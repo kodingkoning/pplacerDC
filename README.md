@@ -1,13 +1,3 @@
----
-title: CS581 Project Proposal
-author: Elizabeth Koning, Malachi Phillips
-date: October 22, 2020
-geometry: margin=2cm
-header-includes: |
-    \usepackage[ruled,vlined]{algorithm2e}
-nocite: |
-  @*
----
 # CS 581 Project: Imrpoving Scalability and Accuracy in Phylogenetic Placement
 
 ## Elizabeth Koning and Malachi Phillips
