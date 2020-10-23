@@ -16,15 +16,3 @@ Next, the software will run pplacer on the subtree from Step 2 and the query seq
 ### Step 4: Return the result in the backbone tree
 
 As in the other approaches, the final result is the placement of the query sequence in the original backbone tree based on its subtree placement.
-
-# Data
-
-## Testing Data
-
-We still need to choose the data we will use to test and debug.
-
-## Benchmarking Data
-
-For simulated data, we will use the same datasets as APPLES used from Guo et al. (2009), and use the RNASim-VS sets. These sets are of size 500, 1000, 5000, 10,000, 50,000, 100,000 and 200,000.
-
-For biological data, we will need advice on selecting appropriate datasets.
