@@ -6,6 +6,11 @@ The training data is the 1000M1 dataset from SATe-I.
 
 K. Liu, S. Raghavan, S. Nelesen, C. R. Linder, T. Warnow, "Rapid and Accurate Large-Scale Coestimation of Sequence Alignments and Phylogenetic Trees," Science, vol. 324, no. 5934, pp. 1561-1564, 19 June 2009.
 
+The backbone trees for the dataset were prepared using FastTree:
+```
+./FastTree -gamma -gtr -nt rose.tt
+```
+
 ## Testing Data
 
 The testing data will be the same RNASim-VS datasets as APPLES used from Guo et al. (2009).
