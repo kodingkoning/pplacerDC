@@ -4,11 +4,19 @@ import dendropy
 import subprocess
 import os # TODO: may not be portable
 
-def generate_fasta_file(subtree, querySequence):
+def generate_fasta_file(subtree, querySequence, referenceFastaFile, outputReferenceFile):
     concatSequences = ""
     leaves = subtree.leaf_node_names()
     for leaf in leaves:
       concatSequences.join(" " + leaf)
+    concatSequences.join(" " + querySequence)
+    subprocess.call(["python3", "faSomeRecords.py", # Execute faSomeRecords.py
+        "--records", concatSequences,               # Sequences to keep
+        "--fasta", referenceFastaFile,              # FASTA file
+        "--outfile", outputReferenceFile])
+
+
+
 
 def read_alignment_and_tree(alignment_file, tree_file):
     alignment = MutableAlignment()
@@ -83,7 +91,8 @@ if __name__ == "__main__":
     print(os.getcwd())
     outputLocation = "output.jplace"
     raxml_info_file = f"{base_dir}/RAxML_info.REF"
-    query_alignment_file = "aln_dna.fa" # test <-----
+    query_alignment_file = "foobar.fa" # test <-----
+    generate_fasta_file(tree_object, querySequence, alignment_file, query_alignment_file)
     run_pplacer(raxml_info_file, outputTreeFile, alignment_file, query_alignment_file, outputLocation)
     #run_pplacer(raxml_info_file, outputTreeFile, alignment_file, alignment_file, outputLocation)
 
