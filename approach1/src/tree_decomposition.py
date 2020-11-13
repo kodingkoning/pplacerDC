@@ -4,16 +4,19 @@ import dendropy
 import subprocess
 import os # TODO: may not be portable
 
-def generate_fasta_file(subtree, querySequence, referenceFastaFile, outputReferenceFile):
+def generate_fasta_file(subtree, querySequence, referenceFastaFile, outputReferenceFile, debugOutput=False):
     concatSequences = ""
     leaves = subtree.leaf_node_names()
     for leaf in leaves:
-      concatSequences.join(" " + leaf)
-    concatSequences.join(" " + querySequence)
-    subprocess.call(["python3", "faSomeRecords.py", # Execute faSomeRecords.py
-        "--records", concatSequences,               # Sequences to keep
-        "--fasta", referenceFastaFile,              # FASTA file
-        "--outfile", outputReferenceFile])
+      concatSequences += f" {leaf}"
+    concatSequences += f" {querySequence}"
+    command = "python3 faSomeRecords.py"
+    command += " --records " + concatSequences
+    command += " --fasta " + referenceFastaFile
+    command += " --outfile " + outputReferenceFile
+    if debugOutput:
+        print(f"Command =\n{command}")
+    subprocess.call([command], shell=True)
 
 
 
@@ -57,7 +60,7 @@ def run_pplacer(raxml_info_file, backbone_tree, reference_aln, queries, output):
 
 if __name__ == "__main__":
   os.chdir("test")
-  base_dir = "/home/malachi/work/classes/variable-size/data/500/0/"
+  base_dir = "/home/malachi/work/classes/variable-size/data/500/0"
   tree_size = 500
   raxml_info_file = f"{base_dir}/RAxML_result.REF"
   querySequences = read_list("queries.txt")
