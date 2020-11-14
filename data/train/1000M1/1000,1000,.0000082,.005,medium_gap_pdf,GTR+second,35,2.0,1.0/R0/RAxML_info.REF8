@@ -1,0 +1,87 @@
+
+
+IMPORTANT WARNING: Sequences SFEI and SCCE are exactly identical
+
+IMPORTANT WARNING
+Found 1 sequence that is exactly identical to other sequences in the alignment.
+Normally they should be excluded from the analysis.
+
+Just in case you might need it, an alignment file with 
+sequence duplicates removed is printed to file /home/ekoning2/scratch/cs581-project/data/train/1000M1/1000M1/R0//rose.aln.true.fasta.reduced
+
+
+Using BFGS method to optimize GTR rate parameters, to disable this specify "--no-bfgs" 
+
+
+
+This is RAxML version 8.2.12 released by Alexandros Stamatakis on May 2018.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Sarah Lutteropp   (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+Charlie Taylor    (UF)
+
+
+Alignment has 2807 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 73.89%
+
+RAxML Model Optimization up to an accuracy of 0.100000 log likelihood units
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+All free model parameters will be estimated by RAxML
+GAMMA model of rate heterogeneity, ML estimate of alpha-parameter
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 2807
+Name: No Name Provided
+DataType: DNA
+Substitution Matrix: GTR
+
+
+
+
+RAxML was called as follows:
+
+./raxmlHPC-PTHREADS -f e -t /home/ekoning2/scratch/cs581-project/data/train/1000M1/1000M1/R0//tree.nwk -m GTRGAMMA -s /home/ekoning2/scratch/cs581-project/data/train/1000M1/1000M1/R0//rose.aln.true.fasta -n REF8 -p 1984 -T 8 -w /home/ekoning2/scratch/cs581-project/data/train/1000M1/1000M1/R0/ 
+
+
+
+Model parameters (binary file format) written to: /home/ekoning2/scratch/cs581-project/data/train/1000M1/1000M1/R0/RAxML_binaryModelParameters.REF8
+
+
+Overall Time for Tree Evaluation 26.615792
+Final GAMMA  likelihood: -960564.005666
+
+Number of free parameters for AIC-TEST(BR-LEN): 2006
+Number of free parameters for AIC-TEST(NO-BR-LEN): 9
+
+
+Model Parameters of Partition 0, Name: No Name Provided, Type of Data: DNA
+alpha: 0.754495
+Tree-Length: 829.185438
+rate A <-> C: 1.182651
+rate A <-> G: 3.326673
+rate A <-> T: 0.517699
+rate C <-> G: 1.106862
+rate C <-> T: 4.241184
+rate G <-> T: 1.000000
+
+freq pi(A): 0.256487
+freq pi(C): 0.243434
+freq pi(G): 0.245688
+freq pi(T): 0.254392
+
+Final tree written to:                 /home/ekoning2/scratch/cs581-project/data/train/1000M1/1000M1/R0/RAxML_result.REF8
+Execution Log File written to:         /home/ekoning2/scratch/cs581-project/data/train/1000M1/1000M1/R0/RAxML_log.REF8
