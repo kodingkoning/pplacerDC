@@ -2,6 +2,9 @@ from tree_decomposition import *
 from script_executor import *
 
 
+########### TODO ##############
+# - Clean up this code
+
 os.chdir("test")
 base_dir = "/home/malachi/work/classes/variable-size/data/500/0"
 tree_size = 500
@@ -47,38 +50,34 @@ for i, tree_key in enumerate(decomposed_trees.keys()): # For testing!
 
   # Find leaf node matching query sequence
   treeWithPlacement = read_tree(open(resultTree, "r")).get_tree()
-  parentNodeName = ""
-  queryNode = None
-  branchHit = False
-  parentNode = None
-  # Likely a much better way to do this...
-  print(f"Hunting for query sequence {querySequence}")
-  for leaf in treeWithPlacement.leaf_nodes():
-    print(f"On leaf {leaf}")
-    if leaf.taxon.label == querySequence:
-      print(leaf.adjacent_nodes())
-      #parentNode, _ = leaf.adjacent_nodes()
-      parentNode = leaf.adjacent_nodes()[0]
-      #parentNodeName = leaf.adjacent_nodes()[0].taxon.label
-      queryNode = leaf
-      branchHit = True
-      break
-  assert branchHit, "Expected to actually find the parent node!"
-  
-  branchHit = False
-  # Clone larger tree, add in sequence
-  #backBoneTreeWithPlacement = read_tree(open(prunedTree, "r")).get_tree().clone()
-  print(f"Parent node = {parentNode}")
-  for node in tree.get_tree().nodes():
-    print(f"Node = {node}")
-    if node == parentNode:
-      node.add_child(queryNode)
-      branchHit = True
-  assert branchHit, "Expected to actually find the parent node in the backbone tree!"
 
-  tree.update_bipartitions()
+  # Reload original tree, since it seems the initial
+  # tree has been modified by the centroid decomposition
+  theTree = read_tree(open(prunedTree, "r")).get_tree()
+
+  subTreeNodeToNode={}
+  label_internal_nodes_subtree(treeWithPlacement, theTree, subTreeNodeToNode)
+  #queryNode = treeWithPlacement.find_node_with_label(querySequence)
+  #assert not queryNode, "Expected queryNode to not be None type!"
+  queryNode = None
+  for leaf in treeWithPlacement.leaf_nodes():
+    if leaf.taxon.label == querySequence:
+      queryNode = leaf
+      break
+  if queryNode == None:
+    print("Expected non null queryNode")
+
+
+  parentSubTree = queryNode.adjacent_nodes()[0]
+  print(f"Parent sub tree = {parentSubTree}")
+  for key in subTreeNodeToNode.keys():
+    print(f"Key = {key}")
+  parent = subTreeNodeToNode[parentSubTree]
+  parent.add_child(queryNode)
+
+  #theTree.update_bipartitions()
 
   # Dump out tree
-  tree.write(file=open("the-result.tre", "w"), schema="newick")
+  theTree.write(file=open("the-result.tre", "w"), schema="newick")
 
 

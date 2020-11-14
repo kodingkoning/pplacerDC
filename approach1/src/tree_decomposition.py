@@ -5,7 +5,8 @@ import subprocess
 import os # TODO: may not be portable
 import numpy as np
 import script_executor as se
-
+import string
+import random
 def read_tree(tree_file):
     tree = PhylogeneticTree(
       dendropy.Tree.get_from_stream(tree_file,
@@ -30,3 +31,28 @@ def read_list(fileName):
         content = fileHandle.readlines()
     content=[x.strip() for x in content]
     return content
+
+def label_internal_nodes_subtree_impl(subTreeNode, node, subTreeNodeToNode):
+    if subTreeNode in subTreeNodeToNode:
+      return
+    print(f"Mapping {subTreeNode} to {node}")
+    subTreeNodeToNode[subTreeNode] = node
+    if subTreeNode.adjacent_nodes():
+      subTreeParent = subTreeNode.adjacent_nodes()[0]
+      parent = node.adjacent_nodes()[0]
+      print(f"Mapping {subTreeNode} to {node}")
+      label_internal_nodes_subtree_impl(subTreeParent, parent, subTreeNodeToNode)
+
+def label_internal_nodes_subtree(subTree, tree, subTreeNodeToNode):
+    visited=()
+    visitedSubTree=()
+    print("Labeling internal nodes...")
+    for leaf in tree.leaf_nodes():
+      for subTreeLeaf in subTree.leaf_nodes():
+        print(f"Comparing {leaf.taxon.label} and {subTreeLeaf.taxon.label}")
+        if leaf.taxon.label == subTreeLeaf.taxon.label:
+          print(f"Taxons matched for {leaf} and {subTreeLeaf}")
+          subTreeParent = subTreeLeaf.adjacent_nodes()[0]
+          parent = leaf.adjacent_nodes()[0]
+          label_internal_nodes_subtree_impl(subTreeParent, parent, subTreeNodeToNode)
+      
