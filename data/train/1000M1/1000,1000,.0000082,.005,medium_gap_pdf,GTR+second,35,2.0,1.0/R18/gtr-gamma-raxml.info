@@ -1,0 +1,119 @@
+
+RAxML-NG v. 1.0.0 released on 07.08.2020 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Core(TM) i7-7800X CPU @ 3.50GHz, 6 cores, 30 GB RAM
+
+RAxML-NG was called at 15-Sep-2020 03:54:06 as follows:
+
+raxml-ng-mpi --msa rose.aln.true.fasta --prefix name --threads 10 --seed 12345 --model GTR+G --tree pars{1}
+
+Analysis options:
+  run mode: ML tree search
+  start tree(s): parsimony (1)
+  random seed: 12345
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (10 threads), thread pinning: ON
+
+[00:00:00] Reading alignment from file: rose.aln.true.fasta
+[00:00:00] Loaded alignment with 1000 taxa and 4079 sites
+
+WARNING: Sequences SJBB and SCH are exactly identical!
+WARNING: Duplicate sequences found: 1
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /home/malachi2/classes/cs581/hw3/cs581/hw3/data/1000,1000,.0000082,.005,medium_gap_pdf,GTR+second,35,2.0,1.0/R18/name.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 2838 patterns
+
+Partition 0: noname
+Model: GTR+FO+G4m
+Alignment sites / patterns: 4079 / 2838
+Gaps: 75.32 %
+Invariant sites: 52.59 %
+
+
+NOTE: Binary MSA file created: name.raxml.rba
+
+Parallelization scheme autoconfig: 1 worker(s) x 10 thread(s)
+
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:01] Generating 1 parsimony starting tree(s) with 1000 taxa
+[00:00:01] Data distribution: max. partitions/sites/weight per thread: 1 / 284 / 4544
+[00:00:01] Data distribution: max. searches per worker: 1
+
+Starting ML tree search with 1 distinct starting trees
+
+[00:00:01 -1093102.026844] Initial branch length optimization
+[00:00:02 -1023473.251266] Model parameter optimization (eps = 10.000000)
+[00:00:11 -995960.751308] AUTODETECT spr round 1 (radius: 5)
+[00:00:35 -992389.307954] AUTODETECT spr round 2 (radius: 10)
+[00:01:14 -991341.529105] AUTODETECT spr round 3 (radius: 15)
+[00:02:32 -991334.716987] AUTODETECT spr round 4 (radius: 20)
+[00:04:31 -991334.653598] SPR radius for FAST iterations: 15 (autodetect)
+[00:04:31 -991334.653598] Model parameter optimization (eps = 3.000000)
+[00:04:32 -991332.373865] FAST spr round 1 (radius: 15)
+[00:06:11 -990860.963882] FAST spr round 2 (radius: 15)
+[00:07:24 -990837.228195] FAST spr round 3 (radius: 15)
+[00:08:16 -990821.983572] FAST spr round 4 (radius: 15)
+[00:08:57 -990805.854597] FAST spr round 5 (radius: 15)
+[00:09:29 -990804.852702] FAST spr round 6 (radius: 15)
+[00:09:59 -990804.114281] FAST spr round 7 (radius: 15)
+[00:10:27 -990803.551662] FAST spr round 8 (radius: 15)
+[00:10:53 -990803.142735] FAST spr round 9 (radius: 15)
+[00:11:20 -990802.815400] FAST spr round 10 (radius: 15)
+[00:11:46 -990801.221710] FAST spr round 11 (radius: 15)
+[00:12:12 -990801.050829] FAST spr round 12 (radius: 15)
+[00:12:37 -990800.891613] FAST spr round 13 (radius: 15)
+[00:13:03 -990800.741358] FAST spr round 14 (radius: 15)
+[00:13:29 -990800.645536] Model parameter optimization (eps = 1.000000)
+[00:13:30 -990800.295105] SLOW spr round 1 (radius: 5)
+[00:14:27 -990746.181196] SLOW spr round 2 (radius: 5)
+[00:15:17 -990746.079625] SLOW spr round 3 (radius: 5)
+[00:16:05 -990746.077375] SLOW spr round 4 (radius: 10)
+[00:17:07 -990746.076502] SLOW spr round 5 (radius: 15)
+[00:22:57 -990746.076133] SLOW spr round 6 (radius: 20)
+[00:30:22 -990746.075964] SLOW spr round 7 (radius: 25)
+[00:36:57 -990746.075879] Model parameter optimization (eps = 0.100000)
+
+[00:36:58] ML tree search #1, logLikelihood: -990745.861139
+
+
+Optimized model parameters:
+
+   Partition 0: noname
+   Rate heterogeneity: GAMMA (4 cats, mean),  alpha: 0.806229 (ML),  weights&rates: (0.250000,0.096884) (0.250000,0.409630) (0.250000,0.958666) (0.250000,2.534820) 
+   Base frequencies (ML): 0.251441 0.247818 0.249544 0.251197 
+   Substitution rates (ML): 1.206094 3.387728 0.515582 1.123672 4.328146 1.000000 
+
+
+Final LogLikelihood: -990745.861139
+
+AIC score: 1985503.722277 / AICc score: 1989389.863204 / BIC score: 1998168.818199
+Free parameters (model + branch lengths): 2006
+
+WARNING: Best ML tree contains 12 near-zero branches!
+
+Best ML tree with collapsed near-zero branches saved to: /home/malachi2/classes/cs581/hw3/cs581/hw3/data/1000,1000,.0000082,.005,medium_gap_pdf,GTR+second,35,2.0,1.0/R18/name.raxml.bestTreeCollapsed
+Best ML tree saved to: /home/malachi2/classes/cs581/hw3/cs581/hw3/data/1000,1000,.0000082,.005,medium_gap_pdf,GTR+second,35,2.0,1.0/R18/name.raxml.bestTree
+Optimized model saved to: /home/malachi2/classes/cs581/hw3/cs581/hw3/data/1000,1000,.0000082,.005,medium_gap_pdf,GTR+second,35,2.0,1.0/R18/name.raxml.bestModel
+
+Execution log saved to: /home/malachi2/classes/cs581/hw3/cs581/hw3/data/1000,1000,.0000082,.005,medium_gap_pdf,GTR+second,35,2.0,1.0/R18/name.raxml.log
+
+Analysis started: 15-Sep-2020 03:54:06 / finished: 15-Sep-2020 04:31:05
+
+Elapsed time: 2219.065 seconds
+
+Consumed energy: 74.820 Wh
+
