@@ -3,6 +3,7 @@ from sepp_utils.tree import PhylogeneticTree
 import dendropy
 import subprocess
 import os # TODO: may not be portable
+import numpy as np
 
 def generate_fasta_file(subtree, querySequence, referenceFastaFile, outputReferenceFile, debugOutput=False):
     concatSequences = ""
@@ -18,8 +19,20 @@ def generate_fasta_file(subtree, querySequence, referenceFastaFile, outputRefere
         print(f"Command =\n{command}")
     subprocess.call([command], shell=True)
 
+def place_sequence_in_subtree(pplacerOutput, outputTreeFileName):
+    subprocess.call(["guppy","tog",
+        "-o", outputTreeFileName,
+        pplacerOutput
+        ])
 
 
+
+def read_tree(tree_file):
+    tree = PhylogeneticTree(
+      dendropy.Tree.get_from_stream(tree_file,
+                                    schema="newick",
+                                    preserve_underscores=True))
+    return tree
 
 def read_alignment_and_tree(alignment_file, tree_file):
     alignment = MutableAlignment()
@@ -79,6 +92,7 @@ if __name__ == "__main__":
   maxSize = 100 # e.g., this will be a tuneable parameter
   decomposed_trees = tree.decompose_tree(maxSize, strategy="centroid", minSize=1)
   assert len(decomposed_trees.keys())*maxSize >= tree_size, "Expected at least 5 sub trees in the decomposition!"
+
   for i, tree_key in enumerate(decomposed_trees.keys()): # For testing!
     if i > 0:
       continue # only run on first tree...
@@ -97,6 +111,43 @@ if __name__ == "__main__":
     query_alignment_file = "foobar.fa" # test <-----
     generate_fasta_file(tree_object, querySequence, alignment_file, query_alignment_file)
     run_pplacer(raxml_info_file, outputTreeFile, alignment_file, query_alignment_file, outputLocation)
-    #run_pplacer(raxml_info_file, outputTreeFile, alignment_file, alignment_file, outputLocation)
+    # overwrite the current file
+    place_sequence_in_subtree(outputLocation, outputTreeFile)
+
+    # Find leaf node matching query sequence
+    treeWithPlacement = read_tree(open(outputTreeFile, "r")).get_tree()
+    parentNodeName = ""
+    queryNode = None
+    branchHit = False
+    parentNode = None
+    # Likely a much better way to do this...
+    print(f"Hunting for query sequence {querySequence}")
+    for leaf in treeWithPlacement.leaf_nodes():
+      print(f"On leaf {leaf}")
+      if leaf.taxon.label == querySequence:
+        print(leaf.adjacent_nodes())
+        #parentNode, _ = leaf.adjacent_nodes()
+        parentNode = leaf.adjacent_nodes()[0]
+        #parentNodeName = leaf.adjacent_nodes()[0].taxon.label
+        queryNode = leaf
+        branchHit = True
+        break
+    assert branchHit, "Expected to actually find the parent node!"
+    
+    branchHit = False
+    # Clone larger tree, add in sequence
+    #backBoneTreeWithPlacement = read_tree(open(prunedTree, "r")).get_tree().clone()
+    print(f"Parent node = {parentNode}")
+    for node in tree.get_tree().nodes():
+      print(f"Node = {node}")
+      if node == parentNode:
+        node.add_child(queryNode)
+        branchHit = True
+    assert branchHit, "Expected to actually find the parent node in the backbone tree!"
+
+    tree.update_bipartitions()
+
+    # Dump out tree
+    tree.write(file=open("the-result.tre", "w"), schema="newick")
 
 

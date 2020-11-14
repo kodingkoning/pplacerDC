@@ -1,0 +1,197 @@
+Found 56 sequence(s)
+Sequences saved to foobar.fa
+Running pplacer v1.1.alpha19-0-g807f6f3 analysis on foobar.fa...
+Found reference sequences in given alignment file. Using those for reference alignment.
+Warning: using a statistics file directly is now deprecated. We suggest using a reference package. If you already are, then please use the latest version of taxtastic.
+parsing a re-estimated RAxML info file.Pre-masking sequences... sequence length cut from 1620 to 1537.
+Determining figs... figs disabled.
+Allocating memory for internal nodes... done.
+Caching likelihood information on reference tree... done.
+Pulling exponents... done.
+Preparing the edges for baseball... done.
+working on L1717065 (1/1)...
+Tree (0) has 108 nodes and 55 leafs!
+/home/malachi/work/classes/cs581-project/approach1/src/test
+Hunting for query sequence L1717065
+On leaf <Node object at 0x7f6fbec71970: 'None' (<Taxon 0x7f6fbec719d0 'L1809648'>)>
+On leaf <Node object at 0x7f6fbec71b20: 'None' (<Taxon 0x7f6fbec71b80 'L1783213'>)>
+On leaf <Node object at 0x7f6fbec71be0: 'None' (<Taxon 0x7f6fbec71c40 'L1781807'>)>
+On leaf <Node object at 0x7f6fbec71d60: 'None' (<Taxon 0x7f6fbec71dc0 'L1795565'>)>
+On leaf <Node object at 0x7f6fbec71e80: 'None' (<Taxon 0x7f6fbec71ee0 'L1790610'>)>
+On leaf <Node object at 0x7f6fbec71f40: 'None' (<Taxon 0x7f6fbec71fa0 'L1792175'>)>
+On leaf <Node object at 0x7f6fbec77100: 'None' (<Taxon 0x7f6fbec77160 'L1797836'>)>
+On leaf <Node object at 0x7f6fbec771c0: 'None' (<Taxon 0x7f6fbec77220 'L1797661'>)>
+On leaf <Node object at 0x7f6fbec772e0: 'None' (<Taxon 0x7f6fbec77340 'L1802871'>)>
+On leaf <Node object at 0x7f6fbec77400: 'None' (<Taxon 0x7f6fbec77460 'L1801956'>)>
+On leaf <Node object at 0x7f6fbec77520: 'None' (<Taxon 0x7f6fbec77580 'L1806041'>)>
+On leaf <Node object at 0x7f6fbec77610: 'None' (<Taxon 0x7f6fbec77670 'L1804462'>)>
+On leaf <Node object at 0x7f6fbec77730: 'None' (<Taxon 0x7f6fbec77790 'L1605566'>)>
+On leaf <Node object at 0x7f6fbec777f0: 'None' (<Taxon 0x7f6fbec77850 'L1604043'>)>
+On leaf <Node object at 0x7f6fbec77a00: 'None' (<Taxon 0x7f6fbec77a60 'L1768309'>)>
+On leaf <Node object at 0x7f6fbec77ac0: 'None' (<Taxon 0x7f6fbec77b20 'L1776565'>)>
+On leaf <Node object at 0x7f6fbec77d00: 'None' (<Taxon 0x7f6fbec77d60 'L1759263'>)>
+On leaf <Node object at 0x7f6fbec77e20: 'None' (<Taxon 0x7f6fbec77e80 'L1757827'>)>
+On leaf <Node object at 0x7f6fbec77ee0: 'None' (<Taxon 0x7f6fbec77f40 'L1758555'>)>
+On leaf <Node object at 0x7f6fbec7b040: 'None' (<Taxon 0x7f6fbec7b0a0 'L1753230'>)>
+On leaf <Node object at 0x7f6fbec7b160: 'None' (<Taxon 0x7f6fbec7b1c0 'L1754951'>)>
+On leaf <Node object at 0x7f6fbec7b220: 'None' (<Taxon 0x7f6fbec7b280 'L1755293'>)>
+On leaf <Node object at 0x7f6fbec7b340: 'None' (<Taxon 0x7f6fbec7b3a0 'L1738145'>)>
+On leaf <Node object at 0x7f6fbec7b460: 'None' (<Taxon 0x7f6fbec7b4c0 'L1741224'>)>
+On leaf <Node object at 0x7f6fbec7b580: 'None' (<Taxon 0x7f6fbec7b5e0 'L1744576'>)>
+On leaf <Node object at 0x7f6fbec7b640: 'None' (<Taxon 0x7f6fbec7b6a0 'L1746547'>)>
+On leaf <Node object at 0x7f6fbec7b760: 'None' (<Taxon 0x7f6fbec7b7c0 'L1761642'>)>
+On leaf <Node object at 0x7f6fbec7b820: 'None' (<Taxon 0x7f6fbec7b880 'L1732990'>)>
+On leaf <Node object at 0x7f6fbec7b9a0: 'None' (<Taxon 0x7f6fbec7ba00 'L1727354'>)>
+On leaf <Node object at 0x7f6fbec7bb20: 'None' (<Taxon 0x7f6fbec7bb80 'L1717277'>)>
+On leaf <Node object at 0x7f6fbec7bc40: 'None' (<Taxon 0x7f6fbec7bca0 'L1715900'>)>
+On leaf <Node object at 0x7f6fbec7bd00: 'None' (<Taxon 0x7f6fbec7bd60 'L1717065'>)>
+[<Node object at 0x7f6fbec7bbe0: 'None' (None)>]
+Parent node = <Node object at 0x7f6fbec7bbe0: 'None' (None)>
+Node = <Node object at 0x7f6fbed045e0: 'None' (None)>
+Node = <Node object at 0x7f6fbed046a0: 'None' (None)>
+Node = <Node object at 0x7f6fbed04700: 'None' (None)>
+Node = <Node object at 0x7f6fbed04760: 'None' (<Taxon 0x7f6fbed047c0 'L1151849'>)>
+Node = <Node object at 0x7f6fbed04820: 'None' (None)>
+Node = <Node object at 0x7f6fbed04880: 'None' (<Taxon 0x7f6fbed048e0 'L1147865'>)>
+Node = <Node object at 0x7f6fbed04940: 'None' (<Taxon 0x7f6fbed049a0 'L1150498'>)>
+Node = <Node object at 0x7f6fbed04a00: 'None' (None)>
+Node = <Node object at 0x7f6fbed04a60: 'None' (<Taxon 0x7f6fbed04ac0 'L1134872'>)>
+Node = <Node object at 0x7f6fbed04b20: 'None' (<Taxon 0x7f6fbed04b80 'L1135783'>)>
+Node = <Node object at 0x7f6fbed04be0: 'None' (None)>
+Node = <Node object at 0x7f6fbed04c40: 'None' (None)>
+Node = <Node object at 0x7f6fbed04ca0: 'None' (None)>
+Node = <Node object at 0x7f6fbed04d00: 'None' (None)>
+Node = <Node object at 0x7f6fbed04d60: 'None' (<Taxon 0x7f6fbed04dc0 'L1070386'>)>
+Node = <Node object at 0x7f6fbed04e20: 'None' (<Taxon 0x7f6fbed04e80 'L1062475'>)>
+Node = <Node object at 0x7f6fbed04ee0: 'None' (None)>
+Node = <Node object at 0x7f6fbed04f40: 'None' (None)>
+Node = <Node object at 0x7f6fbed04fa0: 'None' (<Taxon 0x7f6fbed1d040 'L1110554'>)>
+Node = <Node object at 0x7f6fbed1d0a0: 'None' (None)>
+Node = <Node object at 0x7f6fbed1d100: 'None' (None)>
+Node = <Node object at 0x7f6fbed1d160: 'None' (<Taxon 0x7f6fbed1d1c0 'L1204345'>)>
+Node = <Node object at 0x7f6fbed1d220: 'None' (None)>
+Node = <Node object at 0x7f6fbed1d280: 'None' (<Taxon 0x7f6fbed1d2e0 'L1198559'>)>
+Node = <Node object at 0x7f6fbed1d340: 'None' (None)>
+Node = <Node object at 0x7f6fbed1d3a0: 'None' (None)>
+Node = <Node object at 0x7f6fbed1d400: 'None' (<Taxon 0x7f6fbed1d460 'L1164853'>)>
+Node = <Node object at 0x7f6fbed1d4c0: 'None' (None)>
+Node = <Node object at 0x7f6fbed1d520: 'None' (<Taxon 0x7f6fbed1d580 'L1163763'>)>
+Node = <Node object at 0x7f6fbed1d5e0: 'None' (<Taxon 0x7f6fbed1d640 'L1164449'>)>
+Node = <Node object at 0x7f6fbed1d6a0: 'None' (None)>
+Node = <Node object at 0x7f6fbed1d700: 'None' (None)>
+Node = <Node object at 0x7f6fbed1d760: 'None' (<Taxon 0x7f6fbed1d7c0 'L1179211'>)>
+Node = <Node object at 0x7f6fbed1d820: 'None' (None)>
+Node = <Node object at 0x7f6fbed1d880: 'None' (<Taxon 0x7f6fbed1d8e0 'L1169118'>)>
+Node = <Node object at 0x7f6fbed1d940: 'None' (None)>
+Node = <Node object at 0x7f6fbed1d9a0: 'None' (<Taxon 0x7f6fbed1da00 'L1167268'>)>
+Node = <Node object at 0x7f6fbed1da60: 'None' (None)>
+Node = <Node object at 0x7f6fbed1dac0: 'None' (<Taxon 0x7f6fbed1db20 'L1168088'>)>
+Node = <Node object at 0x7f6fbed1db80: 'None' (<Taxon 0x7f6fbed1dbe0 'L1167536'>)>
+Node = <Node object at 0x7f6fbed1dc40: 'None' (None)>
+Node = <Node object at 0x7f6fbed1dca0: 'None' (None)>
+Node = <Node object at 0x7f6fbed1dd00: 'None' (<Taxon 0x7f6fbed1dd60 'L1192822'>)>
+Node = <Node object at 0x7f6fbed1ddc0: 'None' (<Taxon 0x7f6fbed1de20 'L1192259'>)>
+Node = <Node object at 0x7f6fbed1de80: 'None' (None)>
+Node = <Node object at 0x7f6fbed1dee0: 'None' (<Taxon 0x7f6fbed1df40 'L1196233'>)>
+Node = <Node object at 0x7f6fbed1dfa0: 'None' (<Taxon 0x7f6fbed23040 'L1195284'>)>
+Node = <Node object at 0x7f6fbed230a0: 'None' (None)>
+Node = <Node object at 0x7f6fbed23100: 'None' (None)>
+Node = <Node object at 0x7f6fbed23160: 'None' (<Taxon 0x7f6fbed231c0 'L1218735'>)>
+Node = <Node object at 0x7f6fbed23220: 'None' (<Taxon 0x7f6fbed23280 'L1218994'>)>
+Node = <Node object at 0x7f6fbed232e0: 'None' (None)>
+Node = <Node object at 0x7f6fbed23340: 'None' (None)>
+Node = <Node object at 0x7f6fbed233a0: 'None' (<Taxon 0x7f6fbed23400 'L1211063'>)>
+Node = <Node object at 0x7f6fbed23460: 'None' (None)>
+Node = <Node object at 0x7f6fbed234c0: 'None' (<Taxon 0x7f6fbed23520 'L1212196'>)>
+Node = <Node object at 0x7f6fbed23580: 'None' (<Taxon 0x7f6fbed235e0 'L1212718'>)>
+Node = <Node object at 0x7f6fbed23640: 'None' (None)>
+Node = <Node object at 0x7f6fbed236a0: 'None' (<Taxon 0x7f6fbed23700 'L1219837'>)>
+Node = <Node object at 0x7f6fbed23760: 'None' (None)>
+Node = <Node object at 0x7f6fbed237c0: 'None' (<Taxon 0x7f6fbed23820 'L1205795'>)>
+Node = <Node object at 0x7f6fbed23880: 'None' (<Taxon 0x7f6fbed238e0 'L1206641'>)>
+Node = <Node object at 0x7f6fbed23940: 'None' (None)>
+Node = <Node object at 0x7f6fbed239a0: 'None' (None)>
+Node = <Node object at 0x7f6fbed23a00: 'None' (<Taxon 0x7f6fbed23a60 'L1107210'>)>
+Node = <Node object at 0x7f6fbed23ac0: 'None' (None)>
+Node = <Node object at 0x7f6fbed23b20: 'None' (<Taxon 0x7f6fbed23b80 'L1070969'>)>
+Node = <Node object at 0x7f6fbed23be0: 'None' (None)>
+Node = <Node object at 0x7f6fbed23c40: 'None' (<Taxon 0x7f6fbed23ca0 'L1105637'>)>
+Node = <Node object at 0x7f6fbed23d00: 'None' (None)>
+Node = <Node object at 0x7f6fbed23d60: 'None' (None)>
+Node = <Node object at 0x7f6fbed23dc0: 'None' (None)>
+Node = <Node object at 0x7f6fbed23e20: 'None' (<Taxon 0x7f6fbed23e80 'L1091389'>)>
+Node = <Node object at 0x7f6fbed23ee0: 'None' (<Taxon 0x7f6fbed23f40 'L1077427'>)>
+Node = <Node object at 0x7f6fbed23fa0: 'None' (None)>
+Node = <Node object at 0x7f6fbed29040: 'None' (<Taxon 0x7f6fbed290a0 'L1081296'>)>
+Node = <Node object at 0x7f6fbed29100: 'None' (None)>
+Node = <Node object at 0x7f6fbed29160: 'None' (<Taxon 0x7f6fbed291c0 'L1097614'>)>
+Node = <Node object at 0x7f6fbed29220: 'None' (<Taxon 0x7f6fbed29280 'L1083097'>)>
+Node = <Node object at 0x7f6fbed292e0: 'None' (None)>
+Node = <Node object at 0x7f6fbed29340: 'None' (<Taxon 0x7f6fbed293a0 'L1074026'>)>
+Node = <Node object at 0x7f6fbed29400: 'None' (<Taxon 0x7f6fbed29460 'L1073996'>)>
+Node = <Node object at 0x7f6fbed294c0: 'None' (None)>
+Node = <Node object at 0x7f6fbed29580: 'None' (None)>
+Node = <Node object at 0x7f6fbed295e0: 'None' (None)>
+Node = <Node object at 0x7f6fbed29640: 'None' (None)>
+Node = <Node object at 0x7f6fbed296a0: 'None' (<Taxon 0x7f6fbed29700 'L1285296'>)>
+Node = <Node object at 0x7f6fbed29760: 'None' (<Taxon 0x7f6fbed297c0 'L1284382'>)>
+Node = <Node object at 0x7f6fbed29820: 'None' (None)>
+Node = <Node object at 0x7f6fbed29880: 'None' (<Taxon 0x7f6fbed298e0 'L1278631'>)>
+Node = <Node object at 0x7f6fbed29940: 'None' (None)>
+Node = <Node object at 0x7f6fbed299a0: 'None' (<Taxon 0x7f6fbed29a00 'L1278905'>)>
+Node = <Node object at 0x7f6fbed29a60: 'None' (None)>
+Node = <Node object at 0x7f6fbed29ac0: 'None' (<Taxon 0x7f6fbed29b20 'L1281100'>)>
+Node = <Node object at 0x7f6fbed29b80: 'None' (<Taxon 0x7f6fbed29be0 'L1279731'>)>
+Node = <Node object at 0x7f6fbed29c40: 'None' (None)>
+Node = <Node object at 0x7f6fbed29ca0: 'None' (None)>
+Node = <Node object at 0x7f6fbed29d00: 'None' (<Taxon 0x7f6fbed29d60 'L1229376'>)>
+Node = <Node object at 0x7f6fbed29dc0: 'None' (<Taxon 0x7f6fbed29e20 'L1227695'>)>
+Node = <Node object at 0x7f6fbed29e80: 'None' (None)>
+Node = <Node object at 0x7f6fbed29ee0: 'None' (None)>
+Node = <Node object at 0x7f6fbed29f40: 'None' (<Taxon 0x7f6fbed29fa0 'L1247489'>)>
+Node = <Node object at 0x7f6fbed2e040: 'None' (None)>
+Node = <Node object at 0x7f6fbed2e0a0: 'None' (<Taxon 0x7f6fbed2e100 'L1234463'>)>
+Node = <Node object at 0x7f6fbed2e160: 'None' (None)>
+Node = <Node object at 0x7f6fbed2e1c0: 'None' (<Taxon 0x7f6fbed2e220 'L1239794'>)>
+Node = <Node object at 0x7f6fbed2e280: 'None' (<Taxon 0x7f6fbed2e2e0 'L1241949'>)>
+Node = <Node object at 0x7f6fbed2e340: 'None' (None)>
+Node = <Node object at 0x7f6fbed2e3a0: 'None' (None)>
+Node = <Node object at 0x7f6fbed2e400: 'None' (<Taxon 0x7f6fbed2e460 'L1251243'>)>
+Node = <Node object at 0x7f6fbed2e4c0: 'None' (None)>
+Node = <Node object at 0x7f6fbed2e520: 'None' (<Taxon 0x7f6fbed2e580 'L1259289'>)>
+Node = <Node object at 0x7f6fbed2e5e0: 'None' (None)>
+Node = <Node object at 0x7f6fbed2e640: 'None' (<Taxon 0x7f6fbed2e6a0 'L1261561'>)>
+Node = <Node object at 0x7f6fbed2e700: 'None' (<Taxon 0x7f6fbed2e760 'L1262664'>)>
+Node = <Node object at 0x7f6fbed2e7c0: 'None' (None)>
+Node = <Node object at 0x7f6fbed2e820: 'None' (None)>
+Node = <Node object at 0x7f6fbed2e880: 'None' (<Taxon 0x7f6fbed2e8e0 'L1276109'>)>
+Node = <Node object at 0x7f6fbed2e940: 'None' (None)>
+Node = <Node object at 0x7f6fbed2e9a0: 'None' (<Taxon 0x7f6fbed2ea00 'L1263973'>)>
+Node = <Node object at 0x7f6fbed2ea60: 'None' (None)>
+Node = <Node object at 0x7f6fbed2eac0: 'None' (<Taxon 0x7f6fbed2eb20 'L1269925'>)>
+Node = <Node object at 0x7f6fbed2eb80: 'None' (<Taxon 0x7f6fbed2ebe0 'L1264853'>)>
+Node = <Node object at 0x7f6fbed2ec40: 'None' (<Taxon 0x7f6fbed2eca0 'L1276342'>)>
+Node = <Node object at 0x7f6fbec6b400: 'None' (<Taxon 0x7f6fbec6b460 'L1290368'>)>
+Node = <Node object at 0x7f6fbec6b4c0: 'None' (<Taxon 0x7f6fbec6b520 'L1133370'>)>
+Node = <Node object at 0x7f6fbec6b580: 'None' (None)>
+Node = <Node object at 0x7f6fbec6b5e0: 'None' (None)>
+Node = <Node object at 0x7f6fbec6b640: 'None' (<Taxon 0x7f6fbec6b6a0 'L1119469'>)>
+Node = <Node object at 0x7f6fbec6b700: 'None' (<Taxon 0x7f6fbec6b760 'L1114823'>)>
+Node = <Node object at 0x7f6fbec6b7c0: 'None' (None)>
+Node = <Node object at 0x7f6fbec6b820: 'None' (None)>
+Node = <Node object at 0x7f6fbec6b880: 'None' (None)>
+Node = <Node object at 0x7f6fbec6b8e0: 'None' (<Taxon 0x7f6fbec6b940 'L1127458'>)>
+Node = <Node object at 0x7f6fbec6b9a0: 'None' (<Taxon 0x7f6fbec6ba00 'L1127509'>)>
+Node = <Node object at 0x7f6fbec6ba60: 'None' (None)>
+Node = <Node object at 0x7f6fbec6bac0: 'None' (<Taxon 0x7f6fbec6bb20 'L1129144'>)>
+Node = <Node object at 0x7f6fbec6bb80: 'None' (<Taxon 0x7f6fbec6bbe0 'L1129995'>)>
+Node = <Node object at 0x7f6fbec6bc40: 'None' (None)>
+Node = <Node object at 0x7f6fbec6bca0: 'None' (<Taxon 0x7f6fbec6bd00 'L1125734'>)>
+Node = <Node object at 0x7f6fbec6bd60: 'None' (None)>
+Node = <Node object at 0x7f6fbec6bdc0: 'None' (<Taxon 0x7f6fbec6be20 'L1125092'>)>
+Node = <Node object at 0x7f6fbec6be80: 'None' (<Taxon 0x7f6fbec6bee0 'L1125116'>)>
+Node = <Node object at 0x7f6fbec6bf40: 'None' (<Taxon 0x7f6fbec6bfa0 'L1161647'>)>
+Traceback (most recent call last):
+  File "tree_decomposition.py", line 146, in <module>
+    assert branchHit, "Expected to actually find the parent node in the backbone tree!"
+AssertionError: Expected to actually find the parent node in the backbone tree!
