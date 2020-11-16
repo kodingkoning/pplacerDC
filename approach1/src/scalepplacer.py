@@ -82,14 +82,14 @@ def run_program(args):
       backBoneTree.write(file=open(temporaryBackBoneTree, "w"), schema="newick")
     
       if VALIDATE:
-          validate_result_tree(theTree, theTreeCopy, querySequence)
+          validate_result_tree(backBoneTree, backBoneTreeCopy, querySequence)
     
       if nTrees == 1:
           scores[i] = 1.0 # only a single tree, don't bother
       else:
           scores[i] = score_raxml(temporaryBackBoneTree, msaFile)
         
-      if DEBUG: print(f"ML score = {score}")
+      if DEBUG: print(f"ML score = {scores[i]}")
 
     timer.tic("Threaded region")
     #executor = concurrent.futures.ProcessPoolExecutor(numThreads)
