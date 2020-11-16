@@ -4,6 +4,8 @@ from util import *
 import uuid
 import numpy as np
 import shutil
+import concurrent
+import concurrent.futures
 
 
 ########### TODO ##############
@@ -46,10 +48,12 @@ bestTree = "bestTree.tre"
 raxml_info_file = f"{base_dir}/RAxML_info.REF"
 
 # Threaded region over sub trees
+nThreads = 3
 
 scores = [0 for i in decomposed_trees.keys()]
 
-for i, tree_key in enumerate(decomposed_trees.keys()):
+def run_subtree(item):
+  i, tree_key, scores = item
   # Constants midrun
   outputLocation = f"output-{i}.jplace"
   resultTree = f"mytestoutput-{i}.tre"
@@ -92,6 +96,13 @@ for i, tree_key in enumerate(decomposed_trees.keys()):
   timer.toc("raxml")
   if DEBUG: print(f"ML score = {score}")
 
+executor = concurrent.futures.ProcessPoolExecutor(nThreads)
+futures = [executor.submit(run_subtree, (i,tree_key,scores)) for i, tree_key in enumerate(decomposed_trees.keys())]
+concurrent.futures.wait(futures)
+
+#for i, tree_key in enumerate(decomposed_trees.keys()):
+#  run_subtree(i,tree_key)
+
 # Do maxLoc reduction to find best tree
 bestOne = None
 maxScore = -np.inf
@@ -99,8 +110,10 @@ for i, score in enumerate(scores):
   if score > maxScore:
     maxScore = score
     bestOne = f"the-result-{i}.tre"
-# move best on to old dir
+# move best on to old dir, remove old dir
 shutil.move(bestOne, f"{oldDir}/{bestTree}")
+os.chdir(oldDir)
+shutil.rmtree(tmpdir)
 
 
 
