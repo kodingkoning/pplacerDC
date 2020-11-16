@@ -20,7 +20,7 @@ def generate_fasta_file(subtree, querySequence, referenceFastaFile, outputRefere
     for leaf in leaves:
       concatSequences += f" {leaf}"
     concatSequences += f" {querySequence}"
-    command = "python3 faSomeRecords.py"
+    command = "faSomeRecords.py"
     command += " --records " + concatSequences
     command += " --fasta " + referenceFastaFile
     command += " --outfile " + outputReferenceFile

@@ -22,7 +22,7 @@ timer.tic("Setup")
 tmpdir = str(uuid.uuid4())
 os.mkdir(tmpdir)
 querySequences = read_list("queries.txt")
-shutil.copyfile("faSomeRecords.py", f"{tmpdir}/faSomeRecords.py")
+#shutil.copyfile("faSomeRecords.py", f"{tmpdir}/faSomeRecords.py")
 oldDir = os.getcwd()
 os.chdir(f"{tmpdir}")
 base_dir = "/home/malachi/work/classes/variable-size/data/500/0"
