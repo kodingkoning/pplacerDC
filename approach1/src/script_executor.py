@@ -1,5 +1,19 @@
 import subprocess
 import os
+import tempfile
+import uuid
+import re
+import glob
+def field_by_regex(regex,log_file_name, fieldnum = 0):
+    with open(log_file_name) as log_file:
+        content =log_file.readlines()
+    content = [x.strip() for x in content]
+    field=[]
+    for line in content:
+        m = re.search(regex,line)
+        if m:
+            field.append(float(m.groups()[fieldnum]))
+    return field
 def generate_fasta_file(subtree, querySequence, referenceFastaFile, outputReferenceFile, debugOutput=False):
     concatSequences = ""
     leaves = subtree.leaf_node_names()
@@ -40,3 +54,31 @@ def run_pplacer(raxml_info_file, backbone_tree, reference_aln, queries, output):
                        queries    # Name of file containing query sequences
                        ]
                        )
+def score_raxml(treeFile, referenceAln):
+    """
+    Run RAxML-ng in fixed tree mode to determine the best LogLikelihood score possible
+    treeFile: the file where the tree is located
+    referenceAln: the file where the reference alignment is located
+    """
+    tmpFile = str(uuid.uuid4())
+    tmpFileHandle = open(tmpFile,"w")
+    # generate temporary file handle
+    subprocess.call(["raxml-ng",
+                     "--msa", referenceAln,
+                     "--model", "GTR+G",
+                     "--tree", treeFile,
+                     "--evaluate"   # fixed-tree evaluation
+                     ],
+                     stdout=tmpFileHandle
+                     )
+    # parse the output for the score
+    regex = "Final LogLikelihood: (.+)"
+    score = field_by_regex(regex, tmpFile)[0]
+    # delete temporary file
+    tmpFileHandle.close()
+    os.remove(tmpFile)
+
+    # delete raxml files
+    for fl in glob.glob(f"{referenceAln}.raxml*"):
+        os.remove(fl)
+    return score

@@ -75,7 +75,7 @@ for i, tree_key in enumerate(decomposed_trees.keys()): # For testing!
   parent = subTreeNodeToNode[parentSubTree]
 
   """
-  Current have:
+  Currently have:
 
   x---------------------------x
   parent                      eventual siblingToQuery
@@ -103,5 +103,8 @@ for i, tree_key in enumerate(decomposed_trees.keys()): # For testing!
   theTree.write(file=open("the-result.tre", "w"), schema="newick")
 
   validate_result_tree(theTree, theTreeCopy, querySequence)
+
+  score = score_raxml("the-result.tre", "aln_dna.fa")
+  print(f"ML score = {score}")
 
 
