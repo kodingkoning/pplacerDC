@@ -22,7 +22,7 @@ alignment_file_handle = open(f"{base_dir}/aln_dna.fa", "r")
 alignment, tree = read_alignment_and_tree(alignment_file_handle,
      tree_file_handle)
 
-maxSize = 5 # e.g., this will be a tuneable parameter
+maxSize = 100 # e.g., this will be a tuneable parameter
 decomposed_trees = tree.decompose_tree(maxSize, strategy="centroid", minSize=1)
 assert len(decomposed_trees.keys())*maxSize >= tree_size, "Expected at least 5 sub trees in the decomposition!"
 
@@ -54,6 +54,7 @@ for i, tree_key in enumerate(decomposed_trees.keys()): # For testing!
   # Reload original tree, since it seems the initial
   # tree has been modified by the centroid decomposition
   theTree = read_tree(open(prunedTree, "r")).get_tree()
+  theTreeCopy = dendropy.Tree(theTree)
 
   subTreeNodeToNode={}
   label_internal_nodes_subtree(treeWithPlacement, theTree, subTreeNodeToNode)
@@ -69,9 +70,6 @@ for i, tree_key in enumerate(decomposed_trees.keys()): # For testing!
 
 
   parentSubTree = queryNode.adjacent_nodes()[0]
-  print(f"Parent sub tree = {parentSubTree}")
-  for key in subTreeNodeToNode.keys():
-    print(f"Key = {key}")
   parent = subTreeNodeToNode[parentSubTree]
   parent.add_child(queryNode)
 
@@ -79,5 +77,7 @@ for i, tree_key in enumerate(decomposed_trees.keys()): # For testing!
 
   # Dump out tree
   theTree.write(file=open("the-result.tre", "w"), schema="newick")
+
+  validate_result_tree(theTree, theTreeCopy, querySequence)
 
 

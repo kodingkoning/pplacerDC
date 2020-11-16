@@ -7,6 +7,9 @@ import numpy as np
 import script_executor as se
 import string
 import random
+
+DEBUG = False
+
 def read_tree(tree_file):
     tree = PhylogeneticTree(
       dendropy.Tree.get_from_stream(tree_file,
@@ -35,24 +38,30 @@ def read_list(fileName):
 def label_internal_nodes_subtree_impl(subTreeNode, node, subTreeNodeToNode):
     if subTreeNode in subTreeNodeToNode:
       return
-    print(f"Mapping {subTreeNode} to {node}")
+    if DEBUG: print(f"Mapping {subTreeNode} to {node}")
     subTreeNodeToNode[subTreeNode] = node
     if subTreeNode.adjacent_nodes():
       subTreeParent = subTreeNode.adjacent_nodes()[0]
       parent = node.adjacent_nodes()[0]
-      print(f"Mapping {subTreeNode} to {node}")
+      if DEBUG: print(f"Mapping {subTreeNode} to {node}")
       label_internal_nodes_subtree_impl(subTreeParent, parent, subTreeNodeToNode)
 
 def label_internal_nodes_subtree(subTree, tree, subTreeNodeToNode):
     visited=()
     visitedSubTree=()
-    print("Labeling internal nodes...")
+    if DEBUG: print("Labeling internal nodes...")
     for leaf in tree.leaf_nodes():
       for subTreeLeaf in subTree.leaf_nodes():
-        print(f"Comparing {leaf.taxon.label} and {subTreeLeaf.taxon.label}")
+        if DEBUG: print(f"Comparing {leaf.taxon.label} and {subTreeLeaf.taxon.label}")
         if leaf.taxon.label == subTreeLeaf.taxon.label:
-          print(f"Taxons matched for {leaf} and {subTreeLeaf}")
+          if DEBUG: print(f"Taxons matched for {leaf} and {subTreeLeaf}")
           subTreeParent = subTreeLeaf.adjacent_nodes()[0]
           parent = leaf.adjacent_nodes()[0]
           label_internal_nodes_subtree_impl(subTreeParent, parent, subTreeNodeToNode)
-      
+def validate_result_tree(treeWithPlacement, tree, querySequence):
+    taxaTreeWithPlacement = [i.taxon.label for i in treeWithPlacement.leaf_nodes()]
+    treeTaxa = [i.taxon.label for i in tree.leaf_nodes()]
+    for taxa in taxaTreeWithPlacement:
+      expression = taxa in treeTaxa or taxa == querySequence
+      assert expression, "Expected {taxa} to be in the main tree, or match the query sequence {querySequence}"
+      if DEBUG: print(f"{expression}")
