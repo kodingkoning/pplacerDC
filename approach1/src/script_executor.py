@@ -67,6 +67,9 @@ def score_raxml(treeFile, referenceAln):
                      "--msa", referenceAln,
                      "--model", "GTR+G",
                      "--tree", treeFile,
+                     "--threads", "1", # run in serial
+                     "--opt-branches", "off", # do not optimize branch lengths
+                     "--opt-model", "off", # do not optimize model conditions
                      "--evaluate"   # fixed-tree evaluation
                      ],
                      stdout=tmpFileHandle

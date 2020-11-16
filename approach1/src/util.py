@@ -13,6 +13,8 @@ class Timer(object):
           self.elapsed[tag] += tElapsed
         else:
           self.elapsed[tag] = tElapsed
+    def get_elapsed_time(self,tag):
+        return self.elapsed[tag]
     def dump(self):
         print("===== Timing =====")
         for tag in self.elapsed.keys():

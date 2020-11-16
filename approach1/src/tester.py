@@ -6,6 +6,7 @@ import numpy as np
 import shutil
 import concurrent
 import concurrent.futures
+from multiprocessing.pool import ThreadPool as Pool
 
 
 ########### TODO ##############
@@ -15,6 +16,7 @@ VALIDATE = False
 DEBUG = False
 
 timer = Timer()
+timer.tic("Program execution")
 
 timer.tic("Setup")
 tmpdir = str(uuid.uuid4())
@@ -47,13 +49,12 @@ maxScore = -np.inf
 bestTree = "bestTree.tre"
 raxml_info_file = f"{base_dir}/RAxML_info.REF"
 
-# Threaded region over sub trees
-nThreads = 3
 
 scores = [0 for i in decomposed_trees.keys()]
 
 def run_subtree(item):
   i, tree_key, scores = item
+  #threadLocalTimer = t_timers[i]
   # Constants midrun
   outputLocation = f"output-{i}.jplace"
   resultTree = f"mytestoutput-{i}.tre"
@@ -65,40 +66,43 @@ def run_subtree(item):
   outputTreeFile = f"decomposed-tree-{i}.tre"
   tree_object.get_tree().write(file=open(outputTreeFile, 'w'),
       schema="newick")
-  timer.tic("FASTA pruning")
+  #threadLocalTimer.tic("FASTA pruning")
   generate_fasta_file(tree_object, querySequence, alignment_file, query_alignment_file)
-  timer.toc("FASTA pruning")
-  timer.tic("pplacer")
+  #threadLocalTimer.toc("FASTA pruning")
+  #threadLocalTimer.tic("pplacer")
   run_pplacer(raxml_info_file, outputTreeFile, alignment_file, query_alignment_file, outputLocation)
-  timer.toc("pplacer")
+  #threadLocalTimer.toc("pplacer")
   # overwrite the current file
-  timer.tic("guppy")
+  #threadLocalTimer.tic("guppy")
   place_sequence_in_subtree(outputLocation, temporaryResultTree)
-  timer.toc("guppy")
+  #threadLocalTimer.toc("guppy")
 
-  timer.tic("tree mod")
+  #threadLocalTimer.tic("tree mod")
   resultTree = read_tree(temporaryResultTree).get_tree()
   backBoneTree = read_tree(prunedTree).get_tree()
   backBoneTreeCopy = None
   if VALIDATE: backBoneTreeCopy = dendropy.Tree(backBoneTree)
   modify_backbone_tree_with_placement(resultTree, backBoneTree, querySequence)
   backBoneTree.write(file=open(temporaryBackBoneTree, "w"), schema="newick")
-  timer.toc("tree mod")
+  #threadLocalTimer.toc("tree mod")
 
   if VALIDATE:
-      timer.tic("tree validation")
+      #threadLocalTimer.tic("tree validation")
       validate_result_tree(theTree, theTreeCopy, querySequence)
-      timer.toc("tree validation")
+      #threadLocalTimer.toc("tree validation")
 
-  timer.tic("raxml")
+  #threadLocalTimer.tic("raxml")
   scores[i] = score_raxml(temporaryBackBoneTree, alignment_file)
     
-  timer.toc("raxml")
+  #threadLocalTimer.toc("raxml")
   if DEBUG: print(f"ML score = {score}")
 
+timer.tic("Threaded region")
+nThreads = 4
 executor = concurrent.futures.ProcessPoolExecutor(nThreads)
 futures = [executor.submit(run_subtree, (i,tree_key,scores)) for i, tree_key in enumerate(decomposed_trees.keys())]
 concurrent.futures.wait(futures)
+timer.toc("Threaded region")
 
 #for i, tree_key in enumerate(decomposed_trees.keys()):
 #  run_subtree(i,tree_key)
@@ -115,7 +119,5 @@ shutil.move(bestOne, f"{oldDir}/{bestTree}")
 os.chdir(oldDir)
 shutil.rmtree(tmpdir)
 
-
-
-
+timer.toc("Program execution")
 timer.dump()
