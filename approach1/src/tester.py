@@ -15,12 +15,15 @@ DEBUG = False
 timer = Timer()
 
 timer.tic("Setup")
-
-os.chdir("test")
+tmpdir = str(uuid.uuid4())
+os.mkdir(tmpdir)
+querySequences = read_list("queries.txt")
+shutil.copyfile("faSomeRecords.py", f"{tmpdir}/faSomeRecords.py")
+oldDir = os.getcwd()
+os.chdir(f"{tmpdir}")
 base_dir = "/home/malachi/work/classes/variable-size/data/500/0"
 tree_size = 500
 raxml_info_file = f"{base_dir}/RAxML_result.REF"
-querySequences = read_list("queries.txt")
 assert len(querySequences) == 1, "Expected only a single query sequence!"
 querySequence = querySequences[0]
 # generate backbone tree by removing query sequence
@@ -37,23 +40,25 @@ maxSize = 250 # e.g., this will be a tuneable parameter
 decomposed_trees = tree.decompose_tree(maxSize, strategy="centroid", minSize=1)
 timer.toc("Setup")
 
-# Constants midrun
-outputLocation = "output.jplace"
-resultTree = "mytestoutput.tre"
-raxml_info_file = f"{base_dir}/RAxML_info.REF"
-query_alignment_file = "foobar.fa" # test <-----
-temporaryResultTree = "mytestoutput.tre"
-temporaryBackBoneTree = "the-result.tre" # backbone tree with a tentative placement
-bestTree = "bestTree.tre"
 
 maxScore = -np.inf
+bestTree = "bestTree.tre"
+raxml_info_file = f"{base_dir}/RAxML_info.REF"
+
+# Threaded region over sub trees
+
+scores = [0 for i in decomposed_trees.keys()]
 
 for i, tree_key in enumerate(decomposed_trees.keys()):
-  if i > 0:
-    break
+  # Constants midrun
+  outputLocation = f"output-{i}.jplace"
+  resultTree = f"mytestoutput-{i}.tre"
+  query_alignment_file = f"foobar-{i}.fa" # test <-----
+  temporaryResultTree = f"mytestoutput-{i}.tre"
+  temporaryBackBoneTree = f"the-result-{i}.tre" # backbone tree with a tentative placement
   tree_object = decomposed_trees[tree_key]
   print(f"Tree ({tree_key}) has {tree_object.count_nodes()} nodes and {tree_object.count_leaves()} leafs!")
-  outputTreeFile = f"decomposed-tree-{tree_key}.tre"
+  outputTreeFile = f"decomposed-tree-{i}.tre"
   tree_object.get_tree().write(file=open(outputTreeFile, 'w'),
       schema="newick")
   timer.tic("FASTA pruning")
@@ -82,13 +87,20 @@ for i, tree_key in enumerate(decomposed_trees.keys()):
       timer.toc("tree validation")
 
   timer.tic("raxml")
-  score = score_raxml(temporaryBackBoneTree, alignment_file)
-  if score > maxScore:
-    maxScore = score
-    shutil.move(temporaryBackBoneTree,bestTree)
+  scores[i] = score_raxml(temporaryBackBoneTree, alignment_file)
     
   timer.toc("raxml")
   if DEBUG: print(f"ML score = {score}")
+
+# Do maxLoc reduction to find best tree
+bestOne = None
+maxScore = -np.inf
+for i, score in enumerate(scores):
+  if score > maxScore:
+    maxScore = score
+    bestOne = f"the-result-{i}.tre"
+# move best on to old dir
+shutil.move(bestOne, f"{oldDir}/{bestTree}")
 
 
 
