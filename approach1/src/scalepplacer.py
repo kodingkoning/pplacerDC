@@ -12,10 +12,10 @@ import concurrent
 import concurrent.futures
 from multiprocessing.pool import ThreadPool as Pool
 
-VALIDATE = False
-DEBUG = False
 def run_program(args):
+    print(f"Current working directory is {os.getcwd()}")
     numThreads = int(args.numThreads)
+    print(f"numThreads={numThreads}")
     maxSubTreeSize = int(args.max)
     outputTree = args.output
     raxml_info_file = args.info
@@ -23,6 +23,8 @@ def run_program(args):
     querySequence = args.query
     msaFile = args.ref_msa
     verbose = args.verbose
+    VALIDATE = True
+    DEBUG = True
     if verbose:
       VALIDATE = True
       DEBUG = True
@@ -34,13 +36,18 @@ def run_program(args):
     os.mkdir(tmpdir)
     oldDir = os.getcwd()
     os.chdir(f"{tmpdir}")
-    se.prune_query(raxml_info_file, querySequence, prunedTree)
+
+    inputTree = f"{oldDir}/{inputTree}"
+    msaFile = f"{oldDir}/{msaFile}"
+    raxml_info_file = f"{oldDir}/{raxml_info_file}"
     
-    tree_file_handle = open(inputTree, "r")
-    tree = read_tree(tree_file_handle)
+    if DEBUG: print("Reading tree...")
+    tree = read_tree(inputTree)
     
-    decomposed_trees = tree.decompose_tree(maxSize, strategy="centroid", minSize=1)
+    if DEBUG: print("Decomposing tree...")
+    decomposed_trees = tree.decompose_tree(maxSubTreeSize, strategy="centroid", minSize=1)
     nTrees = len(decomposed_trees.keys())
+    if DEBUG: print(f"Has {nTrees} sub trees...")
     timer.toc("Setup")
     
     maxScore = -np.inf
@@ -49,26 +56,28 @@ def run_program(args):
     scores = [0 for i in decomposed_trees.keys()]
     
     def run_subtree(item):
-      i, tree_key, scores = item
+      i, tree_key = item
+      if DEBUG: print(f"On thread id = {i}")
       outputLocation = f"output-{i}.jplace"
       resultTree = f"mytestoutput-{i}.tre"
       query_alignment_file = f"foobar-{i}.fa"
       temporaryResultTree = f"mytestoutput-{i}.tre"
       temporaryBackBoneTree = f"the-result-{i}.tre"
       tree_object = decomposed_trees[tree_key]
-      print(f"Tree ({tree_key}) has {tree_object.count_nodes()} nodes and {tree_object.count_leaves()} leafs!")
+      if DEBUG: print(f"Tree ({tree_key}) has {tree_object.count_nodes()} nodes and {tree_object.count_leaves()} leafs!")
       outputTreeFile = f"decomposed-tree-{i}.tre"
       tree_object.get_tree().write(file=open(outputTreeFile, 'w'),
           schema="newick")
-      generate_fasta_file(tree_object, querySequence, alignment_file, query_alignment_file)
-      run_pplacer(raxml_info_file, outputTreeFile, alignment_file, query_alignment_file, outputLocation)
+      generate_fasta_file(tree_object, querySequence, msaFile, query_alignment_file)
+      run_pplacer(raxml_info_file, outputTreeFile, msaFile, query_alignment_file, outputLocation)
       # overwrite the current file
       place_sequence_in_subtree(outputLocation, temporaryResultTree)
     
       resultTree = read_tree(temporaryResultTree).get_tree()
-      backBoneTree = read_tree(prunedTree).get_tree()
+      backBoneTree = read_tree(inputTree).get_tree()
       backBoneTreeCopy = None
       if VALIDATE: backBoneTreeCopy = dendropy.Tree(backBoneTree)
+      if DEBUG: print(f"Modifying with query sequence {querySequence}")
       modify_backbone_tree_with_placement(resultTree, backBoneTree, querySequence)
       backBoneTree.write(file=open(temporaryBackBoneTree, "w"), schema="newick")
     
@@ -78,14 +87,17 @@ def run_program(args):
       if nTrees == 1:
           scores[i] = 1.0 # only a single tree, don't bother
       else:
-          scores[i] = score_raxml(temporaryBackBoneTree, alignment_file)
+          scores[i] = score_raxml(temporaryBackBoneTree, msaFile)
         
       if DEBUG: print(f"ML score = {score}")
-    
+
     timer.tic("Threaded region")
-    executor = concurrent.futures.ProcessPoolExecutor(numThreads)
-    futures = [executor.submit(run_subtree, (i,tree_key,scores)) for i, tree_key in enumerate(decomposed_trees.keys())]
-    concurrent.futures.wait(futures)
+    #executor = concurrent.futures.ProcessPoolExecutor(numThreads)
+    #futures = [executor.submit(run_subtree, (i,tree_key,scores)) for i, tree_key in enumerate(decomposed_trees.keys())]
+    #concurrent.futures.wait(futures)
+    for i, tree_key in enumerate(decomposed_trees.keys()):
+      run_subtree((i, tree_key))
+
     timer.toc("Threaded region")
     
     # Do maxLoc reduction to find best tree
@@ -114,10 +126,10 @@ if __name__ == "__main__":
     requiredNamed = parser.add_argument_group("required named arguments")
     
     # required args
-    requiredNamed.add_argument('-s', '--info', help='RAxML v7 or v8 info file [NOT raxml-ng]', required=True)
-    requiredNamed.add_argument('-t', '--tree', help='Input tree', required=True)
-    requiredNamed.add_argument('-q', '--query', help='Query taxa to place into tree.', required=True)
-    requiredNamed.add_argument('-r', '--ref-msa', help='Reference MSA', required=True)
+    requiredNamed.add_argument('-s', '--info', help='RAxML v7 or v8 info file [NOT raxml-ng]. Path must be relative to directory flag.', required=True)
+    requiredNamed.add_argument('-t', '--tree', help='Input tree. Path must be relative to directory flag.', required=True)
+    requiredNamed.add_argument('-q', '--query', help='Query taxa to place into tree. Path must be relative to directory flag.', required=True)
+    requiredNamed.add_argument('-r', '--ref-msa', help='Reference MSA. Path must be relative to directory flag.', required=True)
     
     args = parser.parse_args()
     run_program(args)

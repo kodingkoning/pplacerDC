@@ -48,16 +48,14 @@ def label_internal_nodes_subtree_impl(subTreeNode, node, subTreeNodeToNode):
       label_internal_nodes_subtree_impl(subTreeParent, parent, subTreeNodeToNode)
 
 def label_internal_nodes_subtree(subTree, tree, subTreeNodeToNode):
-    visited=()
-    visitedSubTree=()
     if DEBUG: print("Labeling internal nodes...")
     for leaf in tree.leaf_nodes():
       for subTreeLeaf in subTree.leaf_nodes():
         if DEBUG: print(f"Comparing {leaf.taxon.label} and {subTreeLeaf.taxon.label}")
         if leaf.taxon.label == subTreeLeaf.taxon.label:
           if DEBUG: print(f"Taxons matched for {leaf} and {subTreeLeaf}")
-          subTreeParent = subTreeLeaf.adjacent_nodes()[0]
-          parent = leaf.adjacent_nodes()[0]
+          subTreeParent = subTreeLeaf._get_parent_node()
+          parent = leaf._get_parent_node()
           label_internal_nodes_subtree_impl(subTreeParent, parent, subTreeNodeToNode)
 def validate_result_tree(treeWithPlacement, tree, querySequence):
     taxaTreeWithPlacement = [i.taxon.label for i in treeWithPlacement.leaf_nodes()]
@@ -81,8 +79,10 @@ def modify_backbone_tree_with_placement(resultTree, backBoneTree, querySequence)
   assert len(queryNode.sibling_nodes()) == 1, "Expected query node to only have a single sibling"
   siblingToQuery = subTreeNodeToNode[queryNode.sibling_nodes()[0]] # should be real at this point...
 
-  parentSubTree = queryNode.adjacent_nodes()[0]
-  parent = subTreeNodeToNode[parentSubTree]
+  #parentSubTree = queryNode.adjacent_nodes()[0]
+  #parent = subTreeNodeToNode[parentSubTree]
+  #parent = siblingToQuery.adjacent_nodes()[0]
+  parent = siblingToQuery._get_parent_node()
 
   """
   Currently have:
