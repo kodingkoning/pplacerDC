@@ -40,8 +40,9 @@ alignment_file_handle = open(f"{base_dir}/aln_dna.fa", "r")
 alignment, tree = read_alignment_and_tree(alignment_file_handle,
      tree_file_handle)
 
-maxSize = 250 # e.g., this will be a tuneable parameter
+maxSize = 500 # e.g., this will be a tuneable parameter
 decomposed_trees = tree.decompose_tree(maxSize, strategy="centroid", minSize=1)
+nTrees = len(decomposed_trees.keys())
 timer.toc("Setup")
 
 
@@ -92,7 +93,10 @@ def run_subtree(item):
       #threadLocalTimer.toc("tree validation")
 
   #threadLocalTimer.tic("raxml")
-  scores[i] = score_raxml(temporaryBackBoneTree, alignment_file)
+  if nTrees == 1:
+      scores[i] = 1.0 # only a single tree, don't bother
+  else:
+      scores[i] = score_raxml(temporaryBackBoneTree, alignment_file)
     
   #threadLocalTimer.toc("raxml")
   if DEBUG: print(f"ML score = {score}")
