@@ -41,9 +41,9 @@ def label_internal_nodes_subtree_impl(subTreeNode, node, subTreeNodeToNode):
       return
     if DEBUG: print(f"Mapping {subTreeNode} to {node}")
     subTreeNodeToNode[subTreeNode] = node
-    if subTreeNode.adjacent_nodes():
-      subTreeParent = subTreeNode.adjacent_nodes()[0]
-      parent = node.adjacent_nodes()[0]
+    if subTreeNode._get_parent_node():
+      subTreeParent = subTreeNode._get_parent_node()
+      parent = node._get_parent_node()
       if DEBUG: print(f"Mapping {subTreeNode} to {node}")
       label_internal_nodes_subtree_impl(subTreeParent, parent, subTreeNodeToNode)
 
@@ -77,11 +77,8 @@ def modify_backbone_tree_with_placement(resultTree, backBoneTree, querySequence)
     print("Expected non null queryNode")
  
   assert len(queryNode.sibling_nodes()) == 1, "Expected query node to only have a single sibling"
-  siblingToQuery = subTreeNodeToNode[queryNode.sibling_nodes()[0]] # should be real at this point...
-
-  #parentSubTree = queryNode.adjacent_nodes()[0]
-  #parent = subTreeNodeToNode[parentSubTree]
-  #parent = siblingToQuery.adjacent_nodes()[0]
+  siblingToQuery = queryNode.sibling_nodes()[0]
+  siblingToQuery = subTreeNodeToNode[siblingToQuery]
   parent = siblingToQuery._get_parent_node()
 
   """

@@ -69,7 +69,7 @@ def run_program(args):
       tree_object.get_tree().write(file=open(outputTreeFile, 'w'),
           schema="newick")
       generate_fasta_file(tree_object, querySequence, msaFile, query_alignment_file)
-      run_pplacer(raxml_info_file, outputTreeFile, msaFile, query_alignment_file, outputLocation)
+      run_pplacer(raxml_info_file, outputTreeFile, query_alignment_file, outputLocation)
       # overwrite the current file
       place_sequence_in_subtree(outputLocation, temporaryResultTree)
     
@@ -93,7 +93,7 @@ def run_program(args):
 
     timer.tic("Threaded region")
     #executor = concurrent.futures.ProcessPoolExecutor(numThreads)
-    #futures = [executor.submit(run_subtree, (i,tree_key,scores)) for i, tree_key in enumerate(decomposed_trees.keys())]
+    #futures = [executor.submit(run_subtree, (i,tree_key)) for i, tree_key in enumerate(decomposed_trees.keys())]
     #concurrent.futures.wait(futures)
     for i, tree_key in enumerate(decomposed_trees.keys()):
       run_subtree((i, tree_key))

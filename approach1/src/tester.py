@@ -26,7 +26,7 @@ querySequences = read_list("queries.txt")
 oldDir = os.getcwd()
 os.chdir(f"{tmpdir}")
 base_dir = "/home/malachi/work/classes/variable-size/data/500/0"
-tree_size = 500
+tree_size = 150
 raxml_info_file = f"{base_dir}/RAxML_result.REF"
 assert len(querySequences) == 1, "Expected only a single query sequence!"
 querySequence = querySequences[0]
@@ -40,7 +40,7 @@ alignment_file_handle = open(f"{base_dir}/aln_dna.fa", "r")
 alignment, tree = read_alignment_and_tree(alignment_file_handle,
      tree_file_handle)
 
-maxSize = 500 # e.g., this will be a tuneable parameter
+maxSize = 150 # e.g., this will be a tuneable parameter
 decomposed_trees = tree.decompose_tree(maxSize, strategy="centroid", minSize=1)
 nTrees = len(decomposed_trees.keys())
 timer.toc("Setup")
@@ -53,8 +53,7 @@ raxml_info_file = f"{base_dir}/RAxML_info.REF"
 
 scores = [0 for i in decomposed_trees.keys()]
 
-def run_subtree(item):
-  i, tree_key, scores = item
+for i, tree_key in enumerate(decomposed_trees.keys()):
   #threadLocalTimer = t_timers[i]
   # Constants midrun
   outputLocation = f"output-{i}.jplace"
@@ -71,7 +70,7 @@ def run_subtree(item):
   generate_fasta_file(tree_object, querySequence, alignment_file, query_alignment_file)
   #threadLocalTimer.toc("FASTA pruning")
   #threadLocalTimer.tic("pplacer")
-  run_pplacer(raxml_info_file, outputTreeFile, alignment_file, query_alignment_file, outputLocation)
+  run_pplacer(raxml_info_file, outputTreeFile, query_alignment_file, outputLocation)
   #threadLocalTimer.toc("pplacer")
   # overwrite the current file
   #threadLocalTimer.tic("guppy")
@@ -101,12 +100,15 @@ def run_subtree(item):
   #threadLocalTimer.toc("raxml")
   if DEBUG: print(f"ML score = {score}")
 
-timer.tic("Threaded region")
-nThreads = 4
-executor = concurrent.futures.ProcessPoolExecutor(nThreads)
-futures = [executor.submit(run_subtree, (i,tree_key,scores)) for i, tree_key in enumerate(decomposed_trees.keys())]
-concurrent.futures.wait(futures)
-timer.toc("Threaded region")
+#timer.tic("Threaded region")
+#nThreads = 1
+##executor = concurrent.futures.ProcessPoolExecutor(nThreads)
+##futures = [executor.submit(run_subtree, (i,tree_key,scores)) for i, tree_key in enumerate(decomposed_trees.keys())]
+##concurrent.futures.wait(futures)
+#for i, tree_key in enumerate(decomposed_trees.keys()):
+#  run_subtree((i,tree_key, scores))
+#
+#timer.toc("Threaded region")
 
 #for i, tree_key in enumerate(decomposed_trees.keys()):
 #  run_subtree(i,tree_key)
