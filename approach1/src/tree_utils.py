@@ -11,8 +11,9 @@ import random
 DEBUG = False
 
 def read_tree(tree_file):
+    handle = open(tree_file, "r")
     tree = PhylogeneticTree(
-      dendropy.Tree.get_from_stream(tree_file,
+      dendropy.Tree.get_from_stream(handle,
                                     schema="newick",
                                     preserve_underscores=True))
     return tree
@@ -65,3 +66,43 @@ def validate_result_tree(treeWithPlacement, tree, querySequence):
       expression = taxa in treeTaxa or taxa == querySequence
       assert expression, "Expected {taxa} to be in the main tree, or match the query sequence {querySequence}"
       if DEBUG: print(f"{expression}")
+
+def modify_backbone_tree_with_placement(resultTree, backBoneTree, querySequence):
+  subTreeNodeToNode={}
+  label_internal_nodes_subtree(resultTree, backBoneTree, subTreeNodeToNode)
+  queryNode = None
+  for leaf in resultTree.leaf_nodes():
+    if leaf.taxon.label == querySequence:
+      queryNode = leaf
+      break
+  if queryNode == None:
+    print("Expected non null queryNode")
+ 
+  assert len(queryNode.sibling_nodes()) == 1, "Expected query node to only have a single sibling"
+  siblingToQuery = subTreeNodeToNode[queryNode.sibling_nodes()[0]] # should be real at this point...
+
+  parentSubTree = queryNode.adjacent_nodes()[0]
+  parent = subTreeNodeToNode[parentSubTree]
+
+  """
+  Currently have:
+
+  x---------------------------x
+  parent                      eventual siblingToQuery
+  Transform into:
+           q  query node
+           |
+           |
+           |
+  x--------x------------------x
+  parent   unmarked node      siblingToQuery
+  """
+
+  "Create unmarked node, add it into the main tree"
+  unmarkedNode = dendropy.Node(label="unmarkedNode")
+
+  "Disconnect parent from siblingToQuery"
+  parent.remove_child(siblingToQuery)
+  parent.add_child(unmarkedNode)
+  unmarkedNode.add_child(queryNode)
+  unmarkedNode.add_child(siblingToQuery)

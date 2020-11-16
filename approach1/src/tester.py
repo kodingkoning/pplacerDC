@@ -1,9 +1,20 @@
-from tree_decomposition import *
+from tree_utils import *
 from script_executor import *
+from util import *
+import uuid
+import numpy as np
+import shutil
 
 
 ########### TODO ##############
 # - Clean up this code
+
+VALIDATE = False
+DEBUG = False
+
+timer = Timer()
+
+timer.tic("Setup")
 
 os.chdir("test")
 base_dir = "/home/malachi/work/classes/variable-size/data/500/0"
@@ -22,89 +33,64 @@ alignment_file_handle = open(f"{base_dir}/aln_dna.fa", "r")
 alignment, tree = read_alignment_and_tree(alignment_file_handle,
      tree_file_handle)
 
-maxSize = 100 # e.g., this will be a tuneable parameter
+maxSize = 250 # e.g., this will be a tuneable parameter
 decomposed_trees = tree.decompose_tree(maxSize, strategy="centroid", minSize=1)
-assert len(decomposed_trees.keys())*maxSize >= tree_size, "Expected at least 5 sub trees in the decomposition!"
+timer.toc("Setup")
 
-for i, tree_key in enumerate(decomposed_trees.keys()): # For testing!
+# Constants midrun
+outputLocation = "output.jplace"
+resultTree = "mytestoutput.tre"
+raxml_info_file = f"{base_dir}/RAxML_info.REF"
+query_alignment_file = "foobar.fa" # test <-----
+temporaryResultTree = "mytestoutput.tre"
+temporaryBackBoneTree = "the-result.tre" # backbone tree with a tentative placement
+bestTree = "bestTree.tre"
+
+maxScore = -np.inf
+
+for i, tree_key in enumerate(decomposed_trees.keys()):
   if i > 0:
-    continue # only run on first tree...
+    break
   tree_object = decomposed_trees[tree_key]
-  numNodes = tree_object.count_nodes()
-  numLeafs = tree_object.count_leaves()
-  print(f"Tree ({tree_key}) has {numNodes} nodes and {numLeafs} leafs!")
-  # output to a file through dendropy.Tree object
+  print(f"Tree ({tree_key}) has {tree_object.count_nodes()} nodes and {tree_object.count_leaves()} leafs!")
   outputTreeFile = f"decomposed-tree-{tree_key}.tre"
   tree_object.get_tree().write(file=open(outputTreeFile, 'w'),
       schema="newick")
-  #subprocess.call(["cd", "test"])
-  print(os.getcwd())
-  outputLocation = "output.jplace"
-  raxml_info_file = f"{base_dir}/RAxML_info.REF"
-  query_alignment_file = "foobar.fa" # test <-----
+  timer.tic("FASTA pruning")
   generate_fasta_file(tree_object, querySequence, alignment_file, query_alignment_file)
+  timer.toc("FASTA pruning")
+  timer.tic("pplacer")
   run_pplacer(raxml_info_file, outputTreeFile, alignment_file, query_alignment_file, outputLocation)
+  timer.toc("pplacer")
   # overwrite the current file
-  resultTree = "mytestoutput.tre"
-  place_sequence_in_subtree(outputLocation, "mytestoutput.tre")
+  timer.tic("guppy")
+  place_sequence_in_subtree(outputLocation, temporaryResultTree)
+  timer.toc("guppy")
 
-  # Find leaf node matching query sequence
-  treeWithPlacement = read_tree(open(resultTree, "r")).get_tree()
+  timer.tic("tree mod")
+  resultTree = read_tree(temporaryResultTree).get_tree()
+  backBoneTree = read_tree(prunedTree).get_tree()
+  backBoneTreeCopy = None
+  if VALIDATE: backBoneTreeCopy = dendropy.Tree(backBoneTree)
+  modify_backbone_tree_with_placement(resultTree, backBoneTree, querySequence)
+  backBoneTree.write(file=open(temporaryBackBoneTree, "w"), schema="newick")
+  timer.toc("tree mod")
 
-  # Reload original tree, since it seems the initial
-  # tree has been modified by the centroid decomposition
-  theTree = read_tree(open(prunedTree, "r")).get_tree()
-  theTreeCopy = dendropy.Tree(theTree)
+  if VALIDATE:
+      timer.tic("tree validation")
+      validate_result_tree(theTree, theTreeCopy, querySequence)
+      timer.toc("tree validation")
 
-  subTreeNodeToNode={}
-  label_internal_nodes_subtree(treeWithPlacement, theTree, subTreeNodeToNode)
-  #queryNode = treeWithPlacement.find_node_with_label(querySequence)
-  #assert not queryNode, "Expected queryNode to not be None type!"
-  queryNode = None
-  for leaf in treeWithPlacement.leaf_nodes():
-    if leaf.taxon.label == querySequence:
-      queryNode = leaf
-      break
-  if queryNode == None:
-    print("Expected non null queryNode")
- 
-  assert len(queryNode.sibling_nodes()) == 1, "Expected query node to only have a single sibling"
-  siblingToQuery = subTreeNodeToNode[queryNode.sibling_nodes()[0]] # should be real at this point...
-
-  parentSubTree = queryNode.adjacent_nodes()[0]
-  parent = subTreeNodeToNode[parentSubTree]
-
-  """
-  Currently have:
-
-  x---------------------------x
-  parent                      eventual siblingToQuery
-  Transform into:
-           q  query node
-           |
-           |
-           |
-  x--------x------------------x
-  parent   unmarked node      siblingToQuery
-  """
-
-  "Create unmarked node, add it into the main tree"
-  unmarkedNode = dendropy.Node(label="unmarkedNode")
-
-  "Disconnect parent from siblingToQuery"
-  parent.remove_child(siblingToQuery)
-  parent.add_child(unmarkedNode)
-  unmarkedNode.add_child(queryNode)
-  unmarkedNode.add_child(siblingToQuery)
-
-  #theTree.update_bipartitions()
-
-  # Dump out tree
-  theTree.write(file=open("the-result.tre", "w"), schema="newick")
-
-  validate_result_tree(theTree, theTreeCopy, querySequence)
-
-  score = score_raxml("the-result.tre", "aln_dna.fa")
-  print(f"ML score = {score}")
+  timer.tic("raxml")
+  score = score_raxml(temporaryBackBoneTree, alignment_file)
+  if score > maxScore:
+    maxScore = score
+    shutil.move(temporaryBackBoneTree,bestTree)
+    
+  timer.toc("raxml")
+  if DEBUG: print(f"ML score = {score}")
 
 
+
+
+timer.dump()
