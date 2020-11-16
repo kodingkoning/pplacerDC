@@ -67,11 +67,35 @@ for i, tree_key in enumerate(decomposed_trees.keys()): # For testing!
       break
   if queryNode == None:
     print("Expected non null queryNode")
-
+ 
+  assert len(queryNode.sibling_nodes()) == 1, "Expected query node to only have a single sibling"
+  siblingToQuery = subTreeNodeToNode[queryNode.sibling_nodes()[0]] # should be real at this point...
 
   parentSubTree = queryNode.adjacent_nodes()[0]
   parent = subTreeNodeToNode[parentSubTree]
-  parent.add_child(queryNode)
+
+  """
+  Current have:
+
+  x---------------------------x
+  parent                      eventual siblingToQuery
+  Transform into:
+           q  query node
+           |
+           |
+           |
+  x--------x------------------x
+  parent   unmarked node      siblingToQuery
+  """
+
+  "Create unmarked node, add it into the main tree"
+  unmarkedNode = dendropy.Node(label="unmarkedNode")
+
+  "Disconnect parent from siblingToQuery"
+  parent.remove_child(siblingToQuery)
+  parent.add_child(unmarkedNode)
+  unmarkedNode.add_child(queryNode)
+  unmarkedNode.add_child(siblingToQuery)
 
   #theTree.update_bipartitions()
 
