@@ -90,11 +90,8 @@ def run_program(args):
       if DEBUG: print(f"ML score = {scores[i]}")
 
     timer.tic("Threaded region")
-    #executor = concurrent.futures.ProcessPoolExecutor(numThreads)
-    #futures = [executor.submit(run_subtree, (i,tree_key)) for i, tree_key in enumerate(decomposed_trees.keys())]
-    #concurrent.futures.wait(futures)
-    for i, tree_key in enumerate(decomposed_trees.keys()):
-      run_subtree((i,tree_key))
+    with concurrent.futures.ThreadPoolExecutor(max_workers=numThreads) as executor:
+        executor.map(run_subtree, [(i, tree_key) for i, tree_key in enumerate(decomposed_trees.keys())])
     timer.toc("Threaded region")
     
     # Do maxLoc reduction to find best tree
