@@ -1,0 +1,47 @@
+\begin{thebibliography}{1}
+
+\bibitem{balaban_apples_2020}
+Metin Balaban, Shahab Sarmashghi, and Siavash Mirarab.
+\newblock {APPLES}: {Scalable} {Distance}-{Based} {Phylogenetic} {Placement}
+  with or without {Alignments}.
+\newblock {\em Systematic Biology}, 69(3):566--578, May 2020.
+\newblock Publisher: Oxford Academic.
+
+\bibitem{guo}
+Sheng Guo, Li-San Wang, and Junhyong Kim.
+\newblock Large-scale simulation of rna macroevolution by an energy-dependent
+  fitness model, 2009.
+
+\bibitem{raxml}
+Alexey~M Kozlov, Diego Darriba, Tomáš Flouri, Benoit Morel, and Alexandros
+  Stamatakis.
+\newblock {RAxML-NG: a fast, scalable and user-friendly tool for maximum
+  likelihood phylogenetic inference}.
+\newblock {\em Bioinformatics}, 35(21):4453--4455, 05 2019.
+
+\bibitem{sate}
+Kevin Liu, Sindhu Raghavan, Serita Nelesen, C.~Randal Linder, and Tandy Warnow.
+\newblock Rapid and accurate large-scale coestimation of sequence alignments
+  and phylogenetic trees.
+\newblock {\em Science}, 324(5934):1561--1564, 2009.
+
+\bibitem{matsen_pplacer_2010}
+Frederick~A. Matsen, Robin~B. Kodner, and E~Virginia Armbrust.
+\newblock pplacer: linear time maximum-likelihood and {Bayesian} phylogenetic
+  placement of sequences onto a fixed reference tree.
+\newblock {\em BMC Bioinformatics}, 11(1):538, October 2010.
+
+\bibitem{PASTA}
+Siavash Mirarab, Nam Nguyen, Sheng Guo, Li-San Wang, Junhyong Kim, and Tandy
+  Warnow.
+\newblock Pasta: Ultra-large multiple sequence alignment for nucleotide and
+  amino-acid sequences.
+\newblock {\em Journal of Computational Biology}, 22:377--386, 2015.
+
+\bibitem{nguyen_tipp_2014}
+Nam-phuong Nguyen, Siavash Mirarab, Bo~Liu, Mihai Pop, and Tandy Warnow.
+\newblock {TIPP}: taxonomic identification and phylogenetic profiling.
+\newblock {\em Bioinformatics}, 30(24):3548--3555, December 2014.
+\newblock Publisher: Oxford Academic.
+
+\end{thebibliography}
