@@ -13,9 +13,7 @@ import concurrent.futures
 from multiprocessing.pool import ThreadPool as Pool
 
 def run_program(args):
-    print(f"Current working directory is {os.getcwd()}")
     numThreads = int(args.numThreads)
-    print(f"numThreads={numThreads}")
     maxSubTreeSize = int(args.max)
     outputTree = args.output
     raxml_info_file = args.info
@@ -51,7 +49,7 @@ def run_program(args):
     timer.toc("Setup")
     
     maxScore = -np.inf
-    bestTree = "bestTree.tre"
+    bestTree = outputTree
     
     scores = [-np.inf for i in decomposed_trees.keys()]
     
