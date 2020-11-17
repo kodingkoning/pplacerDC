@@ -33,7 +33,6 @@ def generate_fasta_file(subtree, querySequence, referenceFastaFile, outputRefere
         faSomeRecords_error = tmpFileHandle.readlines()
         print(f"Failed to run fasomeRecords.py, it said:\n{faSomeRecords_error}")
     tmpFileHandle.close()
-    os.remove(tmpFile)
     if ret != 0:
         exit(-1)
 
@@ -67,7 +66,6 @@ def run_pplacer(raxml_info_file, backbone_tree, queries, output):
         print(f"Failed to run pplacer, it said:\n{pplacer_error}")
 
     tmpFileHandle.close()
-    os.remove(tmpFile)
     if ret != 0:
       exit(-1)
 
@@ -79,6 +77,7 @@ def score_raxml(treeFile, referenceAln):
     """
     tmpFile = str(uuid.uuid4())
     tmpFileHandle = open(tmpFile,"w")
+    random_prefix = str(uuid.uuid4())
     # generate temporary file handle
     ret = subprocess.call(["raxml-ng",
                      "--msa", referenceAln,
@@ -87,6 +86,7 @@ def score_raxml(treeFile, referenceAln):
                      "--threads", "1", # run in serial
                      "--opt-branches", "off", # do not optimize branch lengths
                      "--opt-model", "off", # do not optimize model conditions
+                     "--prefix", random_prefix, # prevent race condition with random prefix
                      "--evaluate"   # fixed-tree evaluation
                      ],
                      stdout=tmpFileHandle
@@ -98,13 +98,8 @@ def score_raxml(treeFile, referenceAln):
       raxml_error = tmpFileHandle.readlines()
       print(f"Failed to run raxml-ng, it said:\n{raxml_error}")
 
-    # delete temporary file
     tmpFileHandle.close()
-    os.remove(tmpFile)
 
-    # delete raxml files
-    for fl in glob.glob(f"{referenceAln}.raxml*"):
-        os.remove(fl)
     if ret != 0:
       exit(-1)
     return score

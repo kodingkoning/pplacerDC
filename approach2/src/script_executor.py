@@ -123,6 +123,7 @@ def score_raxml(treeFile, referenceAln):
     """
     tmpFile = str(uuid.uuid4())
     tmpFileHandle = open(tmpFile,"w")
+    random_prefix = str(uuid.uuid4())
     # generate temporary file handle
     ret = subprocess.call(["raxml-ng",
                      "--msa", referenceAln,
@@ -131,6 +132,7 @@ def score_raxml(treeFile, referenceAln):
                      "--threads", "1", # run in serial
                      "--opt-branches", "off", # do not optimize branch lengths
                      "--opt-model", "off", # do not optimize model conditions
+                     "--prefix", random_prefix, # do not optimize model conditions
                      "--evaluate"   # fixed-tree evaluation
                      ],
                      stdout=tmpFileHandle
@@ -146,9 +148,6 @@ def score_raxml(treeFile, referenceAln):
     tmpFileHandle.close()
     os.remove(tmpFile)
 
-    # delete raxml files
-    for fl in glob.glob(f"{referenceAln}.raxml*"):
-        os.remove(fl)
     if ret != 0:
       exit(-1)
     return score
