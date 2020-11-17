@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-import numpy as np
 import sys
+import math
 import argparse
 from tree_utils import *
 from script_executor import *
 from util import *
 import uuid
-import numpy as np
 import shutil
 import concurrent
 import concurrent.futures
@@ -48,10 +47,10 @@ def run_program(args):
     if DEBUG: print(f"Has {nTrees} sub trees...")
     timer.toc("Setup")
     
-    maxScore = -np.inf
+    maxScore = -math.inf
     bestTree = outputTree
     
-    scores = [-np.inf for i in decomposed_trees.keys()]
+    scores = [-math.inf for i in decomposed_trees.keys()]
     
     def run_subtree(item):
       i, tree_key = item
@@ -96,7 +95,7 @@ def run_program(args):
     
     # Do maxLoc reduction to find best tree
     bestOne = None
-    maxScore = -np.inf
+    maxScore = -math.inf
     for i, score in enumerate(scores):
       if score > maxScore:
         maxScore = score

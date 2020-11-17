@@ -1,6 +1,5 @@
 import dendropy
 import subprocess
-import numpy as np
 import script_executor as se
 import string
 import random

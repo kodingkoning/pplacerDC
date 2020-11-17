@@ -5,7 +5,7 @@ from tree_utils import *
 import uuid
 import os
 from util import *
-import numpy
+import math
 import argparse
 import shutil
 import concurrent
@@ -48,7 +48,7 @@ def run_program(args):
     timer.toc("apples")
     place_sequence_in_subtree(applesPlacement, Tapples)
 
-    scores = [-np.inf for i in range(nClades+1)] # last position is apples
+    scores = [-math.inf for i in range(nClades+1)] # last position is apples
 
     scores[-1] = score_raxml(Tapples, alignment)
     applesTree = read_tree(Tapples)
@@ -89,7 +89,7 @@ def run_program(args):
 
     # Do maxLoc reduction to find best tree
     bestOne = None
-    maxScore = -np.inf
+    maxScore = -math.inf
     for i, score in enumerate(scores):
       if score > maxScore:
         maxScore = score
