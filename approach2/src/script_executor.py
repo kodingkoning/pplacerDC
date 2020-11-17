@@ -16,7 +16,7 @@ def field_by_regex(regex,log_file_name, fieldnum = 0):
     return field
 def generate_fasta_file(subtree, querySequence, referenceFastaFile, outputReferenceFile, debugOutput=False):
     concatSequences = ""
-    leaves = subtree.leaf_node_names()
+    leaves = [node.taxon.label for node in subtree.leaf_nodes()]
     for leaf in leaves:
       concatSequences += f" {leaf}"
     concatSequences += f" {querySequence}"
@@ -30,7 +30,7 @@ def generate_fasta_file(subtree, querySequence, referenceFastaFile, outputRefere
     tmpFileHandle = open(tmpFile,"w")
     ret = subprocess.call([command], shell=True, stdout=tmpFileHandle)
     if ret != 0:
-        faSomeRecords_error = tmpFileHandle.read_lines()
+        faSomeRecords_error = tmpFileHandle.readlines()
         print(f"Failed to run fasomeRecords.py, it said:\n{faSomeRecords_error}")
     tmpFileHandle.close()
     os.remove(tmpFile)
@@ -63,7 +63,7 @@ def run_pplacer(raxml_info_file, backbone_tree, queries, output):
                        stdout=tmpFileHandle
                        )
     if ret != 0:
-        pplacer_error = tmpFileHandle.read_lines()
+        pplacer_error = tmpFileHandle.readlines()
         print(f"Failed to run pplacer, it said:\n{pplacer_error}")
 
     tmpFileHandle.close()
@@ -80,14 +80,15 @@ def run_apples(alignmentFile, backBoneTreeFile, querySequenceAlignmentFile, outp
                        "--threads", str(threads), # num threads to run
                        "-q", querySequenceAlignmentFile,
                        ],
-                       shell=True,
+                       #shell=True,
                        stdout=tmpFileHandle
                        )
+    tmpFileHandle.close()
     if ret != 0:
-        apples_error = tmpFileHandle.read_lines()
+        reader = open(tmpFile, "r")
+        apples_error = reader.readlines()
         print(f"Failed to run apples, it said:\n{apples_error}")
 
-    tmpFileHandle.close()
     os.remove(tmpFile)
     if ret != 0:
       exit(-1)
@@ -116,7 +117,7 @@ def score_raxml(treeFile, referenceAln):
     regex = "Final LogLikelihood: (.+)"
     score = field_by_regex(regex, tmpFile)[0]
     if ret != 0:
-      raxml_error = tmpFileHandle.read_lines()
+      raxml_error = tmpFileHandle.readlines()
       print(f"Failed to run raxml-ng, it said:\n{raxml_error}")
 
     # delete temporary file

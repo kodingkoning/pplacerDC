@@ -30,7 +30,7 @@ def generate_fasta_file(subtree, querySequence, referenceFastaFile, outputRefere
     tmpFileHandle = open(tmpFile,"w")
     ret = subprocess.call([command], shell=True, stdout=tmpFileHandle)
     if ret != 0:
-        faSomeRecords_error = tmpFileHandle.read_lines()
+        faSomeRecords_error = tmpFileHandle.readlines()
         print(f"Failed to run fasomeRecords.py, it said:\n{faSomeRecords_error}")
     tmpFileHandle.close()
     os.remove(tmpFile)
@@ -63,7 +63,7 @@ def run_pplacer(raxml_info_file, backbone_tree, queries, output):
                        stdout=tmpFileHandle
                        )
     if ret != 0:
-        pplacer_error = tmpFileHandle.read_lines()
+        pplacer_error = tmpFileHandle.readlines()
         print(f"Failed to run pplacer, it said:\n{pplacer_error}")
 
     tmpFileHandle.close()
@@ -95,7 +95,7 @@ def score_raxml(treeFile, referenceAln):
     regex = "Final LogLikelihood: (.+)"
     score = field_by_regex(regex, tmpFile)[0]
     if ret != 0:
-      raxml_error = tmpFileHandle.read_lines()
+      raxml_error = tmpFileHandle.readlines()
       print(f"Failed to run raxml-ng, it said:\n{raxml_error}")
 
     # delete temporary file

@@ -6,7 +6,7 @@ import uuid
 import os
 from util import *
 import numpy
-import parser
+import argparse
 
 def run_program(args):
     tree = args.tree
@@ -33,7 +33,7 @@ def run_program(args):
     applesPlacement = "apples.jplace"
     Tapples = f"result-{nClades}.tre"
     queryAlignment = "query.fa"
-    generate_fasta_file(tree, query, alignment, queryAlignment)
+    generate_fasta_file(backboneTree, query, alignment, queryAlignment)
     timer.toc("setup")
     
     timer.tic("apples")
@@ -66,7 +66,7 @@ def run_program(args):
         return
     # TODO: turn on threading
     for thread in range(nClades):
-        execute_with_random_clade(thread):
+        execute_with_random_clade(thread)
 
     # Do maxLoc reduction to find best tree
     bestOne = None
@@ -98,7 +98,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Place a query sequence into a backbone tree.')
     # optional args
     parser.add_argument('-j', '--numThreads', default=1, help='Number of threads (default: 1)')
-    parser.add_argument('-m', '--max', default=500, help='Maximum size of subtree to hand to pplacer')
+    parser.add_argument('-m', '--maxPplacer', default=500, help='Maximum size of subtree to hand to pplacer')
+    parser.add_argument('-n', '--numClades', default=1, help='Number of (random) clades to consider')
     parser.add_argument('-o', '--output', default='tree.tre', help='Resultant tree with placement')
     parser.add_argument('-v', '--verbose', default=False, help='Run in verbose mode')
     

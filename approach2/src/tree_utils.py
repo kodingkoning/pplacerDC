@@ -9,10 +9,7 @@ DEBUG = False
 
 def read_tree(tree_file):
     handle = open(tree_file, "r")
-    tree = 
-      dendropy.Tree.get_from_stream(handle,
-                                    schema="newick",
-                                    preserve_underscores=True)
+    tree = dendropy.Tree.get_from_stream(handle,schema="newick",preserve_underscores=True)
     return tree
 
 def read_list(fileName):
@@ -127,7 +124,7 @@ def collectSubtreeTaxa(node, numTaxa):
     taxons = []
     shuffledChildren = node.child_nodes().copy()
     random.shuffle(shuffledChildren)
-    for child in shuffledChildren
+    for child in shuffledChildren:
         taxons.extend(collectSubtreeTaxa(child, numTaxa - len(taxons)))
         if len(taxons) >= numTaxa:
             return taxons
