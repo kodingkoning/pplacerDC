@@ -23,8 +23,8 @@ def run_program(args):
     querySequence = args.query
     msaFile = args.ref_msa
     verbose = args.verbose
-    VALIDATE = True
-    DEBUG = True
+    VALIDATE = False
+    DEBUG = False
     if verbose:
       VALIDATE = True
       DEBUG = True
@@ -53,7 +53,7 @@ def run_program(args):
     maxScore = -np.inf
     bestTree = "bestTree.tre"
     
-    scores = [0 for i in decomposed_trees.keys()]
+    scores = [-np.inf for i in decomposed_trees.keys()]
     
     def run_subtree(item):
       i, tree_key = item
@@ -96,8 +96,7 @@ def run_program(args):
     #futures = [executor.submit(run_subtree, (i,tree_key)) for i, tree_key in enumerate(decomposed_trees.keys())]
     #concurrent.futures.wait(futures)
     for i, tree_key in enumerate(decomposed_trees.keys()):
-      run_subtree((i, tree_key))
-
+      run_subtree((i,tree_key))
     timer.toc("Threaded region")
     
     # Do maxLoc reduction to find best tree
