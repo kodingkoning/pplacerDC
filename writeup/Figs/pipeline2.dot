@@ -25,8 +25,16 @@ digraph G {
 		randomClade1 -> pplacer1 -> place1 -> raxml1;
 		randomClade2 -> pplacer2 -> place2 -> raxml2;
 		randomClade3 -> pplacer3 -> place3 -> raxml3;
+    raxmlapples
 		label = "Parallel loop over (random) clases of Tapples with the placement (placement removed)";
 	}
+  subgraph cluster_1 {
+		//style=filled;
+		color=blue;
+		node [style=filled,color=white];
+    apples
+		label = "Run parallel APPLES";
+  }
 
 	start -> apples;
   apples -> randomClade1;

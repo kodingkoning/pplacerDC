@@ -15,8 +15,8 @@ digraph G {
   decompose[label="centroid decomposition"]
 
 	subgraph cluster_0 {
-		style=filled;
-		color=lightgrey;
+		//style=filled;
+		color=blue;
 		node [style=filled,color=white];
 		pplacer1 -> place1 -> raxml1;
 		pplacer2 -> place2 -> raxml2;

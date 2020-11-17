@@ -71,6 +71,19 @@ each of the placement trees. Based on the location of the best score on
 the best subtree, the algorithm returns the corresponding location on
 the original backbone tree. Pseudocode for approach 1 is shown below in
 algorithm \ref{alg:approach1}.
+The pipeline for approach 1 is also shown below in figure \ref{fig:approach1-pipeline}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Figs/pipeline1.png}
+\label{fig:approach1-pipeline}
+\caption{Pipeline for approach 1. Placements inside the parallel region over
+the sub trees identified by the centroid decomposition are evaluated
+using pplacer.
+The overall placement on the backbone trees is scored by the log-likelihood
+from running raxml-ng in fixed tree, fixed parameter mode.
+}
+\end{figure}
 
 \subsection{Approach 2}
 
@@ -101,6 +114,22 @@ fixed tree mode, is then chosen as the placement returned by the
 algorithm. Note also that the original placement, as determine by
 APPLES, is also included in this consideration. Pseudocode for approach
 2 is shown below in algorithm \ref{alg:approach2}.
+The pipeline for approach 2 is also shown below in figure \ref{fig:approach2-pipeline}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Figs/pipeline2.png}
+\label{fig:approach2-pipeline}
+\caption{Pipeline for approach 2.
+APPLES is initially used to find a tentative placement for the query sequence.
+Random clades about the query placement are generated
+up to some provided fixed size.
+The query sequence is then placed in each clade
+using pplacer.
+The overall placement on the backbone trees is scored by the log-likelihood
+from running raxml-ng in fixed tree, fixed parameter mode.
+}
+\end{figure}
 
 \section{Data}
 
