@@ -43,7 +43,7 @@ def label_internal_nodes_subtree_impl(subTreeNode, node, queryNode, subTreeNodeT
       parent = node._get_parent_node()
       # skip parent of the query node, since that doesn't exist in the backBoneTree
       if subTreeParent == queryNodeParent:
-        print("Skipping parent of query node in sub tree")
+        if DEBUG: print("Skipping parent of query node in sub tree")
         assert subTreeParent._get_parent_node()
         subTreeParent = subTreeParent._get_parent_node()
       label_internal_nodes_subtree_impl(subTreeParent, parent, queryNode, subTreeNodeToNode)

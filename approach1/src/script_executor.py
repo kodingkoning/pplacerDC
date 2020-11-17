@@ -26,7 +26,17 @@ def generate_fasta_file(subtree, querySequence, referenceFastaFile, outputRefere
     command += " --outfile " + outputReferenceFile
     if debugOutput:
         print(f"Command =\n{command}")
-    subprocess.call([command], shell=True)
+    tmpFile = str(uuid.uuid4())
+    tmpFileHandle = open(tmpFile,"w")
+    ret = subprocess.call([command], shell=True, stdout=tmpFileHandle)
+    if ret != 0:
+        faSomeRecords_error = tmpFileHandle.read_lines()
+        print(f"Failed to run fasomeRecords.py, it said:\n{faSomeRecords_error}")
+    tmpFileHandle.close()
+    os.remove(tmpFile)
+    if ret != 0:
+        exit(-1)
+
 
 def place_sequence_in_subtree(pplacerOutput, outputTreeFileName):
     subprocess.call(["guppy","tog",
@@ -34,25 +44,33 @@ def place_sequence_in_subtree(pplacerOutput, outputTreeFileName):
         pplacerOutput
         ])
 
-def prune_query(referenceTree, querySequence, outputTree):
-    fileHandle = open(outputTree, "w")
-    p = subprocess.call(["nw_prune", referenceTree, querySequence], stdout=fileHandle)
-
 def run_pplacer(raxml_info_file, backbone_tree, queries, output):
     # Ubuntu 18.0.4 workaround for a bad assertion in loadLocale.c:129
     # THIS IS A BODGE!!!
     # see: https://askubuntu.com/questions/1081901/what-is-the-correct-way-to-fix-an-assertion-in-loadlocale-c
     # for more details
     os.environ["LC_ALL"] = "C"
-    subprocess.call(["pplacer",
+    tmpFile = str(uuid.uuid4())
+    tmpFileHandle = open(tmpFile,"w")
+    ret = subprocess.call(["pplacer",
                        "-m", "GTR", # model
                        "-s", raxml_info_file, # raxml info file location
                        "-t", backbone_tree, # backbone tree
                        "-o", f"{output}", # output location
                        "-j", "1", # Run on single thread
                        queries    # Name of file containing query sequences
-                       ]
+                       ],
+                       stdout=tmpFileHandle
                        )
+    if ret != 0:
+        pplacer_error = tmpFileHandle.read_lines()
+        print(f"Failed to run pplacer, it said:\n{pplacer_error}")
+
+    tmpFileHandle.close()
+    os.remove(tmpFile)
+    if ret != 0:
+      exit(-1)
+
 def score_raxml(treeFile, referenceAln):
     """
     Run RAxML-ng in fixed tree mode to determine the best LogLikelihood score possible
@@ -62,7 +80,7 @@ def score_raxml(treeFile, referenceAln):
     tmpFile = str(uuid.uuid4())
     tmpFileHandle = open(tmpFile,"w")
     # generate temporary file handle
-    subprocess.call(["raxml-ng",
+    ret = subprocess.call(["raxml-ng",
                      "--msa", referenceAln,
                      "--model", "GTR+G",
                      "--tree", treeFile,
@@ -76,6 +94,10 @@ def score_raxml(treeFile, referenceAln):
     # parse the output for the score
     regex = "Final LogLikelihood: (.+)"
     score = field_by_regex(regex, tmpFile)[0]
+    if ret != 0:
+      raxml_error = tmpFileHandle.read_lines()
+      print(f"Failed to run raxml-ng, it said:\n{raxml_error}")
+
     # delete temporary file
     tmpFileHandle.close()
     os.remove(tmpFile)
@@ -83,4 +105,6 @@ def score_raxml(treeFile, referenceAln):
     # delete raxml files
     for fl in glob.glob(f"{referenceAln}.raxml*"):
         os.remove(fl)
+    if ret != 0:
+      exit(-1)
     return score
