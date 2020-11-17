@@ -2,7 +2,6 @@ from sepp_utils.alignment import MutableAlignment
 from sepp_utils.tree import PhylogeneticTree
 import dendropy
 import subprocess
-import os # TODO: may not be portable
 import numpy as np
 import script_executor as se
 import string
@@ -27,28 +26,37 @@ def read_alignment_and_tree(alignment_file, tree_file):
                                     preserve_underscores=True))
     return (alignment, tree)
 
-# TODO: system calls may not be reliable on all systems
-# Useful for pruning a query sequence from the tree for leave-one-out
-# or leave-many-out studies
 def read_list(fileName):
     with open(fileName) as fileHandle:
         content = fileHandle.readlines()
     content=[x.strip() for x in content]
     return content
 
-def label_internal_nodes_subtree_impl(subTreeNode, node, subTreeNodeToNode):
+def label_internal_nodes_subtree_impl(subTreeNode, node, queryNode, subTreeNodeToNode):
     if subTreeNode in subTreeNodeToNode:
-      return
+      return # nothing to do
     if DEBUG: print(f"Mapping {subTreeNode} to {node}")
     subTreeNodeToNode[subTreeNode] = node
-    if subTreeNode._get_parent_node():
+    queryNodeParent = queryNode._get_parent_node()
+    if subTreeNode._get_parent_node() and node._get_parent_node():
       subTreeParent = subTreeNode._get_parent_node()
       parent = node._get_parent_node()
-      if DEBUG: print(f"Mapping {subTreeNode} to {node}")
-      label_internal_nodes_subtree_impl(subTreeParent, parent, subTreeNodeToNode)
+      # skip parent of the query node, since that doesn't exist in the backBoneTree
+      if subTreeParent == queryNodeParent:
+        print("Skipping parent of query node in sub tree")
+        assert subTreeParent._get_parent_node()
+        subTreeParent = subTreeParent._get_parent_node()
+      label_internal_nodes_subtree_impl(subTreeParent, parent, queryNode, subTreeNodeToNode)
 
-def label_internal_nodes_subtree(subTree, tree, subTreeNodeToNode):
+def label_internal_nodes_subtree(subTree, tree, querySequence, subTreeNodeToNode):
     if DEBUG: print("Labeling internal nodes...")
+    # Grab queryNode
+    queryNode = None
+    for leaf in subTree.leaf_nodes():
+      if leaf.taxon.label == querySequence:
+        queryNode = leaf
+    assert queryNode, "Expected queryNode to be non-null"
+
     for leaf in tree.leaf_nodes():
       for subTreeLeaf in subTree.leaf_nodes():
         if DEBUG: print(f"Comparing {leaf.taxon.label} and {subTreeLeaf.taxon.label}")
@@ -56,7 +64,7 @@ def label_internal_nodes_subtree(subTree, tree, subTreeNodeToNode):
           if DEBUG: print(f"Taxons matched for {leaf} and {subTreeLeaf}")
           subTreeParent = subTreeLeaf._get_parent_node()
           parent = leaf._get_parent_node()
-          label_internal_nodes_subtree_impl(subTreeParent, parent, subTreeNodeToNode)
+          label_internal_nodes_subtree_impl(subTreeParent, parent, queryNode, subTreeNodeToNode)
 def validate_result_tree(treeWithPlacement, tree, querySequence):
     taxaTreeWithPlacement = [i.taxon.label for i in treeWithPlacement.leaf_nodes()]
     treeTaxa = [i.taxon.label for i in tree.leaf_nodes()]
@@ -67,7 +75,7 @@ def validate_result_tree(treeWithPlacement, tree, querySequence):
 
 def modify_backbone_tree_with_placement(resultTree, backBoneTree, querySequence):
   subTreeNodeToNode={}
-  label_internal_nodes_subtree(resultTree, backBoneTree, subTreeNodeToNode)
+  label_internal_nodes_subtree(resultTree, backBoneTree, querySequence, subTreeNodeToNode)
   queryNode = None
   for leaf in resultTree.leaf_nodes():
     if leaf.taxon.label == querySequence:

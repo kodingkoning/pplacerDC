@@ -40,7 +40,7 @@ alignment_file_handle = open(f"{base_dir}/aln_dna.fa", "r")
 alignment, tree = read_alignment_and_tree(alignment_file_handle,
      tree_file_handle)
 
-maxSize = 150 # e.g., this will be a tuneable parameter
+maxSize = 125 # e.g., this will be a tuneable parameter
 decomposed_trees = tree.decompose_tree(maxSize, strategy="centroid", minSize=1)
 nTrees = len(decomposed_trees.keys())
 timer.toc("Setup")
