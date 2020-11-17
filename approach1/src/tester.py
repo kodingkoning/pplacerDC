@@ -20,6 +20,7 @@ timer.tic("Program execution")
 
 timer.tic("Setup")
 tmpdir = str(uuid.uuid4())
+#tmpdir = "test"
 os.mkdir(tmpdir)
 querySequences = read_list("queries.txt")
 #shutil.copyfile("faSomeRecords.py", f"{tmpdir}/faSomeRecords.py")
@@ -51,7 +52,7 @@ bestTree = "bestTree.tre"
 raxml_info_file = f"{base_dir}/RAxML_info.REF"
 
 
-scores = [0 for i in decomposed_trees.keys()]
+scores = [-np.inf for i in decomposed_trees.keys()]
 
 for i, tree_key in enumerate(decomposed_trees.keys()):
   #threadLocalTimer = t_timers[i]

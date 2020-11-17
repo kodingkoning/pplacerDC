@@ -50,6 +50,7 @@ def label_internal_nodes_subtree_impl(subTreeNode, node, queryNode, subTreeNodeT
 
 def label_internal_nodes_subtree(subTree, tree, querySequence, subTreeNodeToNode):
     if DEBUG: print("Labeling internal nodes...")
+    if DEBUG: print(f"subTree has {len(subTree.leaf_nodes())} leaf nodes and {len(subTree.nodes())} nodes")
     # Grab queryNode
     queryNode = None
     for leaf in subTree.leaf_nodes():
@@ -59,18 +60,20 @@ def label_internal_nodes_subtree(subTree, tree, querySequence, subTreeNodeToNode
 
     for leaf in tree.leaf_nodes():
       for subTreeLeaf in subTree.leaf_nodes():
-        if DEBUG: print(f"Comparing {leaf.taxon.label} and {subTreeLeaf.taxon.label}")
+        #if DEBUG: print(f"Comparing {leaf.taxon.label} and {subTreeLeaf.taxon.label}")
         if leaf.taxon.label == subTreeLeaf.taxon.label:
-          if DEBUG: print(f"Taxons matched for {leaf} and {subTreeLeaf}")
+          #if DEBUG: print(f"Taxons matched for {leaf} and {subTreeLeaf}")
           subTreeParent = subTreeLeaf._get_parent_node()
           parent = leaf._get_parent_node()
+          subTreeNodeToNode[subTreeLeaf] = leaf
           label_internal_nodes_subtree_impl(subTreeParent, parent, queryNode, subTreeNodeToNode)
+    if DEBUG: print(f"subTreeNodeToNode has {len(subTreeNodeToNode.keys())}")
 def validate_result_tree(treeWithPlacement, tree, querySequence):
     taxaTreeWithPlacement = [i.taxon.label for i in treeWithPlacement.leaf_nodes()]
     treeTaxa = [i.taxon.label for i in tree.leaf_nodes()]
     for taxa in taxaTreeWithPlacement:
       expression = taxa in treeTaxa or taxa == querySequence
-      assert expression, "Expected {taxa} to be in the main tree, or match the query sequence {querySequence}"
+      assert expression, f"Expected {taxa} to be in the main tree, or match the query sequence {querySequence}"
       if DEBUG: print(f"{expression}")
 
 def modify_backbone_tree_with_placement(resultTree, backBoneTree, querySequence):
