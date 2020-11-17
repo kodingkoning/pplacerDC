@@ -14,6 +14,28 @@ def field_by_regex(regex,log_file_name, fieldnum = 0):
         if m:
             field.append(float(m.groups()[fieldnum]))
     return field
+def generate_fasta_file_apples(subtree, querySequence, referenceFastaFile, outputReferenceFile, debugOutput=False):
+    concatSequences = ""
+    #leaves = [node.taxon.label for node in subtree.leaf_nodes()]
+    #for leaf in leaves:
+    #  concatSequences += f" {leaf}"
+    concatSequences += f" {querySequence}"
+    command = "faSomeRecords.py"
+    command += " --records " + concatSequences
+    command += " --fasta " + referenceFastaFile
+    command += " --outfile " + outputReferenceFile
+    if debugOutput:
+        print(f"Command =\n{command}")
+    tmpFile = str(uuid.uuid4())
+    tmpFileHandle = open(tmpFile,"w")
+    ret = subprocess.call([command], shell=True, stdout=tmpFileHandle)
+    if ret != 0:
+        faSomeRecords_error = tmpFileHandle.readlines()
+        print(f"Failed to run fasomeRecords.py, it said:\n{faSomeRecords_error}")
+    tmpFileHandle.close()
+    os.remove(tmpFile)
+    if ret != 0:
+        exit(-1)
 def generate_fasta_file(subtree, querySequence, referenceFastaFile, outputReferenceFile, debugOutput=False):
     concatSequences = ""
     leaves = [node.taxon.label for node in subtree.leaf_nodes()]

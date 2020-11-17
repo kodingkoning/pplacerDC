@@ -56,6 +56,7 @@ def label_internal_nodes_subtree(subTree, tree, querySequence, subTreeNodeToNode
     for leaf in subTree.leaf_nodes():
       if leaf.taxon.label == querySequence:
         queryNode = leaf
+        break
     assert queryNode, "Expected queryNode to be non-null"
 
     for leaf in tree.leaf_nodes():
