@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import dendropy
 import subtree_code
 
