@@ -21,7 +21,7 @@ def generate_fasta_file_apples(subtree, querySequence, referenceFastaFile, outpu
     #for leaf in leaves:
     #  concatSequences += f" {leaf}"
     concatSequences += f" {querySequence}"
-    command = os.getcwd() + "/../../../common/faSomeRecords.py" #TODO: make sure this path doesn't change if changing the project structure
+    command = "faSomeRecords.py"
     command += " --records " + concatSequences
     command += " --fasta " + referenceFastaFile
     command += " --outfile " + outputReferenceFile
@@ -137,7 +137,8 @@ def score_raxml(treeFile, referenceAln):
                      "--prefix", random_prefix, # do not optimize model conditions
                      "--evaluate"   # fixed-tree evaluation
                      ],
-                     stdout=tmpFileHandle
+                     stdout=tmpFileHandle,
+                     stderr=tmpFileHandle
                      )
     # parse the output for the score
     regex = "Final LogLikelihood: (.+)"
