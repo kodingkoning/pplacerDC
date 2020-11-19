@@ -21,7 +21,7 @@ def generate_fasta_file_apples(subtree, querySequence, referenceFastaFile, outpu
     #for leaf in leaves:
     #  concatSequences += f" {leaf}"
     concatSequences += f" {querySequence}"
-    command = os.getcwd() + "/../../../common/faSomeRecords.py" #TODO: make sure this path doesn't change if changing the project structure
+    command = "faSomeRecords.py"
     command += " --records " + concatSequences
     command += " --fasta " + referenceFastaFile
     command += " --outfile " + outputReferenceFile
