@@ -14,6 +14,7 @@ def field_by_regex(regex,log_file_name, fieldnum = 0):
         if m:
             field.append(float(m.groups()[fieldnum]))
     return field
+
 def generate_fasta_file_apples(subtree, querySequence, referenceFastaFile, outputReferenceFile, debugOutput=False):
     concatSequences = ""
     #leaves = [node.taxon.label for node in subtree.leaf_nodes()]
@@ -36,6 +37,7 @@ def generate_fasta_file_apples(subtree, querySequence, referenceFastaFile, outpu
     os.remove(tmpFile)
     if ret != 0:
         exit(-1)
+
 def generate_fasta_file(subtree, querySequence, referenceFastaFile, outputReferenceFile, debugOutput=False):
     concatSequences = ""
     leaves = [node.taxon.label for node in subtree.leaf_nodes()]
