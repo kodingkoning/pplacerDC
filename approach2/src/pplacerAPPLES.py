@@ -22,7 +22,7 @@ def run_program(args):
     bestTree = args.output
     verbose = bool(args.verbose)
     DEBUG = verbose
-    timer = Timer()
+    timer = util.Timer()
     timer.tic("execution")
     timer.tic("setup")
     tmpdir = str(uuid.uuid4())
@@ -30,28 +30,29 @@ def run_program(args):
     oldDir = os.getcwd()
     os.chdir(tmpdir)
 
-    tree = tree if tree.startswith("/") or tree.startswith("~") else f"{oldDir}/{tree}"
-    alignment = alignment if alignment.startswith("/") or alignment.startswith("~") else f"{oldDir}/{alignment}"
+    test_str = f"{tree}"
+    tree = tree if (tree.startswith("/") or tree.startswith("~")) else f"{oldDir}/{tree}"
+    alignment = alignment if (alignment.startswith("/") or alignment.startswith("~")) else f"{oldDir}/{alignment}"
     raxml_info_file = raxml_info_file if raxml_info_file.startswith("/") or raxml_info_file.startswith("~") else f"{oldDir}/{raxml_info_file}"
 
-    backboneTree = read_tree(tree)
+    backboneTree = tree_utils.read_tree(tree)
 
     applesPlacement = "apples.jplace"
     Tapples = f"result-{nClades}.tre"
     queryAlignment = "query.fa"
     # query.fa must contain only the alignment for the query sequence
-    generate_fasta_file_apples(backboneTree, query, alignment, queryAlignment)
+    script_executor.generate_fasta_file_apples(backboneTree, query, alignment, queryAlignment)
     timer.toc("setup")
     
     timer.tic("apples")
-    run_apples(alignment, tree, queryAlignment, applesPlacement, numThreads)
+    script_executor.run_apples(alignment, tree, queryAlignment, applesPlacement, numThreads)
     timer.toc("apples")
-    place_sequence_in_subtree(applesPlacement, Tapples)
+    script_executor.place_sequence_in_subtree(applesPlacement, Tapples)
 
     scores = [-math.inf for i in range(nClades+1)] # last position is apples
 
-    scores[-1] = score_raxml(Tapples, alignment)
-    applesTree = read_tree(Tapples)
+    scores[-1] = script_executor.score_raxml(Tapples, alignment)
+    applesTree = tree_utils.read_tree(Tapples)
 
     queryNode = None
     for leaf in applesTree.leaf_nodes():
@@ -62,22 +63,22 @@ def run_program(args):
 
     def execute_with_random_clade(item):
         threadIdx = item
-        cladeNodes = sampleCompact(queryNode, maxPplacer)
+        cladeNodes = tree_utils.sampleCompact(queryNode, maxPplacer)
         outputSubTree = f"clade-subtree-{threadIdx}.tre"
         subTree = backboneTree.extract_tree_with_taxa_labels(cladeNodes)
         subTree.write(file=open(outputSubTree, "w"), schema="newick")
         queryAlignment = f"query-{threadIdx}.fa"
-        generate_fasta_file(subTree, query, alignment, queryAlignment)
+        script_executor.generate_fasta_file(subTree, query, alignment, queryAlignment)
         placementOutput = f"pplacer-{threadIdx}.jplace"
-        run_pplacer(raxml_info_file, outputSubTree, queryAlignment, placementOutput)
+        script_executor.run_pplacer(raxml_info_file, outputSubTree, queryAlignment, placementOutput)
         subTreeWithPlacement = f"subtree-with-placement-{threadIdx}.tre"
-        place_sequence_in_subtree(placementOutput, subTreeWithPlacement)
-        resultTree = read_tree(subTreeWithPlacement)
-        newbackboneTree = read_tree(tree)
-        modify_backbone_tree_with_placement(resultTree, newbackboneTree, query)
+        script_executor.place_sequence_in_subtree(placementOutput, subTreeWithPlacement)
+        resultTree = tree_utils.read_tree(subTreeWithPlacement)
+        newbackboneTree = tree_utils.read_tree(tree)
+        tree_utils.modify_backbone_tree_with_placement(resultTree, newbackboneTree, query)
         temporaryBackBoneTree = f"result-{threadIdx}.tre"
         newbackboneTree.write(file=open(temporaryBackBoneTree, "w"), schema="newick")
-        scores[threadIdx] = score_raxml(temporaryBackBoneTree, alignment)
+        scores[threadIdx] = script_executor.score_raxml(temporaryBackBoneTree, alignment)
         return
     timer.tic("Threaded region")
     #for thread in range(nClades):

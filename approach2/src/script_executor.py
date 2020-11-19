@@ -21,14 +21,14 @@ def generate_fasta_file_apples(subtree, querySequence, referenceFastaFile, outpu
     #for leaf in leaves:
     #  concatSequences += f" {leaf}"
     concatSequences += f" {querySequence}"
-    command = "faSomeRecords.py"
+    command = os.getcwd() + "/../../../common/faSomeRecords.py" #TODO: make sure this path doesn't change if changing the project structure
     command += " --records " + concatSequences
     command += " --fasta " + referenceFastaFile
     command += " --outfile " + outputReferenceFile
     if debugOutput:
         print(f"Command =\n{command}")
     tmpFile = str(uuid.uuid4())
-    tmpFileHandle = open(tmpFile,"w")
+    tmpFileHandle = open(tmpFile,"w+")
     ret = subprocess.call([command], shell=True, stdout=tmpFileHandle)
     if ret != 0:
         faSomeRecords_error = tmpFileHandle.readlines()
@@ -141,8 +141,13 @@ def score_raxml(treeFile, referenceAln):
                      )
     # parse the output for the score
     regex = "Final LogLikelihood: (.+)"
+    # fields = field_by_regex(regex, tmpFile)
+    # score = 0
+    # if len(fields):
+    #     score = fields[0]
     score = field_by_regex(regex, tmpFile)[0]
     if ret != 0:
+      print(ret)
       raxml_error = tmpFileHandle.readlines()
       print(f"Failed to run raxml-ng, it said:\n{raxml_error}")
 
