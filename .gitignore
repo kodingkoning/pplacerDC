@@ -1,3 +1,7 @@
+# Results files (output for each query)
+data/train/1000M1/1000,1000,.0000082,.005,medium_gap_pdf,GTR+second,35,2.0,1.0/R0/S*/*
+data/train/1000M1/1000,1000,.0000082,.005,medium_gap_pdf,GTR+second,35,2.0,1.0/R1/S*/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

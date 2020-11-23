@@ -7,7 +7,7 @@
         "pendant_length"
     ],
     "metadata": {
-        "invocation": "/home/erk24/miniconda3/bin/run_apples.py -t /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R0//SFDJ/backbone.tree -s /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R0//SFDJ/ref.fa -q /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R0//SFDJ/query.fa -T 1 -o /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R0//SFDJ/apples.jplace"
+        "invocation": "/home/erk24/miniconda3/bin/run_apples.py -t /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R0//SFDJ/backbone.tree -s /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R0//SFDJ/ref.fa -q /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R0//SFDJ/query.fa -T 4 -o /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R0//SFDJ/apples.jplace"
     },
     "placements": [
         {

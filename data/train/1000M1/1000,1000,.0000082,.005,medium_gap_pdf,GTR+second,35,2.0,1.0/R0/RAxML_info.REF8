@@ -6,8 +6,8 @@ IMPORTANT WARNING
 Found 1 sequence that is exactly identical to other sequences in the alignment.
 Normally they should be excluded from the analysis.
 
-Just in case you might need it, an alignment file with 
-sequence duplicates removed is printed to file /home/ekoning2/scratch/cs581-project/data/train/1000M1/1000M1/R0//rose.aln.true.fasta.reduced
+An alignment file with sequence duplicates removed has already
+been printed to file /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R0/rose.aln.true.fasta.reduced
 
 
 Using BFGS method to optimize GTR rate parameters, to disable this specify "--no-bfgs" 
@@ -54,14 +54,14 @@ Substitution Matrix: GTR
 
 RAxML was called as follows:
 
-./raxmlHPC-PTHREADS -f e -t /home/ekoning2/scratch/cs581-project/data/train/1000M1/1000M1/R0//tree.nwk -m GTRGAMMA -s /home/ekoning2/scratch/cs581-project/data/train/1000M1/1000M1/R0//rose.aln.true.fasta -n REF8 -p 1984 -T 8 -w /home/ekoning2/scratch/cs581-project/data/train/1000M1/1000M1/R0/ 
+/home/erk24/workspace/standard-RAxML/raxmlHPC-PTHREADS -f e -t /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R0/tree.nwk -m GTRGAMMA -s /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R0/rose.aln.true.fasta -n REF8 -p 1984 -T 8 -w /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R0 
 
 
 
-Model parameters (binary file format) written to: /home/ekoning2/scratch/cs581-project/data/train/1000M1/1000M1/R0/RAxML_binaryModelParameters.REF8
+Model parameters (binary file format) written to: /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R0/RAxML_binaryModelParameters.REF8
 
 
-Overall Time for Tree Evaluation 26.615792
+Overall Time for Tree Evaluation 7318.761328
 Final GAMMA  likelihood: -960564.005666
 
 Number of free parameters for AIC-TEST(BR-LEN): 2006
@@ -83,5 +83,5 @@ freq pi(C): 0.243434
 freq pi(G): 0.245688
 freq pi(T): 0.254392
 
-Final tree written to:                 /home/ekoning2/scratch/cs581-project/data/train/1000M1/1000M1/R0/RAxML_result.REF8
-Execution Log File written to:         /home/ekoning2/scratch/cs581-project/data/train/1000M1/1000M1/R0/RAxML_log.REF8
+Final tree written to:                 /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R0/RAxML_result.REF8
+Execution Log File written to:         /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R0/RAxML_log.REF8
