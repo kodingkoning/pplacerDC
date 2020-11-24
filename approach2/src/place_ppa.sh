@@ -1,26 +1,23 @@
 #$1 = dir
 #$2 = number of threads
-#$3 = raxml executable
-
-# access RAxML v7.2.7 from: https://cme.h-its.org/exelixis/web/software/raxml/index.html
-# extract files and then make prefered version (used Makefile.PHREADS.gcc here)
 
 dir=$1
 threads=$2
-raxml=$3
+raxml=/home/ekoning2/scratch/RAxML-7.2.7-ALPHA/raxmlHPC-PTHREADS #from https://cme.h-its.org/exelixis/web/software/raxml/index.html 
+newick_utils=/home/ekoning2/scratch/newick-utils-1.6/src #from http://cegg.unige.ch/newick_utils
 
 # APPLES-pplacer
-# if test ! -f ${dir}/RAxML_info.REF7; then
-# 	# rm ${dir}/RAxML_info.REF7
-#     python3 fasta2phylip.py -r -i ${dir}/rose.aln.true.fasta -o ${dir}/truealignment.phylip
-#     ${raxml} -f e -t ${dir}/tree.nwk -m GTRGAMMA -s ${dir}/truealignment.phylip -n REF7 -p 1984 -T 8 -w ${dir}
-# fi
+if test ! -f ${dir}/RAxML_info.REF7; then
+	# rm ${dir}/RAxML_info.REF7
+    ${raxml} -f e -t ${dir}/tree.nwk -m GTRGAMMA -s ${dir}/rose.aln.true.fasta -n REF7 -p 1984 -T 8 -w ${dir}
+fi
+
 while read query; do
-    echo
     echo "For query ${query}:"
-    /home/erk24/Documents/CS581/finalProject/cs581-project/approach2/src/newick-utils-1.6/src/nw_prune ${dir}/RAxML_result.REF7 ${query} &> input.tre
+    ${newick_utils}/nw_prune ${dir}/RAxML_result.REF7 ${query} &> input.tre
+    echo "./pplacerAPPLES.py -t input.tre -q ${query} -s ${dir}/RAxML_info.REF7  -r ${dir}/rose.aln.true.fasta -o ${dir}/${query}/pplacerAPPLES.tree -j ${threads} -m 500 -n 1"
     ./pplacerAPPLES.py -t input.tre -q ${query} -s ${dir}/RAxML_info.REF7  -r ${dir}/rose.aln.true.fasta -o ${dir}/${query}/pplacerAPPLES.tree -j ${threads} -m 500 -n 1
-    # ./pplacerAPPLES.py -t ${dir}/${query}/backbone.tree -q ${query} -s ${dir}/RAxML_info.REF8  -r ${dir}/rose.aln.true.fasta -o ${dir}/${query}/pplacerAPPLES.tree -j ${threads} -m 500 -n 1
+    echo
 done < ${dir}/queries.txt
 
 # for each of the placed trees (pplacerAPPLES.tree), compare to the true tree (rose.mt) and the backbone tree it was removed from (tree.nwk)
