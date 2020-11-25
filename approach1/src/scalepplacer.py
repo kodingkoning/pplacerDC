@@ -37,6 +37,7 @@ def run_program(args):
     inputTree = inputTree if (inputTree.startswith("/") or inputTree.startswith("~")) else f"{oldDir}/{inputTree}"
     msaFile = msaFile if (msaFile.startswith("/") or msaFile.startswith("~")) else f"{oldDir}/{msaFile}"
     raxml_info_file = raxml_info_file if raxml_info_file.startswith("/") or raxml_info_file.startswith("~") else f"{oldDir}/{raxml_info_file}"
+    outputTree = outputTree if outputTree.startswith("/") or outputTree.startswith("~") else f"{oldDir}/{outputTree}"
     
     if DEBUG: print("Reading tree...")
     tree = read_tree(inputTree)
@@ -48,7 +49,6 @@ def run_program(args):
     timer.toc("Setup")
     
     maxScore = -math.inf
-    bestTree = outputTree
     
     scores = [-math.inf for i in decomposed_trees.keys()]
     
@@ -92,6 +92,8 @@ def run_program(args):
     with concurrent.futures.ThreadPoolExecutor(max_workers=numThreads) as executor:
         executor.map(run_subtree, [(i, tree_key) for i, tree_key in enumerate(decomposed_trees.keys())])
     timer.toc("Threaded region")
+
+    print(scores)
     
     # Do maxLoc reduction to find best tree
     bestOne = None
@@ -101,7 +103,8 @@ def run_program(args):
         maxScore = score
         bestOne = f"the-result-{i}.tre"
     # move best on to old dir, remove old dir
-    shutil.move(bestOne, f"{oldDir}/{bestTree}")
+    print(f"Moving file {bestOne} to {outputTree}")
+    shutil.move(bestOne, outputTree)
     os.chdir(oldDir)
     shutil.rmtree(tmpdir)
     
