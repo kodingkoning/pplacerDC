@@ -14,9 +14,9 @@ fi
 
 while read query; do
     echo "For query ${query}:"
-    ${newick_utils}/nw_prune ${dir}/RAxML_result.REF7 ${query} &> input.tre
-    echo "./scalepplacer.py -t input.tre -q ${query} -s ${dir}/RAxML_info.REF7  -r ${dir}/rose.aln.true.fasta -o ${dir}/${query}/scalepplacer.tree -j ${threads} -m 500 -n 1"
-    ./scalepplacer.py -t input.tre -q ${query} -s ${dir}/RAxML_info.REF7  -r ${dir}/rose.aln.true.fasta -o ${dir}/${query}/scalepplacer.tree -j ${threads} -m 500 -n 1
+    nw_prune ${dir}/RAxML_result.REF7 ${query} &> input.tre
+    echo "scalepplacer.py -t input.tre -q ${query} -s ${dir}/RAxML_info.REF7  -r ${dir}/rose.aln.true.fasta -o ${dir}/${query}/scalepplacer.tree -j ${threads} -m 500"
+    scalepplacer.py -t input.tre -q ${query} -s ${dir}/RAxML_info.REF7  -r ${dir}/rose.aln.true.fasta -o ${dir}/${query}/scalepplacer.tree -j ${threads} -m 500 -n 1
     echo
 done < ${dir}/queries.txt
 
