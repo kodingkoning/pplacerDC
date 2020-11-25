@@ -34,9 +34,9 @@ def run_program(args):
     oldDir = os.getcwd()
     os.chdir(f"{tmpdir}")
 
-    inputTree = f"{oldDir}/{inputTree}"
-    msaFile = f"{oldDir}/{msaFile}"
-    raxml_info_file = f"{oldDir}/{raxml_info_file}"
+    inputTree = inputTree if (inputTree.startswith("/") or inputTree.startswith("~")) else f"{oldDir}/{inputTree}"
+    msaFile = msaFile if (msaFile.startswith("/") or msaFile.startswith("~")) else f"{oldDir}/{msaFile}"
+    raxml_info_file = raxml_info_file if raxml_info_file.startswith("/") or raxml_info_file.startswith("~") else f"{oldDir}/{raxml_info_file}"
     
     if DEBUG: print("Reading tree...")
     tree = read_tree(inputTree)
