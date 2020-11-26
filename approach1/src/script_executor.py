@@ -50,7 +50,7 @@ def run_pplacer(raxml_info_file, backbone_tree, queries, output):
     # for more details
     os.environ["LC_ALL"] = "C"
     tmpFile = str(uuid.uuid4())
-    tmpFileHandle = open(tmpFile,"w")
+    tmpFileHandle = open(tmpFile,"w+")
     ret = subprocess.call(["pplacer",
                        "-m", "GTR", # model
                        "-s", raxml_info_file, # raxml info file location
@@ -59,7 +59,8 @@ def run_pplacer(raxml_info_file, backbone_tree, queries, output):
                        "-j", "1", # Run on single thread
                        queries    # Name of file containing query sequences
                        ],
-                       stdout=tmpFileHandle
+                       stdout=tmpFileHandle,
+                       stderr=tmpFileHandle
                        )
     if ret != 0:
         pplacer_error = tmpFileHandle.readlines()

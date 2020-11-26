@@ -1,10 +1,14 @@
+#!/bin/bash
 #$1 = dir
 #$2 = number of threads
 
 dir=$1
 threads=$2
+
+raxml=raxmlHPC-PTHREADS
+prune=nw_prune
 #raxml=/home/erk24/workspace/RAxML7/RAxML-7.2.7-ALPHA/raxmlHPC-PTHREADS #from https://cme.h-its.org/exelixis/web/software/raxml/index.html 
-#newick_utils=/usr/local/bin #from http://cegg.unige.ch/newick_utils
+#prune=/home/ekoning2/scratch/newick-utils-1.6/src/nw_prune #from http://cegg.unige.ch/newick_utils
 #
 ## APPLES-pplacer
 #if test ! -f ${dir}/RAxML_info.REF7; then
@@ -14,11 +18,12 @@ threads=$2
 
 while read query; do
     echo "For query ${query}:"
-    nw_prune ${dir}/RAxML_result.REF7 ${query} &> input.tre
+    ${prune} ${dir}/RAxML_result.REF7 ${query} &> input.tre
     echo "scalepplacer.py -t input.tre -q ${query} -s ${dir}/RAxML_info.REF7  -r ${dir}/rose.aln.true.fasta -o ${dir}/${query}/scalepplacer.tree -j ${threads} -m 500"
     scalepplacer.py -t input.tre -q ${query} -s ${dir}/RAxML_info.REF7  -r ${dir}/rose.aln.true.fasta -o ${dir}/${query}/scalepplacer.tree -j ${threads} -m 500
     echo
-done < ${dir}/queries.txt
+#done < ${dir}/queries.txt
+done < ${dir}/1query.txt
 
 # for each of the placed trees (scalepplacer.tree), compare to the true tree (rose.mt) and the backbone tree it was removed from (tree.nwk)
 #while read query; do

@@ -9,6 +9,7 @@ newick_utils=/home/ekoning2/scratch/newick-utils-1.6/src #from http://cegg.unige
 # APPLES-pplacer
 if test ! -f ${dir}/RAxML_info.REF7; then
 	# rm ${dir}/RAxML_info.REF7
+    python3 fasta2phylip.py -r -i ${dir}/rose.aln.true.fasta -o ${dir}/truealignment.phylip
     ${raxml} -f e -t ${dir}/tree.nwk -m GTRGAMMA -s ${dir}/rose.aln.true.fasta -n REF7 -p 1984 -T 8 -w ${dir}
 fi
 

@@ -1,15 +1,16 @@
-#!/usr/bin/python3
+#!/home/ekoning2/.conda/envs/ppa/bin/python3
 import sys
 import math
 import argparse
 from tree_utils import *
 from script_executor import *
 from util import *
-import uuid
 import shutil
 import concurrent
 import concurrent.futures
 from multiprocessing.pool import ThreadPool as Pool
+import os.path # for debugging
+from os import path
 
 def run_program(args):
     numThreads = int(args.numThreads)
@@ -29,7 +30,10 @@ def run_program(args):
     timer.tic("Program execution")
     
     timer.tic("Setup")
-    tmpdir = str(uuid.uuid4())
+    if not os.path.exists("temp_files"):
+      os.mkdir("temp_files")
+    tmpdir = "temp_files/"+str(uuid.uuid4())
+    print(tmpdir)
     os.mkdir(tmpdir)
     oldDir = os.getcwd()
     os.chdir(f"{tmpdir}")
@@ -39,6 +43,11 @@ def run_program(args):
     raxml_info_file = raxml_info_file if raxml_info_file.startswith("/") or raxml_info_file.startswith("~") else f"{oldDir}/{raxml_info_file}"
     outputTree = outputTree if outputTree.startswith("/") or outputTree.startswith("~") else f"{oldDir}/{outputTree}"
     
+    if DEBUG:
+      print(f"inputTree: "+ str(path.exists(inputTree)))
+      print(f"tmpdir: "+ str(path.isdir(tmpdir)))
+      print(f"msaFile: "+ str(path.exists(msaFile)))
+      print(f"raxml_info_file: "+ str(path.exists(raxml_info_file)))
     if DEBUG: print("Reading tree...")
     tree = read_tree(inputTree)
     
