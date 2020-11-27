@@ -1,4 +1,3 @@
-from sepp_utils.alignment import MutableAlignment
 from sepp_utils.tree import PhylogeneticTree
 import dendropy
 import subprocess
@@ -15,16 +14,6 @@ def read_tree(tree_file):
                                     schema="newick",
                                     preserve_underscores=True))
     return tree
-
-def read_alignment_and_tree(alignment_file, tree_file):
-    alignment = MutableAlignment()
-    alignment.read_file_object(alignment_file)
-    tree = PhylogeneticTree(
-      dendropy.Tree.get_from_stream(tree_file,
-                                    schema="newick",
-                                    preserve_underscores=True))
-    return (alignment, tree)
-
 def read_list(fileName):
     with open(fileName) as fileHandle:
         content = fileHandle.readlines()

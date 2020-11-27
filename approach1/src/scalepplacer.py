@@ -1,4 +1,4 @@
-#!/home/ekoning2/.conda/envs/ppa/bin/python3
+#!/usr/bin/python3
 import sys
 import math
 import argparse
