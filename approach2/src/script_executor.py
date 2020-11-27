@@ -27,7 +27,9 @@ def generate_fasta_file_apples(subtree, querySequence, referenceFastaFile, outpu
     command += " --outfile " + outputReferenceFile
     if debugOutput:
         print(f"Command =\n{command}")
-    tmpFile = str(uuid.uuid4())
+    if not os.path.exists('temp_files'):
+        os.mkdir('temp_files')
+    tmpFile = 'temp_files/'+str(uuid.uuid4())
     tmpFileHandle = open(tmpFile,"w+")
     ret = subprocess.call([command], shell=True, stdout=tmpFileHandle)
     if ret != 0:
