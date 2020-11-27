@@ -24,9 +24,6 @@ from dendropy import Tree, Taxon, treecalc
 from dendropy import DataSet as Dataset
 from dendropy.datamodel.treemodel import _convert_node_to_root_polytomy as \
     convert_node_to_root_polytomy
-from sepp import get_logger, sortByValue
-from sepp.alignment import get_pdistance
-from sepp.decompose_tree import decompose_by_diameter
 
 
 try:
@@ -39,8 +36,231 @@ import string
 import random
 import re
 
-_LOG = get_logger(__name__)
+def decompose_by_diameter(a_tree, strategy, max_size=None, min_size=None,
+                          max_diam=None):
+    def __ini_record__():
+        for node in a_tree.postorder_node_iter():
+            __updateNode__(node)
 
+    def __find_midpoint_edge__(t):
+        u = t.seed_node.bestLCA.anchor
+        uel = u.edge_length if u.edge_length else 0
+        d = 0
+        while (d+uel < t.seed_node.diameter/2):
+            d += uel
+            u = u.parent_node
+            uel = u.edge_length if u.edge_length else 0
+        return u.edge
+
+    def __find_centroid_edge__(t):
+        u = t.seed_node
+        product = 0
+        acc_nleaf = 0
+
+        while not u.is_leaf():
+            max_child = None
+            max_child_nleaf = 0
+            for ch in u.child_node_iter():
+                if ch.nleaf > max_child_nleaf:
+                    max_child_nleaf = ch.nleaf
+                    max_child = ch
+            acc_nleaf += (u.nleaf-max_child.nleaf)
+            new_product = max_child.nleaf * acc_nleaf
+            if new_product <= product:
+                break
+            product = new_product
+            u = max_child
+
+        return u.edge
+
+    def __bisect__(t, e):
+        # e = __find_centroid_edge__(t)
+
+        u = e.tail_node
+        v = e.head_node
+
+        u.remove_child(v)
+        t1 = Tree(seed_node=v)
+
+        if u.num_child_nodes() == 1:
+            p = u.parent_node
+            v = u.child_nodes()[0]
+            l_v = v.edge_length if v.edge_length else 0
+            u.remove_child(v)
+            # u is the seed_node; this means the tree runs out of all but one
+            # side
+            if p is None:
+                t.seed_node = v
+                return t, t1
+            l_u = u.edge_length if u.edge_length else 0
+            p.remove_child(u)
+            p.add_child(v)
+            v.edge_length = l_u + l_v
+            u = p
+
+        while u is not None:
+            __updateNode__(u)
+            u = u.parent_node
+
+        return t, t1
+
+    def __clean_up__(t):
+        for node in t.postorder_node_iter():
+            delattr(node, "nleaf")
+            delattr(node, "anchor")
+            # delattr(node,"maxheight")
+            delattr(node, "maxdepth")
+            delattr(node, "diameter")
+            # delattr(node,"topo_diam")
+            delattr(node, "bestLCA")
+
+    def __updateNode__(node):
+        if node.is_leaf():
+            node.anchor = node
+            # node.maxheight = 0
+            node.maxdepth = 0
+            node.diameter = 0
+            # node.topo_diam = 0
+            node.bestLCA = node
+            node.nleaf = 1
+            return
+
+        # n1 = -1
+        # n2 = -1
+        d1 = -1
+        d2 = -1
+        anchor1 = None
+        node.diameter = 0
+        # node.topo_diam = 0
+        node.bestLCA = None
+        node.nleaf = 0
+
+        for ch in node.child_node_iter():
+            node.nleaf += ch.nleaf
+#               n = ch.maxheight + 1
+            d = ch.maxdepth + ch.edge_length if ch.edge_length else 0
+#               if n > n1:
+#                   n2 = n1
+#                   n1 = n
+#                   anchor2 = anchor1
+#                   anchor1 = ch.anchor
+#               elif n > n2:
+#                   n2 = n
+#                   anchor2 = ch.anchor
+            if d > d1:
+                d2 = d1
+                d1 = d
+                anchor1 = ch.anchor
+            elif d > d2:
+                d2 = d
+            if ch.diameter > node.diameter:
+                node.diameter = ch.diameter
+                node.bestLCA = ch.bestLCA
+#               node.diameter = max(ch.diameter,node.diameter)
+
+#        node.diameter = max(d1+d2, node.diameter)
+        node.maxdepth = d1
+#        node.maxheight = n1
+        node.anchor = anchor1
+        if d1+d2 > node.diameter:
+            node.diameter = d1+d2
+            node.bestLCA = node
+
+    def __get_breaking_edge__(t, edge_type):
+        if t.seed_node.nleaf <= max_size and t.seed_node.diameter <= max_diam:
+            return None
+        if edge_type == 'midpoint':
+            e = __find_midpoint_edge__(t)
+        elif edge_type == 'centroid':
+            e = __find_centroid_edge__(t)
+        else:
+            #_LOG.warning(("Invalid decomposition type! Please use either "
+            #              "'midpoint' or 'centroid'"))
+            return None
+
+        n = e.head_node.nleaf
+        if (n < min_size) or (t.seed_node.nleaf - n) < min_size:
+            return None
+        return e
+
+    def __check_stop__(t):
+        return ((t.seed_node.nleaf <= max_size and
+                 t.seed_node.diameter <= max_diam) or
+                (t.seed_node.nleaf//2 < min_size))
+
+    def __break_by_MP_centroid__(t):
+        e = __get_breaking_edge__(t, 'midpoint')
+        if e is None:
+            # print("Midpoint failed. Trying centroid decomposition...")
+            e = __get_breaking_edge__(t, 'centroid')
+        # else:
+        #    print("Successfully splitted by midpoint")
+        return e
+
+    def __break(t):
+        if strategy == "centroid":
+            return __get_breaking_edge__(t, 'centroid')
+        elif strategy == "midpoint":
+            return __break_by_MP_centroid__(t)
+        else:
+            raise Exception("strategy not valid: %s" % strategy)
+
+    tqueue = Queue()
+
+    #_LOG.debug("Starting brlen decomposition ...")
+    __ini_record__()
+    min_size = min_size if min_size else 0
+    max_size = max_size if max_size else a_tree.seed_node.nleaf
+    max_diam = max_diam if max_diam else a_tree.seed_node.diameter
+
+    #_LOG.debug(
+    #    "Now breaking by %s with min %d and max %d sizes and diameter %f ..." %
+    #    (strategy, min_size, max_size, max_diam))
+    # try using midpoint
+    e = __break(a_tree)
+
+    if e is None:
+        __clean_up__(a_tree)
+        return [a_tree]
+
+    treeMap = []
+    tqueue.put((a_tree, e))
+    while not tqueue.empty():
+        t, e = tqueue.get()
+        t1, t2 = __bisect__(t, e)
+        e1 = __break(t1)
+        if e1 is None:
+            __clean_up__(t1)
+            treeMap.append(t1)
+        else:
+            tqueue.put((t1, e1))
+        e2 = __break(t2)
+        if e2 is None:
+            __clean_up__(t2)
+            treeMap.append(t2)
+        else:
+            tqueue.put((t2, e2))
+
+    return treeMap
+
+def get_pdistance(distances, leaves, stat='mean'):
+    """Returns the mean p-distance given a distance matrix and a set of
+       names"""
+    counts = 0
+    pdistance = 0
+    for i in range(0, len(leaves)-1):
+        for j in range(i+1, len(leaves)):
+            name = "".join([leaves[i], leaves[j]])
+            if stat == 'mean':
+                pdistance = pdistance + distances[name]
+                counts = counts + 1
+            elif stat == 'max':
+                if (distances[name] > pdistance):
+                    pdistance = distances[name]
+
+    if (stat == 'mean'):
+        pdistance = pdistance / counts
+    return pdistance
 
 class PhylogeneticTree(object):
     """Data structure to store phylogenetic tree, wrapping dendropy.Tree."""
@@ -337,15 +557,15 @@ for l2 in sys.stdin.readlines():
             e = self.get_breaking_edge(breaking_edge_style, minSize)
             if (e is None):
                 return None, None, None
-            _LOG.debug("breaking_edge length = %s, %s" % (
-                e.length, breaking_edge_style))
+            #_LOG.debug("breaking_edge length = %s, %s" % (
+            #    e.length, breaking_edge_style))
             tree1, tree2 = self.bipartition_by_edge(e)
         else:
             tree1, tree2, e = self.bipartition_by_root()
 
-        _LOG.debug("Tree 1 has %s nodes, tree 2 has %s nodes" % (
-            tree1.n_leaves, tree2.n_leaves))
-        assert snl == tree1.n_leaves + tree2.n_leaves
+        #_LOG.debug("Tree 1 has %s nodes, tree 2 has %s nodes" % (
+        #    tree1.n_leaves, tree2.n_leaves))
+        #assert snl == tree1.n_leaves + tree2.n_leaves
         return tree1, tree2, e
 
 #    def decompose_tree(self, maxSize, strategy, minSize = None, tree_map={},
@@ -398,10 +618,10 @@ for l2 in sys.stdin.readlines():
                                   decomp_strategy, pdistance, distances)
             else:
                 tree_map[len(tree_map)] = self
-                _LOG.warning(
-                    ("It was not possible to break-down the following tree "
-                     "according to given subset sizes: %d , %d:\n %s") % (
-                     minSize, maxSize, self._tree))
+                #_LOG.warning(
+                #    ("It was not possible to break-down the following tree "
+                #     "according to given subset sizes: %d , %d:\n %s") % (
+                #     minSize, maxSize, self._tree))
         else:
             tree_map[len(tree_map)] = self
         return tree_map

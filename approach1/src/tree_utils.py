@@ -1,4 +1,4 @@
-from sepp_utils.tree import PhylogeneticTree
+from tree import PhylogeneticTree
 import dendropy
 import subprocess
 import script_executor as se
