@@ -25,7 +25,9 @@ def run_program(args):
     timer = util.Timer()
     timer.tic("execution")
     timer.tic("setup")
-    tmpdir = str(uuid.uuid4())
+    if not os.path.exists('temp_files'):
+        os.mkdir('temp_files')
+    tmpdir = 'temp_files/'+str(uuid.uuid4())
     os.mkdir(tmpdir)
     oldDir = os.getcwd()
     os.chdir(tmpdir)
