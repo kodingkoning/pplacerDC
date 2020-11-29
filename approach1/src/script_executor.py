@@ -28,7 +28,7 @@ def generate_fasta_file(subtree, querySequence, referenceFastaFile, outputRefere
         print(f"Command =\n{command}")
     tmpFile = str(uuid.uuid4())
     tmpFileHandle = open(tmpFile,"w")
-    ret = subprocess.call([command], shell=True, stdout=tmpFileHandle)
+    ret = subprocess.call([command], shell=True, stdout=tmpFileHandle, stderr=tmpFileHandle)
     if ret != 0:
         faSomeRecords_error = tmpFileHandle.readlines()
         print(f"Failed to run fasomeRecords.py, it said:\n{faSomeRecords_error}")
@@ -38,6 +38,11 @@ def generate_fasta_file(subtree, querySequence, referenceFastaFile, outputRefere
 
 
 def place_sequence_in_subtree(pplacerOutput, outputTreeFileName):
+    # Ubuntu 18.0.4 workaround for a bad assertion in loadLocale.c:129
+    # THIS IS A BODGE!!!
+    # see: https://askubuntu.com/questions/1081901/what-is-the-correct-way-to-fix-an-assertion-in-loadlocale-c
+    # for more details
+    os.environ["LC_ALL"] = "C"
     subprocess.call(["guppy","tog",
         "-o", outputTreeFileName,
         pplacerOutput
@@ -70,7 +75,7 @@ def run_pplacer(raxml_info_file, backbone_tree, queries, output):
     if ret != 0:
       exit(-1)
 
-def score_raxml(treeFile, referenceAln):
+def score_raxml(treeFile, referenceAln, tid):
     """
     Run RAxML-ng in fixed tree mode to determine the best LogLikelihood score possible
     treeFile: the file where the tree is located
@@ -78,7 +83,8 @@ def score_raxml(treeFile, referenceAln):
     """
     tmpFile = str(uuid.uuid4())
     tmpFileHandle = open(tmpFile,"w")
-    random_prefix = str(uuid.uuid4())
+    #random_prefix = str(uuid.uuid4())
+    prefix = f"raxml-prefix-{tid}"
     # generate temporary file handle
     ret = subprocess.call(["raxml-ng",
                      "--msa", referenceAln,
@@ -87,7 +93,7 @@ def score_raxml(treeFile, referenceAln):
                      "--threads", "1", # run in serial
                      "--opt-branches", "off", # do not optimize branch lengths
                      "--opt-model", "off", # do not optimize model conditions
-                     "--prefix", random_prefix, # prevent race condition with random prefix
+                     "--prefix", prefix, # prevent race condition with random prefix
                      "--evaluate"   # fixed-tree evaluation
                      ],
                      stdout=tmpFileHandle
@@ -103,4 +109,4 @@ def score_raxml(treeFile, referenceAln):
 
     if ret != 0:
       exit(-1)
-    return score
+    return

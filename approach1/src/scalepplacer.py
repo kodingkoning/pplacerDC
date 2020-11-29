@@ -3,7 +3,8 @@ import sys
 import math
 import argparse
 from tree_utils import *
-from script_executor import *
+import script_executor as se
+import uuid
 from util import *
 import shutil
 import concurrent
@@ -11,6 +12,60 @@ import concurrent.futures
 from multiprocessing.pool import ThreadPool as Pool
 import os.path # for debugging
 from os import path
+DEBUG_THREAD = False
+class ThreadLocalStorage(object):
+  def __init__(self, tid, outputTree, raxml_info_file, inputTree, querySequence, msaFile):
+    i = tid
+    self.outputLocation = f"output-{i}.jplace"
+    self.resultTree = f"mytestoutput-{i}.tre"
+    self.query_alignment_file = f"foobar-{i}.fa"
+    self.temporaryResultTree = f"mytestoutput-{i}.tre"
+    self.temporaryBackBoneTree = f"the-result-{i}.tre"
+    self.outputTreeFile = f"decomposed-tree-{i}.tre"
+
+    self.outputTree = outputTree
+    self.raxml_info_file = raxml_info_file
+    self.inputTree = inputTree
+    self.querySequence = querySequence
+    self.msaFile = msaFile
+    self.score = -math.inf
+
+def make_fasta_files(item):
+  tid, tree_object, threadLocalStorage = item
+  if DEBUG_THREAD: print(f"Making fasta files on thread {tid}")
+  tree_object.get_tree().write(file=open(threadLocalStorage.outputTreeFile, 'w'),
+      schema="newick")
+  se.generate_fasta_file(tree_object, threadLocalStorage.querySequence, threadLocalStorage.msaFile, threadLocalStorage.query_alignment_file)
+  return
+def execute_pplacer(item):
+  tid, tree_object, threadLocalStorage = item
+  if DEBUG_THREAD: print(f"Running pplacer on thread {tid}")
+  se.run_pplacer(threadLocalStorage.raxml_info_file, threadLocalStorage.outputTreeFile, threadLocalStorage.query_alignment_file, threadLocalStorage.outputLocation)
+  return
+def place_query(item):
+  tid, tree_object, threadLocalStorage = item
+  if DEBUG_THREAD: print(f"Placing query sequence on thread {tid}")
+  se.place_sequence_in_subtree(threadLocalStorage.outputLocation, threadLocalStorage.temporaryResultTree)
+  return
+def modify_trees(item):
+  tid, tree_object, threadLocalStorage = item
+  if DEBUG_THREAD: print(f"Modifying trees on thread {tid}")
+  resultTree = read_tree(threadLocalStorage.temporaryResultTree).get_tree()
+  backBoneTree = read_tree(threadLocalStorage.inputTree).get_tree()
+  modify_backbone_tree_with_placement(resultTree, backBoneTree, threadLocalStorage.querySequence)
+  backBoneTree.write(file=open(threadLocalStorage.temporaryBackBoneTree, "w"), schema="newick")
+  return
+def score_trees(item):
+  tid, tree_object, threadLocalStorage = item
+  if DEBUG_THREAD: print(f"Scoring trees on thread {tid}")
+  se.score_raxml(threadLocalStorage.temporaryBackBoneTree, threadLocalStorage.msaFile, tid)
+  return
+
+def parse_score(tid):
+    regex = "Final LogLikelihood: (.+)"
+    raxmlLog = f"raxml-prefix-{tid}.raxml.log"
+    score = se.field_by_regex(regex, raxmlLog)[0]
+    return score
 
 def run_program(args):
     numThreads = int(args.numThreads)
@@ -60,49 +115,51 @@ def run_program(args):
     maxScore = -math.inf
     
     scores = [-math.inf for i in decomposed_trees.keys()]
-    
-    def run_subtree(item):
-      i, tree_key = item
-      if DEBUG: print(f"On thread id = {i}")
-      outputLocation = f"output-{i}.jplace"
-      resultTree = f"mytestoutput-{i}.tre"
-      query_alignment_file = f"foobar-{i}.fa"
-      temporaryResultTree = f"mytestoutput-{i}.tre"
-      temporaryBackBoneTree = f"the-result-{i}.tre"
-      tree_object = decomposed_trees[tree_key]
-      if DEBUG: print(f"Tree ({tree_key}) has {tree_object.count_nodes()} nodes and {tree_object.count_leaves()} leafs!")
-      outputTreeFile = f"decomposed-tree-{i}.tre"
-      tree_object.get_tree().write(file=open(outputTreeFile, 'w'),
-          schema="newick")
-      generate_fasta_file(tree_object, querySequence, msaFile, query_alignment_file)
-      run_pplacer(raxml_info_file, outputTreeFile, query_alignment_file, outputLocation)
-      # overwrite the current file
-      place_sequence_in_subtree(outputLocation, temporaryResultTree)
-    
-      resultTree = read_tree(temporaryResultTree).get_tree()
-      backBoneTree = read_tree(inputTree).get_tree()
-      backBoneTreeCopy = None
-      if VALIDATE: backBoneTreeCopy = dendropy.Tree(backBoneTree)
-      if DEBUG: print(f"Modifying with query sequence {querySequence}")
-      modify_backbone_tree_with_placement(resultTree, backBoneTree, querySequence)
-      backBoneTree.write(file=open(temporaryBackBoneTree, "w"), schema="newick")
-    
-      if VALIDATE:
-          validate_result_tree(backBoneTree, backBoneTreeCopy, querySequence)
-    
-      if nTrees == 1:
-          scores[i] = 1.0 # only a single tree, don't bother
-      else:
-          scores[i] = score_raxml(temporaryBackBoneTree, msaFile)
-        
-      if DEBUG: print(f"ML score = {scores[i]}")
 
-    timer.tic("Threaded region")
-    with concurrent.futures.ThreadPoolExecutor(max_workers=numThreads) as executor:
-        executor.map(run_subtree, [(i, tree_key) for i, tree_key in enumerate(decomposed_trees.keys())])
-    timer.toc("Threaded region")
+    # Thread local data
+    threadData = [ThreadLocalStorage(tid,
+      outputTree,
+      raxml_info_file,
+      inputTree,
+      querySequence,
+      msaFile
+      ) for tid, _ in enumerate(decomposed_trees.keys())]
 
-    print(scores)
+    # Thread local variants do *one* process at a time
+    timer.tic("Generating fasta files for pplacer...")
+    if DEBUG: print("Generating fasta files for pplacer...")
+    with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
+        executor.map(make_fasta_files, [(i, decomposed_trees[tree_key], threadData[i]) for i, tree_key in enumerate(decomposed_trees.keys())])
+    timer.toc("Generating fasta files for pplacer...")
+
+    timer.tic("Running pplacer...")
+    if DEBUG: print("Running pplacer...")
+    with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
+        executor.map(execute_pplacer, [(i, decomposed_trees[tree_key], threadData[i]) for i, tree_key in enumerate(decomposed_trees.keys())])
+    timer.toc("Running pplacer...")
+
+    timer.tic("Placing query into subtree...")
+    if DEBUG: print("Placing query into subtree...")
+    with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
+        executor.map(place_query, [(i, decomposed_trees[tree_key], threadData[i]) for i, tree_key in enumerate(decomposed_trees.keys())])
+    timer.toc("Placing query into subtree...")
+
+    timer.tic("Modify main tree...")
+    if DEBUG: print("Modifying main tree...")
+    with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
+        executor.map(modify_trees, [(i, decomposed_trees[tree_key], threadData[i]) for i, tree_key in enumerate(decomposed_trees.keys())])
+    timer.toc("Modify main tree...")
+
+    timer.tic("Scoring trees...")
+    if DEBUG: print("Scoring trees...")
+    with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
+        executor.map(score_trees, [[i, decomposed_trees[tree_key], threadData[i]] for i, tree_key in enumerate(decomposed_trees.keys())])
+    timer.toc("Scoring trees...")
+
+    for i, threadStorage in enumerate(threadData):
+      scores[i] = parse_score(i)
+
+    if DEBUG: print(scores)
     
     # Do maxLoc reduction to find best tree
     bestOne = None
@@ -112,7 +169,7 @@ def run_program(args):
         maxScore = score
         bestOne = f"the-result-{i}.tre"
     # move best on to old dir, remove old dir
-    print(f"Moving file {bestOne} to {outputTree}")
+    if DEBUG: print(f"Moving file {bestOne} to {outputTree}")
     shutil.move(bestOne, outputTree)
     os.chdir(oldDir)
     shutil.rmtree(tmpdir)
