@@ -1,3 +1,4 @@
+#!/bin/bash
 #$1 = dir
 #$2 = number of threads
 
@@ -15,16 +16,18 @@ fi
 
 while read query; do
     echo "For query ${query}:"
-    ${newick_utils}/nw_prune ${dir}/RAxML_result.REF7 ${query} &> input.tre
-    echo "./pplacerAPPLES.py -t input.tre -q ${query} -s ${dir}/RAxML_info.REF7  -r ${dir}/rose.aln.true.fasta -o ${dir}/${query}/pplacerAPPLES.tree -j ${threads} -m 500 -n 1"
-    ./pplacerAPPLES.py -t input.tre -q ${query} -s ${dir}/RAxML_info.REF7  -r ${dir}/rose.aln.true.fasta -o ${dir}/${query}/pplacerAPPLES.tree -j ${threads} -m 500 -n 1
+    ${newick_utils}/nw_prune ${dir}/RAxML_result.REF7 ${query} &> backbone_ppa.tree
+    echo "./pplacerAPPLES.py -t backbone_ppa.tree -q ${query} -s ${dir}/RAxML_info.REF7  -r ${dir}/rose.aln.true.fasta -o ${dir}/${query}/pplacerAPPLES.tree -j ${threads} -m 500 -n 1"
+    time ./pplacerAPPLES.py -t backbone_ppa.tree -q ${query} -s ${dir}/RAxML_info.REF7  -r ${dir}/rose.aln.true.fasta -o ${dir}/${query}/pplacerAPPLES.tree -j ${threads} -m 500 -n 1
     echo
-done < ${dir}/queries.txt
+#done < ${dir}/queries.txt
+done < ${dir}/1query.txt
 
 # for each of the placed trees (pplacerAPPLES.tree), compare to the true tree (rose.mt) and the backbone tree it was removed from (tree.nwk)
 while read query; do
     # compare to backbone tree (tree.nwk)
     python3 treecompare.py ${dir}/tree.nwk ${dir}/${query}/pplacerAPPLES.tree
     # compare trees ${dir}/${query}/pplacerAPPLES.tree vs ${dir}/tree.nwk and ${dir}/rose.mt
-done < ${dir}/queries.txt
+#done < ${dir}/queries.txt
+done < ${dir}/1query.txt
 

@@ -20,7 +20,7 @@ while read query; do
     echo "For query ${query}:"
     ${prune} ${dir}/RAxML_result.REF7 ${query} &> input.tre
     echo "scalepplacer.py -t input.tre -q ${query} -s ${dir}/RAxML_info.REF7  -r ${dir}/rose.aln.true.fasta -o ${dir}/${query}/scalepplacer.tree -j ${threads} -m 500"
-    scalepplacer.py -t input.tre -q ${query} -s ${dir}/RAxML_info.REF7  -r ${dir}/rose.aln.true.fasta -o ${dir}/${query}/scalepplacer.tree -j ${threads} -m 500
+    time scalepplacer.py -t input.tre -q ${query} -s ${dir}/RAxML_info.REF7  -r ${dir}/rose.aln.true.fasta -o ${dir}/${query}/scalepplacer.tree -j ${threads} -m 500
     echo
 #done < ${dir}/queries.txt
 done < ${dir}/1query.txt

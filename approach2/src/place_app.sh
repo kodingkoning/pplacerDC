@@ -7,7 +7,9 @@ dir=$1
 
 # apples
 while read query; do
-    run_apples.py -t ${dir}/${query}/backbone.tree -s ${dir}/${query}/ref.fa -q ${dir}/${query}/query.fa -T $2 -o ${dir}/${query}/apples.jplace
+    echo "for query ${query}:"
+    time run_apples.py -t ${dir}/${query}/backbone.tree -s ${dir}/${query}/ref.fa -q ${dir}/${query}/query.fa -T $2 -o ${dir}/${query}/apples.jplace
+    echo
 done < ${dir}/queries.txt
 
 # for each of the placed trees in apples.jplace, compare to the true tree (rose.mt) and the backbone tree it was removed from (tree.nwk)
