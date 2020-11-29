@@ -5,7 +5,7 @@
 dir=$1
 threads=$2
 
-raxml=raxmlHPC-PTHREADS
+#raxml=raxmlHPC-PTHREADS
 prune=nw_prune
 #raxml=/home/erk24/workspace/RAxML7/RAxML-7.2.7-ALPHA/raxmlHPC-PTHREADS #from https://cme.h-its.org/exelixis/web/software/raxml/index.html 
 #prune=/home/ekoning2/scratch/newick-utils-1.6/src/nw_prune #from http://cegg.unige.ch/newick_utils
