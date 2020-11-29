@@ -126,35 +126,67 @@ def run_program(args):
       ) for tid, _ in enumerate(decomposed_trees.keys())]
 
     # Thread local variants do *one* process at a time
-    timer.tic("Generating fasta files for pplacer...")
-    if DEBUG: print("Generating fasta files for pplacer...")
-    with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
-        executor.map(make_fasta_files, [(i, decomposed_trees[tree_key], threadData[i]) for i, tree_key in enumerate(decomposed_trees.keys())])
-    timer.toc("Generating fasta files for pplacer...")
+    SERIAL = False # This provides better debugging output
+    if not SERIAL:
+      timer.tic("Generating fasta files for pplacer...")
+      if DEBUG: print("Generating fasta files for pplacer...")
+      with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
+          executor.map(make_fasta_files, [(i, decomposed_trees[tree_key], threadData[i]) for i, tree_key in enumerate(decomposed_trees.keys())])
+      timer.toc("Generating fasta files for pplacer...")
 
-    timer.tic("Running pplacer...")
-    if DEBUG: print("Running pplacer...")
-    with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
-        executor.map(execute_pplacer, [(i, decomposed_trees[tree_key], threadData[i]) for i, tree_key in enumerate(decomposed_trees.keys())])
-    timer.toc("Running pplacer...")
+      timer.tic("Running pplacer...")
+      if DEBUG: print("Running pplacer...")
+      with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
+          executor.map(execute_pplacer, [(i, decomposed_trees[tree_key], threadData[i]) for i, tree_key in enumerate(decomposed_trees.keys())])
+      timer.toc("Running pplacer...")
 
-    timer.tic("Placing query into subtree...")
-    if DEBUG: print("Placing query into subtree...")
-    with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
-        executor.map(place_query, [(i, decomposed_trees[tree_key], threadData[i]) for i, tree_key in enumerate(decomposed_trees.keys())])
-    timer.toc("Placing query into subtree...")
+      timer.tic("Placing query into subtree...")
+      if DEBUG: print("Placing query into subtree...")
+      with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
+          executor.map(place_query, [(i, decomposed_trees[tree_key], threadData[i]) for i, tree_key in enumerate(decomposed_trees.keys())])
+      timer.toc("Placing query into subtree...")
 
-    timer.tic("Modify main tree...")
-    if DEBUG: print("Modifying main tree...")
-    with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
-        executor.map(modify_trees, [(i, decomposed_trees[tree_key], threadData[i]) for i, tree_key in enumerate(decomposed_trees.keys())])
-    timer.toc("Modify main tree...")
+      timer.tic("Modify main tree...")
+      if DEBUG: print("Modifying main tree...")
+      with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
+          executor.map(modify_trees, [(i, decomposed_trees[tree_key], threadData[i]) for i, tree_key in enumerate(decomposed_trees.keys())])
+      timer.toc("Modify main tree...")
 
-    timer.tic("Scoring trees...")
-    if DEBUG: print("Scoring trees...")
-    with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
-        executor.map(score_trees, [[i, decomposed_trees[tree_key], threadData[i]] for i, tree_key in enumerate(decomposed_trees.keys())])
-    timer.toc("Scoring trees...")
+      timer.tic("Scoring trees...")
+      if DEBUG: print("Scoring trees...")
+      with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
+          executor.map(score_trees, [[i, decomposed_trees[tree_key], threadData[i]] for i, tree_key in enumerate(decomposed_trees.keys())])
+      timer.toc("Scoring trees...")
+    else:
+      timer.tic("Generating fasta files for pplacer...")
+      if DEBUG: print("Generating fasta files for pplacer...")
+      for i, tree_key in enumerate(decomposed_trees.keys()):
+        make_fasta_files((i, decomposed_trees[tree_key], threadData[i]))
+      timer.toc("Generating fasta files for pplacer...")
+
+      timer.tic("Running pplacer...")
+      if DEBUG: print("Running pplacer...")
+      for i, tree_key in enumerate(decomposed_trees.keys()):
+        execute_pplacer((i, decomposed_trees[tree_key], threadData[i]))
+      timer.toc("Running pplacer...")
+
+      timer.tic("Placing query into subtree...")
+      if DEBUG: print("Placing query into subtree...")
+      for i, tree_key in enumerate(decomposed_trees.keys()):
+        place_query((i, decomposed_trees[tree_key], threadData[i]))
+      timer.toc("Placing query into subtree...")
+
+      timer.tic("Modify main tree...")
+      if DEBUG: print("Modifying main tree...")
+      for i, tree_key in enumerate(decomposed_trees.keys()):
+        modify_trees((i, decomposed_trees[tree_key], threadData[i]))
+      timer.toc("Modify main tree...")
+
+      timer.tic("Scoring trees...")
+      if DEBUG: print("Scoring trees...")
+      for i, tree_key in enumerate(decomposed_trees.keys()):
+        score_trees((i, decomposed_trees[tree_key], threadData[i]))
+      timer.toc("Scoring trees...")
 
     for i, threadStorage in enumerate(threadData):
       scores[i] = parse_score(i)
