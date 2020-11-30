@@ -83,10 +83,8 @@ def run_program(args):
         scores[threadIdx] = script_executor.score_raxml(temporaryBackBoneTree, alignment)
         return
     timer.tic("Threaded region")
-    #for thread in range(nClades):
-    #    execute_with_random_clade(thread)
-    with concurrent.futures.ThreadPoolExecutor(max_workers=numThreads) as executor:
-        executor.map(execute_with_random_clade, range(nClades))
+    for thread in range(nClades):
+        execute_with_random_clade(thread)
 
     timer.toc("Threaded region")
 
