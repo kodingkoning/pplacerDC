@@ -70,7 +70,7 @@ def place_sequence_in_subtree(pplacerOutput, outputTreeFileName):
         pplacerOutput
         ])
 
-def run_pplacer(raxml_info_file, backbone_tree, queries, output):
+def run_pplacer(raxml_info_file, backbone_tree, queries, output, threads):
     # Ubuntu 18.0.4 workaround for a bad assertion in loadLocale.c:129
     # THIS IS A BODGE!!!
     # see: https://askubuntu.com/questions/1081901/what-is-the-correct-way-to-fix-an-assertion-in-loadlocale-c
@@ -83,7 +83,7 @@ def run_pplacer(raxml_info_file, backbone_tree, queries, output):
                        "-s", raxml_info_file, # raxml info file location
                        "-t", backbone_tree, # backbone tree
                        "-o", f"{output}", # output location
-                       "-j", "1", # Run on single thread
+                       "-j", str(threads), # Run on single thread
                        queries    # Name of file containing query sequences
                        ],
                        stdout=tmpFileHandle

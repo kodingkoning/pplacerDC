@@ -72,7 +72,7 @@ def run_program(args):
         queryAlignment = f"query-{threadIdx}.fa"
         script_executor.generate_fasta_file(subTree, query, alignment, queryAlignment)
         placementOutput = f"pplacer-{threadIdx}.jplace"
-        script_executor.run_pplacer(raxml_info_file, outputSubTree, queryAlignment, placementOutput)
+        script_executor.run_pplacer(raxml_info_file, outputSubTree, queryAlignment, placementOutput, numThreads)
         subTreeWithPlacement = f"subtree-with-placement-{threadIdx}.tre"
         script_executor.place_sequence_in_subtree(placementOutput, subTreeWithPlacement)
         resultTree = tree_utils.read_tree(subTreeWithPlacement)
