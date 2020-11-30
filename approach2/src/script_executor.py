@@ -129,7 +129,7 @@ def score_raxml(treeFile, referenceAln, threads, tid):
     tmpFileHandle = open(prefix,"w")
     random_prefix = str(uuid.uuid4())
     # generate temporary file handle
-    ret = subprocess.call(["raxml-ng",
+    ret = subprocess.call(["raxml-ng-mpi",
                      "--msa", referenceAln,
                      "--model", "GTR+G",
                      "--tree", treeFile,
