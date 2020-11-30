@@ -64,7 +64,11 @@ def score_trees(item):
 def parse_score(tid):
     regex = "Final LogLikelihood: (.+)"
     raxmlLog = f"raxml-prefix-{tid}.score"
-    score = se.field_by_regex(regex, raxmlLog)[0]
+    score = -math.inf
+    try:
+      score = se.field_by_regex(regex, raxmlLog)[0]
+    except:
+      print(f"WARNING: Unable to score tid {tid} correctly. Disregarding tree!")
     return score
 
 def run_program(args):
