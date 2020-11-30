@@ -10,6 +10,11 @@ import argparse
 import shutil
 import concurrent
 import concurrent.futures
+def parse_score(tid):
+    regex = "Final LogLikelihood: (.+)"
+    raxmlLog = f"raxml-prefix-{tid}.score"
+    score = script_executor.field_by_regex(regex, raxmlLog)[0]
+    return score
 
 def run_program(args):
     tree = args.tree
@@ -53,7 +58,8 @@ def run_program(args):
 
     scores = [-math.inf for i in range(nClades+1)] # last position is apples
 
-    scores[-1] = script_executor.score_raxml(Tapples, alignment, numThreads)
+    script_executor.score_raxml(Tapples, alignment, numThreads, nClades)
+    scores[-1] = parse_score(nClades)
     applesTree = tree_utils.read_tree(Tapples)
 
     queryNode = None
@@ -80,7 +86,8 @@ def run_program(args):
         tree_utils.modify_backbone_tree_with_placement(resultTree, newbackboneTree, query)
         temporaryBackBoneTree = f"result-{threadIdx}.tre"
         newbackboneTree.write(file=open(temporaryBackBoneTree, "w"), schema="newick")
-        scores[threadIdx] = script_executor.score_raxml(temporaryBackBoneTree, alignment, numThreads)
+        script_executor.score_raxml(temporaryBackBoneTree, alignment, numThreads, threadIdx)
+        scores[threadIdx] = parse_score(threadIdx)
         return
     timer.tic("Threaded region")
     for thread in range(nClades):

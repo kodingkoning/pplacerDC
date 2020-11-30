@@ -119,14 +119,14 @@ def run_apples(alignmentFile, backBoneTreeFile, querySequenceAlignmentFile, outp
     if ret != 0:
       exit(-1)
 
-def score_raxml(treeFile, referenceAln, threads):
+def score_raxml(treeFile, referenceAln, threads, tid):
     """
     Run RAxML-ng in fixed tree mode to determine the best LogLikelihood score possible
     treeFile: the file where the tree is located
     referenceAln: the file where the reference alignment is located
     """
-    tmpFile = str(uuid.uuid4())
-    tmpFileHandle = open(tmpFile,"w")
+    prefix = f"raxml-prefix-{tid}.score"
+    tmpFileHandle = open(prefix,"w")
     random_prefix = str(uuid.uuid4())
     # generate temporary file handle
     ret = subprocess.call(["raxml-ng",
@@ -136,28 +136,14 @@ def score_raxml(treeFile, referenceAln, threads):
                      "--threads", str(threads), # run in serial
                      "--opt-branches", "off", # do not optimize branch lengths
                      "--opt-model", "off", # do not optimize model conditions
-                     "--prefix", random_prefix, # do not optimize model conditions
-                     "--evaluate"   # fixed-tree evaluation
+                     "--prefix", prefix, # do not optimize model conditions
+                     "--evaluate",   # fixed-tree evaluation
+                     "--nofiles", # do not generate files
+                     "--log", "result", # do not log anything
                      ],
-                     stdout=tmpFileHandle,
-                     stderr=tmpFileHandle
+                     stdout=tmpFileHandle
                      )
-    # parse the output for the score
-    regex = "Final LogLikelihood: (.+)"
-    # fields = field_by_regex(regex, tmpFile)
-    # score = 0
-    # if len(fields):
-    #     score = fields[0]
-    score = field_by_regex(regex, tmpFile)[0]
-    if ret != 0:
-      print(ret)
-      raxml_error = tmpFileHandle.readlines()
-      print(f"Failed to run raxml-ng, it said:\n{raxml_error}")
-
-    # delete temporary file
     tmpFileHandle.close()
-    os.remove(tmpFile)
-
     if ret != 0:
       exit(-1)
-    return score
+    return
