@@ -58,7 +58,9 @@ def run_program(args):
 
     scores = [-math.inf for i in range(nClades+1)] # last position is apples
 
+    timer.tic("RAxML scoring")
     script_executor.score_raxml(Tapples, alignment, numThreads, nClades)
+    timer.toc("RAxML scoring")
     scores[-1] = parse_score(nClades)
     applesTree = tree_utils.read_tree(Tapples)
 
@@ -71,22 +73,30 @@ def run_program(args):
 
     def execute_with_random_clade(item):
         threadIdx = item
+        timer.tic("Clade identification")
         cladeNodes = tree_utils.sampleCompact(queryNode, maxPplacer)
         outputSubTree = f"clade-subtree-{threadIdx}.tre"
         subTree = backboneTree.extract_tree_with_taxa_labels(cladeNodes)
         subTree.write(file=open(outputSubTree, "w"), schema="newick")
+        timer.toc("Clade identification")
         queryAlignment = f"query-{threadIdx}.fa"
+        timer.tic("FASTA file creation")
         script_executor.generate_fasta_file(subTree, query, alignment, queryAlignment)
+        timer.toc("FASTA file creation")
         placementOutput = f"pplacer-{threadIdx}.jplace"
         script_executor.run_pplacer(raxml_info_file, outputSubTree, queryAlignment, placementOutput, numThreads)
         subTreeWithPlacement = f"subtree-with-placement-{threadIdx}.tre"
         script_executor.place_sequence_in_subtree(placementOutput, subTreeWithPlacement)
         resultTree = tree_utils.read_tree(subTreeWithPlacement)
         newbackboneTree = tree_utils.read_tree(tree)
+        timer.tic("Tree mod")
         tree_utils.modify_backbone_tree_with_placement(resultTree, newbackboneTree, query)
+        timer.toc("Tree mod")
         temporaryBackBoneTree = f"result-{threadIdx}.tre"
         newbackboneTree.write(file=open(temporaryBackBoneTree, "w"), schema="newick")
+        timer.tic("RAxML scoring")
         script_executor.score_raxml(temporaryBackBoneTree, alignment, numThreads, threadIdx)
+        timer.toc("RAxML scoring")
         scores[threadIdx] = parse_score(threadIdx)
         return
     timer.tic("Threaded region")
