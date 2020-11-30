@@ -63,7 +63,7 @@ def score_trees(item):
 
 def parse_score(tid):
     regex = "Final LogLikelihood: (.+)"
-    raxmlLog = f"raxml-prefix-{tid}.raxml.log"
+    raxmlLog = f"raxml-prefix-{tid}.score"
     score = se.field_by_regex(regex, raxmlLog)[0]
     return score
 

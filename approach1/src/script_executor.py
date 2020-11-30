@@ -81,10 +81,9 @@ def score_raxml(treeFile, referenceAln, tid):
     treeFile: the file where the tree is located
     referenceAln: the file where the reference alignment is located
     """
-    tmpFile = str(uuid.uuid4())
-    tmpFileHandle = open(tmpFile,"w")
     #random_prefix = str(uuid.uuid4())
-    prefix = f"raxml-prefix-{tid}"
+    prefix = f"raxml-prefix-{tid}.score"
+    tmpFileHandle = open(prefix,"w")
     # generate temporary file handle
     ret = subprocess.call(["raxml-ng",
                      "--msa", referenceAln,
@@ -94,13 +93,15 @@ def score_raxml(treeFile, referenceAln, tid):
                      "--opt-branches", "off", # do not optimize branch lengths
                      "--opt-model", "off", # do not optimize model conditions
                      "--prefix", prefix, # prevent race condition with random prefix
-                     "--evaluate"   # fixed-tree evaluation
+                     "--evaluate",   # fixed-tree evaluation
+                     "--nofiles", # do not generate files
+                     "--log", "result", # do not log anything
                      ],
                      stdout=tmpFileHandle
                      )
     # parse the output for the score
-    regex = "Final LogLikelihood: (.+)"
-    score = field_by_regex(regex, tmpFile)[0]
+    #regex = "Final LogLikelihood: (.+)"
+    #score = field_by_regex(regex, tmpFile)[0]
     if ret != 0:
       raxml_error = tmpFileHandle.readlines()
       print(f"Failed to run raxml-ng, it said:\n{raxml_error}")
