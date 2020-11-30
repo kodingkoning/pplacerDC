@@ -119,7 +119,7 @@ def run_apples(alignmentFile, backBoneTreeFile, querySequenceAlignmentFile, outp
     if ret != 0:
       exit(-1)
 
-def score_raxml(treeFile, referenceAln):
+def score_raxml(treeFile, referenceAln, threads):
     """
     Run RAxML-ng in fixed tree mode to determine the best LogLikelihood score possible
     treeFile: the file where the tree is located
@@ -133,7 +133,7 @@ def score_raxml(treeFile, referenceAln):
                      "--msa", referenceAln,
                      "--model", "GTR+G",
                      "--tree", treeFile,
-                     "--threads", "1", # run in serial
+                     "--threads", str(threads), # run in serial
                      "--opt-branches", "off", # do not optimize branch lengths
                      "--opt-model", "off", # do not optimize model conditions
                      "--prefix", random_prefix, # do not optimize model conditions

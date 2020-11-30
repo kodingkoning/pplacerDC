@@ -53,7 +53,7 @@ def run_program(args):
 
     scores = [-math.inf for i in range(nClades+1)] # last position is apples
 
-    scores[-1] = script_executor.score_raxml(Tapples, alignment)
+    scores[-1] = script_executor.score_raxml(Tapples, alignment, numThreads)
     applesTree = tree_utils.read_tree(Tapples)
 
     queryNode = None
@@ -80,7 +80,7 @@ def run_program(args):
         tree_utils.modify_backbone_tree_with_placement(resultTree, newbackboneTree, query)
         temporaryBackBoneTree = f"result-{threadIdx}.tre"
         newbackboneTree.write(file=open(temporaryBackBoneTree, "w"), schema="newick")
-        scores[threadIdx] = script_executor.score_raxml(temporaryBackBoneTree, alignment)
+        scores[threadIdx] = script_executor.score_raxml(temporaryBackBoneTree, alignment, numThreads)
         return
     timer.tic("Threaded region")
     for thread in range(nClades):
