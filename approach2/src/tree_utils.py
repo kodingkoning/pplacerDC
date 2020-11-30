@@ -83,6 +83,7 @@ def sampleCompact(leaf, size):
     node = leaf.parent_node # Don't include parent of query
                             # this isn't a real node in the backbone
     while len(taxons) < size:
+      if node:
         shuffled_nodes = node.sibling_nodes().copy()
         random.shuffle(shuffled_nodes)
         for bro in shuffled_nodes:
@@ -91,9 +92,13 @@ def sampleCompact(leaf, size):
                 return taxons
         
         node = node.parent_node      
+      else:
+        break
     return taxons
 
 def collectSubtreeTaxa(node, numTaxa):
+    if not node:
+        return []
     if node.is_leaf():
         return [node.taxon.label]
     
