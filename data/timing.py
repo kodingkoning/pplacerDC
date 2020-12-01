@@ -17,7 +17,7 @@ def read_list(fileName):
     content=[float(x.strip()) for x in content]
     return np.array(content)
 
-sizes = np.array([500, 1000, 5000, 10000])
+sizes = np.array([500, 1000, 5000, 10000, 50000])
 def get_time_by_regex(filename, regex, sizes):
   avg_times = np.zeros(len(sizes))
   std_times = np.zeros(len(sizes))

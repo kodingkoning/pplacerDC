@@ -21,7 +21,7 @@ def get_errs(method, size):
 def get_errs(method, size):
   return np.sort(read_list(f"vs-data/{size}/delta_error_{method}.txt"))
 
-sizes = [500,1000,5000,10000]
+sizes = [500,1000,5000,10000, 50000]
 pplacer_sizes = [500,1000]
 
 def make_figure(size):
