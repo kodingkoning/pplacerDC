@@ -55,6 +55,9 @@ apples_regex = "apples took (.*) s"
 avg_t_apples, std_t_apples = get_time_by_regex("run_output2.log", apples_regex, sizes)
 ax.errorbar(sizes,avg_t_apples,yerr=std_t_apples, label="APPLES*", marker="x")
 
+plt.xticks([500,1000,5000,10000,50000])
+ax.set_xticklabels([500,1000,5000,10000,50000])
+
 ax.legend()
 #plt.show()
 
