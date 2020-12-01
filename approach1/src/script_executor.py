@@ -75,12 +75,16 @@ def run_pplacer(raxml_info_file, backbone_tree, queries, output):
     if ret != 0:
       exit(-1)
 
-def score_raxml(treeFile, referenceAln, tid):
+def score_raxml(treeFile, referenceAln, tid, trial=0):
     """
     Run RAxML-ng in fixed tree mode to determine the best LogLikelihood score possible
     treeFile: the file where the tree is located
     referenceAln: the file where the reference alignment is located
     """
+    maxTrials = 2
+    if trial > maxTrials:
+      # I give up.
+      return
     #random_prefix = str(uuid.uuid4())
     prefix = f"raxml-prefix-{tid}.score"
     tmpFileHandle = open(prefix,"w")
@@ -92,7 +96,6 @@ def score_raxml(treeFile, referenceAln, tid):
                      "--threads", "1", # run in serial
                      "--opt-branches", "off", # do not optimize branch lengths
                      "--opt-model", "off", # do not optimize model conditions
-                     "--prefix", prefix, # prevent race condition with random prefix
                      "--evaluate",   # fixed-tree evaluation
                      "--nofiles", # do not generate files
                      "--log", "result", # do not log anything
@@ -100,13 +103,17 @@ def score_raxml(treeFile, referenceAln, tid):
                      stdout=tmpFileHandle
                      )
     # parse the output for the score
-    #regex = "Final LogLikelihood: (.+)"
-    #score = field_by_regex(regex, tmpFile)[0]
+    tmpFileHandle.close()
+    regex = "Final LogLikelihood: (.+)"
+    try:
+      score = field_by_regex(regex, prefix)[0]
+    except:
+      # there are spurious IO errors, so we can just re-run this
+      trial += 1
+      score_raxml(treeFile, referenceAln, tid, trial)
     if ret != 0:
       raxml_error = tmpFileHandle.readlines()
       print(f"Failed to run raxml-ng, it said:\n{raxml_error}")
-
-    tmpFileHandle.close()
 
     if ret != 0:
       exit(-1)
