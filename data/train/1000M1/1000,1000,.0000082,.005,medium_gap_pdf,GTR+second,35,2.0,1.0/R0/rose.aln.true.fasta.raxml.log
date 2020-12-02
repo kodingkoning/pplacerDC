@@ -1,0 +1,30 @@
+
+RAxML-NG v. 1.0.0 released on 07.08.2020 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Core(TM) i7-7800X CPU @ 3.50GHz, 6 cores, 30 GB RAM
+
+RAxML-NG was called at 27-Nov-2020 13:57:07 as follows:
+
+raxml-ng-mpi --msa /home/malachi2/cs581-project/cs581-project/data/train/1000M1/1000M1/R0/rose.aln.true.fasta
+
+Analysis options:
+  run mode: ML tree search
+  start tree(s): random (10) + parsimony (10)
+  random seed: 1606507027
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+
+ERROR: Please specify an evolutionary model with --model switch
+

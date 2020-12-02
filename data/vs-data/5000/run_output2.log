@@ -1,0 +1,1350 @@
+===== Timing =====
+setup took 0.5590412616729736 s
+apples took 1.5598273277282715 s
+RAxML scoring took 2.7221953868865967 s
+Clade identification took 0.46460628509521484 s
+FASTA file creation took 0.6208541393280029 s
+Tree mod took 0.017290592193603516 s
+Threaded region took 21.218847513198853 s
+execution took 25.585694551467896 s
+===== Timing =====
+setup took 0.5589723587036133 s
+apples took 1.8862624168395996 s
+RAxML scoring took 2.6559393405914307 s
+Clade identification took 0.49063944816589355 s
+FASTA file creation took 0.6366612911224365 s
+Tree mod took 0.01784801483154297 s
+Threaded region took 20.9712073802948 s
+execution took 25.470003366470337 s
+===== Timing =====
+setup took 0.5634827613830566 s
+apples took 1.6957752704620361 s
+RAxML scoring took 2.7752223014831543 s
+Clade identification took 0.4381413459777832 s
+FASTA file creation took 0.5449614524841309 s
+Tree mod took 0.017544984817504883 s
+Threaded region took 20.317809581756592 s
+execution took 24.727333307266235 s
+===== Timing =====
+setup took 0.6032519340515137 s
+apples took 1.7051401138305664 s
+RAxML scoring took 2.6557960510253906 s
+Clade identification took 0.40172648429870605 s
+FASTA file creation took 0.524616003036499 s
+Tree mod took 0.015616178512573242 s
+Threaded region took 17.951963901519775 s
+execution took 22.294671058654785 s
+===== Timing =====
+setup took 0.5611507892608643 s
+apples took 1.6677634716033936 s
+RAxML scoring took 2.7612781524658203 s
+Clade identification took 0.4433622360229492 s
+FASTA file creation took 0.6095297336578369 s
+Tree mod took 0.01822519302368164 s
+Threaded region took 21.694272756576538 s
+execution took 25.98131036758423 s
+===== Timing =====
+setup took 0.586728572845459 s
+apples took 1.6718201637268066 s
+RAxML scoring took 2.6790854930877686 s
+Clade identification took 0.4464569091796875 s
+FASTA file creation took 0.5811667442321777 s
+Tree mod took 0.01752161979675293 s
+Threaded region took 21.28011918067932 s
+execution took 25.57261347770691 s
+===== Timing =====
+setup took 0.562077522277832 s
+apples took 1.6858606338500977 s
+RAxML scoring took 2.840327501296997 s
+Clade identification took 0.44115543365478516 s
+FASTA file creation took 0.546760082244873 s
+Tree mod took 0.017844676971435547 s
+Threaded region took 20.759392023086548 s
+execution took 25.108070373535156 s
+===== Timing =====
+setup took 0.5717761516571045 s
+apples took 1.6678175926208496 s
+RAxML scoring took 2.703174352645874 s
+Clade identification took 0.03285360336303711 s
+FASTA file creation took 0.15035653114318848 s
+Tree mod took 0.012958526611328125 s
+Threaded region took 3.2072436809539795 s
+execution took 7.520910739898682 s
+===== Timing =====
+setup took 0.5599522590637207 s
+apples took 1.544907808303833 s
+RAxML scoring took 2.659144878387451 s
+Clade identification took 0.442091703414917 s
+FASTA file creation took 0.608623743057251 s
+Tree mod took 0.017943143844604492 s
+Threaded region took 21.140053510665894 s
+execution took 25.552855491638184 s
+===== Timing =====
+setup took 0.5765945911407471 s
+apples took 1.6690576076507568 s
+RAxML scoring took 2.750894784927368 s
+Clade identification took 0.43616724014282227 s
+FASTA file creation took 0.578343391418457 s
+Tree mod took 0.01807379722595215 s
+Threaded region took 20.94672679901123 s
+execution took 25.235151290893555 s
+===== Timing =====
+setup took 0.5814433097839355 s
+apples took 1.704280138015747 s
+RAxML scoring took 2.6443843841552734 s
+Clade identification took 0.44576001167297363 s
+FASTA file creation took 0.546044111251831 s
+Tree mod took 0.018207788467407227 s
+Threaded region took 21.097105026245117 s
+execution took 25.404078722000122 s
+===== Timing =====
+setup took 0.5855681896209717 s
+apples took 1.6770281791687012 s
+RAxML scoring took 2.7546253204345703 s
+Clade identification took 0.44922304153442383 s
+FASTA file creation took 0.556405782699585 s
+Tree mod took 0.017888307571411133 s
+Threaded region took 21.026249170303345 s
+execution took 25.29614806175232 s
+===== Timing =====
+setup took 0.564964771270752 s
+apples took 1.6744556427001953 s
+RAxML scoring took 2.622676134109497 s
+Clade identification took 0.4456338882446289 s
+FASTA file creation took 0.6288774013519287 s
+Tree mod took 0.016927480697631836 s
+Threaded region took 21.258628606796265 s
+execution took 25.5186607837677 s
+===== Timing =====
+setup took 0.5581059455871582 s
+apples took 1.7216813564300537 s
+RAxML scoring took 2.789480447769165 s
+Clade identification took 0.4610011577606201 s
+FASTA file creation took 0.564455509185791 s
+Tree mod took 0.017607927322387695 s
+Threaded region took 21.116856813430786 s
+execution took 25.471940279006958 s
+===== Timing =====
+setup took 0.5605447292327881 s
+apples took 1.671037197113037 s
+RAxML scoring took 2.7101492881774902 s
+Clade identification took 0.44155335426330566 s
+FASTA file creation took 0.6607093811035156 s
+Tree mod took 0.017670154571533203 s
+Threaded region took 21.183863401412964 s
+execution took 25.42074751853943 s
+===== Timing =====
+setup took 0.5589148998260498 s
+apples took 1.6624016761779785 s
+RAxML scoring took 2.6519219875335693 s
+Clade identification took 0.371826171875 s
+FASTA file creation took 0.5231804847717285 s
+Tree mod took 0.016051530838012695 s
+Threaded region took 17.771648168563843 s
+execution took 22.03594207763672 s
+===== Timing =====
+setup took 0.5886678695678711 s
+apples took 1.6690623760223389 s
+RAxML scoring took 2.7627363204956055 s
+Clade identification took 0.4439244270324707 s
+FASTA file creation took 0.5932378768920898 s
+Tree mod took 0.01768350601196289 s
+Threaded region took 21.443901777267456 s
+execution took 25.84497332572937 s
+===== Timing =====
+setup took 0.5546307563781738 s
+apples took 1.6686451435089111 s
+RAxML scoring took 2.692178249359131 s
+Clade identification took 0.46013736724853516 s
+FASTA file creation took 0.5556952953338623 s
+Tree mod took 0.017920255661010742 s
+Threaded region took 20.832171201705933 s
+execution took 25.13839364051819 s
+===== Timing =====
+setup took 0.569232702255249 s
+apples took 1.6915674209594727 s
+RAxML scoring took 2.825950860977173 s
+Clade identification took 0.4596261978149414 s
+FASTA file creation took 0.5724797248840332 s
+Tree mod took 0.016407012939453125 s
+Threaded region took 20.853726625442505 s
+execution took 25.303735494613647 s
+===== Timing =====
+setup took 0.556096076965332 s
+apples took 1.6907920837402344 s
+RAxML scoring took 2.7090296745300293 s
+Clade identification took 0.44843292236328125 s
+FASTA file creation took 0.5682168006896973 s
+Tree mod took 0.017496824264526367 s
+Threaded region took 21.63148808479309 s
+execution took 25.971761226654053 s
+===== Timing =====
+setup took 0.594740629196167 s
+apples took 1.701627492904663 s
+RAxML scoring took 2.7372732162475586 s
+Clade identification took 0.44495224952697754 s
+FASTA file creation took 0.6035184860229492 s
+Tree mod took 0.017737388610839844 s
+Threaded region took 21.144758701324463 s
+execution took 25.56693458557129 s
+===== Timing =====
+setup took 0.5527310371398926 s
+apples took 1.6711249351501465 s
+RAxML scoring took 2.6807174682617188 s
+Clade identification took 0.5204086303710938 s
+FASTA file creation took 0.5790579319000244 s
+Tree mod took 0.017712831497192383 s
+Threaded region took 21.402270555496216 s
+execution took 25.70106792449951 s
+===== Timing =====
+setup took 0.5568060874938965 s
+apples took 1.6601223945617676 s
+RAxML scoring took 2.745694160461426 s
+Clade identification took 0.44151854515075684 s
+FASTA file creation took 0.6011362075805664 s
+Tree mod took 0.017180681228637695 s
+Threaded region took 21.069021463394165 s
+execution took 26.163094520568848 s
+===== Timing =====
+setup took 0.5573508739471436 s
+apples took 1.6516685485839844 s
+RAxML scoring took 2.7606353759765625 s
+Clade identification took 0.4598574638366699 s
+FASTA file creation took 0.6113426685333252 s
+Tree mod took 0.018355131149291992 s
+Threaded region took 20.671594858169556 s
+execution took 25.010871171951294 s
+===== Timing =====
+setup took 0.6103363037109375 s
+apples took 1.8022871017456055 s
+RAxML scoring took 2.768188238143921 s
+Clade identification took 0.5002310276031494 s
+FASTA file creation took 0.5751972198486328 s
+Tree mod took 0.017018556594848633 s
+Threaded region took 21.247186422348022 s
+execution took 25.85611367225647 s
+===== Timing =====
+setup took 0.582282304763794 s
+apples took 1.741267204284668 s
+RAxML scoring took 3.754307985305786 s
+Clade identification took 0.46152186393737793 s
+FASTA file creation took 0.5909278392791748 s
+Tree mod took 0.017795085906982422 s
+Threaded region took 21.680525541305542 s
+execution took 26.7939772605896 s
+===== Timing =====
+setup took 0.5705785751342773 s
+apples took 1.6031053066253662 s
+RAxML scoring took 3.9320740699768066 s
+Clade identification took 0.40113043785095215 s
+FASTA file creation took 0.5444686412811279 s
+Tree mod took 0.017209768295288086 s
+Threaded region took 18.817959308624268 s
+execution took 23.65634298324585 s
+===== Timing =====
+setup took 0.552304744720459 s
+apples took 1.607304573059082 s
+RAxML scoring took 3.5666909217834473 s
+Clade identification took 0.4058852195739746 s
+FASTA file creation took 0.5079917907714844 s
+Tree mod took 0.015159130096435547 s
+Threaded region took 18.523646116256714 s
+execution took 23.198941946029663 s
+===== Timing =====
+setup took 0.5914361476898193 s
+apples took 1.8403964042663574 s
+RAxML scoring took 3.0689001083374023 s
+Clade identification took 0.36508846282958984 s
+FASTA file creation took 0.5334963798522949 s
+Tree mod took 0.016155719757080078 s
+Threaded region took 17.85996675491333 s
+execution took 22.64189887046814 s
+===== Timing =====
+setup took 0.5605320930480957 s
+apples took 1.6681506633758545 s
+RAxML scoring took 2.655879497528076 s
+Clade identification took 0.37789416313171387 s
+FASTA file creation took 0.530552864074707 s
+Tree mod took 0.016274452209472656 s
+Threaded region took 18.00012230873108 s
+execution took 22.32661199569702 s
+===== Timing =====
+setup took 0.5848016738891602 s
+apples took 1.679868459701538 s
+RAxML scoring took 2.7347161769866943 s
+Clade identification took 0.550328254699707 s
+FASTA file creation took 0.7741191387176514 s
+Tree mod took 0.01758599281311035 s
+Threaded region took 21.40966534614563 s
+execution took 25.755699634552002 s
+===== Timing =====
+setup took 0.5534939765930176 s
+apples took 1.6800904273986816 s
+RAxML scoring took 2.626532554626465 s
+Clade identification took 0.43877148628234863 s
+FASTA file creation took 0.62813401222229 s
+Tree mod took 0.01760554313659668 s
+Threaded region took 21.076568365097046 s
+execution took 25.34680724143982 s
+===== Timing =====
+setup took 0.5720205307006836 s
+apples took 1.642993450164795 s
+RAxML scoring took 2.7423620223999023 s
+Clade identification took 0.46257591247558594 s
+FASTA file creation took 0.6400668621063232 s
+Tree mod took 0.017704248428344727 s
+Threaded region took 21.143726587295532 s
+execution took 25.41481924057007 s
+===== Timing =====
+setup took 0.583838939666748 s
+apples took 1.666335105895996 s
+RAxML scoring took 2.6744961738586426 s
+Clade identification took 0.4504261016845703 s
+FASTA file creation took 0.5681924819946289 s
+Tree mod took 0.017892122268676758 s
+Threaded region took 21.332821130752563 s
+execution took 25.74683141708374 s
+===== Timing =====
+setup took 0.5575695037841797 s
+apples took 1.6561362743377686 s
+RAxML scoring took 2.750598192214966 s
+Clade identification took 0.44449782371520996 s
+FASTA file creation took 0.6032896041870117 s
+Tree mod took 0.017712831497192383 s
+Threaded region took 20.913925886154175 s
+execution took 25.159979820251465 s
+===== Timing =====
+setup took 0.5586643218994141 s
+apples took 1.6746282577514648 s
+RAxML scoring took 2.6675844192504883 s
+Clade identification took 0.47987890243530273 s
+FASTA file creation took 0.5629630088806152 s
+Tree mod took 0.018080949783325195 s
+Threaded region took 20.946995973587036 s
+execution took 25.218403339385986 s
+===== Timing =====
+setup took 0.5607151985168457 s
+apples took 1.6678850650787354 s
+RAxML scoring took 2.79276967048645 s
+Clade identification took 0.4630436897277832 s
+FASTA file creation took 0.5903289318084717 s
+Tree mod took 0.017739534378051758 s
+Threaded region took 20.91556739807129 s
+execution took 25.272413730621338 s
+===== Timing =====
+setup took 0.5562939643859863 s
+apples took 1.68442964553833 s
+RAxML scoring took 2.6843080520629883 s
+Clade identification took 0.3858792781829834 s
+FASTA file creation took 0.5236327648162842 s
+Tree mod took 0.016152143478393555 s
+Threaded region took 17.848356246948242 s
+execution took 22.21786642074585 s
+===== Timing =====
+setup took 0.5863704681396484 s
+apples took 1.6608614921569824 s
+RAxML scoring took 3.55318284034729 s
+Clade identification took 0.3710663318634033 s
+FASTA file creation took 0.5282096862792969 s
+Tree mod took 0.016084671020507812 s
+Threaded region took 18.698394298553467 s
+execution took 23.03645634651184 s
+===== Timing =====
+setup took 0.7871792316436768 s
+apples took 2.549863576889038 s
+RAxML scoring took 3.3438990116119385 s
+Clade identification took 0.48610639572143555 s
+FASTA file creation took 0.6170125007629395 s
+Tree mod took 0.01817464828491211 s
+Threaded region took 21.13538146018982 s
+execution took 26.95931625366211 s
+===== Timing =====
+setup took 0.5973868370056152 s
+apples took 1.8523592948913574 s
+RAxML scoring took 3.307969331741333 s
+Clade identification took 0.46108388900756836 s
+FASTA file creation took 0.5801265239715576 s
+Tree mod took 0.017750978469848633 s
+Threaded region took 21.311331272125244 s
+execution took 26.110584020614624 s
+===== Timing =====
+setup took 0.6160032749176025 s
+apples took 1.7201168537139893 s
+RAxML scoring took 3.517616033554077 s
+Clade identification took 0.44971585273742676 s
+FASTA file creation took 0.5346193313598633 s
+Tree mod took 0.017946958541870117 s
+Threaded region took 21.211776971817017 s
+execution took 26.146077394485474 s
+===== Timing =====
+setup took 0.5733702182769775 s
+apples took 1.7592189311981201 s
+RAxML scoring took 3.2235801219940186 s
+Clade identification took 0.4734077453613281 s
+FASTA file creation took 0.5711987018585205 s
+Tree mod took 0.01775836944580078 s
+Threaded region took 21.314762592315674 s
+execution took 25.9852774143219 s
+===== Timing =====
+setup took 0.570925235748291 s
+apples took 1.73885178565979 s
+RAxML scoring took 3.3028523921966553 s
+Clade identification took 0.4351058006286621 s
+FASTA file creation took 0.5445764064788818 s
+Tree mod took 0.01768183708190918 s
+Threaded region took 21.260102033615112 s
+execution took 26.015362977981567 s
+===== Timing =====
+setup took 0.5719962120056152 s
+apples took 2.0220067501068115 s
+RAxML scoring took 4.640117883682251 s
+Clade identification took 0.5772209167480469 s
+FASTA file creation took 0.911088228225708 s
+Tree mod took 0.018319129943847656 s
+Threaded region took 22.567680835723877 s
+execution took 28.719616174697876 s
+===== Timing =====
+setup took 0.5867049694061279 s
+apples took 1.6772677898406982 s
+RAxML scoring took 2.728192090988159 s
+Clade identification took 0.3642563819885254 s
+FASTA file creation took 0.5415639877319336 s
+Tree mod took 0.016431808471679688 s
+Threaded region took 17.38633441925049 s
+execution took 21.752288341522217 s
+===== Timing =====
+setup took 0.5749800205230713 s
+apples took 1.6521646976470947 s
+RAxML scoring took 2.6579458713531494 s
+Clade identification took 0.3699226379394531 s
+FASTA file creation took 0.5377717018127441 s
+Tree mod took 0.01632976531982422 s
+Threaded region took 17.755526542663574 s
+execution took 22.02719259262085 s
+===== Timing =====
+setup took 0.5738685131072998 s
+apples took 1.6809229850769043 s
+RAxML scoring took 2.750922203063965 s
+Clade identification took 0.436565637588501 s
+FASTA file creation took 0.6012156009674072 s
+Tree mod took 0.01754474639892578 s
+Threaded region took 20.972534894943237 s
+execution took 25.26350235939026 s
+===== Timing =====
+setup took 0.6185853481292725 s
+apples took 1.6724450588226318 s
+RAxML scoring took 2.685227870941162 s
+Clade identification took 0.365631103515625 s
+FASTA file creation took 0.4732508659362793 s
+Tree mod took 0.016731977462768555 s
+Threaded region took 17.864309549331665 s
+execution took 22.3206889629364 s
+===== Timing =====
+setup took 0.5619723796844482 s
+apples took 1.6654956340789795 s
+RAxML scoring took 2.7082180976867676 s
+Clade identification took 0.37795257568359375 s
+FASTA file creation took 0.5239448547363281 s
+Tree mod took 0.015137434005737305 s
+Threaded region took 17.92702889442444 s
+execution took 22.280353307724 s
+===== Timing =====
+setup took 0.5836894512176514 s
+apples took 1.6909735202789307 s
+RAxML scoring took 2.7911429405212402 s
+Clade identification took 0.460343599319458 s
+FASTA file creation took 0.5493617057800293 s
+Tree mod took 0.01842808723449707 s
+Threaded region took 20.917717218399048 s
+execution took 25.416866540908813 s
+===== Timing =====
+setup took 0.5639829635620117 s
+apples took 1.6672594547271729 s
+RAxML scoring took 2.675950050354004 s
+Clade identification took 0.4364049434661865 s
+FASTA file creation took 0.5638754367828369 s
+Tree mod took 0.018291234970092773 s
+Threaded region took 20.472126245498657 s
+execution took 24.77767014503479 s
+===== Timing =====
+setup took 0.5596418380737305 s
+apples took 1.6548941135406494 s
+RAxML scoring took 2.7406399250030518 s
+Clade identification took 0.4801480770111084 s
+FASTA file creation took 0.6064529418945312 s
+Tree mod took 0.016031265258789062 s
+Threaded region took 20.670007467269897 s
+execution took 25.0377836227417 s
+===== Timing =====
+setup took 0.5599427223205566 s
+apples took 1.6837544441223145 s
+RAxML scoring took 2.6705400943756104 s
+Clade identification took 0.4438316822052002 s
+FASTA file creation took 0.5563657283782959 s
+Tree mod took 0.01646566390991211 s
+Threaded region took 20.72113347053528 s
+execution took 25.019620418548584 s
+===== Timing =====
+setup took 0.5571539402008057 s
+apples took 1.6967077255249023 s
+RAxML scoring took 2.7636160850524902 s
+Clade identification took 0.5266537666320801 s
+FASTA file creation took 0.5701320171356201 s
+Tree mod took 0.016492843627929688 s
+Threaded region took 20.093907594680786 s
+execution took 24.52045750617981 s
+===== Timing =====
+setup took 0.615483283996582 s
+apples took 1.6652960777282715 s
+RAxML scoring took 2.6754939556121826 s
+Clade identification took 0.44924044609069824 s
+FASTA file creation took 0.5885283946990967 s
+Tree mod took 0.017362356185913086 s
+Threaded region took 20.61593770980835 s
+execution took 25.02117395401001 s
+===== Timing =====
+setup took 0.5632030963897705 s
+apples took 1.6786351203918457 s
+RAxML scoring took 2.7728781700134277 s
+Clade identification took 0.43953394889831543 s
+FASTA file creation took 0.6218562126159668 s
+Tree mod took 0.017507076263427734 s
+Threaded region took 20.679168462753296 s
+execution took 25.08179497718811 s
+===== Timing =====
+setup took 0.5645332336425781 s
+apples took 1.6719756126403809 s
+RAxML scoring took 2.653606653213501 s
+Clade identification took 0.45090341567993164 s
+FASTA file creation took 0.5852890014648438 s
+Tree mod took 0.01622152328491211 s
+Threaded region took 20.744754552841187 s
+execution took 25.045541524887085 s
+===== Timing =====
+setup took 0.5604391098022461 s
+apples took 1.6920995712280273 s
+RAxML scoring took 2.7556474208831787 s
+Clade identification took 0.44225096702575684 s
+FASTA file creation took 0.5551507472991943 s
+Tree mod took 0.018482208251953125 s
+Threaded region took 20.731232404708862 s
+execution took 25.126866817474365 s
+===== Timing =====
+setup took 0.5601692199707031 s
+apples took 1.6717438697814941 s
+RAxML scoring took 2.691181182861328 s
+Clade identification took 0.4386942386627197 s
+FASTA file creation took 0.6007554531097412 s
+Tree mod took 0.01633596420288086 s
+Threaded region took 20.559561729431152 s
+execution took 24.86731767654419 s
+===== Timing =====
+setup took 0.5557057857513428 s
+apples took 1.6521663665771484 s
+RAxML scoring took 2.761181592941284 s
+Clade identification took 0.49784016609191895 s
+FASTA file creation took 0.5607390403747559 s
+Tree mod took 0.01648259162902832 s
+Threaded region took 20.56984543800354 s
+execution took 24.942484617233276 s
+===== Timing =====
+setup took 0.5570361614227295 s
+apples took 1.637343168258667 s
+RAxML scoring took 2.714038610458374 s
+Clade identification took 0.4641108512878418 s
+FASTA file creation took 0.5809147357940674 s
+Tree mod took 0.018729448318481445 s
+Threaded region took 20.981906175613403 s
+execution took 25.265488624572754 s
+===== Timing =====
+setup took 0.5810461044311523 s
+apples took 1.8008816242218018 s
+RAxML scoring took 2.7526962757110596 s
+Clade identification took 0.46272706985473633 s
+FASTA file creation took 0.5528864860534668 s
+Tree mod took 0.01640176773071289 s
+Threaded region took 20.725124835968018 s
+execution took 25.239341974258423 s
+===== Timing =====
+setup took 0.553673267364502 s
+apples took 1.6542503833770752 s
+RAxML scoring took 2.9643170833587646 s
+Clade identification took 0.4460790157318115 s
+FASTA file creation took 0.5431046485900879 s
+Tree mod took 0.016646146774291992 s
+Threaded region took 21.079587697982788 s
+execution took 25.3484787940979 s
+===== Timing =====
+setup took 0.5544066429138184 s
+apples took 1.6604633331298828 s
+RAxML scoring took 3.9320170879364014 s
+Clade identification took 0.44667625427246094 s
+FASTA file creation took 0.5282349586486816 s
+Tree mod took 0.018135786056518555 s
+Threaded region took 21.236563682556152 s
+execution took 26.148369550704956 s
+===== Timing =====
+setup took 0.5609991550445557 s
+apples took 1.593397617340088 s
+RAxML scoring took 3.4315388202667236 s
+Clade identification took 0.44048595428466797 s
+FASTA file creation took 0.6021275520324707 s
+Tree mod took 0.01723003387451172 s
+Threaded region took 21.26891016960144 s
+execution took 25.832706212997437 s
+===== Timing =====
+setup took 0.5529439449310303 s
+apples took 1.6104631423950195 s
+RAxML scoring took 3.602820634841919 s
+Clade identification took 0.4372725486755371 s
+FASTA file creation took 0.5682373046875 s
+Tree mod took 0.018456459045410156 s
+Threaded region took 21.818113088607788 s
+execution took 26.705399990081787 s
+===== Timing =====
+setup took 0.565037727355957 s
+apples took 1.6102123260498047 s
+RAxML scoring took 3.9056193828582764 s
+Clade identification took 0.45238828659057617 s
+FASTA file creation took 0.6128101348876953 s
+Tree mod took 0.01634669303894043 s
+Threaded region took 19.93294048309326 s
+execution took 25.409340381622314 s
+===== Timing =====
+setup took 0.5542519092559814 s
+apples took 1.6552844047546387 s
+RAxML scoring took 2.771230936050415 s
+Clade identification took 0.44578123092651367 s
+FASTA file creation took 0.5462346076965332 s
+Tree mod took 0.018135547637939453 s
+Threaded region took 20.479576587677002 s
+execution took 24.854759454727173 s
+===== Timing =====
+setup took 0.5845210552215576 s
+apples took 1.6647436618804932 s
+RAxML scoring took 2.7400734424591064 s
+Clade identification took 0.4512605667114258 s
+FASTA file creation took 0.5564985275268555 s
+Tree mod took 0.016347646713256836 s
+Threaded region took 20.647090911865234 s
+execution took 25.015153169631958 s
+===== Timing =====
+setup took 0.5635800361633301 s
+apples took 1.7140748500823975 s
+RAxML scoring took 2.806224822998047 s
+Clade identification took 0.32660794258117676 s
+FASTA file creation took 0.42624998092651367 s
+Tree mod took 0.016111135482788086 s
+Threaded region took 14.702871561050415 s
+execution took 19.155710458755493 s
+===== Timing =====
+setup took 0.5839312076568604 s
+apples took 1.6974103450775146 s
+RAxML scoring took 2.713923931121826 s
+Clade identification took 0.4449601173400879 s
+FASTA file creation took 0.5717780590057373 s
+Tree mod took 0.017944812774658203 s
+Threaded region took 20.424319744110107 s
+execution took 24.81150722503662 s
+===== Timing =====
+setup took 0.5593516826629639 s
+apples took 1.7081019878387451 s
+RAxML scoring took 2.81473970413208 s
+Clade identification took 0.46149444580078125 s
+FASTA file creation took 0.5824325084686279 s
+Tree mod took 0.01655411720275879 s
+Threaded region took 20.792158603668213 s
+execution took 25.210259199142456 s
+===== Timing =====
+setup took 0.5830626487731934 s
+apples took 1.7102324962615967 s
+RAxML scoring took 2.7085790634155273 s
+Clade identification took 0.3173356056213379 s
+FASTA file creation took 0.42098307609558105 s
+Tree mod took 0.016083717346191406 s
+Threaded region took 14.106027841567993 s
+execution took 18.513463973999023 s
+===== Timing =====
+setup took 0.5588028430938721 s
+apples took 1.6662349700927734 s
+RAxML scoring took 2.6799020767211914 s
+Clade identification took 0.4427454471588135 s
+FASTA file creation took 0.5686938762664795 s
+Tree mod took 0.01692962646484375 s
+Threaded region took 20.49631905555725 s
+execution took 24.801912307739258 s
+===== Timing =====
+setup took 0.5727710723876953 s
+apples took 1.683762550354004 s
+RAxML scoring took 2.8146371841430664 s
+Clade identification took 0.43860530853271484 s
+FASTA file creation took 0.5620005130767822 s
+Tree mod took 0.01674962043762207 s
+Threaded region took 20.67739725112915 s
+execution took 25.15928363800049 s
+===== Timing =====
+setup took 0.5550928115844727 s
+apples took 1.7018647193908691 s
+RAxML scoring took 2.7050652503967285 s
+Clade identification took 0.4505159854888916 s
+FASTA file creation took 0.5500154495239258 s
+Tree mod took 0.017849445343017578 s
+Threaded region took 20.644770860671997 s
+execution took 25.008304119110107 s
+===== Timing =====
+setup took 0.581467866897583 s
+apples took 1.6690423488616943 s
+RAxML scoring took 2.7598347663879395 s
+Clade identification took 0.45501255989074707 s
+FASTA file creation took 0.6989262104034424 s
+Tree mod took 0.018273591995239258 s
+Threaded region took 20.92875576019287 s
+execution took 25.37072467803955 s
+===== Timing =====
+setup took 0.5844569206237793 s
+apples took 1.7177197933197021 s
+RAxML scoring took 2.6929492950439453 s
+Clade identification took 0.46778345108032227 s
+FASTA file creation took 0.5883464813232422 s
+Tree mod took 0.01752018928527832 s
+Threaded region took 19.933860063552856 s
+execution took 24.73066210746765 s
+===== Timing =====
+setup took 0.575221061706543 s
+apples took 1.697016954421997 s
+RAxML scoring took 2.8016748428344727 s
+Clade identification took 0.45908212661743164 s
+FASTA file creation took 0.5833227634429932 s
+Tree mod took 0.01610565185546875 s
+Threaded region took 20.834815740585327 s
+execution took 25.3437020778656 s
+===== Timing =====
+setup took 0.5994818210601807 s
+apples took 1.6869544982910156 s
+RAxML scoring took 2.7209994792938232 s
+Clade identification took 0.4862518310546875 s
+FASTA file creation took 0.5848388671875 s
+Tree mod took 0.016733169555664062 s
+Threaded region took 20.859193086624146 s
+execution took 25.36943030357361 s
+===== Timing =====
+setup took 0.5980725288391113 s
+apples took 1.6919264793395996 s
+RAxML scoring took 2.7622549533843994 s
+Clade identification took 0.46767544746398926 s
+FASTA file creation took 0.6035737991333008 s
+Tree mod took 0.01809406280517578 s
+Threaded region took 20.89807629585266 s
+execution took 25.359416484832764 s
+===== Timing =====
+setup took 0.5605261325836182 s
+apples took 1.7096943855285645 s
+RAxML scoring took 2.7095980644226074 s
+Clade identification took 0.45195841789245605 s
+FASTA file creation took 0.6081771850585938 s
+Tree mod took 0.01801300048828125 s
+Threaded region took 20.55275273323059 s
+execution took 24.952105045318604 s
+===== Timing =====
+setup took 0.5632569789886475 s
+apples took 1.7027671337127686 s
+RAxML scoring took 2.7848944664001465 s
+Clade identification took 0.4389326572418213 s
+FASTA file creation took 0.5499963760375977 s
+Tree mod took 0.01625823974609375 s
+Threaded region took 20.316654443740845 s
+execution took 24.791330099105835 s
+===== Timing =====
+setup took 0.5661144256591797 s
+apples took 1.7145016193389893 s
+RAxML scoring took 2.683323383331299 s
+Clade identification took 0.4433126449584961 s
+FASTA file creation took 0.5603034496307373 s
+Tree mod took 0.017838478088378906 s
+Threaded region took 20.397898197174072 s
+execution took 24.76881766319275 s
+===== Timing =====
+setup took 0.5764024257659912 s
+apples took 1.6898212432861328 s
+RAxML scoring took 2.822352170944214 s
+Clade identification took 0.43799710273742676 s
+FASTA file creation took 0.6463091373443604 s
+Tree mod took 0.017737150192260742 s
+Threaded region took 20.8472683429718 s
+execution took 25.311957359313965 s
+===== Timing =====
+setup took 0.5788154602050781 s
+apples took 1.8329710960388184 s
+RAxML scoring took 2.723662853240967 s
+Clade identification took 0.4679245948791504 s
+FASTA file creation took 0.5858030319213867 s
+Tree mod took 0.016267061233520508 s
+Threaded region took 20.759594917297363 s
+execution took 25.31798791885376 s
+===== Timing =====
+setup took 0.6105537414550781 s
+apples took 1.818955421447754 s
+RAxML scoring took 2.772244930267334 s
+Clade identification took 0.4657003879547119 s
+FASTA file creation took 0.6045510768890381 s
+Tree mod took 0.017913818359375 s
+Threaded region took 20.42505383491516 s
+execution took 25.018201112747192 s
+===== Timing =====
+setup took 0.5582702159881592 s
+apples took 1.6882212162017822 s
+RAxML scoring took 2.6978249549865723 s
+Clade identification took 0.4436044692993164 s
+FASTA file creation took 0.5678927898406982 s
+Tree mod took 0.016835927963256836 s
+Threaded region took 20.617003202438354 s
+execution took 24.985424041748047 s
+===== Timing =====
+setup took 0.5895893573760986 s
+apples took 1.7024075984954834 s
+RAxML scoring took 2.7809462547302246 s
+Clade identification took 0.4367358684539795 s
+FASTA file creation took 0.5942986011505127 s
+Tree mod took 0.01647639274597168 s
+Threaded region took 20.712307691574097 s
+execution took 25.19420886039734 s
+===== Timing =====
+setup took 0.5568127632141113 s
+apples took 1.7007172107696533 s
+RAxML scoring took 2.7038755416870117 s
+Clade identification took 0.4725022315979004 s
+FASTA file creation took 0.5725545883178711 s
+Tree mod took 0.018688201904296875 s
+Threaded region took 20.798374891281128 s
+execution took 25.16529369354248 s
+===== Timing =====
+setup took 0.5663375854492188 s
+apples took 1.7092831134796143 s
+RAxML scoring took 2.8072800636291504 s
+Clade identification took 0.4493250846862793 s
+FASTA file creation took 0.5762600898742676 s
+Tree mod took 0.018702030181884766 s
+Threaded region took 20.817464351654053 s
+execution took 25.260788679122925 s
+===== Timing =====
+setup took 0.5630698204040527 s
+apples took 1.6992011070251465 s
+RAxML scoring took 2.718625545501709 s
+Clade identification took 0.44719815254211426 s
+FASTA file creation took 0.5575411319732666 s
+Tree mod took 0.017925500869750977 s
+Threaded region took 20.44638705253601 s
+execution took 24.808059453964233 s
+===== Timing =====
+setup took 0.5701813697814941 s
+apples took 1.694917917251587 s
+RAxML scoring took 2.7964670658111572 s
+Clade identification took 0.4492838382720947 s
+FASTA file creation took 0.5882408618927002 s
+Tree mod took 0.016329050064086914 s
+Threaded region took 21.43418312072754 s
+execution took 25.877187728881836 s
+===== Timing =====
+setup took 0.558786153793335 s
+apples took 1.6816329956054688 s
+RAxML scoring took 2.6850287914276123 s
+Clade identification took 0.4481847286224365 s
+FASTA file creation took 0.5398077964782715 s
+Tree mod took 0.01705336570739746 s
+Threaded region took 20.813111305236816 s
+execution took 25.11965799331665 s
+===== Timing =====
+setup took 0.5872139930725098 s
+apples took 1.6925523281097412 s
+RAxML scoring took 2.787379741668701 s
+Clade identification took 0.45185017585754395 s
+FASTA file creation took 0.5665977001190186 s
+Tree mod took 0.017425060272216797 s
+Threaded region took 20.72678256034851 s
+execution took 25.171244859695435 s
+===== Timing =====
+setup took 0.5512795448303223 s
+apples took 1.6956067085266113 s
+RAxML scoring took 2.7091774940490723 s
+Clade identification took 0.46322011947631836 s
+FASTA file creation took 0.5577821731567383 s
+Tree mod took 0.017327308654785156 s
+Threaded region took 20.857425928115845 s
+execution took 25.22342300415039 s
+===== Timing =====
+setup took 0.5730457305908203 s
+apples took 1.6672916412353516 s
+RAxML scoring took 2.8250041007995605 s
+Clade identification took 0.4401698112487793 s
+FASTA file creation took 0.5461635589599609 s
+Tree mod took 0.018524169921875 s
+Threaded region took 20.94827914237976 s
+execution took 25.35757279396057 s
+===== Timing =====
+setup took 0.5557079315185547 s
+apples took 1.7049195766448975 s
+RAxML scoring took 2.7181880474090576 s
+Clade identification took 0.4649660587310791 s
+FASTA file creation took 0.5469086170196533 s
+Tree mod took 0.01625990867614746 s
+Threaded region took 20.71515440940857 s
+execution took 25.055588006973267 s
+===== Timing =====
+setup took 0.5529556274414062 s
+apples took 1.7090485095977783 s
+RAxML scoring took 2.766111135482788 s
+Clade identification took 0.3272533416748047 s
+FASTA file creation took 0.470623254776001 s
+Tree mod took 0.015588521957397461 s
+Threaded region took 14.6936194896698 s
+execution took 19.11518359184265 s
+===== Timing =====
+setup took 1.4612975120544434 s
+apples took 1.820798635482788 s
+RAxML scoring took 2.831127166748047 s
+Clade identification took 0.496110200881958 s
+FASTA file creation took 0.5784645080566406 s
+Tree mod took 0.01788640022277832 s
+Threaded region took 21.012733697891235 s
+execution took 26.64678168296814 s
+===== Timing =====
+setup took 0.5569465160369873 s
+apples took 1.6597981452941895 s
+RAxML scoring took 2.8374991416931152 s
+Clade identification took 0.4501502513885498 s
+FASTA file creation took 0.6213583946228027 s
+Tree mod took 0.01810312271118164 s
+Threaded region took 20.915130138397217 s
+execution took 25.207221031188965 s
+===== Timing =====
+setup took 0.5651447772979736 s
+apples took 1.6547985076904297 s
+RAxML scoring took 3.2880892753601074 s
+Clade identification took 0.44327259063720703 s
+FASTA file creation took 0.5369207859039307 s
+Tree mod took 0.016997337341308594 s
+Threaded region took 21.095930576324463 s
+execution took 25.907673597335815 s
+===== Timing =====
+setup took 0.5696384906768799 s
+apples took 1.6819751262664795 s
+RAxML scoring took 2.8375627994537354 s
+Clade identification took 0.4457416534423828 s
+FASTA file creation took 0.5614824295043945 s
+Tree mod took 0.017168521881103516 s
+Threaded region took 21.15007710456848 s
+execution took 25.518390417099 s
+===== Timing =====
+setup took 0.5615160465240479 s
+apples took 1.6919326782226562 s
+RAxML scoring took 2.7648048400878906 s
+Clade identification took 0.4488654136657715 s
+FASTA file creation took 0.5664842128753662 s
+Tree mod took 0.01615309715270996 s
+Threaded region took 21.21853280067444 s
+execution took 25.551317930221558 s
+===== Timing =====
+setup took 0.58447265625 s
+apples took 1.6801927089691162 s
+RAxML scoring took 2.8437302112579346 s
+Clade identification took 0.4528324604034424 s
+FASTA file creation took 0.5502245426177979 s
+Tree mod took 0.017360448837280273 s
+Threaded region took 20.861698150634766 s
+execution took 25.205156326293945 s
+===== Timing =====
+setup took 0.5634944438934326 s
+apples took 1.7005300521850586 s
+RAxML scoring took 2.7325117588043213 s
+Clade identification took 0.4578585624694824 s
+FASTA file creation took 0.555915355682373 s
+Tree mod took 0.017302274703979492 s
+Threaded region took 20.85463547706604 s
+execution took 25.159665822982788 s
+===== Timing =====
+setup took 0.5596437454223633 s
+apples took 1.7033054828643799 s
+RAxML scoring took 2.8382372856140137 s
+Clade identification took 0.43910694122314453 s
+FASTA file creation took 0.5468959808349609 s
+Tree mod took 0.017981529235839844 s
+Threaded region took 20.783373594284058 s
+execution took 25.112712144851685 s
+===== Timing =====
+setup took 0.5712029933929443 s
+apples took 1.6673016548156738 s
+RAxML scoring took 2.7336206436157227 s
+Clade identification took 0.43723320960998535 s
+FASTA file creation took 0.5624785423278809 s
+Tree mod took 0.017452239990234375 s
+Threaded region took 20.82241654396057 s
+execution took 25.112667083740234 s
+===== Timing =====
+setup took 0.5787873268127441 s
+apples took 1.7175102233886719 s
+RAxML scoring took 2.84089732170105 s
+Clade identification took 0.44371628761291504 s
+FASTA file creation took 0.5407917499542236 s
+Tree mod took 0.018250465393066406 s
+Threaded region took 20.662904500961304 s
+execution took 25.04886531829834 s
+===== Timing =====
+setup took 0.5816323757171631 s
+apples took 1.708876609802246 s
+RAxML scoring took 2.765604019165039 s
+Clade identification took 0.4335296154022217 s
+FASTA file creation took 0.5641789436340332 s
+Tree mod took 0.018393278121948242 s
+Threaded region took 20.84206533432007 s
+execution took 25.226933240890503 s
+===== Timing =====
+setup took 0.555614709854126 s
+apples took 1.696162223815918 s
+RAxML scoring took 2.8244855403900146 s
+Clade identification took 0.4394204616546631 s
+FASTA file creation took 0.5593442916870117 s
+Tree mod took 0.0167696475982666 s
+Threaded region took 21.236180305480957 s
+execution took 25.540282487869263 s
+===== Timing =====
+setup took 0.5640599727630615 s
+apples took 1.6743590831756592 s
+RAxML scoring took 2.766605854034424 s
+Clade identification took 0.44954490661621094 s
+FASTA file creation took 0.5650379657745361 s
+Tree mod took 0.01643538475036621 s
+Threaded region took 21.123186826705933 s
+execution took 25.430841207504272 s
+===== Timing =====
+setup took 0.5530483722686768 s
+apples took 1.7037298679351807 s
+RAxML scoring took 2.815486192703247 s
+Clade identification took 0.4439103603363037 s
+FASTA file creation took 0.564702033996582 s
+Tree mod took 0.01630425453186035 s
+Threaded region took 20.878514766693115 s
+execution took 25.188799381256104 s
+===== Timing =====
+setup took 0.569648265838623 s
+apples took 1.7083373069763184 s
+RAxML scoring took 2.7471587657928467 s
+Clade identification took 0.44355320930480957 s
+FASTA file creation took 0.5494980812072754 s
+Tree mod took 0.01736140251159668 s
+Threaded region took 20.74356508255005 s
+execution took 25.080974340438843 s
+===== Timing =====
+setup took 0.5588996410369873 s
+apples took 1.601001501083374 s
+RAxML scoring took 2.836688280105591 s
+Clade identification took 0.4427037239074707 s
+FASTA file creation took 0.6153111457824707 s
+Tree mod took 0.017635583877563477 s
+Threaded region took 21.0056369304657 s
+execution took 25.243713855743408 s
+===== Timing =====
+setup took 0.5712931156158447 s
+apples took 1.7004177570343018 s
+RAxML scoring took 2.7554986476898193 s
+Clade identification took 0.4410238265991211 s
+FASTA file creation took 0.5595557689666748 s
+Tree mod took 0.018448591232299805 s
+Threaded region took 20.789602756500244 s
+execution took 25.165798664093018 s
+===== Timing =====
+setup took 0.5691452026367188 s
+apples took 1.7060725688934326 s
+RAxML scoring took 3.463218927383423 s
+Clade identification took 0.43744683265686035 s
+FASTA file creation took 0.5752677917480469 s
+Tree mod took 0.0184175968170166 s
+Threaded region took 21.580362558364868 s
+execution took 25.901628494262695 s
+===== Timing =====
+setup took 0.5570061206817627 s
+apples took 1.5855076313018799 s
+RAxML scoring took 3.5117568969726562 s
+Clade identification took 0.744877815246582 s
+FASTA file creation took 0.5440292358398438 s
+Tree mod took 0.017115354537963867 s
+Threaded region took 20.571295022964478 s
+execution took 25.46642017364502 s
+===== Timing =====
+setup took 0.5496280193328857 s
+apples took 1.588507890701294 s
+RAxML scoring took 4.025874376296997 s
+Clade identification took 0.4375801086425781 s
+FASTA file creation took 0.5370094776153564 s
+Tree mod took 0.017897844314575195 s
+Threaded region took 21.656603813171387 s
+execution took 26.35256862640381 s
+===== Timing =====
+setup took 0.5695505142211914 s
+apples took 1.6263585090637207 s
+RAxML scoring took 3.8466789722442627 s
+Clade identification took 0.45101165771484375 s
+FASTA file creation took 0.558814525604248 s
+Tree mod took 0.01799464225769043 s
+Threaded region took 21.571115016937256 s
+execution took 26.293784379959106 s
+===== Timing =====
+setup took 0.5736043453216553 s
+apples took 1.6459248065948486 s
+RAxML scoring took 2.896888494491577 s
+Clade identification took 0.46907520294189453 s
+FASTA file creation took 0.5750467777252197 s
+Tree mod took 0.017492055892944336 s
+Threaded region took 20.875544548034668 s
+execution took 25.284953355789185 s
+===== Timing =====
+setup took 0.5987017154693604 s
+apples took 1.692122459411621 s
+RAxML scoring took 2.7165427207946777 s
+Clade identification took 0.44886088371276855 s
+FASTA file creation took 0.5646789073944092 s
+Tree mod took 0.016270160675048828 s
+Threaded region took 20.92499876022339 s
+execution took 25.295310020446777 s
+===== Timing =====
+setup took 0.5586621761322021 s
+apples took 1.6563677787780762 s
+RAxML scoring took 2.791929244995117 s
+Clade identification took 0.4601314067840576 s
+FASTA file creation took 0.5479521751403809 s
+Tree mod took 0.017504453659057617 s
+Threaded region took 20.802846431732178 s
+execution took 25.068583250045776 s
+===== Timing =====
+setup took 0.5672190189361572 s
+apples took 1.6676409244537354 s
+RAxML scoring took 2.7230451107025146 s
+Clade identification took 0.47769618034362793 s
+FASTA file creation took 0.5982320308685303 s
+Tree mod took 0.016700029373168945 s
+Threaded region took 20.793633699417114 s
+execution took 25.146419048309326 s
+===== Timing =====
+setup took 0.5608301162719727 s
+apples took 1.7153382301330566 s
+RAxML scoring took 2.8429176807403564 s
+Clade identification took 0.4415163993835449 s
+FASTA file creation took 0.5760135650634766 s
+Tree mod took 0.018492698669433594 s
+Threaded region took 20.79087471961975 s
+execution took 25.21266484260559 s
+===== Timing =====
+setup took 0.5854814052581787 s
+apples took 1.783538579940796 s
+RAxML scoring took 2.753725528717041 s
+Clade identification took 0.4634270668029785 s
+FASTA file creation took 0.5762841701507568 s
+Tree mod took 0.016438007354736328 s
+Threaded region took 20.84054136276245 s
+execution took 25.320500135421753 s
+===== Timing =====
+setup took 0.5915486812591553 s
+apples took 1.7895255088806152 s
+RAxML scoring took 2.797935962677002 s
+Clade identification took 0.4729609489440918 s
+FASTA file creation took 0.6018037796020508 s
+Tree mod took 0.018287181854248047 s
+Threaded region took 20.995662212371826 s
+execution took 25.499490976333618 s
+===== Timing =====
+setup took 0.5888381004333496 s
+apples took 1.6980702877044678 s
+RAxML scoring took 2.7255759239196777 s
+Clade identification took 0.44447827339172363 s
+FASTA file creation took 0.5472464561462402 s
+Tree mod took 0.01786661148071289 s
+Threaded region took 20.617945432662964 s
+execution took 25.032081127166748 s
+===== Timing =====
+setup took 0.5586304664611816 s
+apples took 1.675447702407837 s
+RAxML scoring took 2.785766124725342 s
+Clade identification took 0.45919156074523926 s
+FASTA file creation took 0.5655984878540039 s
+Tree mod took 0.018390893936157227 s
+Threaded region took 20.846623420715332 s
+execution took 25.147646188735962 s
+===== Timing =====
+setup took 0.5654213428497314 s
+apples took 1.6919879913330078 s
+RAxML scoring took 2.711214303970337 s
+Clade identification took 0.46833276748657227 s
+FASTA file creation took 0.6126914024353027 s
+Tree mod took 0.01817035675048828 s
+Threaded region took 20.92038655281067 s
+execution took 25.275102615356445 s
+===== Timing =====
+setup took 0.6113786697387695 s
+apples took 1.7032437324523926 s
+RAxML scoring took 2.692194700241089 s
+Clade identification took 0.3320281505584717 s
+FASTA file creation took 0.4774751663208008 s
+Tree mod took 0.014847040176391602 s
+Threaded region took 15.006820678710938 s
+execution took 19.418325185775757 s
+===== Timing =====
+setup took 0.5601990222930908 s
+apples took 1.6603052616119385 s
+RAxML scoring took 2.779627799987793 s
+Clade identification took 0.44182634353637695 s
+FASTA file creation took 0.5507347583770752 s
+Tree mod took 0.017646074295043945 s
+Threaded region took 20.99226427078247 s
+execution took 25.32942509651184 s
+===== Timing =====
+setup took 0.5541119575500488 s
+apples took 1.6845004558563232 s
+RAxML scoring took 2.7169172763824463 s
+Clade identification took 0.4648106098175049 s
+FASTA file creation took 0.5548834800720215 s
+Tree mod took 0.017226457595825195 s
+Threaded region took 19.576372861862183 s
+execution took 23.863105535507202 s
+===== Timing =====
+setup took 0.5726592540740967 s
+apples took 1.6712255477905273 s
+RAxML scoring took 2.802436113357544 s
+Clade identification took 0.4427070617675781 s
+FASTA file creation took 0.5587177276611328 s
+Tree mod took 0.018413066864013672 s
+Threaded region took 20.757513284683228 s
+execution took 25.161951541900635 s
+===== Timing =====
+setup took 0.5730149745941162 s
+apples took 1.6939482688903809 s
+RAxML scoring took 2.6757311820983887 s
+Clade identification took 0.43428778648376465 s
+FASTA file creation took 0.5471115112304688 s
+Tree mod took 0.016719818115234375 s
+Threaded region took 21.268845558166504 s
+execution took 25.598445892333984 s
+===== Timing =====
+setup took 0.5866546630859375 s
+apples took 1.693612813949585 s
+RAxML scoring took 2.784355401992798 s
+Clade identification took 0.4379127025604248 s
+FASTA file creation took 0.556734561920166 s
+Tree mod took 0.01637434959411621 s
+Threaded region took 20.86642289161682 s
+execution took 25.280144691467285 s
+===== Timing =====
+setup took 0.5517840385437012 s
+apples took 1.688913345336914 s
+RAxML scoring took 2.725550413131714 s
+Clade identification took 0.4375772476196289 s
+FASTA file creation took 0.5463497638702393 s
+Tree mod took 0.017530441284179688 s
+Threaded region took 20.78407573699951 s
+execution took 25.088436126708984 s
+===== Timing =====
+setup took 0.558941125869751 s
+apples took 1.6825337409973145 s
+RAxML scoring took 2.8020589351654053 s
+Clade identification took 0.44368720054626465 s
+FASTA file creation took 0.6011357307434082 s
+Tree mod took 0.01824021339416504 s
+Threaded region took 20.975132942199707 s
+execution took 25.3548800945282 s
+===== Timing =====
+setup took 0.5572295188903809 s
+apples took 1.6731956005096436 s
+RAxML scoring took 2.728426694869995 s
+Clade identification took 0.4368729591369629 s
+FASTA file creation took 0.5590775012969971 s
+Tree mod took 0.018354415893554688 s
+Threaded region took 21.050177097320557 s
+execution took 25.361416339874268 s
+===== Timing =====
+setup took 0.5716433525085449 s
+apples took 1.6585326194763184 s
+RAxML scoring took 2.827775239944458 s
+Clade identification took 0.4546477794647217 s
+FASTA file creation took 0.5341787338256836 s
+Tree mod took 0.017355680465698242 s
+Threaded region took 20.654505968093872 s
+execution took 25.036386966705322 s
+===== Timing =====
+setup took 0.5537655353546143 s
+apples took 1.6887516975402832 s
+RAxML scoring took 2.748788833618164 s
+Clade identification took 0.44236254692077637 s
+FASTA file creation took 0.5922915935516357 s
+Tree mod took 0.018372297286987305 s
+Threaded region took 20.73252820968628 s
+execution took 25.039942026138306 s
+===== Timing =====
+setup took 0.5618851184844971 s
+apples took 1.6371533870697021 s
+RAxML scoring took 2.7940404415130615 s
+Clade identification took 0.3304128646850586 s
+FASTA file creation took 0.4279000759124756 s
+Tree mod took 0.014881610870361328 s
+Threaded region took 14.889849424362183 s
+execution took 19.241450786590576 s
+===== Timing =====
+setup took 0.5832061767578125 s
+apples took 1.667905569076538 s
+RAxML scoring took 2.6694247722625732 s
+Clade identification took 0.4544382095336914 s
+FASTA file creation took 0.614905595779419 s
+Tree mod took 0.018060684204101562 s
+Threaded region took 20.640676736831665 s
+execution took 24.918465852737427 s
+===== Timing =====
+setup took 0.5555071830749512 s
+apples took 1.673475980758667 s
+RAxML scoring took 2.8237345218658447 s
+Clade identification took 0.4497406482696533 s
+FASTA file creation took 0.544959306716919 s
+Tree mod took 0.018032312393188477 s
+Threaded region took 20.840960025787354 s
+execution took 25.13189935684204 s
+===== Timing =====
+setup took 0.5498123168945312 s
+apples took 1.7014060020446777 s
+RAxML scoring took 2.680124044418335 s
+Clade identification took 0.4463531970977783 s
+FASTA file creation took 0.5654771327972412 s
+Tree mod took 0.01768660545349121 s
+Threaded region took 20.658921718597412 s
+execution took 24.960639476776123 s
+===== Timing =====
+setup took 0.5608174800872803 s
+apples took 1.6238410472869873 s
+RAxML scoring took 2.8409907817840576 s
+Clade identification took 0.4442257881164551 s
+FASTA file creation took 0.5488388538360596 s
+Tree mod took 0.018782615661621094 s
+Threaded region took 21.102946281433105 s
+execution took 25.490001440048218 s
+===== Timing =====
+setup took 0.5920331478118896 s
+apples took 1.6963775157928467 s
+RAxML scoring took 2.7860920429229736 s
+Clade identification took 0.43897199630737305 s
+FASTA file creation took 0.5407516956329346 s
+Tree mod took 0.018507719039916992 s
+Threaded region took 20.811840295791626 s
+execution took 25.199729442596436 s
+===== Timing =====
+setup took 0.5666360855102539 s
+apples took 1.6727309226989746 s
+RAxML scoring took 2.712437868118286 s
+Clade identification took 0.3448319435119629 s
+FASTA file creation took 0.4713895320892334 s
+Tree mod took 0.014854669570922852 s
+Threaded region took 15.073924779891968 s
+execution took 19.3589129447937 s
+===== Timing =====
+setup took 0.5588760375976562 s
+apples took 1.6817123889923096 s
+RAxML scoring took 2.8103787899017334 s
+Clade identification took 0.4375326633453369 s
+FASTA file creation took 0.620542049407959 s
+Tree mod took 0.01837468147277832 s
+Threaded region took 20.98043990135193 s
+execution took 25.379222631454468 s
