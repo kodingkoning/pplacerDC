@@ -1,0 +1,2700 @@
+temp_files/321f11d8-ca2f-40f5-be0f-c6e51f144ad4
+===== Timing =====
+Setup took 0.10235023498535156 s
+Generating fasta files for pplacer... took 0.43429088592529297 s
+Running pplacer... took 6.859688758850098 s
+Placing query into subtree... took 0.13418030738830566 s
+Modify main tree... took 0.31675243377685547 s
+Scoring trees... took 0.4464683532714844 s
+Program execution took 8.305088520050049 s
+temp_files/5e7dfef5-aad1-4564-b4a7-42106e659f69
+===== Timing =====
+Setup took 0.10022735595703125 s
+Generating fasta files for pplacer... took 0.3361527919769287 s
+Running pplacer... took 6.790266275405884 s
+Placing query into subtree... took 0.12721943855285645 s
+Modify main tree... took 0.28404688835144043 s
+Scoring trees... took 0.4417290687561035 s
+Program execution took 8.12004828453064 s
+temp_files/5ae1aaaf-295d-467c-bba0-8871632224f5
+===== Timing =====
+Setup took 0.09634208679199219 s
+Generating fasta files for pplacer... took 0.3582797050476074 s
+Running pplacer... took 6.849125862121582 s
+Placing query into subtree... took 0.1418015956878662 s
+Modify main tree... took 0.29670047760009766 s
+Scoring trees... took 0.5268745422363281 s
+Program execution took 8.281569480895996 s
+temp_files/8b398cb0-2cee-4410-8852-94e1db9625ae
+===== Timing =====
+Setup took 0.10226893424987793 s
+Generating fasta files for pplacer... took 0.40731215476989746 s
+Running pplacer... took 6.981020450592041 s
+Placing query into subtree... took 0.155930757522583 s
+Modify main tree... took 0.2760155200958252 s
+Scoring trees... took 0.4340972900390625 s
+Program execution took 8.36771297454834 s
+temp_files/8fab90da-c782-446e-b5f3-97974aaccc47
+===== Timing =====
+Setup took 0.1253950595855713 s
+Generating fasta files for pplacer... took 0.33623695373535156 s
+Running pplacer... took 6.885073900222778 s
+Placing query into subtree... took 0.14786887168884277 s
+Modify main tree... took 0.26538777351379395 s
+Scoring trees... took 0.44436025619506836 s
+Program execution took 8.22869086265564 s
+temp_files/25fe8694-ce44-4126-8eae-a8765a5d55e7
+===== Timing =====
+Setup took 0.10054302215576172 s
+Generating fasta files for pplacer... took 0.34171581268310547 s
+Running pplacer... took 6.863239765167236 s
+Placing query into subtree... took 0.1309375762939453 s
+Modify main tree... took 0.26263904571533203 s
+Scoring trees... took 0.44466328620910645 s
+Program execution took 8.188618183135986 s
+temp_files/9be60c38-1c33-43b8-8f2e-fa0692ac0a45
+===== Timing =====
+Setup took 0.09657645225524902 s
+Generating fasta files for pplacer... took 0.34864044189453125 s
+Running pplacer... took 6.896671772003174 s
+Placing query into subtree... took 0.14026689529418945 s
+Modify main tree... took 0.26238584518432617 s
+Scoring trees... took 0.44379377365112305 s
+Program execution took 8.235107183456421 s
+temp_files/4d318107-6ff5-48cf-9cdc-aacc565fc044
+===== Timing =====
+Setup took 0.10036349296569824 s
+Generating fasta files for pplacer... took 0.36403584480285645 s
+Running pplacer... took 6.870344877243042 s
+Placing query into subtree... took 0.13928675651550293 s
+Modify main tree... took 0.26898741722106934 s
+Scoring trees... took 0.4616975784301758 s
+Program execution took 8.215835571289062 s
+temp_files/5d918ec5-1af0-475b-9a28-2cda4427868d
+===== Timing =====
+Setup took 0.09705400466918945 s
+Generating fasta files for pplacer... took 0.33983731269836426 s
+Running pplacer... took 6.895767688751221 s
+Placing query into subtree... took 0.14610624313354492 s
+Modify main tree... took 0.274613618850708 s
+Scoring trees... took 0.4441196918487549 s
+Program execution took 8.208396911621094 s
+temp_files/a85f547f-aeb3-4423-8b25-96e1c6917a7a
+===== Timing =====
+Setup took 0.10004448890686035 s
+Generating fasta files for pplacer... took 0.3520028591156006 s
+Running pplacer... took 6.8207032680511475 s
+Placing query into subtree... took 0.14580869674682617 s
+Modify main tree... took 0.2588779926300049 s
+Scoring trees... took 0.5223374366760254 s
+Program execution took 8.239682912826538 s
+temp_files/90f90a07-2bdd-4594-b032-f445ab4514ac
+===== Timing =====
+Setup took 0.09721231460571289 s
+Generating fasta files for pplacer... took 0.339099645614624 s
+Running pplacer... took 6.7749927043914795 s
+Placing query into subtree... took 0.14986348152160645 s
+Modify main tree... took 0.27326440811157227 s
+Scoring trees... took 0.45240139961242676 s
+Program execution took 8.107018232345581 s
+temp_files/cb39d84c-e4a5-4a63-a580-1c597beb7a0d
+===== Timing =====
+Setup took 0.10441446304321289 s
+Generating fasta files for pplacer... took 0.35179734230041504 s
+Running pplacer... took 6.937248706817627 s
+Placing query into subtree... took 0.1425769329071045 s
+Modify main tree... took 0.26715683937072754 s
+Scoring trees... took 0.44808173179626465 s
+Program execution took 8.273086786270142 s
+temp_files/38e65062-8736-4986-bac5-fde50cff0acf
+===== Timing =====
+Setup took 0.09781312942504883 s
+Generating fasta files for pplacer... took 0.34448933601379395 s
+Running pplacer... took 6.898670196533203 s
+Placing query into subtree... took 0.14579558372497559 s
+Modify main tree... took 0.26529598236083984 s
+Scoring trees... took 0.44641685485839844 s
+Program execution took 8.209009408950806 s
+temp_files/4b424201-abb1-4334-a658-9bb5654f3dfb
+===== Timing =====
+Setup took 0.09913015365600586 s
+Generating fasta files for pplacer... took 0.3828699588775635 s
+Running pplacer... took 6.913886070251465 s
+Placing query into subtree... took 0.14143919944763184 s
+Modify main tree... took 0.26029157638549805 s
+Scoring trees... took 0.446885347366333 s
+Program execution took 8.256039381027222 s
+temp_files/87e0b16c-de00-46c5-a3a9-3cc264ef20eb
+===== Timing =====
+Setup took 0.09780120849609375 s
+Generating fasta files for pplacer... took 0.3626840114593506 s
+Running pplacer... took 6.913819074630737 s
+Placing query into subtree... took 0.14189982414245605 s
+Modify main tree... took 0.27904677391052246 s
+Scoring trees... took 0.44704651832580566 s
+Program execution took 8.269957780838013 s
+temp_files/59e641c7-ec0b-4096-8140-3a73efa405bd
+===== Timing =====
+Setup took 0.10018157958984375 s
+Generating fasta files for pplacer... took 0.351778507232666 s
+Running pplacer... took 6.5283637046813965 s
+Placing query into subtree... took 0.14311861991882324 s
+Modify main tree... took 0.2640190124511719 s
+Scoring trees... took 0.4434165954589844 s
+Program execution took 7.864168643951416 s
+temp_files/b0dcb5c2-1b9a-4a37-8b1c-e0091075ce79
+===== Timing =====
+Setup took 0.09780454635620117 s
+Generating fasta files for pplacer... took 0.3422715663909912 s
+Running pplacer... took 6.855948448181152 s
+Placing query into subtree... took 0.13864350318908691 s
+Modify main tree... took 0.2908763885498047 s
+Scoring trees... took 0.5267653465270996 s
+Program execution took 8.262929677963257 s
+temp_files/eabaf20b-a366-4bcf-95ec-0dea73926d64
+===== Timing =====
+Setup took 0.10158538818359375 s
+Generating fasta files for pplacer... took 0.38264918327331543 s
+Running pplacer... took 6.913716554641724 s
+Placing query into subtree... took 0.14261245727539062 s
+Modify main tree... took 0.27586936950683594 s
+Scoring trees... took 0.44251418113708496 s
+Program execution took 8.270142078399658 s
+temp_files/e8b79483-a4cc-4a7b-85b1-e0843db82984
+===== Timing =====
+Setup took 0.09822726249694824 s
+Generating fasta files for pplacer... took 0.3870222568511963 s
+Running pplacer... took 6.807946443557739 s
+Placing query into subtree... took 0.14638566970825195 s
+Modify main tree... took 0.2602992057800293 s
+Scoring trees... took 0.44611144065856934 s
+Program execution took 8.166710138320923 s
+temp_files/68d47891-f1ef-4c5f-90bb-b37eb22123d6
+===== Timing =====
+Setup took 0.10071849822998047 s
+Generating fasta files for pplacer... took 0.3402392864227295 s
+Running pplacer... took 6.920980930328369 s
+Placing query into subtree... took 0.13528060913085938 s
+Modify main tree... took 0.26257944107055664 s
+Scoring trees... took 0.4450385570526123 s
+Program execution took 8.234882831573486 s
+temp_files/ca71e725-30f4-4107-9268-c0ee1d0fab1d
+===== Timing =====
+Setup took 0.09690260887145996 s
+Generating fasta files for pplacer... took 0.34233689308166504 s
+Running pplacer... took 6.927084684371948 s
+Placing query into subtree... took 0.1483464241027832 s
+Modify main tree... took 0.2709076404571533 s
+Scoring trees... took 0.4508070945739746 s
+Program execution took 8.26560664176941 s
+temp_files/6fd76bec-0ada-4bc4-ae70-99a77853ea11
+===== Timing =====
+Setup took 0.10128235816955566 s
+Generating fasta files for pplacer... took 0.33429908752441406 s
+Running pplacer... took 6.884528160095215 s
+Placing query into subtree... took 0.1425175666809082 s
+Modify main tree... took 0.27300500869750977 s
+Scoring trees... took 0.4421391487121582 s
+Program execution took 8.188456296920776 s
+temp_files/7504670a-a703-40b0-aba4-f9a324dc8cee
+===== Timing =====
+Setup took 0.10496711730957031 s
+Generating fasta files for pplacer... took 0.40012574195861816 s
+Running pplacer... took 6.8438849449157715 s
+Placing query into subtree... took 0.14083003997802734 s
+Modify main tree... took 0.27226996421813965 s
+Scoring trees... took 0.4436628818511963 s
+Program execution took 8.21704912185669 s
+temp_files/5660f0f7-2e30-450d-9d96-ec3dc29db335
+===== Timing =====
+Setup took 0.1016991138458252 s
+Generating fasta files for pplacer... took 0.34505486488342285 s
+Running pplacer... took 6.765740394592285 s
+Placing query into subtree... took 0.13883090019226074 s
+Modify main tree... took 0.2779850959777832 s
+Scoring trees... took 0.5257821083068848 s
+Program execution took 8.180904150009155 s
+temp_files/c52ab63e-9e4b-4e5b-959c-feb6bfc59858
+===== Timing =====
+Setup took 0.09654927253723145 s
+Generating fasta files for pplacer... took 0.33502674102783203 s
+Running pplacer... took 6.9786131381988525 s
+Placing query into subtree... took 0.1373124122619629 s
+Modify main tree... took 0.2633545398712158 s
+Scoring trees... took 0.44385814666748047 s
+Program execution took 8.284392356872559 s
+temp_files/33bec119-4cc3-4fb0-8b29-bd40d11fb614
+===== Timing =====
+Setup took 0.10071849822998047 s
+Generating fasta files for pplacer... took 0.33942151069641113 s
+Running pplacer... took 6.988027572631836 s
+Placing query into subtree... took 0.1499640941619873 s
+Modify main tree... took 0.2800626754760742 s
+Scoring trees... took 0.4516890048980713 s
+Program execution took 8.32138442993164 s
+temp_files/7796329e-5b44-4db7-a92c-5f3a61703976
+===== Timing =====
+Setup took 0.09672355651855469 s
+Generating fasta files for pplacer... took 0.33516645431518555 s
+Running pplacer... took 6.859721422195435 s
+Placing query into subtree... took 0.15822482109069824 s
+Modify main tree... took 0.26570582389831543 s
+Scoring trees... took 0.43299269676208496 s
+Program execution took 8.159392833709717 s
+temp_files/c1e163f6-371a-4508-94a9-d6dc8964b39f
+===== Timing =====
+Setup took 0.10086226463317871 s
+Generating fasta files for pplacer... took 0.3721911907196045 s
+Running pplacer... took 6.844703435897827 s
+Placing query into subtree... took 0.14385724067687988 s
+Modify main tree... took 0.2691988945007324 s
+Scoring trees... took 0.4508795738220215 s
+Program execution took 8.247971773147583 s
+temp_files/a140ae0a-5b91-4d97-9997-4b8a99899048
+===== Timing =====
+Setup took 0.098388671875 s
+Generating fasta files for pplacer... took 0.3427307605743408 s
+Running pplacer... took 6.805730819702148 s
+Placing query into subtree... took 0.14095163345336914 s
+Modify main tree... took 0.2694571018218994 s
+Scoring trees... took 0.4440457820892334 s
+Program execution took 8.140503883361816 s
+temp_files/a44cc9a2-e5db-4a9e-8bf7-d69dbe563a76
+===== Timing =====
+Setup took 0.10101699829101562 s
+Generating fasta files for pplacer... took 0.34067583084106445 s
+Running pplacer... took 6.801961898803711 s
+Placing query into subtree... took 0.12824225425720215 s
+Modify main tree... took 0.2681236267089844 s
+Scoring trees... took 0.44315147399902344 s
+Program execution took 8.10065770149231 s
+temp_files/6fff7714-4eb1-4c74-bc11-c48cfe58a28a
+===== Timing =====
+Setup took 0.10176515579223633 s
+Generating fasta files for pplacer... took 0.34941530227661133 s
+Running pplacer... took 6.955395221710205 s
+Placing query into subtree... took 0.1623523235321045 s
+Modify main tree... took 0.2622511386871338 s
+Scoring trees... took 0.519024133682251 s
+Program execution took 8.3617525100708 s
+temp_files/631cc33d-e511-4225-be7b-1c3da6d9829c
+===== Timing =====
+Setup took 0.10071277618408203 s
+Generating fasta files for pplacer... took 0.3920414447784424 s
+Running pplacer... took 6.818427801132202 s
+Placing query into subtree... took 0.14511799812316895 s
+Modify main tree... took 0.2584049701690674 s
+Scoring trees... took 0.43474364280700684 s
+Program execution took 8.160643339157104 s
+temp_files/edf216e3-9215-40ff-86ca-81cd9519801d
+===== Timing =====
+Setup took 0.09824848175048828 s
+Generating fasta files for pplacer... took 0.3412749767303467 s
+Running pplacer... took 6.828044891357422 s
+Placing query into subtree... took 0.14711427688598633 s
+Modify main tree... took 0.26435208320617676 s
+Scoring trees... took 0.44748401641845703 s
+Program execution took 8.14701533317566 s
+temp_files/7d1d6580-22e2-4baa-8a5e-4cb280b28edd
+===== Timing =====
+Setup took 0.09609746932983398 s
+Generating fasta files for pplacer... took 0.34438157081604004 s
+Running pplacer... took 6.842536687850952 s
+Placing query into subtree... took 0.13774394989013672 s
+Modify main tree... took 0.2606852054595947 s
+Scoring trees... took 0.4407980442047119 s
+Program execution took 8.16825795173645 s
+temp_files/9e3aa8dd-c46b-4d96-9f49-1d9c6e91982d
+===== Timing =====
+Setup took 0.09991002082824707 s
+Generating fasta files for pplacer... took 0.33438634872436523 s
+Running pplacer... took 6.799089670181274 s
+Placing query into subtree... took 0.14444828033447266 s
+Modify main tree... took 0.27098870277404785 s
+Scoring trees... took 0.4717109203338623 s
+Program execution took 8.13202166557312 s
+temp_files/ec778a7c-536c-4077-b6b5-c889a46a10fa
+===== Timing =====
+Setup took 0.10368943214416504 s
+Generating fasta files for pplacer... took 0.34278202056884766 s
+Running pplacer... took 6.846831321716309 s
+Placing query into subtree... took 0.15073704719543457 s
+Modify main tree... took 0.27053260803222656 s
+Scoring trees... took 0.4414241313934326 s
+Program execution took 8.167659521102905 s
+temp_files/590873ef-3bfa-421e-bfb8-f6f314f19c16
+===== Timing =====
+Setup took 0.0970919132232666 s
+Generating fasta files for pplacer... took 0.35944128036499023 s
+Running pplacer... took 6.823318243026733 s
+Placing query into subtree... took 0.1435539722442627 s
+Modify main tree... took 0.26110005378723145 s
+Scoring trees... took 0.4504532814025879 s
+Program execution took 8.145798921585083 s
+temp_files/19a2e628-a5a2-472f-af97-b8eb9cb1430d
+===== Timing =====
+Setup took 0.1026763916015625 s
+Generating fasta files for pplacer... took 0.354816198348999 s
+Running pplacer... took 6.826907634735107 s
+Placing query into subtree... took 0.13867807388305664 s
+Modify main tree... took 0.26129961013793945 s
+Scoring trees... took 0.520756721496582 s
+Program execution took 8.23124384880066 s
+temp_files/4122299e-4dbd-47b9-8b10-f05bb9118d09
+===== Timing =====
+Setup took 0.09376811981201172 s
+Generating fasta files for pplacer... took 0.3385939598083496 s
+Running pplacer... took 6.850237131118774 s
+Placing query into subtree... took 0.14050602912902832 s
+Modify main tree... took 0.2662062644958496 s
+Scoring trees... took 0.43507981300354004 s
+Program execution took 8.143595457077026 s
+temp_files/1d14298f-9c06-445c-9646-9d357c60cb87
+===== Timing =====
+Setup took 0.09677767753601074 s
+Generating fasta files for pplacer... took 0.33777427673339844 s
+Running pplacer... took 6.905237913131714 s
+Placing query into subtree... took 0.1505742073059082 s
+Modify main tree... took 0.2950706481933594 s
+Scoring trees... took 0.4481847286224365 s
+Program execution took 8.244553565979004 s
+temp_files/8feffeaa-733a-4837-b720-532e1ac9839c
+===== Timing =====
+Setup took 0.09775495529174805 s
+Generating fasta files for pplacer... took 0.37114953994750977 s
+Running pplacer... took 6.530388832092285 s
+Placing query into subtree... took 0.14492368698120117 s
+Modify main tree... took 0.2640821933746338 s
+Scoring trees... took 0.4434220790863037 s
+Program execution took 7.862210273742676 s
+temp_files/5f7b1e91-19c5-42c7-8706-4c63d2ed7060
+===== Timing =====
+Setup took 0.10136795043945312 s
+Generating fasta files for pplacer... took 0.34235429763793945 s
+Running pplacer... took 6.818000316619873 s
+Placing query into subtree... took 0.14359211921691895 s
+Modify main tree... took 0.2699263095855713 s
+Scoring trees... took 0.4436657428741455 s
+Program execution took 8.141731977462769 s
+temp_files/4d17635f-3c49-48a5-8038-028ce363f660
+===== Timing =====
+Setup took 0.09673261642456055 s
+Generating fasta files for pplacer... took 0.3413689136505127 s
+Running pplacer... took 6.821028232574463 s
+Placing query into subtree... took 0.14698219299316406 s
+Modify main tree... took 0.260913610458374 s
+Scoring trees... took 0.4436335563659668 s
+Program execution took 8.133374214172363 s
+temp_files/75fd7f38-fb1e-4960-a0ac-1d79fd5dfdbd
+===== Timing =====
+Setup took 0.10161137580871582 s
+Generating fasta files for pplacer... took 0.35121798515319824 s
+Running pplacer... took 6.8069987297058105 s
+Placing query into subtree... took 0.15325403213500977 s
+Modify main tree... took 0.28563404083251953 s
+Scoring trees... took 0.4721081256866455 s
+Program execution took 8.182765245437622 s
+temp_files/f60412a6-2ae5-426f-a0f4-dc7498bb192f
+===== Timing =====
+Setup took 0.09906578063964844 s
+Generating fasta files for pplacer... took 0.3512454032897949 s
+Running pplacer... took 6.912811756134033 s
+Placing query into subtree... took 0.14090967178344727 s
+Modify main tree... took 0.26381850242614746 s
+Scoring trees... took 0.5271196365356445 s
+Program execution took 8.305705070495605 s
+temp_files/160c5803-a2dd-4ace-83d7-cb9a692fdfd3
+===== Timing =====
+Setup took 0.10003113746643066 s
+Generating fasta files for pplacer... took 0.3522059917449951 s
+Running pplacer... took 6.859388828277588 s
+Placing query into subtree... took 0.13286256790161133 s
+Modify main tree... took 0.2611427307128906 s
+Scoring trees... took 0.4453895092010498 s
+Program execution took 8.180535316467285 s
+temp_files/f3112229-2000-45da-86b0-be5cd9457fa7
+===== Timing =====
+Setup took 0.09624862670898438 s
+Generating fasta files for pplacer... took 0.3372318744659424 s
+Running pplacer... took 6.862605571746826 s
+Placing query into subtree... took 0.13268351554870605 s
+Modify main tree... took 0.25868725776672363 s
+Scoring trees... took 0.4425315856933594 s
+Program execution took 8.173612356185913 s
+temp_files/0b63eee5-ab88-427a-a4d9-a331fab75968
+===== Timing =====
+Setup took 0.1001429557800293 s
+Generating fasta files for pplacer... took 0.35681867599487305 s
+Running pplacer... took 6.843444585800171 s
+Placing query into subtree... took 0.14174675941467285 s
+Modify main tree... took 0.26047515869140625 s
+Scoring trees... took 0.44864654541015625 s
+Program execution took 8.17438006401062 s
+temp_files/ead9c476-1d97-4d78-b289-d128a8e92e59
+===== Timing =====
+Setup took 0.0987234115600586 s
+Generating fasta files for pplacer... took 0.35780811309814453 s
+Running pplacer... took 6.871280908584595 s
+Placing query into subtree... took 0.14592361450195312 s
+Modify main tree... took 0.29636549949645996 s
+Scoring trees... took 0.48285412788391113 s
+Program execution took 8.264461517333984 s
+temp_files/ac5a5827-df01-4132-b2fc-af46c54acfe9
+===== Timing =====
+Setup took 0.09969878196716309 s
+Generating fasta files for pplacer... took 0.3640573024749756 s
+Running pplacer... took 6.924444675445557 s
+Placing query into subtree... took 0.13913202285766602 s
+Modify main tree... took 0.27843356132507324 s
+Scoring trees... took 0.5405511856079102 s
+Program execution took 8.357661962509155 s
+temp_files/b7de47e6-10da-4177-a753-bba6bb5df7f3
+===== Timing =====
+Setup took 0.0973811149597168 s
+Generating fasta files for pplacer... took 0.3870110511779785 s
+Running pplacer... took 6.888227224349976 s
+Placing query into subtree... took 0.1456902027130127 s
+Modify main tree... took 0.26369214057922363 s
+Scoring trees... took 0.4507126808166504 s
+Program execution took 8.260106801986694 s
+temp_files/1f754826-ed0f-4f0c-b6b8-8c94b1c903e6
+===== Timing =====
+Setup took 0.10695481300354004 s
+Generating fasta files for pplacer... took 0.3421187400817871 s
+Running pplacer... took 6.9359941482543945 s
+Placing query into subtree... took 0.1309192180633545 s
+Modify main tree... took 0.2920713424682617 s
+Scoring trees... took 0.5720944404602051 s
+Program execution took 8.399263143539429 s
+temp_files/a59ade30-3466-4876-9f29-5bfa4b4b6765
+===== Timing =====
+Setup took 0.10478997230529785 s
+Generating fasta files for pplacer... took 0.3435976505279541 s
+Running pplacer... took 6.918469667434692 s
+Placing query into subtree... took 0.15696072578430176 s
+Modify main tree... took 0.2693808078765869 s
+Scoring trees... took 0.4499490261077881 s
+Program execution took 8.254110097885132 s
+temp_files/6079e602-79d1-45ac-8959-cc7241b3207d
+===== Timing =====
+Setup took 0.10157132148742676 s
+Generating fasta files for pplacer... took 0.390887975692749 s
+Running pplacer... took 6.869097709655762 s
+Placing query into subtree... took 0.14145398139953613 s
+Modify main tree... took 0.2619900703430176 s
+Scoring trees... took 0.44519591331481934 s
+Program execution took 8.22179126739502 s
+temp_files/9d286645-a3fe-47fc-93c2-0ee568ccc28f
+===== Timing =====
+Setup took 0.1000678539276123 s
+Generating fasta files for pplacer... took 0.34441351890563965 s
+Running pplacer... took 6.835217714309692 s
+Placing query into subtree... took 0.17412090301513672 s
+Modify main tree... took 0.2637968063354492 s
+Scoring trees... took 0.4447212219238281 s
+Program execution took 8.174168586730957 s
+temp_files/47ec448c-1d38-44fd-a10f-ff57fc926e81
+===== Timing =====
+Setup took 0.10297918319702148 s
+Generating fasta files for pplacer... took 0.35019493103027344 s
+Running pplacer... took 6.823579788208008 s
+Placing query into subtree... took 0.14879584312438965 s
+Modify main tree... took 0.27353763580322266 s
+Scoring trees... took 0.44748806953430176 s
+Program execution took 8.159019708633423 s
+temp_files/d474c805-6e5f-4f42-8cc8-8789d98d9232
+===== Timing =====
+Setup took 0.10161757469177246 s
+Generating fasta files for pplacer... took 0.34691739082336426 s
+Running pplacer... took 6.882453203201294 s
+Placing query into subtree... took 0.14796137809753418 s
+Modify main tree... took 0.2750742435455322 s
+Scoring trees... took 0.44690632820129395 s
+Program execution took 8.232155323028564 s
+temp_files/3ac00698-a989-4425-8eea-cd2e374de279
+===== Timing =====
+Setup took 0.10077929496765137 s
+Generating fasta files for pplacer... took 0.34882330894470215 s
+Running pplacer... took 6.885876893997192 s
+Placing query into subtree... took 0.1658616065979004 s
+Modify main tree... took 0.2791404724121094 s
+Scoring trees... took 0.45336031913757324 s
+Program execution took 8.245469331741333 s
+temp_files/2ebdc718-d889-409b-8b0a-18152fb58128
+===== Timing =====
+Setup took 0.09897112846374512 s
+Generating fasta files for pplacer... took 0.36641764640808105 s
+Running pplacer... took 6.796332836151123 s
+Placing query into subtree... took 0.1398777961730957 s
+Modify main tree... took 0.2595643997192383 s
+Scoring trees... took 0.5178675651550293 s
+Program execution took 8.214581966400146 s
+temp_files/cb5dff8e-b5f5-4592-a5b4-97b00a01bdc6
+===== Timing =====
+Setup took 0.10286688804626465 s
+Generating fasta files for pplacer... took 0.3417506217956543 s
+Running pplacer... took 6.847837686538696 s
+Placing query into subtree... took 0.14668869972229004 s
+Modify main tree... took 0.26490211486816406 s
+Scoring trees... took 0.45050835609436035 s
+Program execution took 8.178125619888306 s
+temp_files/926e344e-89cb-4bcb-a811-278d109a1c33
+===== Timing =====
+Setup took 0.09833288192749023 s
+Generating fasta files for pplacer... took 0.35089111328125 s
+Running pplacer... took 6.822690010070801 s
+Placing query into subtree... took 0.13389348983764648 s
+Modify main tree... took 0.33554768562316895 s
+Scoring trees... took 0.4486668109893799 s
+Program execution took 8.200859785079956 s
+temp_files/a0bc4caa-0616-4849-9f7e-ab51af4b3cf8
+===== Timing =====
+Setup took 0.10158801078796387 s
+Generating fasta files for pplacer... took 0.34908127784729004 s
+Running pplacer... took 6.78325080871582 s
+Placing query into subtree... took 0.17160677909851074 s
+Modify main tree... took 0.26362037658691406 s
+Scoring trees... took 0.4440290927886963 s
+Program execution took 8.124369144439697 s
+temp_files/586709cc-bd02-4eeb-b05c-139b427e6336
+===== Timing =====
+Setup took 0.09869503974914551 s
+Generating fasta files for pplacer... took 0.3447239398956299 s
+Running pplacer... took 6.880022764205933 s
+Placing query into subtree... took 0.14263367652893066 s
+Modify main tree... took 0.306180477142334 s
+Scoring trees... took 0.48546361923217773 s
+Program execution took 8.305298805236816 s
+temp_files/f61be387-76e1-435a-af99-3bf207b218b7
+===== Timing =====
+Setup took 0.10103869438171387 s
+Generating fasta files for pplacer... took 0.33925914764404297 s
+Running pplacer... took 6.875651597976685 s
+Placing query into subtree... took 0.14708375930786133 s
+Modify main tree... took 0.2736949920654297 s
+Scoring trees... took 0.44959425926208496 s
+Program execution took 8.206831693649292 s
+temp_files/f7c1271f-94f6-4e3a-994a-870db8057640
+===== Timing =====
+Setup took 0.09798336029052734 s
+Generating fasta files for pplacer... took 0.3362445831298828 s
+Running pplacer... took 6.827820301055908 s
+Placing query into subtree... took 0.14733123779296875 s
+Modify main tree... took 0.2758364677429199 s
+Scoring trees... took 0.44278693199157715 s
+Program execution took 8.138262271881104 s
+temp_files/fd2b2f63-8255-46db-a9d7-07036f8143a6
+===== Timing =====
+Setup took 0.0984954833984375 s
+Generating fasta files for pplacer... took 0.3479626178741455 s
+Running pplacer... took 6.895784854888916 s
+Placing query into subtree... took 0.1442573070526123 s
+Modify main tree... took 0.26485514640808105 s
+Scoring trees... took 0.5556802749633789 s
+Program execution took 8.317898750305176 s
+temp_files/4af16aec-d3fe-42df-9b30-2558f79fbcc7
+===== Timing =====
+Setup took 0.09760189056396484 s
+Generating fasta files for pplacer... took 0.3811638355255127 s
+Running pplacer... took 6.781826019287109 s
+Placing query into subtree... took 0.140855073928833 s
+Modify main tree... took 0.26949357986450195 s
+Scoring trees... took 0.45793771743774414 s
+Program execution took 8.1772780418396 s
+temp_files/f890db9f-3e6c-49a9-b2fb-2d698070308b
+===== Timing =====
+Setup took 0.10487198829650879 s
+Generating fasta files for pplacer... took 0.35590481758117676 s
+Running pplacer... took 6.951265096664429 s
+Placing query into subtree... took 0.1698155403137207 s
+Modify main tree... took 0.2754480838775635 s
+Scoring trees... took 0.45322179794311523 s
+Program execution took 8.322038412094116 s
+temp_files/22527a1e-8c27-4ef4-b458-2b645f84d0c6
+===== Timing =====
+Setup took 0.09984254837036133 s
+Generating fasta files for pplacer... took 0.3715076446533203 s
+Running pplacer... took 6.771345615386963 s
+Placing query into subtree... took 0.1468520164489746 s
+Modify main tree... took 0.26325082778930664 s
+Scoring trees... took 0.444141149520874 s
+Program execution took 8.107466459274292 s
+temp_files/72af0071-0492-4acb-bd35-f9413068702c
+===== Timing =====
+Setup took 0.10289740562438965 s
+Generating fasta files for pplacer... took 0.36989259719848633 s
+Running pplacer... took 6.837186336517334 s
+Placing query into subtree... took 0.14031171798706055 s
+Modify main tree... took 0.2791717052459717 s
+Scoring trees... took 0.4481546878814697 s
+Program execution took 8.203036785125732 s
+temp_files/beafa6e8-315e-4b1a-88e8-bdcdb9834a62
+===== Timing =====
+Setup took 0.09759330749511719 s
+Generating fasta files for pplacer... took 0.3442971706390381 s
+Running pplacer... took 6.916056156158447 s
+Placing query into subtree... took 0.1408238410949707 s
+Modify main tree... took 0.27471256256103516 s
+Scoring trees... took 0.4383258819580078 s
+Program execution took 8.236518383026123 s
+temp_files/995e69e9-6795-4b84-b353-2352b4499098
+===== Timing =====
+Setup took 0.10019421577453613 s
+Generating fasta files for pplacer... took 0.39493536949157715 s
+Running pplacer... took 6.9023613929748535 s
+Placing query into subtree... took 0.14610719680786133 s
+Modify main tree... took 0.26055216789245605 s
+Scoring trees... took 0.45577096939086914 s
+Program execution took 8.270859479904175 s
+temp_files/779dfdd3-c5e9-46db-8e8e-9593f6a8d810
+===== Timing =====
+Setup took 0.09713530540466309 s
+Generating fasta files for pplacer... took 0.3670308589935303 s
+Running pplacer... took 6.930121898651123 s
+Placing query into subtree... took 0.13200974464416504 s
+Modify main tree... took 0.2593562602996826 s
+Scoring trees... took 0.5240709781646729 s
+Program execution took 8.321585655212402 s
+temp_files/0f026137-451f-42af-91f0-f46fe2cd6535
+===== Timing =====
+Setup took 0.09746336936950684 s
+Generating fasta files for pplacer... took 0.34046053886413574 s
+Running pplacer... took 6.860702276229858 s
+Placing query into subtree... took 0.13873720169067383 s
+Modify main tree... took 0.2617013454437256 s
+Scoring trees... took 0.4440457820892334 s
+Program execution took 8.177560329437256 s
+temp_files/da6da4ba-dc40-4fd9-b8fe-de71b408d199
+===== Timing =====
+Setup took 0.09770464897155762 s
+Generating fasta files for pplacer... took 0.3565030097961426 s
+Running pplacer... took 6.823936223983765 s
+Placing query into subtree... took 0.13937664031982422 s
+Modify main tree... took 0.28459787368774414 s
+Scoring trees... took 0.449573278427124 s
+Program execution took 8.164376974105835 s
+temp_files/c8caf90a-73f9-4895-be12-0c4dff33dfb3
+===== Timing =====
+Setup took 0.10039782524108887 s
+Generating fasta files for pplacer... took 0.34989261627197266 s
+Running pplacer... took 6.921977281570435 s
+Placing query into subtree... took 0.14583134651184082 s
+Modify main tree... took 0.27454590797424316 s
+Scoring trees... took 0.4533677101135254 s
+Program execution took 8.257204055786133 s
+temp_files/2e8cfad2-3b37-450e-b009-d004ad722a42
+===== Timing =====
+Setup took 0.14337611198425293 s
+Generating fasta files for pplacer... took 0.35187458992004395 s
+Running pplacer... took 6.8001837730407715 s
+Placing query into subtree... took 0.1452791690826416 s
+Modify main tree... took 0.2756354808807373 s
+Scoring trees... took 0.4501762390136719 s
+Program execution took 8.191908597946167 s
+temp_files/97af00ff-6536-4ccf-89a5-051a34d07a2e
+===== Timing =====
+Setup took 0.09929561614990234 s
+Generating fasta files for pplacer... took 0.3558480739593506 s
+Running pplacer... took 6.803415536880493 s
+Placing query into subtree... took 0.13974666595458984 s
+Modify main tree... took 0.2645583152770996 s
+Scoring trees... took 0.4447157382965088 s
+Program execution took 8.14554500579834 s
+temp_files/194cc25c-e373-42a4-9b03-ec54867cea68
+===== Timing =====
+Setup took 0.09543156623840332 s
+Generating fasta files for pplacer... took 0.3364577293395996 s
+Running pplacer... took 6.9220311641693115 s
+Placing query into subtree... took 0.14554190635681152 s
+Modify main tree... took 0.25948357582092285 s
+Scoring trees... took 0.46201348304748535 s
+Program execution took 8.233185291290283 s
+temp_files/3a9fe177-f781-4ead-bd99-e50f6e14be67
+===== Timing =====
+Setup took 0.09815287590026855 s
+Generating fasta files for pplacer... took 0.33911681175231934 s
+Running pplacer... took 6.931500434875488 s
+Placing query into subtree... took 0.14160394668579102 s
+Modify main tree... took 0.2623097896575928 s
+Scoring trees... took 0.5257492065429688 s
+Program execution took 8.309091567993164 s
+temp_files/18365a24-68bf-4125-a416-3114835f637b
+===== Timing =====
+Setup took 0.12944245338439941 s
+Generating fasta files for pplacer... took 0.34146618843078613 s
+Running pplacer... took 6.930010080337524 s
+Placing query into subtree... took 0.14954710006713867 s
+Modify main tree... took 0.2599329948425293 s
+Scoring trees... took 0.4451634883880615 s
+Program execution took 8.290143013000488 s
+temp_files/7a1cd380-045b-45e9-b695-5485335c05b1
+===== Timing =====
+Setup took 0.10069394111633301 s
+Generating fasta files for pplacer... took 0.33780646324157715 s
+Running pplacer... took 6.902751445770264 s
+Placing query into subtree... took 0.14397239685058594 s
+Modify main tree... took 0.26030802726745605 s
+Scoring trees... took 0.4523284435272217 s
+Program execution took 8.220479488372803 s
+temp_files/df37af2f-bec0-4dac-85ae-c4aa25550cfe
+===== Timing =====
+Setup took 0.10285377502441406 s
+Generating fasta files for pplacer... took 0.35541820526123047 s
+Running pplacer... took 6.831963539123535 s
+Placing query into subtree... took 0.14123749732971191 s
+Modify main tree... took 0.28298187255859375 s
+Scoring trees... took 0.4524862766265869 s
+Program execution took 8.178006172180176 s
+temp_files/e11b575d-2036-41fd-b611-b83135703170
+===== Timing =====
+Setup took 0.09852194786071777 s
+Generating fasta files for pplacer... took 0.3641517162322998 s
+Running pplacer... took 6.853986978530884 s
+Placing query into subtree... took 0.1419210433959961 s
+Modify main tree... took 0.2753317356109619 s
+Scoring trees... took 0.44815492630004883 s
+Program execution took 8.21592903137207 s
+temp_files/06086625-7217-4330-a602-39089b210ae8
+===== Timing =====
+Setup took 0.09579277038574219 s
+Generating fasta files for pplacer... took 0.3360908031463623 s
+Running pplacer... took 6.815318822860718 s
+Placing query into subtree... took 0.13896870613098145 s
+Modify main tree... took 0.262052059173584 s
+Scoring trees... took 0.4412508010864258 s
+Program execution took 8.125288724899292 s
+temp_files/6d253aa9-584b-49aa-8b66-2f2fdd5c3999
+===== Timing =====
+Setup took 0.1020820140838623 s
+Generating fasta files for pplacer... took 0.34798216819763184 s
+Running pplacer... took 6.861366271972656 s
+Placing query into subtree... took 0.14695191383361816 s
+Modify main tree... took 0.26294445991516113 s
+Scoring trees... took 0.4466543197631836 s
+Program execution took 8.21124267578125 s
+temp_files/dcbc9e6d-bd63-4814-9727-4ec1ca856868
+===== Timing =====
+Setup took 0.09972429275512695 s
+Generating fasta files for pplacer... took 0.34626340866088867 s
+Running pplacer... took 6.929179906845093 s
+Placing query into subtree... took 0.19655251502990723 s
+Modify main tree... took 0.2716531753540039 s
+Scoring trees... took 0.645240306854248 s
+Program execution took 8.50051760673523 s
+temp_files/e2d75440-0f92-4589-884e-fa853a91c03d
+===== Timing =====
+Setup took 0.09841632843017578 s
+Generating fasta files for pplacer... took 0.34168505668640137 s
+Running pplacer... took 6.878030300140381 s
+Placing query into subtree... took 0.1373758316040039 s
+Modify main tree... took 0.26288843154907227 s
+Scoring trees... took 0.45779943466186523 s
+Program execution took 8.210018634796143 s
+temp_files/743dd9db-a3ef-4018-b594-97d20001ae0f
+===== Timing =====
+Setup took 0.10429263114929199 s
+Generating fasta files for pplacer... took 0.3563086986541748 s
+Running pplacer... took 6.905988931655884 s
+Placing query into subtree... took 0.13245511054992676 s
+Modify main tree... took 0.2700324058532715 s
+Scoring trees... took 0.44792938232421875 s
+Program execution took 8.258413791656494 s
+temp_files/14b1b318-fe88-4ca3-8290-82353d3e0527
+===== Timing =====
+Setup took 0.10184454917907715 s
+Generating fasta files for pplacer... took 0.34369635581970215 s
+Running pplacer... took 6.898417949676514 s
+Placing query into subtree... took 0.12278199195861816 s
+Modify main tree... took 0.30538344383239746 s
+Scoring trees... took 0.465831995010376 s
+Program execution took 8.248447895050049 s
+temp_files/f26409c3-fa96-45bc-814a-c2d30de305d0
+===== Timing =====
+Setup took 0.10162496566772461 s
+Generating fasta files for pplacer... took 0.37194347381591797 s
+Running pplacer... took 6.903881788253784 s
+Placing query into subtree... took 0.14513158798217773 s
+Modify main tree... took 0.2767186164855957 s
+Scoring trees... took 0.44404029846191406 s
+Program execution took 8.264118671417236 s
+temp_files/f56cc976-ec26-4846-aba2-9d67a1ddf7e9
+===== Timing =====
+Setup took 0.09769773483276367 s
+Generating fasta files for pplacer... took 0.3466196060180664 s
+Running pplacer... took 6.992096900939941 s
+Placing query into subtree... took 0.14377713203430176 s
+Modify main tree... took 0.25943946838378906 s
+Scoring trees... took 0.445676326751709 s
+Program execution took 8.311188697814941 s
+temp_files/14ff2da3-93bb-46bf-81c3-6fbc6e0528ff
+===== Timing =====
+Setup took 0.10072445869445801 s
+Generating fasta files for pplacer... took 0.3389394283294678 s
+Running pplacer... took 6.842341661453247 s
+Placing query into subtree... took 0.14939570426940918 s
+Modify main tree... took 0.256436824798584 s
+Scoring trees... took 0.4521651268005371 s
+Program execution took 8.150695562362671 s
+temp_files/04ecb789-67e9-44ec-b0ee-727c8d94eedd
+===== Timing =====
+Setup took 0.09940338134765625 s
+Generating fasta files for pplacer... took 0.3390974998474121 s
+Running pplacer... took 6.564199447631836 s
+Placing query into subtree... took 0.14937257766723633 s
+Modify main tree... took 0.2719271183013916 s
+Scoring trees... took 0.5310161113739014 s
+Program execution took 7.966108322143555 s
+temp_files/6a10ca0c-116f-420d-b1f3-6e21b4493134
+===== Timing =====
+Setup took 0.09852004051208496 s
+Generating fasta files for pplacer... took 0.3381369113922119 s
+Running pplacer... took 6.9026265144348145 s
+Placing query into subtree... took 0.15462803840637207 s
+Modify main tree... took 0.26434826850891113 s
+Scoring trees... took 0.44719362258911133 s
+Program execution took 8.231804132461548 s
+temp_files/5bc72d95-2419-466e-8f82-4fcd64fb208c
+===== Timing =====
+Setup took 0.10140681266784668 s
+Generating fasta files for pplacer... took 0.3405272960662842 s
+Running pplacer... took 6.846821546554565 s
+Placing query into subtree... took 0.14624595642089844 s
+Modify main tree... took 0.2644031047821045 s
+Scoring trees... took 0.44904375076293945 s
+Program execution took 8.171456813812256 s
+temp_files/eab0bd91-f1ca-4341-bded-689484a0be0f
+===== Timing =====
+Setup took 0.1011209487915039 s
+Generating fasta files for pplacer... took 0.3435654640197754 s
+Running pplacer... took 6.893282651901245 s
+Placing query into subtree... took 0.13762784004211426 s
+Modify main tree... took 0.29494285583496094 s
+Scoring trees... took 0.47258615493774414 s
+Program execution took 8.254715204238892 s
+temp_files/998e6459-fd7d-47f8-9e91-e64d87e8a354
+===== Timing =====
+Setup took 0.09978055953979492 s
+Generating fasta files for pplacer... took 0.3500363826751709 s
+Running pplacer... took 6.894483327865601 s
+Placing query into subtree... took 0.1398317813873291 s
+Modify main tree... took 0.2727818489074707 s
+Scoring trees... took 0.4667470455169678 s
+Program execution took 8.239371538162231 s
+temp_files/125d7f0e-5909-47b0-9050-f9ca05adca93
+===== Timing =====
+Setup took 0.09899520874023438 s
+Generating fasta files for pplacer... took 0.49564647674560547 s
+Running pplacer... took 6.873722314834595 s
+Placing query into subtree... took 0.15165925025939941 s
+Modify main tree... took 0.2864041328430176 s
+Scoring trees... took 0.4544498920440674 s
+Program execution took 8.383809566497803 s
+temp_files/2fbd8755-11f5-492c-bec2-0e857621b52e
+===== Timing =====
+Setup took 0.10198307037353516 s
+Generating fasta files for pplacer... took 0.34253954887390137 s
+Running pplacer... took 6.8856706619262695 s
+Placing query into subtree... took 0.14349818229675293 s
+Modify main tree... took 0.27766942977905273 s
+Scoring trees... took 0.44977807998657227 s
+Program execution took 8.24714207649231 s
+temp_files/e7ed1416-9c4e-42d5-b1a6-6ef2f9374831
+===== Timing =====
+Setup took 0.10363030433654785 s
+Generating fasta files for pplacer... took 0.3359849452972412 s
+Running pplacer... took 6.913341760635376 s
+Placing query into subtree... took 0.16666436195373535 s
+Modify main tree... took 0.2651240825653076 s
+Scoring trees... took 0.53383469581604 s
+Program execution took 8.329336881637573 s
+temp_files/22c46daf-3ea7-4dd7-8b00-36779b24abca
+===== Timing =====
+Setup took 0.09451031684875488 s
+Generating fasta files for pplacer... took 0.3792743682861328 s
+Running pplacer... took 6.797654151916504 s
+Placing query into subtree... took 0.14950799942016602 s
+Modify main tree... took 0.28580260276794434 s
+Scoring trees... took 0.45114827156066895 s
+Program execution took 8.168991565704346 s
+temp_files/566f034a-768e-4ca3-9ec1-e740d717ce40
+===== Timing =====
+Setup took 0.10178947448730469 s
+Generating fasta files for pplacer... took 0.3560962677001953 s
+Running pplacer... took 6.890362024307251 s
+Placing query into subtree... took 0.15334510803222656 s
+Modify main tree... took 0.26314711570739746 s
+Scoring trees... took 0.4505929946899414 s
+Program execution took 8.240710735321045 s
+temp_files/6a6e3f75-a7e0-4372-90fd-6709901693b5
+===== Timing =====
+Setup took 0.10494375228881836 s
+Generating fasta files for pplacer... took 0.37211155891418457 s
+Running pplacer... took 6.938743352890015 s
+Placing query into subtree... took 0.14593029022216797 s
+Modify main tree... took 0.2761223316192627 s
+Scoring trees... took 0.44283294677734375 s
+Program execution took 8.291759967803955 s
+temp_files/7ebbc7da-dfa8-4ed4-b603-a8703e6141ab
+===== Timing =====
+Setup took 0.09724307060241699 s
+Generating fasta files for pplacer... took 0.35094690322875977 s
+Running pplacer... took 6.76518440246582 s
+Placing query into subtree... took 0.15429139137268066 s
+Modify main tree... took 0.2945597171783447 s
+Scoring trees... took 0.451601505279541 s
+Program execution took 8.126181602478027 s
+temp_files/aa8ce1fe-c4d6-49f9-aa3f-a809700e4a3c
+===== Timing =====
+Setup took 0.10049557685852051 s
+Generating fasta files for pplacer... took 0.34970831871032715 s
+Running pplacer... took 6.7808966636657715 s
+Placing query into subtree... took 0.1562354564666748 s
+Modify main tree... took 0.260725736618042 s
+Scoring trees... took 0.4464240074157715 s
+Program execution took 8.143664360046387 s
+temp_files/03e07149-492e-4951-a2e1-ee442b110fe4
+===== Timing =====
+Setup took 0.09952998161315918 s
+Generating fasta files for pplacer... took 0.3426365852355957 s
+Running pplacer... took 6.847340106964111 s
+Placing query into subtree... took 0.14627718925476074 s
+Modify main tree... took 0.2833435535430908 s
+Scoring trees... took 0.44296693801879883 s
+Program execution took 8.173378229141235 s
+temp_files/478b8f9b-25b6-4228-a09f-445019137a92
+===== Timing =====
+Setup took 0.10044598579406738 s
+Generating fasta files for pplacer... took 0.3532092571258545 s
+Running pplacer... took 6.801959276199341 s
+Placing query into subtree... took 0.15234875679016113 s
+Modify main tree... took 0.28518223762512207 s
+Scoring trees... took 0.544255256652832 s
+Program execution took 8.249961853027344 s
+temp_files/0483ead8-de8b-4c04-9e08-4c7a37d531c9
+===== Timing =====
+Setup took 0.10103654861450195 s
+Generating fasta files for pplacer... took 0.3488905429840088 s
+Running pplacer... took 6.740214824676514 s
+Placing query into subtree... took 0.1531355381011963 s
+Modify main tree... took 0.2757437229156494 s
+Scoring trees... took 0.4394192695617676 s
+Program execution took 8.110116243362427 s
+temp_files/d7054c83-5deb-4994-937f-2acfb2f6c73e
+===== Timing =====
+Setup took 0.10177469253540039 s
+Generating fasta files for pplacer... took 0.42369866371154785 s
+Running pplacer... took 6.479295969009399 s
+Placing query into subtree... took 0.15204286575317383 s
+Modify main tree... took 0.26350927352905273 s
+Scoring trees... took 0.445026159286499 s
+Program execution took 7.896982669830322 s
+temp_files/311cd9f8-8b65-4ba0-be43-68577b05a770
+===== Timing =====
+Setup took 0.09811782836914062 s
+Generating fasta files for pplacer... took 0.3557322025299072 s
+Running pplacer... took 6.790259122848511 s
+Placing query into subtree... took 0.15188026428222656 s
+Modify main tree... took 0.29938244819641113 s
+Scoring trees... took 0.44819164276123047 s
+Program execution took 8.155482292175293 s
+temp_files/bf3aae45-84bd-4120-a7bf-dbd96dae4f1c
+===== Timing =====
+Setup took 0.10156702995300293 s
+Generating fasta files for pplacer... took 0.3470010757446289 s
+Running pplacer... took 6.76463508605957 s
+Placing query into subtree... took 0.14038872718811035 s
+Modify main tree... took 0.2701413631439209 s
+Scoring trees... took 0.5325629711151123 s
+Program execution took 8.177447319030762 s
+temp_files/61478bea-ddbc-4a81-ae5f-e224299cb69a
+===== Timing =====
+Setup took 0.09674477577209473 s
+Generating fasta files for pplacer... took 0.33591389656066895 s
+Running pplacer... took 6.8362555503845215 s
+Placing query into subtree... took 0.15460205078125 s
+Modify main tree... took 0.2625730037689209 s
+Scoring trees... took 0.4476964473724365 s
+Program execution took 8.170294046401978 s
+temp_files/309556ff-0d7e-460b-9bf0-a906cc112c8d
+===== Timing =====
+Setup took 0.10061836242675781 s
+Generating fasta files for pplacer... took 0.3377418518066406 s
+Running pplacer... took 6.816027879714966 s
+Placing query into subtree... took 0.15272784233093262 s
+Modify main tree... took 0.26090455055236816 s
+Scoring trees... took 0.45142030715942383 s
+Program execution took 8.15339708328247 s
+temp_files/b0800b75-fd6e-4844-b4b6-6ef007514728
+===== Timing =====
+Setup took 0.10416293144226074 s
+Generating fasta files for pplacer... took 0.3549342155456543 s
+Running pplacer... took 6.8648951053619385 s
+Placing query into subtree... took 0.15715479850769043 s
+Modify main tree... took 0.31155872344970703 s
+Scoring trees... took 0.6307995319366455 s
+Program execution took 8.434911489486694 s
+temp_files/f9b4d8dc-5dd0-4137-a848-a7fd8debf7a9
+===== Timing =====
+Setup took 0.1001272201538086 s
+Generating fasta files for pplacer... took 0.3828864097595215 s
+Running pplacer... took 6.799360275268555 s
+Placing query into subtree... took 0.15497779846191406 s
+Modify main tree... took 0.26282811164855957 s
+Scoring trees... took 0.44394540786743164 s
+Program execution took 8.155035972595215 s
+temp_files/ab7dfd4e-a571-4926-9042-ca3f54ba4cfc
+===== Timing =====
+Setup took 0.10488271713256836 s
+Generating fasta files for pplacer... took 0.3550403118133545 s
+Running pplacer... took 6.8429341316223145 s
+Placing query into subtree... took 0.14836692810058594 s
+Modify main tree... took 0.2646660804748535 s
+Scoring trees... took 0.442366361618042 s
+Program execution took 8.185112953186035 s
+temp_files/4826afbb-b7c2-4bb2-b815-fdaebf85bf65
+===== Timing =====
+Setup took 0.10332608222961426 s
+Generating fasta files for pplacer... took 0.33948779106140137 s
+Running pplacer... took 6.89106297492981 s
+Placing query into subtree... took 0.16107773780822754 s
+Modify main tree... took 0.26544785499572754 s
+Scoring trees... took 0.4483175277709961 s
+Program execution took 8.231625318527222 s
+temp_files/16479d14-9377-4491-8127-d4e5006ffdb6
+===== Timing =====
+Setup took 0.10109829902648926 s
+Generating fasta files for pplacer... took 0.3529794216156006 s
+Running pplacer... took 6.830929517745972 s
+Placing query into subtree... took 0.15302348136901855 s
+Modify main tree... took 0.3020358085632324 s
+Scoring trees... took 0.44980621337890625 s
+Program execution took 8.201053857803345 s
+temp_files/f596af5a-1e0e-45e3-b63c-7e6af70a8eff
+===== Timing =====
+Setup took 0.10056328773498535 s
+Generating fasta files for pplacer... took 0.37793684005737305 s
+Running pplacer... took 6.827753782272339 s
+Placing query into subtree... took 0.14634037017822266 s
+Modify main tree... took 0.2648277282714844 s
+Scoring trees... took 0.4469485282897949 s
+Program execution took 8.191643238067627 s
+temp_files/50d162d5-2328-472a-a063-14902a358c15
+===== Timing =====
+Setup took 0.09823250770568848 s
+Generating fasta files for pplacer... took 0.34601449966430664 s
+Running pplacer... took 6.899389028549194 s
+Placing query into subtree... took 0.14891362190246582 s
+Modify main tree... took 0.262890100479126 s
+Scoring trees... took 0.44517040252685547 s
+Program execution took 8.234137058258057 s
+temp_files/5cc67eef-6fd0-4cfe-8bd6-cac67dd0ccf3
+===== Timing =====
+Setup took 0.09903430938720703 s
+Generating fasta files for pplacer... took 0.34504032135009766 s
+Running pplacer... took 6.853215217590332 s
+Placing query into subtree... took 0.15080881118774414 s
+Modify main tree... took 0.2876396179199219 s
+Scoring trees... took 0.5250029563903809 s
+Program execution took 8.290710926055908 s
+temp_files/d0118dc4-81f0-4006-a0e9-216816f3b362
+===== Timing =====
+Setup took 0.0995936393737793 s
+Generating fasta files for pplacer... took 0.34444212913513184 s
+Running pplacer... took 6.860680341720581 s
+Placing query into subtree... took 0.15926051139831543 s
+Modify main tree... took 0.26473569869995117 s
+Scoring trees... took 0.4467945098876953 s
+Program execution took 8.19667673110962 s
+temp_files/bfec2ada-198c-4129-8121-4c92061a2b68
+===== Timing =====
+Setup took 0.10163378715515137 s
+Generating fasta files for pplacer... took 0.3496060371398926 s
+Running pplacer... took 6.745941877365112 s
+Placing query into subtree... took 0.14876699447631836 s
+Modify main tree... took 0.2753434181213379 s
+Scoring trees... took 0.45348191261291504 s
+Program execution took 8.093841314315796 s
+temp_files/30e3eeae-da4c-4339-adaa-f2d361fc794a
+===== Timing =====
+Setup took 0.09952616691589355 s
+Generating fasta files for pplacer... took 0.34362268447875977 s
+Running pplacer... took 6.866805076599121 s
+Placing query into subtree... took 0.14877629280090332 s
+Modify main tree... took 0.26423168182373047 s
+Scoring trees... took 0.44121718406677246 s
+Program execution took 8.220640420913696 s
+temp_files/2f05cb0d-62d4-4deb-8068-82e6a65f3f7f
+===== Timing =====
+Setup took 0.10165715217590332 s
+Generating fasta files for pplacer... took 0.3439199924468994 s
+Running pplacer... took 6.7554545402526855 s
+Placing query into subtree... took 0.14608407020568848 s
+Modify main tree... took 0.3085610866546631 s
+Scoring trees... took 0.44893908500671387 s
+Program execution took 8.11652159690857 s
+temp_files/4e9dfd68-2d39-40e9-b730-33a0d1abe87a
+===== Timing =====
+Setup took 0.10450434684753418 s
+Generating fasta files for pplacer... took 0.3482203483581543 s
+Running pplacer... took 6.721167802810669 s
+Placing query into subtree... took 0.1489565372467041 s
+Modify main tree... took 0.2629868984222412 s
+Scoring trees... took 0.44829463958740234 s
+Program execution took 8.050018072128296 s
+temp_files/585e81c6-8948-4bb6-b62e-df768f8fa0ed
+===== Timing =====
+Setup took 0.10265064239501953 s
+Generating fasta files for pplacer... took 0.37505054473876953 s
+Running pplacer... took 6.844883918762207 s
+Placing query into subtree... took 0.1614830493927002 s
+Modify main tree... took 0.2615799903869629 s
+Scoring trees... took 0.4522066116333008 s
+Program execution took 8.22334361076355 s
+temp_files/45220706-f30b-4004-bc16-37fe76723432
+===== Timing =====
+Setup took 0.09808564186096191 s
+Generating fasta files for pplacer... took 0.3404858112335205 s
+Running pplacer... took 6.758945465087891 s
+Placing query into subtree... took 0.1495652198791504 s
+Modify main tree... took 0.26157236099243164 s
+Scoring trees... took 0.5544588565826416 s
+Program execution took 8.18600845336914 s
+temp_files/8e5034e0-7c8a-467a-ab51-608fe0a2e663
+===== Timing =====
+Setup took 0.10062980651855469 s
+Generating fasta files for pplacer... took 0.3680450916290283 s
+Running pplacer... took 6.947354555130005 s
+Placing query into subtree... took 0.14798355102539062 s
+Modify main tree... took 0.24363136291503906 s
+Scoring trees... took 0.43667125701904297 s
+Program execution took 8.276215553283691 s
+temp_files/ed1f2d18-347e-4929-879a-e20e25bb8dbc
+===== Timing =====
+Setup took 0.10372352600097656 s
+Generating fasta files for pplacer... took 0.34205174446105957 s
+Running pplacer... took 6.70419716835022 s
+Placing query into subtree... took 0.15072369575500488 s
+Modify main tree... took 0.2793760299682617 s
+Scoring trees... took 0.4127085208892822 s
+Program execution took 8.002686500549316 s
+temp_files/8dfab67b-70d2-4b17-b509-47ba0c0f0808
+===== Timing =====
+Setup took 0.0982356071472168 s
+Generating fasta files for pplacer... took 0.36455202102661133 s
+Running pplacer... took 6.675696611404419 s
+Placing query into subtree... took 0.14056944847106934 s
+Modify main tree... took 0.25215792655944824 s
+Scoring trees... took 0.40173768997192383 s
+Program execution took 7.962669849395752 s
+temp_files/8a0385ac-2fb4-45cb-8fa3-85d9b0e5bd52
+===== Timing =====
+Setup took 0.0955650806427002 s
+Generating fasta files for pplacer... took 0.3336324691772461 s
+Running pplacer... took 6.7255637645721436 s
+Placing query into subtree... took 0.13286590576171875 s
+Modify main tree... took 0.23975467681884766 s
+Scoring trees... took 0.42213988304138184 s
+Program execution took 7.978354454040527 s
+temp_files/4b8d22bd-2376-4bdb-9463-cc678f99afc7
+===== Timing =====
+Setup took 0.0971670150756836 s
+Generating fasta files for pplacer... took 0.3222508430480957 s
+Running pplacer... took 6.705610990524292 s
+Placing query into subtree... took 0.14115285873413086 s
+Modify main tree... took 0.25310468673706055 s
+Scoring trees... took 0.405118465423584 s
+Program execution took 7.9651148319244385 s
+temp_files/d09b9e5d-a7d2-4c73-84d9-8505052332ec
+===== Timing =====
+Setup took 0.09509754180908203 s
+Generating fasta files for pplacer... took 0.3443880081176758 s
+Running pplacer... took 6.80089807510376 s
+Placing query into subtree... took 0.1634364128112793 s
+Modify main tree... took 0.2666916847229004 s
+Scoring trees... took 0.41242551803588867 s
+Program execution took 8.093350410461426 s
+temp_files/ecfcf728-0364-4d40-aa4c-fb68d6e3d4d1
+===== Timing =====
+Setup took 0.09719324111938477 s
+Generating fasta files for pplacer... took 0.33917880058288574 s
+Running pplacer... took 6.861896753311157 s
+Placing query into subtree... took 0.13610219955444336 s
+Modify main tree... took 0.2684895992279053 s
+Scoring trees... took 0.49694347381591797 s
+Program execution took 8.223780632019043 s
+temp_files/fc7deddc-f0ca-4fef-9766-b1a254afe8a8
+===== Timing =====
+Setup took 0.09526920318603516 s
+Generating fasta files for pplacer... took 0.33834028244018555 s
+Running pplacer... took 6.906663417816162 s
+Placing query into subtree... took 0.1391146183013916 s
+Modify main tree... took 0.2689800262451172 s
+Scoring trees... took 0.41316652297973633 s
+Program execution took 8.209188222885132 s
+temp_files/b4a01973-8055-4a2a-84d2-b0be368b4663
+===== Timing =====
+Setup took 0.09837770462036133 s
+Generating fasta files for pplacer... took 0.3398160934448242 s
+Running pplacer... took 6.82241153717041 s
+Placing query into subtree... took 0.14508271217346191 s
+Modify main tree... took 0.2679712772369385 s
+Scoring trees... took 0.40581750869750977 s
+Program execution took 8.090047597885132 s
+temp_files/d82491db-2609-4d0e-b268-1fb648e7afbd
+===== Timing =====
+Setup took 0.09896540641784668 s
+Generating fasta files for pplacer... took 0.33075785636901855 s
+Running pplacer... took 6.839972972869873 s
+Placing query into subtree... took 0.15418291091918945 s
+Modify main tree... took 0.2653670310974121 s
+Scoring trees... took 0.45512962341308594 s
+Program execution took 8.184262752532959 s
+temp_files/f349226f-77ff-4eac-b441-189ec688f116
+===== Timing =====
+Setup took 0.10098409652709961 s
+Generating fasta files for pplacer... took 0.3568856716156006 s
+Running pplacer... took 6.767734527587891 s
+Placing query into subtree... took 0.16234707832336426 s
+Modify main tree... took 0.26331233978271484 s
+Scoring trees... took 0.44874143600463867 s
+Program execution took 8.113415002822876 s
+temp_files/e11bdc92-b4e8-4a5a-a638-f1299e3e5be6
+===== Timing =====
+Setup took 0.10166215896606445 s
+Generating fasta files for pplacer... took 0.3560791015625 s
+Running pplacer... took 6.813533306121826 s
+Placing query into subtree... took 0.14687418937683105 s
+Modify main tree... took 0.28012537956237793 s
+Scoring trees... took 0.47515416145324707 s
+Program execution took 8.184228897094727 s
+temp_files/144dd047-3432-4b97-8cd9-a14e3832075d
+===== Timing =====
+Setup took 0.10082459449768066 s
+Generating fasta files for pplacer... took 0.3396735191345215 s
+Running pplacer... took 7.057928800582886 s
+Placing query into subtree... took 0.1598825454711914 s
+Modify main tree... took 0.2619156837463379 s
+Scoring trees... took 0.4597291946411133 s
+Program execution took 8.39119029045105 s
+temp_files/6c48d30b-7446-40ab-b490-3b6e120f14ea
+===== Timing =====
+Setup took 0.1653270721435547 s
+Generating fasta files for pplacer... took 0.38779664039611816 s
+Running pplacer... took 6.895227909088135 s
+Placing query into subtree... took 0.15008091926574707 s
+Modify main tree... took 0.26241374015808105 s
+Scoring trees... took 0.5428547859191895 s
+Program execution took 8.428931951522827 s
+temp_files/4fe17249-5e4a-45e1-85e2-cc4e7d5b52eb
+===== Timing =====
+Setup took 0.09778833389282227 s
+Generating fasta files for pplacer... took 0.3829939365386963 s
+Running pplacer... took 6.798735618591309 s
+Placing query into subtree... took 0.14986896514892578 s
+Modify main tree... took 0.2676973342895508 s
+Scoring trees... took 0.4605581760406494 s
+Program execution took 8.174168825149536 s
+temp_files/0fccc1a3-15b9-4eae-9ab7-c089afdf7b09
+===== Timing =====
+Setup took 0.09955286979675293 s
+Generating fasta files for pplacer... took 0.3397054672241211 s
+Running pplacer... took 6.821425437927246 s
+Placing query into subtree... took 0.16880583763122559 s
+Modify main tree... took 0.272202730178833 s
+Scoring trees... took 0.4517629146575928 s
+Program execution took 8.164403676986694 s
+temp_files/ef2ecf7c-82bc-4d5d-965c-285266aa5e07
+===== Timing =====
+Setup took 0.10096454620361328 s
+Generating fasta files for pplacer... took 0.3372931480407715 s
+Running pplacer... took 6.761615037918091 s
+Placing query into subtree... took 0.152374267578125 s
+Modify main tree... took 0.25294065475463867 s
+Scoring trees... took 0.4462106227874756 s
+Program execution took 8.062829732894897 s
+temp_files/e1bf898a-feaa-4284-82f3-f8f931c8cfb9
+===== Timing =====
+Setup took 0.0993349552154541 s
+Generating fasta files for pplacer... took 0.3445289134979248 s
+Running pplacer... took 6.799739360809326 s
+Placing query into subtree... took 0.15402507781982422 s
+Modify main tree... took 0.2624666690826416 s
+Scoring trees... took 0.4570775032043457 s
+Program execution took 8.159905433654785 s
+temp_files/55afc770-6681-460c-a1ca-a837dacebfce
+===== Timing =====
+Setup took 0.10028648376464844 s
+Generating fasta files for pplacer... took 0.3936293125152588 s
+Running pplacer... took 6.706969499588013 s
+Placing query into subtree... took 0.14874577522277832 s
+Modify main tree... took 0.2675154209136963 s
+Scoring trees... took 0.449373722076416 s
+Program execution took 8.087634563446045 s
+temp_files/8115bf2d-5ba1-4f1f-9946-e75b62ec3bd2
+===== Timing =====
+Setup took 0.10068750381469727 s
+Generating fasta files for pplacer... took 0.34154701232910156 s
+Running pplacer... took 6.787842273712158 s
+Placing query into subtree... took 0.15292716026306152 s
+Modify main tree... took 0.26612377166748047 s
+Scoring trees... took 0.4512193202972412 s
+Program execution took 8.11059284210205 s
+temp_files/d71d1bf3-76e1-422c-978b-a289076ee205
+===== Timing =====
+Setup took 0.1001894474029541 s
+Generating fasta files for pplacer... took 0.35022926330566406 s
+Running pplacer... took 6.832032680511475 s
+Placing query into subtree... took 0.15325188636779785 s
+Modify main tree... took 0.2620658874511719 s
+Scoring trees... took 0.5234205722808838 s
+Program execution took 8.232699632644653 s
+temp_files/e9d63e04-915f-44f9-92ca-6b031a91a735
+===== Timing =====
+Setup took 0.10146093368530273 s
+Generating fasta files for pplacer... took 0.38416075706481934 s
+Running pplacer... took 6.786208868026733 s
+Placing query into subtree... took 0.15730023384094238 s
+Modify main tree... took 0.2686443328857422 s
+Scoring trees... took 0.45735907554626465 s
+Program execution took 8.181954145431519 s
+temp_files/780128da-4025-4e0c-8970-a912191aae89
+===== Timing =====
+Setup took 0.11115884780883789 s
+Generating fasta files for pplacer... took 0.35495972633361816 s
+Running pplacer... took 6.91599702835083 s
+Placing query into subtree... took 0.13599944114685059 s
+Modify main tree... took 0.26009249687194824 s
+Scoring trees... took 0.4503598213195801 s
+Program execution took 8.274790048599243 s
+temp_files/f425d1cd-a1e3-4d40-beb9-04af228486db
+===== Timing =====
+Setup took 0.09679961204528809 s
+Generating fasta files for pplacer... took 0.3504955768585205 s
+Running pplacer... took 6.811036586761475 s
+Placing query into subtree... took 0.1705772876739502 s
+Modify main tree... took 0.2648322582244873 s
+Scoring trees... took 0.44527745246887207 s
+Program execution took 8.149841547012329 s
+temp_files/f7719f0f-e9b6-4ce3-895b-8906e664474e
+===== Timing =====
+Setup took 0.0957326889038086 s
+Generating fasta files for pplacer... took 0.3585631847381592 s
+Running pplacer... took 6.826719522476196 s
+Placing query into subtree... took 0.15823626518249512 s
+Modify main tree... took 0.27408790588378906 s
+Scoring trees... took 0.4431800842285156 s
+Program execution took 8.167920351028442 s
+temp_files/1ab3d34f-6fc0-4cef-9bc3-cdb0842b8a6c
+===== Timing =====
+Setup took 0.09733128547668457 s
+Generating fasta files for pplacer... took 0.36754918098449707 s
+Running pplacer... took 6.810252666473389 s
+Placing query into subtree... took 0.1538105010986328 s
+Modify main tree... took 0.2629051208496094 s
+Scoring trees... took 0.4429469108581543 s
+Program execution took 8.156028509140015 s
+temp_files/8db2ddc4-82d6-49e3-b85a-a623355cd3fe
+===== Timing =====
+Setup took 0.10043525695800781 s
+Generating fasta files for pplacer... took 0.338301420211792 s
+Running pplacer... took 6.9183030128479 s
+Placing query into subtree... took 0.14924383163452148 s
+Modify main tree... took 0.31600260734558105 s
+Scoring trees... took 0.4494919776916504 s
+Program execution took 8.285011529922485 s
+temp_files/4807808e-fae6-4af7-8c48-0e14a6c9ddfb
+===== Timing =====
+Setup took 0.09784102439880371 s
+Generating fasta files for pplacer... took 0.341522216796875 s
+Running pplacer... took 6.812973499298096 s
+Placing query into subtree... took 0.14398980140686035 s
+Modify main tree... took 0.26340818405151367 s
+Scoring trees... took 0.5297558307647705 s
+Program execution took 8.200133085250854 s
+temp_files/248ace65-1513-4ff7-97d4-3d19c472d8f4
+===== Timing =====
+Setup took 0.10049843788146973 s
+Generating fasta files for pplacer... took 0.3812899589538574 s
+Running pplacer... took 6.843790769577026 s
+Placing query into subtree... took 0.1519155502319336 s
+Modify main tree... took 0.2565779685974121 s
+Scoring trees... took 0.45065951347351074 s
+Program execution took 8.19547963142395 s
+temp_files/8175e121-264d-466b-817c-292f5b9eb620
+===== Timing =====
+Setup took 0.09705734252929688 s
+Generating fasta files for pplacer... took 0.361879825592041 s
+Running pplacer... took 6.835671901702881 s
+Placing query into subtree... took 0.15866351127624512 s
+Modify main tree... took 0.2683238983154297 s
+Scoring trees... took 0.4504356384277344 s
+Program execution took 8.198654890060425 s
+temp_files/36da7321-6685-40ba-a116-3d7e1867c2e7
+===== Timing =====
+Setup took 0.09901189804077148 s
+Generating fasta files for pplacer... took 0.3681025505065918 s
+Running pplacer... took 6.716834783554077 s
+Placing query into subtree... took 0.1713426113128662 s
+Modify main tree... took 0.2672710418701172 s
+Scoring trees... took 0.45207667350769043 s
+Program execution took 8.085772514343262 s
+temp_files/32c1f555-8b3f-4680-9820-9ca82989761c
+===== Timing =====
+Setup took 0.1002342700958252 s
+Generating fasta files for pplacer... took 0.3706636428833008 s
+Running pplacer... took 6.8550190925598145 s
+Placing query into subtree... took 0.15793395042419434 s
+Modify main tree... took 0.2803192138671875 s
+Scoring trees... took 0.4464285373687744 s
+Program execution took 8.221239805221558 s
+temp_files/385e31bc-d51d-40a3-a63d-3cc1f5d44537
+===== Timing =====
+Setup took 0.1188962459564209 s
+Generating fasta files for pplacer... took 0.34420156478881836 s
+Running pplacer... took 6.894943714141846 s
+Placing query into subtree... took 0.15001606941223145 s
+Modify main tree... took 0.27817845344543457 s
+Scoring trees... took 0.4464297294616699 s
+Program execution took 8.2580406665802 s
+temp_files/8d3e4f84-8b3b-4e4b-ba96-7bd2b19d2320
+===== Timing =====
+Setup took 0.10036396980285645 s
+Generating fasta files for pplacer... took 0.3502998352050781 s
+Running pplacer... took 6.8188371658325195 s
+Placing query into subtree... took 0.13891386985778809 s
+Modify main tree... took 0.27021217346191406 s
+Scoring trees... took 0.4738504886627197 s
+Program execution took 8.1631441116333 s
+temp_files/a448f943-eb70-41f1-a786-160460dee404
+===== Timing =====
+Setup took 0.1012120246887207 s
+Generating fasta files for pplacer... took 0.3417794704437256 s
+Running pplacer... took 6.771386623382568 s
+Placing query into subtree... took 0.15050268173217773 s
+Modify main tree... took 0.2622811794281006 s
+Scoring trees... took 0.5244290828704834 s
+Program execution took 8.16332721710205 s
+temp_files/0d759b8f-5ea5-4014-8c69-864c8be5c748
+===== Timing =====
+Setup took 0.09832143783569336 s
+Generating fasta files for pplacer... took 0.3643639087677002 s
+Running pplacer... took 6.859631538391113 s
+Placing query into subtree... took 0.148453950881958 s
+Modify main tree... took 0.2577650547027588 s
+Scoring trees... took 0.4357419013977051 s
+Program execution took 8.193969011306763 s
+temp_files/6774c2ca-a790-4e35-82c1-0b90834b5163
+===== Timing =====
+Setup took 0.10168290138244629 s
+Generating fasta files for pplacer... took 0.3370480537414551 s
+Running pplacer... took 6.8641369342803955 s
+Placing query into subtree... took 0.14598846435546875 s
+Modify main tree... took 0.25878143310546875 s
+Scoring trees... took 0.4420619010925293 s
+Program execution took 8.178647994995117 s
+temp_files/e52c2869-06e7-49f3-a307-1c825de75b91
+===== Timing =====
+Setup took 0.09759354591369629 s
+Generating fasta files for pplacer... took 0.3377552032470703 s
+Running pplacer... took 6.846141576766968 s
+Placing query into subtree... took 0.1444568634033203 s
+Modify main tree... took 0.2677750587463379 s
+Scoring trees... took 0.4453468322753906 s
+Program execution took 8.16302490234375 s
+temp_files/25f984c6-2a1e-4d7d-974f-32915e6b826a
+===== Timing =====
+Setup took 0.09989476203918457 s
+Generating fasta files for pplacer... took 0.34610891342163086 s
+Running pplacer... took 6.9211485385894775 s
+Placing query into subtree... took 0.15318036079406738 s
+Modify main tree... took 0.2613077163696289 s
+Scoring trees... took 0.4457392692565918 s
+Program execution took 8.23898696899414 s
+temp_files/770bcfbe-b1c7-478d-a552-22106d66aa1f
+===== Timing =====
+Setup took 0.1024179458618164 s
+Generating fasta files for pplacer... took 0.35685300827026367 s
+Running pplacer... took 6.774822950363159 s
+Placing query into subtree... took 0.14957189559936523 s
+Modify main tree... took 0.2583320140838623 s
+Scoring trees... took 0.44765734672546387 s
+Program execution took 8.103643655776978 s
+temp_files/310e5db5-e8ca-49a6-abac-99c9747ab4fb
+===== Timing =====
+Setup took 0.1041567325592041 s
+Generating fasta files for pplacer... took 0.3443753719329834 s
+Running pplacer... took 6.899031400680542 s
+Placing query into subtree... took 0.14952754974365234 s
+Modify main tree... took 0.2580709457397461 s
+Scoring trees... took 0.4566066265106201 s
+Program execution took 8.241612195968628 s
+temp_files/628580e3-83e9-4549-b10e-54635c47306e
+===== Timing =====
+Setup took 0.09802818298339844 s
+Generating fasta files for pplacer... took 0.344404935836792 s
+Running pplacer... took 6.684518575668335 s
+Placing query into subtree... took 0.13856244087219238 s
+Modify main tree... took 0.26328086853027344 s
+Scoring trees... took 0.5326015949249268 s
+Program execution took 8.074009418487549 s
+temp_files/cafa9f57-f3c0-4d86-8d54-17e1b02486a8
+===== Timing =====
+Setup took 0.09927153587341309 s
+Generating fasta files for pplacer... took 0.3628664016723633 s
+Running pplacer... took 6.855270624160767 s
+Placing query into subtree... took 0.14754748344421387 s
+Modify main tree... took 0.2615652084350586 s
+Scoring trees... took 0.4419236183166504 s
+Program execution took 8.17948579788208 s
+temp_files/9f95ef99-ede5-47dc-80b2-642408c84d9b
+===== Timing =====
+Setup took 0.1048123836517334 s
+Generating fasta files for pplacer... took 0.3556249141693115 s
+Running pplacer... took 6.748626470565796 s
+Placing query into subtree... took 0.1518850326538086 s
+Modify main tree... took 0.25659871101379395 s
+Scoring trees... took 0.4537196159362793 s
+Program execution took 8.088594436645508 s
+temp_files/0f64b3fe-2e2a-4ff6-b33b-a6836b8a3b84
+===== Timing =====
+Setup took 0.09976863861083984 s
+Generating fasta files for pplacer... took 0.3541741371154785 s
+Running pplacer... took 6.6162426471710205 s
+Placing query into subtree... took 0.15323472023010254 s
+Modify main tree... took 0.2748713493347168 s
+Scoring trees... took 0.4546079635620117 s
+Program execution took 7.98742151260376 s
+temp_files/f1056012-eb8e-4975-9b01-2dfbb5822cbb
+===== Timing =====
+Setup took 0.09791111946105957 s
+Generating fasta files for pplacer... took 0.35546135902404785 s
+Running pplacer... took 6.671728849411011 s
+Placing query into subtree... took 0.16272258758544922 s
+Modify main tree... took 0.32000184059143066 s
+Scoring trees... took 0.45191478729248047 s
+Program execution took 8.07191276550293 s
+temp_files/bf336aca-46e0-4c9f-bee1-526755b7323b
+===== Timing =====
+Setup took 0.10427069664001465 s
+Generating fasta files for pplacer... took 0.4018881320953369 s
+Running pplacer... took 6.8917236328125 s
+Placing query into subtree... took 0.15096235275268555 s
+Modify main tree... took 0.27016425132751465 s
+Scoring trees... took 0.4523782730102539 s
+Program execution took 8.309447765350342 s
+temp_files/84cd7036-287b-4cb3-9fe0-a0d3012ed270
+===== Timing =====
+Setup took 0.09468388557434082 s
+Generating fasta files for pplacer... took 0.34940505027770996 s
+Running pplacer... took 6.846318006515503 s
+Placing query into subtree... took 0.1563572883605957 s
+Modify main tree... took 0.2560451030731201 s
+Scoring trees... took 0.43881988525390625 s
+Program execution took 8.190914630889893 s
+temp_files/bc2529bd-f2f1-4939-b94c-c2226079b050
+===== Timing =====
+Setup took 0.09747052192687988 s
+Generating fasta files for pplacer... took 0.35262250900268555 s
+Running pplacer... took 6.8217668533325195 s
+Placing query into subtree... took 0.1504967212677002 s
+Modify main tree... took 0.28028440475463867 s
+Scoring trees... took 0.5290184020996094 s
+Program execution took 8.253691673278809 s
+temp_files/1f168bf1-57c1-4688-9107-3f64f91e2b42
+===== Timing =====
+Setup took 0.10257959365844727 s
+Generating fasta files for pplacer... took 0.34664130210876465 s
+Running pplacer... took 6.51776647567749 s
+Placing query into subtree... took 0.16368412971496582 s
+Modify main tree... took 0.26052141189575195 s
+Scoring trees... took 0.4424760341644287 s
+Program execution took 7.844406366348267 s
+temp_files/3e04f494-e1f7-48b0-877e-268810325251
+===== Timing =====
+Setup took 0.10350346565246582 s
+Generating fasta files for pplacer... took 0.36573052406311035 s
+Running pplacer... took 6.91424036026001 s
+Placing query into subtree... took 0.1559770107269287 s
+Modify main tree... took 0.2635340690612793 s
+Scoring trees... took 0.44492387771606445 s
+Program execution took 8.273741483688354 s
+temp_files/b5745aae-81cc-40c0-8dae-62d2be6d983b
+===== Timing =====
+Setup took 0.09819650650024414 s
+Generating fasta files for pplacer... took 0.3694033622741699 s
+Running pplacer... took 6.935292482376099 s
+Placing query into subtree... took 0.15563178062438965 s
+Modify main tree... took 0.2663109302520752 s
+Scoring trees... took 0.4534764289855957 s
+Program execution took 8.294506788253784 s
+temp_files/3eff0631-6129-402f-aa38-213fa7102e23
+===== Timing =====
+Setup took 0.09666895866394043 s
+Generating fasta files for pplacer... took 0.33936214447021484 s
+Running pplacer... took 6.498197555541992 s
+Placing query into subtree... took 0.15916895866394043 s
+Modify main tree... took 0.2756061553955078 s
+Scoring trees... took 0.4428231716156006 s
+Program execution took 7.834352493286133 s
+temp_files/8547ac5d-8fdb-45d0-9bad-88b917bf845d
+===== Timing =====
+Setup took 0.09960269927978516 s
+Generating fasta files for pplacer... took 0.34839701652526855 s
+Running pplacer... took 6.7778098583221436 s
+Placing query into subtree... took 0.14949750900268555 s
+Modify main tree... took 0.30123114585876465 s
+Scoring trees... took 0.44605517387390137 s
+Program execution took 8.133466482162476 s
+temp_files/2e27d905-b42d-4f51-83d3-9a0636ee15a9
+===== Timing =====
+Setup took 0.09575867652893066 s
+Generating fasta files for pplacer... took 0.3484172821044922 s
+Running pplacer... took 6.774930715560913 s
+Placing query into subtree... took 0.1535506248474121 s
+Modify main tree... took 0.27147531509399414 s
+Scoring trees... took 0.4484519958496094 s
+Program execution took 8.113488674163818 s
+temp_files/c247f8f7-8ca9-40ee-b6c1-5a5a2c7a3d5b
+===== Timing =====
+Setup took 0.09686732292175293 s
+Generating fasta files for pplacer... took 0.3360159397125244 s
+Running pplacer... took 6.754638671875 s
+Placing query into subtree... took 0.13632488250732422 s
+Modify main tree... took 0.2745027542114258 s
+Scoring trees... took 0.5280025005340576 s
+Program execution took 8.171143293380737 s
+temp_files/7c7d0778-159d-4e5b-99c1-fe33538bc2ee
+===== Timing =====
+Setup took 0.10007953643798828 s
+Generating fasta files for pplacer... took 0.3509955406188965 s
+Running pplacer... took 6.865793466567993 s
+Placing query into subtree... took 0.14894676208496094 s
+Modify main tree... took 0.2637054920196533 s
+Scoring trees... took 0.4646437168121338 s
+Program execution took 8.217627048492432 s
+temp_files/b27099c7-85e0-45d2-ba08-91089ca6a0e9
+===== Timing =====
+Setup took 0.09878969192504883 s
+Generating fasta files for pplacer... took 0.34519052505493164 s
+Running pplacer... took 6.861851930618286 s
+Placing query into subtree... took 0.1492166519165039 s
+Modify main tree... took 0.2654073238372803 s
+Scoring trees... took 0.4363107681274414 s
+Program execution took 8.183785915374756 s
+temp_files/d3ed703d-a676-410a-8c2e-f3b9902f10e6
+===== Timing =====
+Setup took 0.09830117225646973 s
+Generating fasta files for pplacer... took 0.3368856906890869 s
+Running pplacer... took 6.8565287590026855 s
+Placing query into subtree... took 0.15567898750305176 s
+Modify main tree... took 0.2602095603942871 s
+Scoring trees... took 0.44048476219177246 s
+Program execution took 8.192193508148193 s
+temp_files/ec99ff3f-5d9a-4317-a4e2-d721387fdb8b
+===== Timing =====
+Setup took 0.09924197196960449 s
+Generating fasta files for pplacer... took 0.35339784622192383 s
+Running pplacer... took 6.774198293685913 s
+Placing query into subtree... took 0.1472156047821045 s
+Modify main tree... took 0.2586674690246582 s
+Scoring trees... took 0.44542908668518066 s
+Program execution took 8.103558540344238 s
+temp_files/90539726-2666-44fd-91e5-5b7758426ad7
+===== Timing =====
+Setup took 0.09850335121154785 s
+Generating fasta files for pplacer... took 0.36130428314208984 s
+Running pplacer... took 6.803173303604126 s
+Placing query into subtree... took 0.14776253700256348 s
+Modify main tree... took 0.27786946296691895 s
+Scoring trees... took 0.4347660541534424 s
+Program execution took 8.135169744491577 s
+temp_files/260bd60c-6e81-4503-bcac-2c09541b3085
+===== Timing =====
+Setup took 0.09961581230163574 s
+Generating fasta files for pplacer... took 0.34866762161254883 s
+Running pplacer... took 6.796478033065796 s
+Placing query into subtree... took 0.15225744247436523 s
+Modify main tree... took 0.27025747299194336 s
+Scoring trees... took 0.4555516242980957 s
+Program execution took 8.160843849182129 s
+temp_files/ae504192-25fc-44d3-9915-558291082cf9
+===== Timing =====
+Setup took 0.10326290130615234 s
+Generating fasta files for pplacer... took 0.3363790512084961 s
+Running pplacer... took 6.733758926391602 s
+Placing query into subtree... took 0.15040135383605957 s
+Modify main tree... took 0.2649664878845215 s
+Scoring trees... took 0.5400874614715576 s
+Program execution took 8.164263725280762 s
+temp_files/992fba58-f537-4949-9604-2fd7dbe956ac
+===== Timing =====
+Setup took 0.09715604782104492 s
+Generating fasta files for pplacer... took 0.3439826965332031 s
+Running pplacer... took 6.8305888175964355 s
+Placing query into subtree... took 0.14597487449645996 s
+Modify main tree... took 0.25040531158447266 s
+Scoring trees... took 0.4415261745452881 s
+Program execution took 8.120257139205933 s
+temp_files/65351f87-4952-45f7-bd19-62921ba83c39
+===== Timing =====
+Setup took 0.10530972480773926 s
+Generating fasta files for pplacer... took 0.39036059379577637 s
+Running pplacer... took 6.763364315032959 s
+Placing query into subtree... took 0.14967799186706543 s
+Modify main tree... took 0.26187753677368164 s
+Scoring trees... took 0.44385313987731934 s
+Program execution took 8.125916957855225 s
+temp_files/af02b1d0-7590-4b66-bf0b-48abdb927a59
+===== Timing =====
+Setup took 0.10198640823364258 s
+Generating fasta files for pplacer... took 0.38774657249450684 s
+Running pplacer... took 6.834373712539673 s
+Placing query into subtree... took 0.1519315242767334 s
+Modify main tree... took 0.2669548988342285 s
+Scoring trees... took 0.4359927177429199 s
+Program execution took 8.210914373397827 s
+temp_files/e8055e93-f1a7-46ce-b978-d4e2780a1add
+===== Timing =====
+Setup took 0.10649776458740234 s
+Generating fasta files for pplacer... took 0.49116086959838867 s
+Running pplacer... took 6.810947895050049 s
+Placing query into subtree... took 0.16393637657165527 s
+Modify main tree... took 0.26509547233581543 s
+Scoring trees... took 0.44815659523010254 s
+Program execution took 8.312868356704712 s
+temp_files/4515b693-306e-4069-9c91-02d247fd1671
+===== Timing =====
+Setup took 0.09745121002197266 s
+Generating fasta files for pplacer... took 0.33626341819763184 s
+Running pplacer... took 6.847824573516846 s
+Placing query into subtree... took 0.16387391090393066 s
+Modify main tree... took 0.26441359519958496 s
+Scoring trees... took 0.434279203414917 s
+Program execution took 8.154492139816284 s
+temp_files/bb09fb2c-f468-42ef-9169-8cf8fec770a3
+===== Timing =====
+Setup took 0.10036206245422363 s
+Generating fasta files for pplacer... took 0.41103291511535645 s
+Running pplacer... took 6.796393394470215 s
+Placing query into subtree... took 0.14802837371826172 s
+Modify main tree... took 0.27427220344543457 s
+Scoring trees... took 0.45194458961486816 s
+Program execution took 8.193296432495117 s
+temp_files/c31c133d-854c-4d65-a2fb-555eebc6d5e8
+===== Timing =====
+Setup took 0.09831523895263672 s
+Generating fasta files for pplacer... took 0.34151268005371094 s
+Running pplacer... took 6.841727256774902 s
+Placing query into subtree... took 0.1457352638244629 s
+Modify main tree... took 0.26034069061279297 s
+Scoring trees... took 0.5210409164428711 s
+Program execution took 8.235392093658447 s
+temp_files/4223cc5f-f1c2-4298-b202-e7bd78bb231b
+===== Timing =====
+Setup took 0.09671783447265625 s
+Generating fasta files for pplacer... took 0.3668346405029297 s
+Running pplacer... took 6.797113656997681 s
+Placing query into subtree... took 0.15183138847351074 s
+Modify main tree... took 0.2607860565185547 s
+Scoring trees... took 0.4451131820678711 s
+Program execution took 8.156071901321411 s
+temp_files/cc48dfa8-14de-4022-862f-c1167bf61593
+===== Timing =====
+Setup took 0.10173320770263672 s
+Generating fasta files for pplacer... took 0.346388578414917 s
+Running pplacer... took 6.920110702514648 s
+Placing query into subtree... took 0.12700939178466797 s
+Modify main tree... took 0.2626204490661621 s
+Scoring trees... took 0.4454057216644287 s
+Program execution took 8.214795112609863 s
+temp_files/5acfa4c7-a565-487e-9f3d-9bfab2a8400b
+===== Timing =====
+Setup took 0.10010743141174316 s
+Generating fasta files for pplacer... took 0.3602621555328369 s
+Running pplacer... took 6.883772850036621 s
+Placing query into subtree... took 0.13791489601135254 s
+Modify main tree... took 0.26584696769714355 s
+Scoring trees... took 0.48427653312683105 s
+Program execution took 8.243266344070435 s
+temp_files/2809b0a0-944b-48b3-a6ec-be4c41143880
+===== Timing =====
+Setup took 0.09714794158935547 s
+Generating fasta files for pplacer... took 0.41412353515625 s
+Running pplacer... took 6.932894706726074 s
+Placing query into subtree... took 0.1430671215057373 s
+Modify main tree... took 0.27393150329589844 s
+Scoring trees... took 0.4470055103302002 s
+Program execution took 8.341953754425049 s
+temp_files/e455b6aa-9938-405f-b8c1-b8f2b373b775
+===== Timing =====
+Setup took 0.10341477394104004 s
+Generating fasta files for pplacer... took 0.35302019119262695 s
+Running pplacer... took 6.8493053913116455 s
+Placing query into subtree... took 0.13135552406311035 s
+Modify main tree... took 0.3078463077545166 s
+Scoring trees... took 0.4422285556793213 s
+Program execution took 8.217631578445435 s
+temp_files/7cdfaa58-ac85-4bc4-b77f-868760b12b80
+===== Timing =====
+Setup took 0.09985136985778809 s
+Generating fasta files for pplacer... took 0.34580302238464355 s
+Running pplacer... took 6.992662668228149 s
+Placing query into subtree... took 0.14623618125915527 s
+Modify main tree... took 0.2653980255126953 s
+Scoring trees... took 0.4431765079498291 s
+Program execution took 8.304649353027344 s
+temp_files/950d4401-eace-4849-9ccb-b99a0e07daa7
+===== Timing =====
+Setup took 0.10164737701416016 s
+Generating fasta files for pplacer... took 0.3846926689147949 s
+Running pplacer... took 6.932576656341553 s
+Placing query into subtree... took 0.1363065242767334 s
+Modify main tree... took 0.29357123374938965 s
+Scoring trees... took 0.5257203578948975 s
+Program execution took 8.385669231414795 s
+temp_files/ff1608cf-fe40-4f7a-aa68-3e7863d0c043
+===== Timing =====
+Setup took 0.09858584403991699 s
+Generating fasta files for pplacer... took 0.551098108291626 s
+Running pplacer... took 7.039541006088257 s
+Placing query into subtree... took 0.14412856101989746 s
+Modify main tree... took 0.26920175552368164 s
+Scoring trees... took 0.4421203136444092 s
+Program execution took 8.56409764289856 s
+temp_files/94db30b0-e361-412b-8426-768b7789fce1
+===== Timing =====
+Setup took 0.10174751281738281 s
+Generating fasta files for pplacer... took 0.38081908226013184 s
+Running pplacer... took 7.012797117233276 s
+Placing query into subtree... took 0.1440281867980957 s
+Modify main tree... took 0.29329538345336914 s
+Scoring trees... took 0.4425520896911621 s
+Program execution took 8.386463403701782 s
+temp_files/d3858f84-7dd3-4b64-8b5e-89f8f8548ce1
+===== Timing =====
+Setup took 0.09737515449523926 s
+Generating fasta files for pplacer... took 0.3782923221588135 s
+Running pplacer... took 6.9522545337677 s
+Placing query into subtree... took 0.1471853256225586 s
+Modify main tree... took 0.2618560791015625 s
+Scoring trees... took 0.44713306427001953 s
+Program execution took 8.295555114746094 s
+temp_files/df6f53fa-1357-4d09-aaf2-46cc707d968e
+===== Timing =====
+Setup took 0.12051892280578613 s
+Generating fasta files for pplacer... took 0.41726255416870117 s
+Running pplacer... took 6.595515489578247 s
+Placing query into subtree... took 0.14666128158569336 s
+Modify main tree... took 0.280045747756958 s
+Scoring trees... took 0.4383735656738281 s
+Program execution took 8.087082147598267 s
+temp_files/56cff089-20f5-4230-9636-785ee21ed9d4
+===== Timing =====
+Setup took 0.10015416145324707 s
+Generating fasta files for pplacer... took 0.40281248092651367 s
+Running pplacer... took 6.9648823738098145 s
+Placing query into subtree... took 0.13554143905639648 s
+Modify main tree... took 0.2791781425476074 s
+Scoring trees... took 0.4716002941131592 s
+Program execution took 8.36594295501709 s
+temp_files/3aa80bb8-b9c2-4a3f-8631-4adc16b4b361
+===== Timing =====
+Setup took 0.10045504570007324 s
+Generating fasta files for pplacer... took 0.44123077392578125 s
+Running pplacer... took 6.910282850265503 s
+Placing query into subtree... took 0.14408159255981445 s
+Modify main tree... took 0.2843444347381592 s
+Scoring trees... took 0.4486970901489258 s
+Program execution took 8.341649293899536 s
+temp_files/7302c1d7-ddae-4e4e-875f-5bc244530e7a
+===== Timing =====
+Setup took 0.0985713005065918 s
+Generating fasta files for pplacer... took 0.3743155002593994 s
+Running pplacer... took 6.896435976028442 s
+Placing query into subtree... took 0.13007068634033203 s
+Modify main tree... took 0.26302027702331543 s
+Scoring trees... took 0.5320234298706055 s
+Program execution took 8.33530068397522 s
+temp_files/a38e7a55-d944-423e-a172-a0fdd8827068
+===== Timing =====
+Setup took 0.1001894474029541 s
+Generating fasta files for pplacer... took 0.36977696418762207 s
+Running pplacer... took 6.570459604263306 s
+Placing query into subtree... took 0.14433550834655762 s
+Modify main tree... took 0.2992386817932129 s
+Scoring trees... took 0.4501035213470459 s
+Program execution took 7.956644773483276 s
+temp_files/6268d640-49cb-406e-a2fb-e79fa4d5f3a0
+===== Timing =====
+Setup took 0.1002964973449707 s
+Generating fasta files for pplacer... took 0.4707050323486328 s
+Running pplacer... took 6.882318019866943 s
+Placing query into subtree... took 0.14912915229797363 s
+Modify main tree... took 0.29775214195251465 s
+Scoring trees... took 0.44266223907470703 s
+Program execution took 8.353166580200195 s
+temp_files/b86b599f-3061-47b5-a224-510643182c17
+===== Timing =====
+Setup took 0.10004639625549316 s
+Generating fasta files for pplacer... took 0.4010124206542969 s
+Running pplacer... took 6.911526441574097 s
+Placing query into subtree... took 0.13387846946716309 s
+Modify main tree... took 0.28976869583129883 s
+Scoring trees... took 0.45113062858581543 s
+Program execution took 8.31749963760376 s
+temp_files/f3393b13-2183-4f05-930a-115f92e86658
+===== Timing =====
+Setup took 0.09772586822509766 s
+Generating fasta files for pplacer... took 0.34191322326660156 s
+Running pplacer... took 6.929336309432983 s
+Placing query into subtree... took 0.14061808586120605 s
+Modify main tree... took 0.2508730888366699 s
+Scoring trees... took 0.438251256942749 s
+Program execution took 8.239386081695557 s
+temp_files/8c1c62b6-46bf-4b95-a6ba-8cf487c897f5
+===== Timing =====
+Setup took 0.09838509559631348 s
+Generating fasta files for pplacer... took 0.3828732967376709 s
+Running pplacer... took 6.8746349811553955 s
+Placing query into subtree... took 0.13668560981750488 s
+Modify main tree... took 0.2933194637298584 s
+Scoring trees... took 0.4486861228942871 s
+Program execution took 8.276838779449463 s
+temp_files/bb95ecce-db81-48af-84d9-7404110a2db3
+===== Timing =====
+Setup took 0.09675860404968262 s
+Generating fasta files for pplacer... took 0.4114367961883545 s
+Running pplacer... took 7.030833005905151 s
+Placing query into subtree... took 0.14615988731384277 s
+Modify main tree... took 0.31074047088623047 s
+Scoring trees... took 0.4510154724121094 s
+Program execution took 8.458397388458252 s
+temp_files/d372ad53-3d37-4ae6-91f5-d14d53e95235
+===== Timing =====
+Setup took 0.10342741012573242 s
+Generating fasta files for pplacer... took 0.44858455657958984 s
+Running pplacer... took 6.996596336364746 s
+Placing query into subtree... took 0.13909626007080078 s
+Modify main tree... took 0.29946279525756836 s
+Scoring trees... took 0.5517699718475342 s
+Program execution took 8.549418210983276 s
+temp_files/0f0a0859-aec7-4a68-9849-1ccafb91e1c0
+===== Timing =====
+Setup took 0.09782648086547852 s
+Generating fasta files for pplacer... took 0.39866185188293457 s
+Running pplacer... took 6.920271873474121 s
+Placing query into subtree... took 0.1385941505432129 s
+Modify main tree... took 0.26643896102905273 s
+Scoring trees... took 0.44196343421936035 s
+Program execution took 8.281447887420654 s
+temp_files/bbf365d8-26dc-421f-b675-f57632d500b4
+===== Timing =====
+Setup took 0.09969854354858398 s
+Generating fasta files for pplacer... took 0.37892818450927734 s
+Running pplacer... took 6.938875436782837 s
+Placing query into subtree... took 0.13809537887573242 s
+Modify main tree... took 0.2837502956390381 s
+Scoring trees... took 0.4440579414367676 s
+Program execution took 8.309542894363403 s
+temp_files/f180f3d8-8f47-4675-a542-089467df5728
+===== Timing =====
+Setup took 0.09962034225463867 s
+Generating fasta files for pplacer... took 0.4632236957550049 s
+Running pplacer... took 6.939084529876709 s
+Placing query into subtree... took 0.1394660472869873 s
+Modify main tree... took 0.28427743911743164 s
+Scoring trees... took 0.4686000347137451 s
+Program execution took 8.4054594039917 s
+temp_files/b3f5243f-31dc-404e-adb1-1025d5c6e98b
+===== Timing =====
+Setup took 0.10144591331481934 s
+Generating fasta files for pplacer... took 0.3725919723510742 s
+Running pplacer... took 6.957840919494629 s
+Placing query into subtree... took 0.1378040313720703 s
+Modify main tree... took 0.28321075439453125 s
+Scoring trees... took 0.4545633792877197 s
+Program execution took 8.346789121627808 s
+temp_files/d48ef0c0-778c-4e3c-bf8f-5027a609de51
+===== Timing =====
+Setup took 0.0984494686126709 s
+Generating fasta files for pplacer... took 0.37029218673706055 s
+Running pplacer... took 6.967249870300293 s
+Placing query into subtree... took 0.13690471649169922 s
+Modify main tree... took 0.26573801040649414 s
+Scoring trees... took 0.44248151779174805 s
+Program execution took 8.317698001861572 s
+temp_files/3aeb9df4-cdfb-45f1-b544-0797760f10d1
+===== Timing =====
+Setup took 0.10344529151916504 s
+Generating fasta files for pplacer... took 0.38825035095214844 s
+Running pplacer... took 6.874161720275879 s
+Placing query into subtree... took 0.13843512535095215 s
+Modify main tree... took 0.28520631790161133 s
+Scoring trees... took 0.4590127468109131 s
+Program execution took 8.260085582733154 s
+temp_files/d0a899cc-8771-40ac-b474-daf4f2fb5340
+===== Timing =====
+Setup took 0.10275125503540039 s
+Generating fasta files for pplacer... took 0.3583409786224365 s
+Running pplacer... took 6.835124969482422 s
+Placing query into subtree... took 0.14464712142944336 s
+Modify main tree... took 0.2801947593688965 s
+Scoring trees... took 0.5203847885131836 s
+Program execution took 8.257384300231934 s
+temp_files/a60aaeec-790f-4993-b5b1-22bc370cb32d
+===== Timing =====
+Setup took 0.10022592544555664 s
+Generating fasta files for pplacer... took 0.3428335189819336 s
+Running pplacer... took 6.860299348831177 s
+Placing query into subtree... took 0.13798141479492188 s
+Modify main tree... took 0.27468013763427734 s
+Scoring trees... took 0.4424266815185547 s
+Program execution took 8.190607070922852 s
+temp_files/b90b1a57-1f9e-4289-a5d2-b37b7d62a2ac
+===== Timing =====
+Setup took 0.10010051727294922 s
+Generating fasta files for pplacer... took 0.3381209373474121 s
+Running pplacer... took 6.874613046646118 s
+Placing query into subtree... took 0.1446399688720703 s
+Modify main tree... took 0.28311872482299805 s
+Scoring trees... took 0.44761204719543457 s
+Program execution took 8.227013349533081 s
+temp_files/8e4a3543-6d0a-49c3-bbeb-fd286a1e3e91
+===== Timing =====
+Setup took 0.09959268569946289 s
+Generating fasta files for pplacer... took 0.3811380863189697 s
+Running pplacer... took 6.870146036148071 s
+Placing query into subtree... took 0.15763020515441895 s
+Modify main tree... took 0.2622649669647217 s
+Scoring trees... took 0.45300889015197754 s
+Program execution took 8.234671354293823 s
+temp_files/f388497c-9320-4479-bc67-e6424b62b054
+===== Timing =====
+Setup took 0.09936761856079102 s
+Generating fasta files for pplacer... took 0.3710758686065674 s
+Running pplacer... took 6.874028921127319 s
+Placing query into subtree... took 0.14469003677368164 s
+Modify main tree... took 0.2799861431121826 s
+Scoring trees... took 0.447887659072876 s
+Program execution took 8.259155511856079 s
+temp_files/81aa18ad-4ee5-44e8-8e53-1c44b3d38073
+===== Timing =====
+Setup took 0.09909534454345703 s
+Generating fasta files for pplacer... took 0.3423035144805908 s
+Running pplacer... took 6.9048614501953125 s
+Placing query into subtree... took 0.1382458209991455 s
+Modify main tree... took 0.26268744468688965 s
+Scoring trees... took 0.4508955478668213 s
+Program execution took 8.216438055038452 s
+temp_files/6a15d7da-a563-4481-913f-7731049698ca
+===== Timing =====
+Setup took 0.09653449058532715 s
+Generating fasta files for pplacer... took 0.37743544578552246 s
+Running pplacer... took 6.815325498580933 s
+Placing query into subtree... took 0.14485549926757812 s
+Modify main tree... took 0.28043079376220703 s
+Scoring trees... took 0.4487607479095459 s
+Program execution took 8.17383074760437 s
+temp_files/98b91daf-1fc8-43c1-9f81-a0dfaba7a94c
+===== Timing =====
+Setup took 0.10255050659179688 s
+Generating fasta files for pplacer... took 0.3494865894317627 s
+Running pplacer... took 6.871969223022461 s
+Placing query into subtree... took 0.1512925624847412 s
+Modify main tree... took 0.2614762783050537 s
+Scoring trees... took 0.5264403820037842 s
+Program execution took 8.27441954612732 s
+temp_files/fcf94abf-0c90-4a04-b8c3-092d7bbf2099
+===== Timing =====
+Setup took 0.10029339790344238 s
+Generating fasta files for pplacer... took 0.3383371829986572 s
+Running pplacer... took 6.898646116256714 s
+Placing query into subtree... took 0.1404705047607422 s
+Modify main tree... took 0.26460933685302734 s
+Scoring trees... took 0.43979406356811523 s
+Program execution took 8.212552785873413 s
+temp_files/475fd013-c7b1-4c4e-8512-ff9bc89d3dba
+===== Timing =====
+Setup took 0.10099267959594727 s
+Generating fasta files for pplacer... took 0.3259100914001465 s
+Running pplacer... took 6.828242301940918 s
+Placing query into subtree... took 0.13805437088012695 s
+Modify main tree... took 0.264589786529541 s
+Scoring trees... took 0.437222957611084 s
+Program execution took 8.132027387619019 s
+temp_files/02e4531f-2ce3-4af3-90e3-c816b3a4c3b4
+===== Timing =====
+Setup took 0.10105514526367188 s
+Generating fasta files for pplacer... took 0.3464031219482422 s
+Running pplacer... took 6.93500542640686 s
+Placing query into subtree... took 0.1394214630126953 s
+Modify main tree... took 0.261812686920166 s
+Scoring trees... took 0.44494080543518066 s
+Program execution took 8.259895086288452 s
+temp_files/deb11a00-dec9-4941-b55f-713b233cfe6a
+===== Timing =====
+Setup took 0.10302186012268066 s
+Generating fasta files for pplacer... took 0.35140061378479004 s
+Running pplacer... took 6.895111322402954 s
+Placing query into subtree... took 0.16268014907836914 s
+Modify main tree... took 0.27299952507019043 s
+Scoring trees... took 0.5209803581237793 s
+Program execution took 8.317183256149292 s
+temp_files/29f39f01-af95-446e-8d2f-e847170cb9f3
+===== Timing =====
+Setup took 0.09857630729675293 s
+Generating fasta files for pplacer... took 0.3585550785064697 s
+Running pplacer... took 6.970757961273193 s
+Placing query into subtree... took 0.14545345306396484 s
+Modify main tree... took 0.25853562355041504 s
+Scoring trees... took 0.4463691711425781 s
+Program execution took 8.3073410987854 s
+temp_files/cbbaec2f-2d24-4a6b-97aa-3817e4cf7144
+===== Timing =====
+Setup took 0.09930944442749023 s
+Generating fasta files for pplacer... took 0.36634039878845215 s
+Running pplacer... took 6.892062664031982 s
+Placing query into subtree... took 0.14022469520568848 s
+Modify main tree... took 0.26901721954345703 s
+Scoring trees... took 0.45493245124816895 s
+Program execution took 8.254958152770996 s
+temp_files/08b07ed2-45ab-44f2-9d1d-2f9453cb28c2
+===== Timing =====
+Setup took 0.10242271423339844 s
+Generating fasta files for pplacer... took 0.34952497482299805 s
+Running pplacer... took 6.956423759460449 s
+Placing query into subtree... took 0.16164636611938477 s
+Modify main tree... took 0.26606321334838867 s
+Scoring trees... took 0.5247740745544434 s
+Program execution took 8.372058153152466 s
+temp_files/a0f4b192-1fa0-4aa0-a64a-e7ac0ca2a701
+===== Timing =====
+Setup took 0.10315608978271484 s
+Generating fasta files for pplacer... took 0.36669230461120605 s
+Running pplacer... took 6.948555946350098 s
+Placing query into subtree... took 0.13951969146728516 s
+Modify main tree... took 0.2767677307128906 s
+Scoring trees... took 0.4467957019805908 s
+Program execution took 8.292754173278809 s
+temp_files/7cea23c4-be5a-4cb7-85d7-f7f0eafad55c
+===== Timing =====
+Setup took 0.12274980545043945 s
+Generating fasta files for pplacer... took 0.3469212055206299 s
+Running pplacer... took 6.93105673789978 s
+Placing query into subtree... took 0.13118600845336914 s
+Modify main tree... took 0.2629239559173584 s
+Scoring trees... took 0.44260597229003906 s
+Program execution took 8.269019365310669 s
+temp_files/23e714b4-9b24-4fca-8c23-6d8afd5d1520
+===== Timing =====
+Setup took 0.10030937194824219 s
+Generating fasta files for pplacer... took 0.35222482681274414 s
+Running pplacer... took 6.882727146148682 s
+Placing query into subtree... took 0.14763641357421875 s
+Modify main tree... took 0.2726619243621826 s
+Scoring trees... took 0.4544081687927246 s
+Program execution took 8.248363256454468 s
+temp_files/440b7223-89e8-4921-a7f5-cbb81141e1f8
+===== Timing =====
+Setup took 0.09353017807006836 s
+Generating fasta files for pplacer... took 0.343031644821167 s
+Running pplacer... took 7.0035483837127686 s
+Placing query into subtree... took 0.16937851905822754 s
+Modify main tree... took 0.2612462043762207 s
+Scoring trees... took 0.4496481418609619 s
+Program execution took 8.33207654953003 s
+temp_files/fa735c40-be7a-471d-9722-425636f5d9df
+===== Timing =====
+Setup took 0.09920263290405273 s
+Generating fasta files for pplacer... took 0.3421444892883301 s
+Running pplacer... took 6.814138650894165 s
+Placing query into subtree... took 0.13373112678527832 s
+Modify main tree... took 0.25937819480895996 s
+Scoring trees... took 0.45230674743652344 s
+Program execution took 8.113268375396729 s
+temp_files/80f1e80e-d847-41f2-95e8-82fc48bf165e
+===== Timing =====
+Setup took 0.09807944297790527 s
+Generating fasta files for pplacer... took 0.3403487205505371 s
+Running pplacer... took 7.044592618942261 s
+Placing query into subtree... took 0.13856005668640137 s
+Modify main tree... took 0.25588440895080566 s
+Scoring trees... took 0.4397156238555908 s
+Program execution took 8.342000246047974 s
+temp_files/d0597cf3-f6d1-4220-a011-0c65825417a5
+===== Timing =====
+Setup took 0.10328555107116699 s
+Generating fasta files for pplacer... took 0.3398013114929199 s
+Running pplacer... took 6.796449184417725 s
+Placing query into subtree... took 0.13724493980407715 s
+Modify main tree... took 0.2951953411102295 s
+Scoring trees... took 0.588019609451294 s
+Program execution took 8.270827770233154 s
+temp_files/bc44b1e2-3dad-4fac-a05e-980f6d344594
+===== Timing =====
+Setup took 0.0982353687286377 s
+Generating fasta files for pplacer... took 0.3533918857574463 s
+Running pplacer... took 6.909539222717285 s
+Placing query into subtree... took 0.14001250267028809 s
+Modify main tree... took 0.26790428161621094 s
+Scoring trees... took 0.44924139976501465 s
+Program execution took 8.229081153869629 s
+temp_files/833680d0-af27-4c03-8df5-6e7768b91cec
+===== Timing =====
+Setup took 0.09979677200317383 s
+Generating fasta files for pplacer... took 0.38904833793640137 s
+Running pplacer... took 6.795878648757935 s
+Placing query into subtree... took 0.14651179313659668 s
+Modify main tree... took 0.27191853523254395 s
+Scoring trees... took 0.44875025749206543 s
+Program execution took 8.165138721466064 s
+temp_files/869aa0f0-7105-4349-80eb-5266a17132f9
+===== Timing =====
+Setup took 0.09604644775390625 s
+Generating fasta files for pplacer... took 0.34066224098205566 s
+Running pplacer... took 6.891930341720581 s
+Placing query into subtree... took 0.13914990425109863 s
+Modify main tree... took 0.2700183391571045 s
+Scoring trees... took 0.44954967498779297 s
+Program execution took 8.24556040763855 s
+temp_files/75f5b117-1b85-42fb-8124-e92dab9d5880
+===== Timing =====
+Setup took 0.10199213027954102 s
+Generating fasta files for pplacer... took 0.3340742588043213 s
+Running pplacer... took 6.900539875030518 s
+Placing query into subtree... took 0.147385835647583 s
+Modify main tree... took 0.2683732509613037 s
+Scoring trees... took 0.4481394290924072 s
+Program execution took 8.212078332901001 s
+temp_files/feab071c-3ed3-4f88-8d70-f6c1f8680ddd
+===== Timing =====
+Setup took 0.0979011058807373 s
+Generating fasta files for pplacer... took 0.35417699813842773 s
+Running pplacer... took 6.818664312362671 s
+Placing query into subtree... took 0.13778066635131836 s
+Modify main tree... took 0.28528761863708496 s
+Scoring trees... took 0.44681763648986816 s
+Program execution took 8.158050060272217 s
+temp_files/effb55ba-fa6a-4a84-90df-32919a44d098
+===== Timing =====
+Setup took 0.09715867042541504 s
+Generating fasta files for pplacer... took 0.35410523414611816 s
+Running pplacer... took 6.876626491546631 s
+Placing query into subtree... took 0.13739609718322754 s
+Modify main tree... took 0.26366233825683594 s
+Scoring trees... took 0.44063639640808105 s
+Program execution took 8.191460847854614 s
+temp_files/6169d96a-6282-47bb-9b6c-c1648b187ca0
+===== Timing =====
+Setup took 0.09741687774658203 s
+Generating fasta files for pplacer... took 0.33275341987609863 s
+Running pplacer... took 6.922926425933838 s
+Placing query into subtree... took 0.13725495338439941 s
+Modify main tree... took 0.2728250026702881 s
+Scoring trees... took 0.5235698223114014 s
+Program execution took 8.306503057479858 s
+temp_files/f1e661eb-8c83-45b0-8535-ac4a2c352385
+===== Timing =====
+Setup took 0.10151910781860352 s
+Generating fasta files for pplacer... took 0.3403301239013672 s
+Running pplacer... took 6.902940511703491 s
+Placing query into subtree... took 0.15142297744750977 s
+Modify main tree... took 0.28597474098205566 s
+Scoring trees... took 0.444019079208374 s
+Program execution took 8.240607738494873 s
+temp_files/cf68270e-b5d7-4ba8-9b47-97033b9a6654
+===== Timing =====
+Setup took 0.10243582725524902 s
+Generating fasta files for pplacer... took 0.3502333164215088 s
+Running pplacer... took 6.891489267349243 s
+Placing query into subtree... took 0.13810110092163086 s
+Modify main tree... took 0.2611067295074463 s
+Scoring trees... took 0.4310603141784668 s
+Program execution took 8.231886386871338 s
+temp_files/2c48e567-06a2-4208-b39b-f462ffa3c6ff
+===== Timing =====
+Setup took 0.10149741172790527 s
+Generating fasta files for pplacer... took 0.3511924743652344 s
+Running pplacer... took 6.901126861572266 s
+Placing query into subtree... took 0.1392836570739746 s
+Modify main tree... took 0.2652585506439209 s
+Scoring trees... took 0.44896697998046875 s
+Program execution took 8.235723972320557 s
+temp_files/59673a7e-5fb4-4986-b4f3-b625720fe30f
+===== Timing =====
+Setup took 0.09860062599182129 s
+Generating fasta files for pplacer... took 0.34169483184814453 s
+Running pplacer... took 6.987764596939087 s
+Placing query into subtree... took 0.140214204788208 s
+Modify main tree... took 0.29061126708984375 s
+Scoring trees... took 0.49248790740966797 s
+Program execution took 8.363408088684082 s
+temp_files/d38db2e4-2e52-478c-9479-6c5617a54014
+===== Timing =====
+Setup took 0.09969758987426758 s
+Generating fasta files for pplacer... took 0.3397712707519531 s
+Running pplacer... took 6.9232563972473145 s
+Placing query into subtree... took 0.13661551475524902 s
+Modify main tree... took 0.26356005668640137 s
+Scoring trees... took 0.45380163192749023 s
+Program execution took 8.241499423980713 s
+temp_files/8c452ded-78f0-4a53-bb9c-7221d8ee695b
+===== Timing =====
+Setup took 0.0979764461517334 s
+Generating fasta files for pplacer... took 0.33840370178222656 s
+Running pplacer... took 6.770487546920776 s
+Placing query into subtree... took 0.1394052505493164 s
+Modify main tree... took 0.2901022434234619 s
+Scoring trees... took 0.44530582427978516 s
+Program execution took 8.092617750167847 s
+temp_files/48e3dbea-70b1-4aca-8990-ec3d3cc852eb
+===== Timing =====
+Setup took 0.09967207908630371 s
+Generating fasta files for pplacer... took 0.3410379886627197 s
+Running pplacer... took 6.838263511657715 s
+Placing query into subtree... took 0.1292119026184082 s
+Modify main tree... took 0.2619438171386719 s
+Scoring trees... took 0.5300984382629395 s
+Program execution took 8.212776184082031 s
+temp_files/2c2f0ac5-2a31-4f7a-8de2-f9f6a4ecc2d1
+===== Timing =====
+Setup took 0.09959769248962402 s
+Generating fasta files for pplacer... took 0.36050868034362793 s
+Running pplacer... took 6.990196466445923 s
+Placing query into subtree... took 0.14196348190307617 s
+Modify main tree... took 0.2713320255279541 s
+Scoring trees... took 0.44867372512817383 s
+Program execution took 8.350607872009277 s
+temp_files/1be2dbdb-4642-404b-90ec-6e3d30f60cea
+===== Timing =====
+Setup took 0.12629961967468262 s
+Generating fasta files for pplacer... took 0.4985935688018799 s
+Running pplacer... took 7.0586326122283936 s
+Placing query into subtree... took 0.15283966064453125 s
+Modify main tree... took 0.2674241065979004 s
+Scoring trees... took 0.4477388858795166 s
+Program execution took 8.577508687973022 s
+temp_files/3637ae39-a42b-41aa-9414-c1f24b57d5f8
+===== Timing =====
+Setup took 0.10156059265136719 s
+Generating fasta files for pplacer... took 0.3925638198852539 s
+Running pplacer... took 6.972064018249512 s
+Placing query into subtree... took 0.14624238014221191 s
+Modify main tree... took 0.30785608291625977 s
+Scoring trees... took 0.4460773468017578 s
+Program execution took 8.377464056015015 s
+temp_files/a107bcaf-9759-4727-b9a3-8ed014292f1e
+===== Timing =====
+Setup took 0.1028132438659668 s
+Generating fasta files for pplacer... took 0.49308133125305176 s
+Running pplacer... took 6.922552585601807 s
+Placing query into subtree... took 0.14586687088012695 s
+Modify main tree... took 0.2820918560028076 s
+Scoring trees... took 0.4368765354156494 s
+Program execution took 8.394618034362793 s
+temp_files/248caf67-3219-407d-aaab-9a80777b00ff
+===== Timing =====
+Setup took 0.09643793106079102 s
+Generating fasta files for pplacer... took 0.38629674911499023 s
+Running pplacer... took 6.815573215484619 s
+Placing query into subtree... took 0.1441338062286377 s
+Modify main tree... took 0.2686145305633545 s
+Scoring trees... took 0.44389772415161133 s
+Program execution took 8.215553045272827 s
+temp_files/1cab723d-7ac2-4732-814b-33940389ae7e
+===== Timing =====
+Setup took 0.09876441955566406 s
+Generating fasta files for pplacer... took 0.6697194576263428 s
+Running pplacer... took 6.871133089065552 s
+Placing query into subtree... took 0.13524508476257324 s
+Modify main tree... took 0.2696247100830078 s
+Scoring trees... took 0.471341609954834 s
+Program execution took 8.527388095855713 s
+temp_files/91cf4299-14f1-4ce8-a830-e204245e1f66
+===== Timing =====
+Setup took 0.09960198402404785 s
+Generating fasta files for pplacer... took 0.46257495880126953 s
+Running pplacer... took 6.88905143737793 s
+Placing query into subtree... took 0.1383802890777588 s
+Modify main tree... took 0.40677809715270996 s
+Scoring trees... took 0.5313701629638672 s
+Program execution took 8.538391351699829 s
+temp_files/3eab093a-bba8-4295-a5d3-385e158eb399
+===== Timing =====
+Setup took 0.10056042671203613 s
+Generating fasta files for pplacer... took 0.625739336013794 s
+Running pplacer... took 6.916585206985474 s
+Placing query into subtree... took 0.1450972557067871 s
+Modify main tree... took 0.29593634605407715 s
+Scoring trees... took 0.44092893600463867 s
+Program execution took 8.535140752792358 s
+temp_files/af4e046e-0533-48b0-b709-1b62c43c122f
+===== Timing =====
+Setup took 0.1056971549987793 s
+Generating fasta files for pplacer... took 0.332317590713501 s
+Running pplacer... took 6.920009136199951 s
+Placing query into subtree... took 0.12836623191833496 s
+Modify main tree... took 0.2625880241394043 s
+Scoring trees... took 0.463864803314209 s
+Program execution took 8.241129159927368 s
+temp_files/ff833d93-fb0b-4ac3-8fe7-efd514076916
+===== Timing =====
+Setup took 0.10002803802490234 s
+Generating fasta files for pplacer... took 0.7555768489837646 s
+Running pplacer... took 6.910303831100464 s
+Placing query into subtree... took 0.13369154930114746 s
+Modify main tree... took 0.27393460273742676 s
+Scoring trees... took 0.45508527755737305 s
+Program execution took 8.655556678771973 s
+temp_files/7260c279-3619-4fa3-ac80-0faea232e998
+===== Timing =====
+Setup took 0.10396146774291992 s
+Generating fasta files for pplacer... took 0.8743793964385986 s
+Running pplacer... took 6.981457948684692 s
+Placing query into subtree... took 0.14747285842895508 s
+Modify main tree... took 0.2789437770843506 s
+Scoring trees... took 0.44724321365356445 s
+Program execution took 8.856005907058716 s
+temp_files/4d8e090a-7c36-4d01-9d97-56182358994b
+===== Timing =====
+Setup took 0.09948277473449707 s
+Generating fasta files for pplacer... took 0.4739677906036377 s
+Running pplacer... took 6.904688358306885 s
+Placing query into subtree... took 0.15210366249084473 s
+Modify main tree... took 0.2767183780670166 s
+Scoring trees... took 0.46226024627685547 s
+Program execution took 8.380611658096313 s
+temp_files/1303f880-c210-43d0-9084-d79619bd91fc
+===== Timing =====
+Setup took 0.09804034233093262 s
+Generating fasta files for pplacer... took 0.40642428398132324 s
+Running pplacer... took 6.918135166168213 s
+Placing query into subtree... took 0.13962173461914062 s
+Modify main tree... took 0.26446080207824707 s
+Scoring trees... took 0.4442715644836426 s
+Program execution took 8.282020092010498 s
+temp_files/d9390278-cc85-4a04-9b2e-70e08955d1d6
+===== Timing =====
+Setup took 0.1013801097869873 s
+Generating fasta files for pplacer... took 0.3978447914123535 s
+Running pplacer... took 6.946121692657471 s
+Placing query into subtree... took 0.14177417755126953 s
+Modify main tree... took 0.28323841094970703 s
+Scoring trees... took 0.5263106822967529 s
+Program execution took 8.40794038772583 s
+temp_files/c9d0c6ae-3bb3-4bc6-b89b-ee95b3d2a778
+===== Timing =====
+Setup took 0.09872245788574219 s
+Generating fasta files for pplacer... took 0.4564859867095947 s
+Running pplacer... took 6.879924297332764 s
+Placing query into subtree... took 0.13002991676330566 s
+Modify main tree... took 0.28182530403137207 s
+Scoring trees... took 0.4575169086456299 s
+Program execution took 8.315956592559814 s
+temp_files/c48e61e4-51cd-4100-8fd8-a4bc0087d74a
+===== Timing =====
+Setup took 0.10017251968383789 s
+Generating fasta files for pplacer... took 0.3520505428314209 s
+Running pplacer... took 6.896546363830566 s
+Placing query into subtree... took 0.14612054824829102 s
+Modify main tree... took 0.27998948097229004 s
+Scoring trees... took 0.4533650875091553 s
+Program execution took 8.256237745285034 s
+temp_files/fcb85d66-73d4-4778-9082-659909f15841
+===== Timing =====
+Setup took 0.09914135932922363 s
+Generating fasta files for pplacer... took 0.33611464500427246 s
+Running pplacer... took 6.855562210083008 s
+Placing query into subtree... took 0.13068842887878418 s
+Modify main tree... took 0.2640547752380371 s
+Scoring trees... took 0.4577972888946533 s
+Program execution took 8.174660205841064 s
+temp_files/8f8c483d-2ba4-4399-a260-d5ba8dd469b4
+===== Timing =====
+Setup took 0.10008883476257324 s
+Generating fasta files for pplacer... took 0.4062504768371582 s
+Running pplacer... took 7.022727012634277 s
+Placing query into subtree... took 0.148573637008667 s
+Modify main tree... took 0.33756351470947266 s
+Scoring trees... took 0.4459829330444336 s
+Program execution took 8.480497360229492 s
+temp_files/b4463471-a5d6-4237-9299-5fbb78514719
+===== Timing =====
+Setup took 0.09624099731445312 s
+Generating fasta files for pplacer... took 0.4354894161224365 s
+Running pplacer... took 6.933459043502808 s
+Placing query into subtree... took 0.12897443771362305 s
+Modify main tree... took 0.30043506622314453 s
+Scoring trees... took 0.4458961486816406 s
+Program execution took 8.351877689361572 s
+temp_files/598711f2-1cd6-44be-87f3-065e078094ea
+===== Timing =====
+Setup took 0.10335588455200195 s
+Generating fasta files for pplacer... took 0.3901386260986328 s
+Running pplacer... took 6.949341535568237 s
+Placing query into subtree... took 0.14010286331176758 s
+Modify main tree... took 0.2930474281311035 s
+Scoring trees... took 0.4497227668762207 s
+Program execution took 8.33682131767273 s
+temp_files/856b4f63-dd74-4e2b-bfb7-88ad65853fc7
+===== Timing =====
+Setup took 0.09625935554504395 s
+Generating fasta files for pplacer... took 0.35782933235168457 s
+Running pplacer... took 6.871309518814087 s
+Placing query into subtree... took 0.13891243934631348 s
+Modify main tree... took 0.260692834854126 s
+Scoring trees... took 0.525787353515625 s
+Program execution took 8.262122392654419 s
+temp_files/9e1fe43e-64eb-4070-aff0-d9d037a2d60e
+===== Timing =====
+Setup took 0.09939742088317871 s
+Generating fasta files for pplacer... took 0.35315847396850586 s
+Running pplacer... took 6.868470907211304 s
+Placing query into subtree... took 0.14052367210388184 s
+Modify main tree... took 0.30264782905578613 s
+Scoring trees... took 0.4463307857513428 s
+Program execution took 8.239328145980835 s
+temp_files/b0f5c297-e56d-4b71-8e0f-18a17c0154f5
+===== Timing =====
+Setup took 0.10011506080627441 s
+Generating fasta files for pplacer... took 0.44589948654174805 s
+Running pplacer... took 6.851725816726685 s
+Placing query into subtree... took 0.13644766807556152 s
+Modify main tree... took 0.2882239818572998 s
+Scoring trees... took 0.45190858840942383 s
+Program execution took 8.313100099563599 s
+temp_files/561f439e-fe6d-488e-8699-87f2e20d03eb
+===== Timing =====
+Setup took 0.10298013687133789 s
+Generating fasta files for pplacer... took 0.6968088150024414 s
+Running pplacer... took 6.9279258251190186 s
+Placing query into subtree... took 0.1382756233215332 s
+Modify main tree... took 0.2707653045654297 s
+Scoring trees... took 0.44667863845825195 s
+Program execution took 8.607709646224976 s
+temp_files/96c21c48-715f-4a3a-9615-ea2de6c6bbe2
+===== Timing =====
+Setup took 0.10035157203674316 s
+Generating fasta files for pplacer... took 0.3704514503479004 s
+Running pplacer... took 6.876033067703247 s
+Placing query into subtree... took 0.13549327850341797 s
+Modify main tree... took 0.25826573371887207 s
+Scoring trees... took 0.46681952476501465 s
+Program execution took 8.218670129776001 s
+temp_files/59adce1a-1a5c-43cf-a71a-b940ba0794c7
+===== Timing =====
+Setup took 0.10014843940734863 s
+Generating fasta files for pplacer... took 0.36751270294189453 s
+Running pplacer... took 6.9768452644348145 s
+Placing query into subtree... took 0.14583897590637207 s
+Modify main tree... took 0.27164673805236816 s
+Scoring trees... took 0.4535698890686035 s
+Program execution took 8.342694997787476 s
+temp_files/46472b7b-0274-40f5-8f13-c18bff0906e5
+===== Timing =====
+Setup took 0.09945201873779297 s
+Generating fasta files for pplacer... took 0.4074852466583252 s
+Running pplacer... took 6.983741283416748 s
+Placing query into subtree... took 0.13951802253723145 s
+Modify main tree... took 0.4432189464569092 s
+Scoring trees... took 0.45067286491394043 s
+Program execution took 8.53579330444336 s
+temp_files/43231e80-d88e-4eb3-b3c4-8f0c4b3bd7ca
+===== Timing =====
+Setup took 0.10169696807861328 s
+Generating fasta files for pplacer... took 0.3961501121520996 s
+Running pplacer... took 6.897097826004028 s
+Placing query into subtree... took 0.16385459899902344 s
+Modify main tree... took 0.299854040145874 s
+Scoring trees... took 0.5339980125427246 s
+Program execution took 8.404273748397827 s
+temp_files/fce86347-9bb5-4426-a1df-c2a658f55ecf
+===== Timing =====
+Setup took 0.09877800941467285 s
+Generating fasta files for pplacer... took 0.3755321502685547 s
+Running pplacer... took 6.91163969039917 s
+Placing query into subtree... took 0.14370203018188477 s
+Modify main tree... took 0.2614617347717285 s
+Scoring trees... took 0.4678826332092285 s
+Program execution took 8.275068521499634 s
+temp_files/f6305d00-982f-483a-b0a7-eddb86264bf5
+===== Timing =====
+Setup took 0.09968113899230957 s
+Generating fasta files for pplacer... took 0.4085965156555176 s
+Running pplacer... took 6.900323390960693 s
+Placing query into subtree... took 0.1407020092010498 s
+Modify main tree... took 0.29914212226867676 s
+Scoring trees... took 0.45331597328186035 s
+Program execution took 8.329484939575195 s
+temp_files/a4c727d1-cf33-4b2c-b8ae-cd4569bac504
+===== Timing =====
+Setup took 0.09778666496276855 s
+Generating fasta files for pplacer... took 0.5995943546295166 s
+Running pplacer... took 6.876637697219849 s
+Placing query into subtree... took 0.1412968635559082 s
+Modify main tree... took 0.3191108703613281 s
+Scoring trees... took 0.4490625858306885 s
+Program execution took 8.533755540847778 s
+temp_files/fa3d820e-d587-4603-ac7d-ca56a0a286bc
+===== Timing =====
+Setup took 0.10188984870910645 s
+Generating fasta files for pplacer... took 0.42060279846191406 s
+Running pplacer... took 6.8338799476623535 s
+Placing query into subtree... took 0.1668550968170166 s
+Modify main tree... took 0.3141753673553467 s
+Scoring trees... took 0.4480881690979004 s
+Program execution took 8.296806812286377 s
+temp_files/9769ba04-6ffa-4ad0-b815-82af56e0c5ab
+===== Timing =====
+Setup took 0.09896993637084961 s
+Generating fasta files for pplacer... took 0.5068187713623047 s
+Running pplacer... took 6.826470613479614 s
+Placing query into subtree... took 0.12111997604370117 s
+Modify main tree... took 0.27976298332214355 s
+Scoring trees... took 0.4451475143432617 s
+Program execution took 8.288887977600098 s
+temp_files/7f8c6281-dd80-4778-9403-c6942a11a9d2
+===== Timing =====
+Setup took 0.10132193565368652 s
+Generating fasta files for pplacer... took 0.44509029388427734 s
+Running pplacer... took 6.911181449890137 s
+Placing query into subtree... took 0.13856124877929688 s
+Modify main tree... took 0.2834923267364502 s
+Scoring trees... took 0.4513523578643799 s
+Program execution took 8.343742370605469 s
+temp_files/ce6d48c7-5a4e-4cc6-b291-da4a1494b548
+===== Timing =====
+Setup took 0.09796571731567383 s
+Generating fasta files for pplacer... took 0.43215274810791016 s
+Running pplacer... took 6.927463531494141 s
+Placing query into subtree... took 0.13853216171264648 s
+Modify main tree... took 0.27617311477661133 s
+Scoring trees... took 0.5317015647888184 s
+Program execution took 8.414977312088013 s
+temp_files/27b68771-9b34-42ba-b5a6-a5370a9d1956
+===== Timing =====
+Setup took 0.1027688980102539 s
+Generating fasta files for pplacer... took 0.3894932270050049 s
+Running pplacer... took 7.074516296386719 s
+Placing query into subtree... took 0.144273042678833 s
+Modify main tree... took 0.2877466678619385 s
+Scoring trees... took 0.4532344341278076 s
+Program execution took 8.501559972763062 s
+temp_files/155957cd-590a-405d-a926-063a776b8fa6
+===== Timing =====
+Setup took 0.09835529327392578 s
+Generating fasta files for pplacer... took 0.34243154525756836 s
+Running pplacer... took 6.901242971420288 s
+Placing query into subtree... took 0.13012218475341797 s
+Modify main tree... took 0.2579481601715088 s
+Scoring trees... took 0.45894503593444824 s
+Program execution took 8.236864566802979 s
+temp_files/1b7a4e74-7ace-48ae-83c7-55bdcdb7c9c0
+===== Timing =====
+Setup took 0.09898185729980469 s
+Generating fasta files for pplacer... took 0.3701772689819336 s
+Running pplacer... took 6.924658536911011 s
+Placing query into subtree... took 0.14521074295043945 s
+Modify main tree... took 0.3070240020751953 s
+Scoring trees... took 0.4492485523223877 s
+Program execution took 8.328938961029053 s
