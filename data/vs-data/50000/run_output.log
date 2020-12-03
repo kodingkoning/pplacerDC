@@ -1,566 +1,450 @@
-temp_files/73ad5fd8-b9ad-41f8-8575-2b53b78bda41
-WARNING: Unable to score tid 0 correctly. Disregarding tree!
-WARNING: Unable to score tid 8 correctly. Disregarding tree!
-WARNING: Unable to score tid 10 correctly. Disregarding tree!
+temp_files/4af76d35-d318-47f3-9511-e0eb5a8fdc0a
 ===== Timing =====
-Setup took 12.263277292251587 s
-Generating fasta files for pplacer... took 11.870374917984009 s
-Running pplacer... took 59.53334617614746 s
-Placing query into subtree... took 0.8393864631652832 s
-Modify main tree... took 91.7985680103302 s
-Scoring trees... took 93.19056129455566 s
-Program execution took 271.43823766708374 s
-temp_files/b7363060-e695-4dfa-a00a-62d17752193c
-WARNING: Unable to score tid 0 correctly. Disregarding tree!
-WARNING: Unable to score tid 6 correctly. Disregarding tree!
-WARNING: Unable to score tid 9 correctly. Disregarding tree!
+Setup took 11.147573947906494 s
+Generating fasta files for pplacer... took 9.867180347442627 s
+Running pplacer... took 58.88556742668152 s
+Placing query into subtree... took 0.8291232585906982 s
+Modify main tree... took 46.23123645782471 s
+Scoring trees... took 47.66301441192627 s
+Program execution took 175.24834537506104 s
+temp_files/867c78b3-16e7-4a0a-b412-00b8da23a5c3
 ===== Timing =====
-Setup took 12.188814401626587 s
-Generating fasta files for pplacer... took 11.897756814956665 s
-Running pplacer... took 59.42803978919983 s
-Placing query into subtree... took 1.4311182498931885 s
-Modify main tree... took 90.15260028839111 s
-Scoring trees... took 91.0118248462677 s
-Program execution took 267.93984270095825 s
-temp_files/d8bd3a1a-496d-4e16-8a98-c6a4867baec1
+Setup took 11.155274152755737 s
+Generating fasta files for pplacer... took 9.829246997833252 s
+Running pplacer... took 59.47166681289673 s
+Placing query into subtree... took 1.9155046939849854 s
+Modify main tree... took 46.153311252593994 s
+Scoring trees... took 56.17839193344116 s
+Program execution took 185.39341521263123 s
+temp_files/441bbfc4-0fa2-4546-9e45-634491d5819d
 ===== Timing =====
-Setup took 12.255341529846191 s
-Generating fasta files for pplacer... took 12.182365894317627 s
-Running pplacer... took 59.54528760910034 s
-Placing query into subtree... took 1.5337960720062256 s
-Modify main tree... took 95.1415627002716 s
-Scoring trees... took 78.6471495628357 s
-Program execution took 261.18968057632446 s
-temp_files/873dba2f-cd46-4e89-9272-6f18cbaa7f1f
-WARNING: Unable to score tid 9 correctly. Disregarding tree!
-WARNING: Unable to score tid 11 correctly. Disregarding tree!
+Setup took 11.242113590240479 s
+Generating fasta files for pplacer... took 9.720783233642578 s
+Running pplacer... took 58.9585919380188 s
+Placing query into subtree... took 1.3558290004730225 s
+Modify main tree... took 45.81828856468201 s
+Scoring trees... took 55.91476917266846 s
+Program execution took 183.62181901931763 s
+temp_files/25473fe7-5472-4cef-968e-c8f89c9ea152
 ===== Timing =====
-Setup took 12.165515422821045 s
-Generating fasta files for pplacer... took 11.67102313041687 s
-Running pplacer... took 59.65668439865112 s
-Placing query into subtree... took 0.7814676761627197 s
-Modify main tree... took 92.69512462615967 s
-Scoring trees... took 91.37990522384644 s
-Program execution took 270.613582611084 s
-temp_files/26dbbc28-e7b8-4c2d-afce-79631bffba97
-WARNING: Unable to score tid 4 correctly. Disregarding tree!
-WARNING: Unable to score tid 8 correctly. Disregarding tree!
+Setup took 11.097186803817749 s
+Generating fasta files for pplacer... took 9.63632583618164 s
+Running pplacer... took 58.61063265800476 s
+Placing query into subtree... took 1.4115025997161865 s
+Modify main tree... took 44.488577365875244 s
+Scoring trees... took 55.88087296485901 s
+Program execution took 181.75994658470154 s
+temp_files/91f32e81-1a82-4c95-ad2a-db21c02f68a7
 ===== Timing =====
-Setup took 12.116825103759766 s
-Generating fasta files for pplacer... took 11.953023433685303 s
-Running pplacer... took 59.886603593826294 s
-Placing query into subtree... took 1.4038937091827393 s
-Modify main tree... took 91.9058907032013 s
-Scoring trees... took 91.37153553962708 s
-Program execution took 270.5600526332855 s
-temp_files/1045d04b-ba81-499b-a0a3-e433d1903a18
-WARNING: Unable to score tid 1 correctly. Disregarding tree!
-WARNING: Unable to score tid 10 correctly. Disregarding tree!
+Setup took 11.108257293701172 s
+Generating fasta files for pplacer... took 9.8573739528656 s
+Running pplacer... took 59.27054166793823 s
+Placing query into subtree... took 1.3552131652832031 s
+Modify main tree... took 45.86695194244385 s
+Scoring trees... took 56.75160050392151 s
+Program execution took 184.82923865318298 s
+temp_files/aff96d8b-e4d9-4f8e-8133-0238c95f9697
 ===== Timing =====
-Setup took 12.345902442932129 s
-Generating fasta files for pplacer... took 11.887115955352783 s
-Running pplacer... took 59.41110873222351 s
-Placing query into subtree... took 1.549511432647705 s
-Modify main tree... took 92.69589686393738 s
-Scoring trees... took 90.97097897529602 s
-Program execution took 270.8334493637085 s
-temp_files/4978811b-be0a-4a85-83fc-680d21ad4077
-WARNING: Unable to score tid 1 correctly. Disregarding tree!
-WARNING: Unable to score tid 5 correctly. Disregarding tree!
+Setup took 11.084510087966919 s
+Generating fasta files for pplacer... took 10.063662767410278 s
+Running pplacer... took 59.04331564903259 s
+Placing query into subtree... took 1.365734338760376 s
+Modify main tree... took 45.49823784828186 s
+Scoring trees... took 53.24780488014221 s
+Program execution took 181.36054682731628 s
+temp_files/8ca3411a-a5e1-49b8-8320-e64dd8c2fdeb
 ===== Timing =====
-Setup took 12.354635000228882 s
-Generating fasta files for pplacer... took 11.892406225204468 s
-Running pplacer... took 61.08442401885986 s
-Placing query into subtree... took 1.4222602844238281 s
-Modify main tree... took 91.69243621826172 s
-Scoring trees... took 91.02896070480347 s
-Program execution took 271.37965965270996 s
-temp_files/1e62b52c-f28d-47dd-ac50-7aceed6a2475
-WARNING: Unable to score tid 2 correctly. Disregarding tree!
-WARNING: Unable to score tid 7 correctly. Disregarding tree!
-WARNING: Unable to score tid 10 correctly. Disregarding tree!
+Setup took 11.032329320907593 s
+Generating fasta files for pplacer... took 9.81116509437561 s
+Running pplacer... took 59.008366107940674 s
+Placing query into subtree... took 1.4063901901245117 s
+Modify main tree... took 44.107160568237305 s
+Scoring trees... took 51.16765761375427 s
+Program execution took 177.2017092704773 s
+temp_files/ee7deaac-b52f-4f0b-b841-18caa4f34749
 ===== Timing =====
-Setup took 12.219553232192993 s
-Generating fasta files for pplacer... took 12.129106760025024 s
-Running pplacer... took 59.735440731048584 s
-Placing query into subtree... took 1.4136524200439453 s
-Modify main tree... took 92.14966106414795 s
-Scoring trees... took 92.19991731643677 s
-Program execution took 271.92695569992065 s
-temp_files/890d1fcd-03ef-4620-8db8-7f357907d387
-WARNING: Unable to score tid 0 correctly. Disregarding tree!
-WARNING: Unable to score tid 1 correctly. Disregarding tree!
-WARNING: Unable to score tid 9 correctly. Disregarding tree!
+Setup took 11.125760078430176 s
+Generating fasta files for pplacer... took 9.680403232574463 s
+Running pplacer... took 58.98540472984314 s
+Placing query into subtree... took 1.3679487705230713 s
+Modify main tree... took 45.245728492736816 s
+Scoring trees... took 57.04756999015808 s
+Program execution took 183.98427391052246 s
+temp_files/d0dda719-22f0-421e-97ce-75a25afcd4df
 ===== Timing =====
-Setup took 12.136744976043701 s
-Generating fasta files for pplacer... took 11.935223817825317 s
-Running pplacer... took 59.353416442871094 s
-Placing query into subtree... took 1.3756201267242432 s
-Modify main tree... took 90.97702383995056 s
-Scoring trees... took 92.56413459777832 s
-Program execution took 270.46388268470764 s
-temp_files/b9956d20-fa1e-4c6e-882a-96494f78c405
+Setup took 11.07498288154602 s
+Generating fasta files for pplacer... took 9.78784728050232 s
+Running pplacer... took 58.462618589401245 s
+Placing query into subtree... took 1.3871006965637207 s
+Modify main tree... took 45.20389914512634 s
+Scoring trees... took 56.3694167137146 s
+Program execution took 183.03167867660522 s
+temp_files/22b2e0ab-b87a-49bd-8894-276114ae02fb
 ===== Timing =====
-Setup took 12.187493562698364 s
-Generating fasta files for pplacer... took 11.984338283538818 s
-Running pplacer... took 60.8293080329895 s
-Placing query into subtree... took 1.3842685222625732 s
-Modify main tree... took 97.41690611839294 s
-Scoring trees... took 76.75618863105774 s
-Program execution took 263.1932818889618 s
-temp_files/16a494fb-84a3-4d06-b3cc-48d26e2e6d94
-WARNING: Unable to score tid 1 correctly. Disregarding tree!
-WARNING: Unable to score tid 10 correctly. Disregarding tree!
+Setup took 11.05155634880066 s
+Generating fasta files for pplacer... took 9.808858871459961 s
+Running pplacer... took 60.664652824401855 s
+Placing query into subtree... took 1.4318435192108154 s
+Modify main tree... took 44.27396202087402 s
+Scoring trees... took 57.20665764808655 s
+Program execution took 185.15188026428223 s
+temp_files/9d3f9af8-61d9-4334-affa-b11bb41c26c3
 ===== Timing =====
-Setup took 12.275403499603271 s
-Generating fasta files for pplacer... took 11.96907114982605 s
-Running pplacer... took 59.224419593811035 s
-Placing query into subtree... took 0.8845193386077881 s
-Modify main tree... took 91.47927618026733 s
-Scoring trees... took 91.55736494064331 s
-Program execution took 269.14047169685364 s
-temp_files/d2f76880-2b4c-49e0-84f9-6215047e4dec
-WARNING: Unable to score tid 6 correctly. Disregarding tree!
-WARNING: Unable to score tid 9 correctly. Disregarding tree!
+Setup took 11.202445268630981 s
+Generating fasta files for pplacer... took 9.779457807540894 s
+Running pplacer... took 60.23319864273071 s
+Placing query into subtree... took 1.3951520919799805 s
+Modify main tree... took 47.107768535614014 s
+Scoring trees... took 45.835771322250366 s
+Program execution took 176.21159839630127 s
+temp_files/48fccd4f-866e-4535-88d2-672d6c0743ee
 ===== Timing =====
-Setup took 12.191293716430664 s
-Generating fasta files for pplacer... took 12.02656865119934 s
-Running pplacer... took 59.134382486343384 s
-Placing query into subtree... took 1.3588495254516602 s
-Modify main tree... took 91.7576220035553 s
-Scoring trees... took 93.22613739967346 s
-Program execution took 271.7435095310211 s
-temp_files/f5df7968-a66d-4fed-b2d9-bb0cdcfaad62
-WARNING: Unable to score tid 6 correctly. Disregarding tree!
-WARNING: Unable to score tid 7 correctly. Disregarding tree!
-WARNING: Unable to score tid 11 correctly. Disregarding tree!
+Setup took 11.123475313186646 s
+Generating fasta files for pplacer... took 9.833415985107422 s
+Running pplacer... took 57.81479024887085 s
+Placing query into subtree... took 1.383594274520874 s
+Modify main tree... took 44.60173034667969 s
+Scoring trees... took 54.717697620391846 s
+Program execution took 180.08247756958008 s
+temp_files/2d7041dd-9682-4321-a730-3882d04e60b0
 ===== Timing =====
-Setup took 12.19587516784668 s
-Generating fasta files for pplacer... took 12.113937139511108 s
-Running pplacer... took 60.367305278778076 s
-Placing query into subtree... took 1.4689254760742188 s
-Modify main tree... took 93.05259680747986 s
-Scoring trees... took 94.02852606773376 s
-Program execution took 275.28222012519836 s
-temp_files/553fc525-16f1-495a-80ee-acf963cf4572
+Setup took 11.089142799377441 s
+Generating fasta files for pplacer... took 9.88461947441101 s
+Running pplacer... took 60.97370505332947 s
+Placing query into subtree... took 1.3750450611114502 s
+Modify main tree... took 46.705366134643555 s
+Scoring trees... took 55.57970333099365 s
+Program execution took 186.3910427093506 s
+temp_files/e50bdd0f-52ff-44ba-aa5c-d201df9103a3
 ===== Timing =====
-Setup took 12.26274847984314 s
-Generating fasta files for pplacer... took 12.090485095977783 s
-Running pplacer... took 59.716715574264526 s
-Placing query into subtree... took 1.4532780647277832 s
-Modify main tree... took 94.79173970222473 s
-Scoring trees... took 84.96694588661194 s
-Program execution took 267.11258459091187 s
-temp_files/132c1487-e7af-47e7-b9c3-5abd128bf17b
-WARNING: Unable to score tid 2 correctly. Disregarding tree!
-WARNING: Unable to score tid 6 correctly. Disregarding tree!
-WARNING: Unable to score tid 7 correctly. Disregarding tree!
+Setup took 11.079251050949097 s
+Generating fasta files for pplacer... took 9.739593029022217 s
+Running pplacer... took 59.679001569747925 s
+Placing query into subtree... took 1.3606336116790771 s
+Modify main tree... took 44.85106372833252 s
+Scoring trees... took 54.99230742454529 s
+Program execution took 182.34731364250183 s
+temp_files/b841d8fb-0e6d-4ef5-9b91-8af161534eb0
 ===== Timing =====
-Setup took 12.148318767547607 s
-Generating fasta files for pplacer... took 11.87715196609497 s
-Running pplacer... took 59.677146911621094 s
-Placing query into subtree... took 1.4214251041412354 s
-Modify main tree... took 90.32652163505554 s
-Scoring trees... took 93.57431197166443 s
-Program execution took 270.88274812698364 s
-temp_files/893e2d75-1173-4bb4-8162-74cade99b702
-WARNING: Unable to score tid 4 correctly. Disregarding tree!
-WARNING: Unable to score tid 5 correctly. Disregarding tree!
-WARNING: Unable to score tid 6 correctly. Disregarding tree!
+Setup took 11.129216432571411 s
+Generating fasta files for pplacer... took 9.785619497299194 s
+Running pplacer... took 58.53114175796509 s
+Placing query into subtree... took 1.4166066646575928 s
+Modify main tree... took 44.99001359939575 s
+Scoring trees... took 56.620816469192505 s
+Program execution took 183.10367369651794 s
+temp_files/1130588e-1d82-4955-8892-767ab5ea97ef
 ===== Timing =====
-Setup took 12.208309412002563 s
-Generating fasta files for pplacer... took 11.98143482208252 s
-Running pplacer... took 60.04537916183472 s
-Placing query into subtree... took 1.432321310043335 s
-Modify main tree... took 91.92064833641052 s
-Scoring trees... took 95.29851913452148 s
-Program execution took 275.00438237190247 s
-temp_files/92b4c6c5-2b47-4640-98f7-d7815c28861e
-WARNING: Unable to score tid 8 correctly. Disregarding tree!
-WARNING: Unable to score tid 9 correctly. Disregarding tree!
+Setup took 11.185462713241577 s
+Generating fasta files for pplacer... took 9.86047077178955 s
+Running pplacer... took 59.501609086990356 s
+Placing query into subtree... took 1.342923641204834 s
+Modify main tree... took 46.25979399681091 s
+Scoring trees... took 56.80792284011841 s
+Program execution took 185.66777300834656 s
+temp_files/671f4a64-18a2-48af-888b-55ebaec13fb2
 ===== Timing =====
-Setup took 12.261009216308594 s
-Generating fasta files for pplacer... took 12.108733177185059 s
-Running pplacer... took 59.334022760391235 s
-Placing query into subtree... took 1.4066290855407715 s
-Modify main tree... took 93.1262891292572 s
-Scoring trees... took 90.7469687461853 s
-Program execution took 270.7021200656891 s
-temp_files/e4ed2580-0768-4548-ac35-fce38d1e27fe
-WARNING: Unable to score tid 6 correctly. Disregarding tree!
-WARNING: Unable to score tid 10 correctly. Disregarding tree!
+Setup took 11.15206503868103 s
+Generating fasta files for pplacer... took 10.657792806625366 s
+Running pplacer... took 58.41045880317688 s
+Placing query into subtree... took 1.3395438194274902 s
+Modify main tree... took 44.51129603385925 s
+Scoring trees... took 54.88897228240967 s
+Program execution took 181.61374521255493 s
+temp_files/467cf12d-0e9a-487c-b19f-f9b2096415f0
 ===== Timing =====
-Setup took 12.293324947357178 s
-Generating fasta files for pplacer... took 11.950279951095581 s
-Running pplacer... took 59.216190576553345 s
-Placing query into subtree... took 1.4055547714233398 s
-Modify main tree... took 91.81019186973572 s
-Scoring trees... took 94.06387782096863 s
-Program execution took 272.62589836120605 s
-temp_files/1ad0a3d3-cf0a-439a-bb4c-9ee5bdcacdf9
-WARNING: Unable to score tid 4 correctly. Disregarding tree!
-WARNING: Unable to score tid 8 correctly. Disregarding tree!
-WARNING: Unable to score tid 11 correctly. Disregarding tree!
+Setup took 11.138261079788208 s
+Generating fasta files for pplacer... took 9.805022478103638 s
+Running pplacer... took 59.37390089035034 s
+Placing query into subtree... took 1.3249602317810059 s
+Modify main tree... took 44.550776720047 s
+Scoring trees... took 54.7329158782959 s
+Program execution took 181.56067299842834 s
+temp_files/3b8f3107-b2c6-4b6f-ac39-34799ce0f477
 ===== Timing =====
-Setup took 12.297653913497925 s
-Generating fasta files for pplacer... took 11.967740535736084 s
-Running pplacer... took 60.396395683288574 s
-Placing query into subtree... took 1.4332568645477295 s
-Modify main tree... took 91.84751987457275 s
-Scoring trees... took 93.88868188858032 s
-Program execution took 273.8063864707947 s
-temp_files/9226516b-2d7c-4425-a672-db3e55cf6d97
-WARNING: Unable to score tid 5 correctly. Disregarding tree!
-WARNING: Unable to score tid 8 correctly. Disregarding tree!
-WARNING: Unable to score tid 9 correctly. Disregarding tree!
+Setup took 11.050151586532593 s
+Generating fasta files for pplacer... took 9.862612247467041 s
+Running pplacer... took 58.83564114570618 s
+Placing query into subtree... took 1.3647451400756836 s
+Modify main tree... took 43.98271894454956 s
+Scoring trees... took 53.83635115623474 s
+Program execution took 179.63267588615417 s
+temp_files/fd19e83e-d5e4-4914-8970-7d3cfab7e170
 ===== Timing =====
-Setup took 12.155120134353638 s
-Generating fasta files for pplacer... took 11.927380323410034 s
-Running pplacer... took 59.69305968284607 s
-Placing query into subtree... took 1.429879903793335 s
-Modify main tree... took 91.56607222557068 s
-Scoring trees... took 93.2229163646698 s
-Program execution took 271.9059901237488 s
-temp_files/624c71df-0216-4a89-b4ce-2052c4029c7f
+Setup took 11.31552505493164 s
+Generating fasta files for pplacer... took 9.794633150100708 s
+Running pplacer... took 58.31919288635254 s
+Placing query into subtree... took 1.34067964553833 s
+Modify main tree... took 45.524231910705566 s
+Scoring trees... took 56.11319661140442 s
+Program execution took 183.07123851776123 s
+temp_files/83dc9a88-eda8-4642-aff6-a04406ab6a3a
 ===== Timing =====
-Setup took 12.283291101455688 s
-Generating fasta files for pplacer... took 12.046118021011353 s
-Running pplacer... took 59.786808490753174 s
-Placing query into subtree... took 1.4406437873840332 s
-Modify main tree... took 93.7091965675354 s
-Scoring trees... took 78.7527117729187 s
-Program execution took 260.9786696434021 s
-temp_files/ccbbb8b4-d260-4e24-a433-fe290fb086c4
-WARNING: Unable to score tid 1 correctly. Disregarding tree!
-WARNING: Unable to score tid 4 correctly. Disregarding tree!
+Setup took 11.128389596939087 s
+Generating fasta files for pplacer... took 9.930143594741821 s
+Running pplacer... took 61.3271210193634 s
+Placing query into subtree... took 1.4297096729278564 s
+Modify main tree... took 46.8466010093689 s
+Scoring trees... took 51.59343695640564 s
+Program execution took 183.1399118900299 s
+temp_files/86ae60e8-1eed-4ded-b258-c5bb003f97ea
 ===== Timing =====
-Setup took 12.15509033203125 s
-Generating fasta files for pplacer... took 11.856738567352295 s
-Running pplacer... took 59.298691511154175 s
-Placing query into subtree... took 0.7800965309143066 s
-Modify main tree... took 91.09309482574463 s
-Scoring trees... took 91.60525798797607 s
-Program execution took 268.6345543861389 s
-temp_files/075e8728-609b-408b-8908-8ff01169c2e0
-WARNING: Unable to score tid 2 correctly. Disregarding tree!
-WARNING: Unable to score tid 4 correctly. Disregarding tree!
+Setup took 11.144332885742188 s
+Generating fasta files for pplacer... took 9.84216570854187 s
+Running pplacer... took 61.3065972328186 s
+Placing query into subtree... took 1.3812861442565918 s
+Modify main tree... took 43.72747540473938 s
+Scoring trees... took 56.606757402420044 s
+Program execution took 184.66560912132263 s
+temp_files/65f2f95b-6c28-4eee-97f4-5f82e98e1fb2
 ===== Timing =====
-Setup took 12.280440092086792 s
-Generating fasta files for pplacer... took 12.22929835319519 s
-Running pplacer... took 60.04996705055237 s
-Placing query into subtree... took 1.376276969909668 s
-Modify main tree... took 92.37630653381348 s
-Scoring trees... took 95.99829721450806 s
-Program execution took 276.22635650634766 s
-temp_files/195c2fe1-e699-44f1-85dc-4a1af1467115
-WARNING: Unable to score tid 0 correctly. Disregarding tree!
-WARNING: Unable to score tid 1 correctly. Disregarding tree!
-WARNING: Unable to score tid 11 correctly. Disregarding tree!
+Setup took 11.19982385635376 s
+Generating fasta files for pplacer... took 9.786514043807983 s
+Running pplacer... took 60.15249800682068 s
+Placing query into subtree... took 1.3371024131774902 s
+Modify main tree... took 44.585140228271484 s
+Scoring trees... took 54.888288259506226 s
+Program execution took 183.0538272857666 s
+temp_files/2c556b62-c4c7-4ad0-9ea3-1eb2487f07f2
 ===== Timing =====
-Setup took 12.130082845687866 s
-Generating fasta files for pplacer... took 11.961968660354614 s
-Running pplacer... took 58.98925757408142 s
-Placing query into subtree... took 1.4323718547821045 s
-Modify main tree... took 90.05293035507202 s
-Scoring trees... took 93.54425024986267 s
-Program execution took 269.81155490875244 s
-temp_files/c90a0c14-9c23-411c-b73b-d87e52fd4ebf
-WARNING: Unable to score tid 0 correctly. Disregarding tree!
-WARNING: Unable to score tid 9 correctly. Disregarding tree!
-WARNING: Unable to score tid 10 correctly. Disregarding tree!
+Setup took 11.140661478042603 s
+Generating fasta files for pplacer... took 10.211799621582031 s
+Running pplacer... took 59.36929512023926 s
+Placing query into subtree... took 1.3600897789001465 s
+Modify main tree... took 45.58708906173706 s
+Scoring trees... took 56.471285343170166 s
+Program execution took 184.76350569725037 s
+temp_files/46fca78f-1b5d-4409-a5ea-cfb88a7daa40
 ===== Timing =====
-Setup took 12.171271085739136 s
-Generating fasta files for pplacer... took 12.019825458526611 s
-Running pplacer... took 59.583462953567505 s
-Placing query into subtree... took 1.3752367496490479 s
-Modify main tree... took 93.33673024177551 s
-Scoring trees... took 92.25369501113892 s
-Program execution took 272.52023005485535 s
-temp_files/fb27bb24-b8ad-4b09-86b8-fa5024c3bf26
+Setup took 11.117139101028442 s
+Generating fasta files for pplacer... took 9.976977586746216 s
+Running pplacer... took 58.98328351974487 s
+Placing query into subtree... took 1.367825984954834 s
+Modify main tree... took 44.432992458343506 s
+Scoring trees... took 55.24443578720093 s
+Program execution took 181.81422638893127 s
+temp_files/094916d2-d815-49ae-a889-1f4441504658
 ===== Timing =====
-Setup took 12.149847745895386 s
-Generating fasta files for pplacer... took 11.991411685943604 s
-Running pplacer... took 61.84757614135742 s
-Placing query into subtree... took 1.4615626335144043 s
-Modify main tree... took 91.17844152450562 s
-Scoring trees... took 74.99308609962463 s
-Program execution took 255.51824927330017 s
-temp_files/6e0cb048-4e26-4657-a935-584a2faedeaa
-WARNING: Unable to score tid 5 correctly. Disregarding tree!
-WARNING: Unable to score tid 8 correctly. Disregarding tree!
+Setup took 11.128341913223267 s
+Generating fasta files for pplacer... took 9.781128883361816 s
+Running pplacer... took 59.6006646156311 s
+Placing query into subtree... took 1.3321442604064941 s
+Modify main tree... took 43.905879735946655 s
+Scoring trees... took 53.962281465530396 s
+Program execution took 180.97078824043274 s
+temp_files/9c8924a1-27a5-42fe-8b8d-3823c36b05c4
 ===== Timing =====
-Setup took 12.229178190231323 s
-Generating fasta files for pplacer... took 11.634674072265625 s
-Running pplacer... took 59.37690043449402 s
-Placing query into subtree... took 0.7644624710083008 s
-Modify main tree... took 91.72242021560669 s
-Scoring trees... took 93.15748143196106 s
-Program execution took 270.6195225715637 s
-temp_files/006983aa-96f7-4d66-bbc0-ae33654851e0
-WARNING: Unable to score tid 7 correctly. Disregarding tree!
-WARNING: Unable to score tid 10 correctly. Disregarding tree!
+Setup took 11.230365991592407 s
+Generating fasta files for pplacer... took 9.63283920288086 s
+Running pplacer... took 58.778592348098755 s
+Placing query into subtree... took 1.396843671798706 s
+Modify main tree... took 45.229191064834595 s
+Scoring trees... took 51.0881450176239 s
+Program execution took 177.95871496200562 s
+temp_files/460d58d5-d367-40f0-948b-31417cf0f4cc
 ===== Timing =====
-Setup took 12.17954421043396 s
-Generating fasta files for pplacer... took 11.877440929412842 s
-Running pplacer... took 59.96750783920288 s
-Placing query into subtree... took 1.365173578262329 s
-Modify main tree... took 91.75742602348328 s
-Scoring trees... took 90.14450407028198 s
-Program execution took 269.3594467639923 s
-temp_files/d48cc4f1-5732-41b5-aed3-094fafd96a87
-WARNING: Unable to score tid 4 correctly. Disregarding tree!
-WARNING: Unable to score tid 9 correctly. Disregarding tree!
-WARNING: Unable to score tid 11 correctly. Disregarding tree!
+Setup took 11.027708053588867 s
+Generating fasta files for pplacer... took 9.810588359832764 s
+Running pplacer... took 59.458481788635254 s
+Placing query into subtree... took 1.3970508575439453 s
+Modify main tree... took 44.36388158798218 s
+Scoring trees... took 56.3672399520874 s
+Program execution took 183.12218379974365 s
+temp_files/4e61d593-dac9-4913-a562-7704cc52af29
 ===== Timing =====
-Setup took 12.243263483047485 s
-Generating fasta files for pplacer... took 12.216753244400024 s
-Running pplacer... took 59.63315510749817 s
-Placing query into subtree... took 1.3782427310943604 s
-Modify main tree... took 91.23996114730835 s
-Scoring trees... took 92.4808738231659 s
-Program execution took 270.8894762992859 s
-temp_files/6e76b3a8-c854-4909-ac39-ab422ffffdba
-WARNING: Unable to score tid 1 correctly. Disregarding tree!
-WARNING: Unable to score tid 8 correctly. Disregarding tree!
-WARNING: Unable to score tid 9 correctly. Disregarding tree!
-WARNING: Unable to score tid 10 correctly. Disregarding tree!
+Setup took 11.112435579299927 s
+Generating fasta files for pplacer... took 9.855308532714844 s
+Running pplacer... took 59.05336546897888 s
+Placing query into subtree... took 1.4243628978729248 s
+Modify main tree... took 44.15592646598816 s
+Scoring trees... took 55.594661235809326 s
+Program execution took 181.9312481880188 s
+temp_files/a9fbbee8-a390-4643-9520-ade99168bd84
 ===== Timing =====
-Setup took 12.201893329620361 s
-Generating fasta files for pplacer... took 12.057934522628784 s
-Running pplacer... took 59.90832185745239 s
-Placing query into subtree... took 1.3812878131866455 s
-Modify main tree... took 91.81708931922913 s
-Scoring trees... took 95.9806923866272 s
-Program execution took 275.797726392746 s
-temp_files/ced71e59-c96a-467d-9ed7-1f3e0000e1b3
-WARNING: Unable to score tid 1 correctly. Disregarding tree!
-WARNING: Unable to score tid 8 correctly. Disregarding tree!
-WARNING: Unable to score tid 9 correctly. Disregarding tree!
+Setup took 11.182286262512207 s
+Generating fasta files for pplacer... took 9.859798908233643 s
+Running pplacer... took 59.75970244407654 s
+Placing query into subtree... took 1.4006175994873047 s
+Modify main tree... took 44.74962520599365 s
+Scoring trees... took 56.038668155670166 s
+Program execution took 183.9166111946106 s
+temp_files/d77f5bd9-71a7-43e4-8523-d08a451bbc72
 ===== Timing =====
-Setup took 12.253266096115112 s
-Generating fasta files for pplacer... took 11.942614793777466 s
-Running pplacer... took 60.047828912734985 s
-Placing query into subtree... took 1.4406802654266357 s
-Modify main tree... took 91.12702655792236 s
-Scoring trees... took 93.29203939437866 s
-Program execution took 271.9810552597046 s
-temp_files/bbb7f2f8-2d71-4d7e-bfff-103c9bcf55e1
-WARNING: Unable to score tid 1 correctly. Disregarding tree!
-WARNING: Unable to score tid 3 correctly. Disregarding tree!
-WARNING: Unable to score tid 5 correctly. Disregarding tree!
+Setup took 11.318116426467896 s
+Generating fasta files for pplacer... took 9.82979416847229 s
+Running pplacer... took 60.78644108772278 s
+Placing query into subtree... took 1.3910002708435059 s
+Modify main tree... took 46.54489850997925 s
+Scoring trees... took 56.15864038467407 s
+Program execution took 186.67678928375244 s
+temp_files/33d3f17e-894d-4956-b242-eabd18daf1a2
 ===== Timing =====
-Setup took 12.155922174453735 s
-Generating fasta files for pplacer... took 11.955076456069946 s
-Running pplacer... took 58.674750089645386 s
-Placing query into subtree... took 1.372798204421997 s
-Modify main tree... took 92.86057543754578 s
-Scoring trees... took 91.62987065315247 s
-Program execution took 271.32350182533264 s
-temp_files/6c551b8b-bb1d-469f-9148-be6fa8da390c
-WARNING: Unable to score tid 1 correctly. Disregarding tree!
+Setup took 11.127876043319702 s
+Generating fasta files for pplacer... took 9.969402313232422 s
+Running pplacer... took 58.61426329612732 s
+Placing query into subtree... took 1.3461942672729492 s
+Modify main tree... took 44.934030532836914 s
+Scoring trees... took 54.37839651107788 s
+Program execution took 181.0394368171692 s
+temp_files/dd28d4a8-4241-40ed-b4cd-981bc11fa96a
 ===== Timing =====
-Setup took 12.139739990234375 s
-Generating fasta files for pplacer... took 11.945123434066772 s
-Running pplacer... took 59.808218002319336 s
-Placing query into subtree... took 1.3892083168029785 s
-Modify main tree... took 90.8425030708313 s
-Scoring trees... took 93.23224472999573 s
-Program execution took 271.2404398918152 s
-temp_files/0213626e-674d-4bb7-86b8-b04b20d7550c
-WARNING: Unable to score tid 4 correctly. Disregarding tree!
-WARNING: Unable to score tid 8 correctly. Disregarding tree!
-WARNING: Unable to score tid 9 correctly. Disregarding tree!
+Setup took 11.091300964355469 s
+Generating fasta files for pplacer... took 10.017962217330933 s
+Running pplacer... took 58.73131251335144 s
+Placing query into subtree... took 1.341379165649414 s
+Modify main tree... took 45.29960870742798 s
+Scoring trees... took 58.97944116592407 s
+Program execution took 186.144921541214 s
+temp_files/b823f273-39de-46a4-8209-72e24f7b7ba2
 ===== Timing =====
-Setup took 12.193381309509277 s
-Generating fasta files for pplacer... took 12.029089450836182 s
-Running pplacer... took 59.89594388008118 s
-Placing query into subtree... took 1.3751678466796875 s
-Modify main tree... took 91.11300110816956 s
-Scoring trees... took 92.98673033714294 s
-Program execution took 272.16780161857605 s
-temp_files/96efef53-95bc-4452-a67a-739c8f383b27
-WARNING: Unable to score tid 0 correctly. Disregarding tree!
-WARNING: Unable to score tid 1 correctly. Disregarding tree!
+Setup took 11.216705799102783 s
+Generating fasta files for pplacer... took 9.840478897094727 s
+Running pplacer... took 58.594537019729614 s
+Placing query into subtree... took 1.4258532524108887 s
+Modify main tree... took 44.31136631965637 s
+Scoring trees... took 56.33047914505005 s
+Program execution took 182.38697504997253 s
+temp_files/a82f20b1-9f3c-4a51-8488-853659fba26c
 ===== Timing =====
-Setup took 12.197796821594238 s
-Generating fasta files for pplacer... took 11.965900897979736 s
-Running pplacer... took 59.47447848320007 s
-Placing query into subtree... took 1.3512992858886719 s
-Modify main tree... took 93.37092471122742 s
-Scoring trees... took 91.97069096565247 s
-Program execution took 272.17372274398804 s
-temp_files/81f62850-81ce-40bc-b417-02567d984fc5
-WARNING: Unable to score tid 0 correctly. Disregarding tree!
-WARNING: Unable to score tid 2 correctly. Disregarding tree!
-WARNING: Unable to score tid 3 correctly. Disregarding tree!
+Setup took 11.157286405563354 s
+Generating fasta files for pplacer... took 9.881211042404175 s
+Running pplacer... took 61.709136724472046 s
+Placing query into subtree... took 1.4361462593078613 s
+Modify main tree... took 44.64310431480408 s
+Scoring trees... took 54.59696006774902 s
+Program execution took 184.11139607429504 s
+temp_files/b993b244-9ab9-4293-b548-e1374e5d1e1a
 ===== Timing =====
-Setup took 12.259217500686646 s
-Generating fasta files for pplacer... took 11.867854595184326 s
-Running pplacer... took 59.986334800720215 s
-Placing query into subtree... took 1.382267951965332 s
-Modify main tree... took 94.33545470237732 s
-Scoring trees... took 93.20859122276306 s
-Program execution took 274.61020612716675 s
-temp_files/921fddc7-5701-4e14-ac14-651fa670dc40
-WARNING: Unable to score tid 0 correctly. Disregarding tree!
-WARNING: Unable to score tid 10 correctly. Disregarding tree!
+Setup took 11.237104415893555 s
+Generating fasta files for pplacer... took 9.95907711982727 s
+Running pplacer... took 59.372580766677856 s
+Placing query into subtree... took 1.520585536956787 s
+Modify main tree... took 45.1784303188324 s
+Scoring trees... took 55.16932678222656 s
+Program execution took 183.29417848587036 s
+temp_files/27a0ae6b-f823-471c-8f89-e4b5bbb53b3b
 ===== Timing =====
-Setup took 12.134950876235962 s
-Generating fasta files for pplacer... took 11.933873414993286 s
-Running pplacer... took 59.43699049949646 s
-Placing query into subtree... took 1.388317584991455 s
-Modify main tree... took 90.92190909385681 s
-Scoring trees... took 93.05950164794922 s
-Program execution took 270.3706603050232 s
-temp_files/69befe50-32df-4e5a-a881-6c0da0d25024
-WARNING: Unable to score tid 3 correctly. Disregarding tree!
-WARNING: Unable to score tid 4 correctly. Disregarding tree!
-WARNING: Unable to score tid 8 correctly. Disregarding tree!
+Setup took 11.28461503982544 s
+Generating fasta files for pplacer... took 9.879515647888184 s
+Running pplacer... took 58.83690118789673 s
+Placing query into subtree... took 1.3855125904083252 s
+Modify main tree... took 44.447879791259766 s
+Scoring trees... took 54.72393846511841 s
+Program execution took 181.2253155708313 s
+temp_files/e339b0e0-5ea9-495f-bc76-fd99404f064d
 ===== Timing =====
-Setup took 12.157350301742554 s
-Generating fasta files for pplacer... took 12.077321529388428 s
-Running pplacer... took 60.01876759529114 s
-Placing query into subtree... took 1.3845860958099365 s
-Modify main tree... took 91.99038767814636 s
-Scoring trees... took 94.28197765350342 s
-Program execution took 274.1330635547638 s
-temp_files/86331b10-594f-4c2b-99a2-106c6a69e738
-WARNING: Unable to score tid 1 correctly. Disregarding tree!
-WARNING: Unable to score tid 6 correctly. Disregarding tree!
+Setup took 11.04710578918457 s
+Generating fasta files for pplacer... took 10.329455614089966 s
+Running pplacer... took 59.528432846069336 s
+Placing query into subtree... took 1.3917438983917236 s
+Modify main tree... took 44.80745506286621 s
+Scoring trees... took 55.84163427352905 s
+Program execution took 183.7613024711609 s
+temp_files/4efb888e-965e-4185-9c36-d6cdcad4d7c1
 ===== Timing =====
-Setup took 12.22732162475586 s
-Generating fasta files for pplacer... took 11.901183366775513 s
-Running pplacer... took 59.53765368461609 s
-Placing query into subtree... took 1.4474656581878662 s
-Modify main tree... took 92.69225454330444 s
-Scoring trees... took 93.07487392425537 s
-Program execution took 272.59679770469666 s
-temp_files/0f035bde-b96a-4b48-8ab7-0f87dd9cd53a
-WARNING: Unable to score tid 1 correctly. Disregarding tree!
-WARNING: Unable to score tid 6 correctly. Disregarding tree!
-WARNING: Unable to score tid 10 correctly. Disregarding tree!
+Setup took 11.088793992996216 s
+Generating fasta files for pplacer... took 10.14867639541626 s
+Running pplacer... took 59.695905685424805 s
+Placing query into subtree... took 1.3873546123504639 s
+Modify main tree... took 45.678433895111084 s
+Scoring trees... took 55.519123554229736 s
+Program execution took 184.20161080360413 s
+temp_files/3e01e0ee-de90-447b-826b-1897a948c659
 ===== Timing =====
-Setup took 12.16542387008667 s
-Generating fasta files for pplacer... took 11.962884902954102 s
-Running pplacer... took 59.926928997039795 s
-Placing query into subtree... took 1.405376672744751 s
-Modify main tree... took 92.83608746528625 s
-Scoring trees... took 91.8188989162445 s
-Program execution took 272.2896673679352 s
-temp_files/48ce88cf-dc27-408a-b8a3-6898263d2b6b
+Setup took 11.103563785552979 s
+Generating fasta files for pplacer... took 9.837976694107056 s
+Running pplacer... took 58.78524589538574 s
+Placing query into subtree... took 1.406834602355957 s
+Modify main tree... took 44.9150972366333 s
+Scoring trees... took 55.98563861846924 s
+Program execution took 182.7014765739441 s
+temp_files/783e3753-19a1-432f-b6ec-a35c66e747a2
 ===== Timing =====
-Setup took 12.192013263702393 s
-Generating fasta files for pplacer... took 12.12393045425415 s
-Running pplacer... took 59.65124273300171 s
-Placing query into subtree... took 1.4367918968200684 s
-Modify main tree... took 92.84230160713196 s
-Scoring trees... took 77.26044797897339 s
-Program execution took 257.1364006996155 s
-temp_files/e4c26f91-4f9b-482b-89c3-7c6a4572c0be
-WARNING: Unable to score tid 4 correctly. Disregarding tree!
-WARNING: Unable to score tid 7 correctly. Disregarding tree!
-WARNING: Unable to score tid 11 correctly. Disregarding tree!
+Setup took 11.110671520233154 s
+Generating fasta files for pplacer... took 9.97599172592163 s
+Running pplacer... took 58.85991334915161 s
+Placing query into subtree... took 1.424018383026123 s
+Modify main tree... took 44.94806694984436 s
+Scoring trees... took 55.21276259422302 s
+Program execution took 182.2898199558258 s
+temp_files/a6e28d2a-13ff-4375-9e79-2fcbdddf35dc
 ===== Timing =====
-Setup took 12.101063251495361 s
-Generating fasta files for pplacer... took 11.73654294013977 s
-Running pplacer... took 59.354697465896606 s
-Placing query into subtree... took 0.7452127933502197 s
-Modify main tree... took 90.96740221977234 s
-Scoring trees... took 93.35455560684204 s
-Program execution took 269.81980752944946 s
-temp_files/3a359a99-7926-487f-8d12-48837fe6b6c5
-WARNING: Unable to score tid 0 correctly. Disregarding tree!
-WARNING: Unable to score tid 2 correctly. Disregarding tree!
-WARNING: Unable to score tid 3 correctly. Disregarding tree!
+Setup took 11.273309469223022 s
+Generating fasta files for pplacer... took 9.98589539527893 s
+Running pplacer... took 60.688384771347046 s
+Placing query into subtree... took 1.445643424987793 s
+Modify main tree... took 44.64174151420593 s
+Scoring trees... took 56.46426725387573 s
+Program execution took 185.1758213043213 s
+temp_files/1d32e7ba-d0a0-46ba-856f-a8fd43c709f8
 ===== Timing =====
-Setup took 12.181129693984985 s
-Generating fasta files for pplacer... took 11.991952180862427 s
-Running pplacer... took 59.43540859222412 s
-Placing query into subtree... took 1.3917555809020996 s
-Modify main tree... took 91.93415546417236 s
-Scoring trees... took 91.59928870201111 s
-Program execution took 270.1751458644867 s
-temp_files/8a3d65ef-2a1d-4318-a3ec-5d10c773dbd6
-WARNING: Unable to score tid 4 correctly. Disregarding tree!
-WARNING: Unable to score tid 11 correctly. Disregarding tree!
+Setup took 11.211507320404053 s
+Generating fasta files for pplacer... took 9.824279546737671 s
+Running pplacer... took 59.45137882232666 s
+Placing query into subtree... took 1.3881292343139648 s
+Modify main tree... took 44.502227783203125 s
+Scoring trees... took 55.72044825553894 s
+Program execution took 182.72099566459656 s
+temp_files/c8a2b87f-c609-4f80-b8e3-550af0fb470e
 ===== Timing =====
-Setup took 12.149611949920654 s
-Generating fasta files for pplacer... took 12.013156652450562 s
-Running pplacer... took 59.818809509277344 s
-Placing query into subtree... took 1.393672227859497 s
-Modify main tree... took 91.15457701683044 s
-Scoring trees... took 87.64112710952759 s
-Program execution took 265.79719281196594 s
-temp_files/01474468-0966-4459-9af1-7f98e6fb9824
-WARNING: Unable to score tid 6 correctly. Disregarding tree!
-WARNING: Unable to score tid 7 correctly. Disregarding tree!
+Setup took 11.07771372795105 s
+Generating fasta files for pplacer... took 9.844499588012695 s
+Running pplacer... took 58.65291404724121 s
+Placing query into subtree... took 1.4228370189666748 s
+Modify main tree... took 44.96020317077637 s
+Scoring trees... took 56.784111738204956 s
+Program execution took 183.46177506446838 s
+temp_files/0f0231d1-8186-4a10-a28f-949bd75aeb12
 ===== Timing =====
-Setup took 12.193758249282837 s
-Generating fasta files for pplacer... took 12.347929000854492 s
-Running pplacer... took 60.19141340255737 s
-Placing query into subtree... took 1.4206998348236084 s
-Modify main tree... took 90.24830961227417 s
-Scoring trees... took 95.4437346458435 s
-Program execution took 273.4526481628418 s
-temp_files/70f282f6-306a-4623-be43-c77391a67b24
-WARNING: Unable to score tid 3 correctly. Disregarding tree!
-WARNING: Unable to score tid 6 correctly. Disregarding tree!
-WARNING: Unable to score tid 7 correctly. Disregarding tree!
+Setup took 11.071707248687744 s
+Generating fasta files for pplacer... took 9.915234565734863 s
+Running pplacer... took 60.03631830215454 s
+Placing query into subtree... took 1.3774254322052002 s
+Modify main tree... took 44.99266338348389 s
+Scoring trees... took 54.578083515167236 s
+Program execution took 182.85728907585144 s
+temp_files/f9765776-01a5-45bd-891c-2d657e12ca20
 ===== Timing =====
-Setup took 12.309319734573364 s
-Generating fasta files for pplacer... took 12.064270257949829 s
-Running pplacer... took 59.59075403213501 s
-Placing query into subtree... took 1.3922321796417236 s
-Modify main tree... took 92.0150556564331 s
-Scoring trees... took 90.7745623588562 s
-Program execution took 269.91317915916443 s
-temp_files/bb182fb9-31d5-4ce1-9f3b-e0419671a673
-WARNING: Unable to score tid 1 correctly. Disregarding tree!
-WARNING: Unable to score tid 2 correctly. Disregarding tree!
-WARNING: Unable to score tid 6 correctly. Disregarding tree!
+Setup took 11.00199270248413 s
+Generating fasta files for pplacer... took 9.851340055465698 s
+Running pplacer... took 58.9969367980957 s
+Placing query into subtree... took 1.4762396812438965 s
+Modify main tree... took 45.10578489303589 s
+Scoring trees... took 55.72713041305542 s
+Program execution took 182.92001509666443 s
+temp_files/2fdb1db7-c1cd-4514-8832-19da7f4bb39c
 ===== Timing =====
-Setup took 12.19324278831482 s
-Generating fasta files for pplacer... took 12.106572151184082 s
-Running pplacer... took 60.24151659011841 s
-Placing query into subtree... took 1.4324383735656738 s
-Modify main tree... took 91.31357669830322 s
-Scoring trees... took 92.40452694892883 s
-Program execution took 271.44705843925476 s
-temp_files/bcd4e2f2-d2e4-4c2d-a2b0-0b2aacacb788
-WARNING: Unable to score tid 2 correctly. Disregarding tree!
-WARNING: Unable to score tid 7 correctly. Disregarding tree!
-WARNING: Unable to score tid 10 correctly. Disregarding tree!
-WARNING: Unable to score tid 11 correctly. Disregarding tree!
+Setup took 10.979450464248657 s
+Generating fasta files for pplacer... took 9.82715106010437 s
+Running pplacer... took 59.26458215713501 s
+Placing query into subtree... took 1.3650126457214355 s
+Modify main tree... took 45.55390954017639 s
+Scoring trees... took 37.78243827819824 s
+Program execution took 165.41209292411804 s
+temp_files/6da6cb2f-6b16-44c8-a685-d69c80bcda01
 ===== Timing =====
-Setup took 12.37086272239685 s
-Generating fasta files for pplacer... took 12.011291027069092 s
-Running pplacer... took 58.88731622695923 s
-Placing query into subtree... took 1.3737030029296875 s
-Modify main tree... took 91.20344614982605 s
-Scoring trees... took 95.95653414726257 s
-Program execution took 273.48800706863403 s
-temp_files/efd12127-dcff-480c-a204-f7a22212e99a
-WARNING: Unable to score tid 2 correctly. Disregarding tree!
-WARNING: Unable to score tid 5 correctly. Disregarding tree!
-WARNING: Unable to score tid 9 correctly. Disregarding tree!
+Setup took 11.11106276512146 s
+Generating fasta files for pplacer... took 9.856359481811523 s
+Running pplacer... took 58.616814851760864 s
+Placing query into subtree... took 0.7753875255584717 s
+Modify main tree... took 46.2068305015564 s
+Scoring trees... took 53.11456918716431 s
+Program execution took 180.32051968574524 s
+temp_files/6d8953b6-62e3-4384-89a8-4db4dafd139a
 ===== Timing =====
-Setup took 12.160868406295776 s
-Generating fasta files for pplacer... took 12.725892066955566 s
-Running pplacer... took 59.7108314037323 s
-Placing query into subtree... took 1.4176084995269775 s
-Modify main tree... took 92.77807426452637 s
-Scoring trees... took 97.3277678489685 s
-Program execution took 277.94040966033936 s
-temp_files/35fa8f19-28f4-42ff-a496-81b5a786eaec
-WARNING: Unable to score tid 0 correctly. Disregarding tree!
-WARNING: Unable to score tid 1 correctly. Disregarding tree!
-WARNING: Unable to score tid 2 correctly. Disregarding tree!
-WARNING: Unable to score tid 9 correctly. Disregarding tree!
+Setup took 11.129448890686035 s
+Generating fasta files for pplacer... took 9.833780765533447 s
+Running pplacer... took 58.812052726745605 s
+Placing query into subtree... took 1.406388521194458 s
+Modify main tree... took 45.04370665550232 s
+Scoring trees... took 56.204251527786255 s
+Program execution took 183.34788489341736 s
+temp_files/81b982bd-9e8e-4b13-b2fc-88a8fb303618
 ===== Timing =====
-Setup took 12.24889850616455 s
-Generating fasta files for pplacer... took 12.074023008346558 s
-Running pplacer... took 60.01951742172241 s
-Placing query into subtree... took 1.4340136051177979 s
-Modify main tree... took 93.7722339630127 s
-Scoring trees... took 90.80394339561462 s
-Program execution took 271.9641981124878 s
+Setup took 11.023913145065308 s
+Generating fasta files for pplacer... took 10.063605070114136 s
+Running pplacer... took 59.097792625427246 s
+Placing query into subtree... took 1.4059062004089355 s
+Modify main tree... took 43.97847509384155 s
+Scoring trees... took 54.07020616531372 s
+Program execution took 180.29793977737427 s
