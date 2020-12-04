@@ -1,0 +1,59 @@
+
+
+IMPORTANT WARNING: Sequences SCFG and SCA are exactly identical
+
+IMPORTANT WARNING
+Found 1 sequence that is exactly identical to other sequences in the alignment.
+Normally they should be excluded from the analysis.
+
+Just in case you might need it, an alignment file with 
+sequence duplicates removed is printed to file /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R2/rose.aln.true.fasta.reduced
+
+
+Using BFGS method to optimize GTR rate parameters, to disable this specify "--no-bfgs" 
+
+
+
+This is RAxML version 8.2.12 released by Alexandros Stamatakis on May 2018.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Sarah Lutteropp   (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+Charlie Taylor    (UF)
+
+
+Alignment has 2933 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 75.74%
+
+RAxML Model Optimization up to an accuracy of 0.100000 log likelihood units
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+All free model parameters will be estimated by RAxML
+GAMMA model of rate heterogeneity, ML estimate of alpha-parameter
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 2933
+Name: No Name Provided
+DataType: DNA
+Substitution Matrix: GTR
+
+
+
+
+RAxML was called as follows:
+
+/home/erk24/workspace/standard-RAxML/raxmlHPC-PTHREADS -f e -t /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R2/tree.nwk -m GTRGAMMA -s /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R2/rose.aln.true.fasta -n REF7 -p 1984 -T 8 -w /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R2 
+
+

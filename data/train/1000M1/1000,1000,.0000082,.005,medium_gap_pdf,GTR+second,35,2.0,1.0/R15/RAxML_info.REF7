@@ -1,0 +1,89 @@
+
+
+IMPORTANT WARNING: Sequences SDGI and SIIC are exactly identical
+
+
+IMPORTANT WARNING: Sequences SJFD and SJCI are exactly identical
+
+
+IMPORTANT WARNING: Sequences SJFB and SCEJ are exactly identical
+
+IMPORTANT WARNING
+Found 3 sequences that are exactly identical to other sequences in the alignment.
+Normally they should be excluded from the analysis.
+
+Just in case you might need it, an alignment file with 
+sequence duplicates removed is printed to file /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R15/truealignment.phylip.reduced
+
+
+This is RAxML version 7.2.7 released by Alexandros Stamatakis in August 2010.
+
+With greatly appreciated code contributions by:
+Andre Aberer (TUM)
+Simon Berger (TUM)
+John Cazes (TACC)
+Michael Ott (TUM)
+Nick Pattengale (UNM)
+Wayne Pfeiffer (SDSC)
+
+
+Alignment has 2808 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 72.63%
+
+RAxML Model Optimization up to an accuracy of 0.100000 log likelihood units
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+All free model parameters will be estimated by RAxML
+GAMMA model of rate heteorgeneity, ML estimate of alpha-parameter
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 2808
+Name: No Name Provided
+DataType: DNA
+Substitution Matrix: GTR
+
+
+
+
+RAxML was called as follows:
+
+/home/erk24/workspace/RAxML7/RAxML-7.2.7-ALPHA/raxmlHPC-PTHREADS -f e -t /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R15/tree.nwk -m GTRGAMMA -s /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R15/truealignment.phylip -n REF7 -p 1984 -T 4 -w /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R15 
+
+
+Testing which likelihood implementation to use
+Standard Implementation full tree traversal time: 1.503849
+Subtree Equality Vectors for gap columns full tree traversal time: 0.701173
+... using SEV-based implementation
+
+
+Model parameters (binary file format) written to: /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R15/RAxML_binaryModelParameters.REF7
+
+
+Overall Time for Tree Evaluation 1090.222227
+Final GAMMA  likelihood: -941882.784465
+Number of free parameters for AIC-TEST(BR-LEN): 2006
+Number of free parameters for AIC-TEST(NO-BR-LEN): 9
+
+
+Model Parameters of Partition 0, Name: No Name Provided, Type of Data: DNA
+alpha: 0.816900
+Tree-Length: 824.749166
+rate A <-> C: 1.180613
+rate A <-> G: 3.382096
+rate A <-> T: 0.516992
+rate C <-> G: 1.083778
+rate C <-> T: 4.270421
+rate G <-> T: 1.000000
+
+freq pi(A): 0.253229
+freq pi(C): 0.246451
+freq pi(G): 0.248905
+freq pi(T): 0.251415
+
+Final tree written to:                 /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R15/RAxML_result.REF7
+Execution Log File written to:         /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R15/RAxML_log.REF7
