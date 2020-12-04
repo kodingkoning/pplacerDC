@@ -7,7 +7,7 @@ Found 1 sequence that is exactly identical to other sequences in the alignment.
 Normally they should be excluded from the analysis.
 
 Just in case you might need it, an alignment file with 
-sequence duplicates removed is printed to file /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R3/truealignment.phylip.reduced
+sequence duplicates removed is printed to file /home/ekoning2/scratch/cs581-project/data/train/1000M1/1000M1/R3/truealignment.phylip.reduced
 
 
 This is RAxML version 7.2.7 released by Alexandros Stamatakis in August 2010.
@@ -46,6 +46,6 @@ Substitution Matrix: GTR
 
 RAxML was called as follows:
 
-/home/erk24/workspace/RAxML7/RAxML-7.2.7-ALPHA/raxmlHPC-PTHREADS -f e -t /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R3/tree.nwk -m GTRGAMMA -s /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R3/truealignment.phylip -n REF7 -p 1984 -T 8 -w /home/erk24/Documents/CS581/finalProject/cs581-project/data/train/1000M1/1000M1/R3 
+/home/ekoning2/scratch/RAxML-7.2.7-ALPHA/raxmlHPC-PTHREADS -f e -t /home/ekoning2/scratch/cs581-project/data/train/1000M1/1000M1/R3/tree.nwk -m GTRGAMMA -s /home/ekoning2/scratch/cs581-project/data/train/1000M1/1000M1/R3/truealignment.phylip -n REF7 -p 1984 -T 8 -w /home/ekoning2/scratch/cs581-project/data/train/1000M1/1000M1/R3 
 
 
