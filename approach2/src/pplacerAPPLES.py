@@ -70,11 +70,12 @@ def run_program(args):
         queryNode = leaf
         break
     assert queryNode, "Expected query node to be non null!"
+    maxPplacer = min(maxPplacer, len(applesTree.leaf_nodes())-1)
 
     def execute_with_random_clade(item):
         threadIdx = item
         timer.tic("Clade identification")
-        cladeNodes = tree_utils.sampleCompact(queryNode, maxPplacer)
+        cladeNodes = tree_utils.sampleCompact(queryNode, maxPplacer, query)
         outputSubTree = f"clade-subtree-{threadIdx}.tre"
         subTree = backboneTree.extract_tree_with_taxa_labels(cladeNodes)
         subTree.write(file=open(outputSubTree, "w"), schema="newick")

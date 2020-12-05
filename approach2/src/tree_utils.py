@@ -77,17 +77,15 @@ def modify_backbone_tree_with_placement(resultTree, backBoneTree, querySequence)
   parent.add_child(unmarkedNode)
   unmarkedNode.add_child(queryNode)
   unmarkedNode.add_child(siblingToQuery)
-# Adapted from code provided by Vlad
-def sampleCompact(leaf, size):
-    taxons = [] # Don't include query node
-    node = leaf.parent_node # Don't include parent of query
-                            # this isn't a real node in the backbone
+def sampleCompact(leaf, size, queryTaxa):
+    taxons = []
+    node = leaf
     while len(taxons) < size:
       if node:
         shuffled_nodes = node.sibling_nodes().copy()
         random.shuffle(shuffled_nodes)
         for bro in shuffled_nodes:
-            taxons.extend(collectSubtreeTaxa(bro, size - len(taxons)))
+            taxons.extend(collectSubtreeTaxa(bro, size - len(taxons), queryTaxa))
             if len(taxons) >= size:
                 return taxons
         
@@ -96,17 +94,20 @@ def sampleCompact(leaf, size):
         break
     return taxons
 
-def collectSubtreeTaxa(node, numTaxa):
+def collectSubtreeTaxa(node, numTaxa, queryTaxa):
     if not node:
         return []
     if node.is_leaf():
-        return [node.taxon.label]
+        if node.taxon.label == queryTaxa:
+          return []
+        else:
+          return [node.taxon.label]
     
     taxons = []
     shuffledChildren = node.child_nodes().copy()
     random.shuffle(shuffledChildren)
     for child in shuffledChildren:
-        taxons.extend(collectSubtreeTaxa(child, numTaxa - len(taxons)))
+        taxons.extend(collectSubtreeTaxa(child, numTaxa - len(taxons), queryTaxa))
         if len(taxons) >= numTaxa:
             return taxons
     return taxons
