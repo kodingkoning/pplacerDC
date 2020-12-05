@@ -13,215 +13,75 @@
 \usepackage{cite}
 \usepackage[ruled,vlined]{algorithm2e}
 \usepackage[utf8]{inputenc}		% Allow some non-ASCII Unicode in source
+\title{CS 581 Final Project: Improving the Scalability of Phylogenetic Placement Methods}
+\author{Elizabeth Koning and Malachi Phillips}
+\date{December 8, 2020}
 
 \begin{document}
-\section{Course Project}
 
-Taxonomic identification and phylogenetic profiling software TIPP
-\cite{nguyen_tipp_2014} requires solving a phylogenetic placement problem in order to
-insert a new alignment into a tree. Currently, software such as pplacer
-\cite{matsen_pplacer_2010} is an accurate, maximum likelihood phylogenetic placement
-method. However, pplacer does not scale to problems larger than 1,000
-sequences. Therefore, alternative phylogenetic placement methods, such
-as APPLES \cite{balaban_apples_2020}, were developed for solving phylogenetic placement.
-While APPLES has been tested to run on 200,000 sequences, the accuracy
-of the method for smaller problems is typically worse than pplacer. This
-course project aims to improve phylogenetic placement software already
-available in two different approaches. The first proposed approach runs
-pplacer in a divide-and-conquer scheme to determine the optimal
-placement of the query sequence. The second approach, however, uses
-APPLES to identity the most probable region for a query sequence. Once
-this region is identified, pplacer is used on some collection of clades
-around this region of the tree in order to determine a more accurate
-placement.
+\maketitle
 
-\subsection{Approach 1}
+\section{Introduction}
 
-Approach 1 aims to solve the placement problem by using a
-divide-and-conquer approach, using pplacer to solve the smaller
-phylogenetic placement problems. The first step of this approach is to
-divide the backbone tree into problems small enough that pplacer can
-readily be used. The software will divide the backbone into disjoint
-subtrees with fewer than 1000 sequences each. This will be done
-similarly to the first step of PASTA described in \cite{PASTA}, using
-centroid decomposition. A centroid decomposition approach is used to
-determine subtrees smaller than some prescribed size, such as 1000
-sequences. The centroid decomposition determines a centroid edge in the
-tree that partitions the tree into two halves of roughly equal size.
-Each subtree is then recursively subdivided using this same approach,
-until each subtree has no more sequences that the prescribed limit. We
-will start with the maximum size of the subtrees at 1000 sequences. We
-will also consider if it may improve the accuracy to have smaller trees,
-such as 500 sequences, though based on the placement accuracy by
-reference tree size in the comparison to APPLES in \cite{balaban_apples_2020}, we expect
-that accuracy will be higher for larger reference trees. After
-decomposing the tree via centroid decomposition, the query sequence will
-be placed into each of the subtrees generated. Pplacer will run
-independently on each of the subtrees from this centroid decomposition.
-Since each subproblem is independent of the other subproblems, this step
-in the algorithm is embarassingly parallel.
+Phylogenetic placement is useful for tree construction and sequence classification. In the case of tree construction, phylogenetic placement can be a scalable way to construct a phylogeny. In the case of sequence classification, placement is useful as it can place sequences near closely related taxa even if the taxon of the sequence is not present in the tree. In both of these cases, it is key to have approaches that are both scalable and accurate.
 
-After determining the placement on each subtree, the placement of the
-query sequence on the subtree is used as the placement of the query
-sequence into the backbone tree. Each backbone tree returned from this
-method can then be compared, and the one with the best score is taken as
-the output from the algorithm. Each tree is scored using RAxML in
-fixed-tree mode, allowing us to compare the maximum likelihood score of
-each of the placement trees. Based on the location of the best score on
-the best subtree, the algorithm returns the corresponding location on
-the original backbone tree. Pseudocode for approach 1 is shown below in
-algorithm \ref{alg:approach1}.
-The pipeline for approach 1 is also shown below in figure \ref{fig:approach1-pipeline}.
+The two leading methods for phylogenetic placement are pplacer and APPLES. pplacer \cite{matsen_pplacer_2010} is a highly accurate maximum likelihood phylogenetic placement method. Its limitation is that it does not scale to large trees. According to \cite{balaban_apples_2020}, pplacer frequently fails to run on trees with over 1000 leaves. For the trees they tested with 5000 leaves, pplacer failed 449 times out of 1000. APPLES has been tested to run on trees up to 200,000 sequences. However, on the trees where both APPLES and pplacer successfully place sequences, pplacer is much more accurate than APPLES.
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth]{Figs/pipeline1.png}
-\label{fig:approach1-pipeline}
-\caption{Pipeline for approach 1. Placements inside the parallel region over
-the sub trees identified by the centroid decomposition are evaluated
-using pplacer.
-The overall placement on the backbone trees is scored by the log-likelihood
-from running raxml-ng in fixed tree, fixed parameter mode.
-}
-\end{figure}
+We propose two approaches that aim to provide the accuracy of pplacer alongside the scalability of APPLES. The first approach, pplacerDC, uses pplacer in a divide-and-conquer method. The second approach, pplacerAPPLES, first uses APPLES to identify a probable placement region, and then uses pplacer to find a more accurate placement within the region.
 
-\subsection{Approach 2}
+% We mentioned TIPP in our proposal because we discussed it as the premise, but it seems to have very little to do with our actual project, so I am not sure that we need to mention it in our introduction.
 
-Approach 2 aims to combine the scalability of APPLES with the accuracy
-empirically seen for pplacer on smaller subtrees. Initially, APPLES is
-run on the query sequence and the entire backbone tree. The placement
-returned from APPLES is then used to identify a collection of
-(relatively) small clades containing this placement. Each clade is
-chosen to be smaller than some prescribed size, such as 1000 sequences.
-Since there is not a single unique clade satisfying this property, some
-(random) collection of clades is considered. If time permits, a more
-sophisticated method for determining clades in the backbone tree
-containing the query sequence may be considered. Psuedocode for
-generating a single (random) clade are shown below in algorithm
-\ref{alg:clade-grabber}. Balaban et al.~observed that, for the RNASim-VS
-data set, the delta errors in APPLES's placement are likely to be
-relatively small. This indicates that the placement of the query
-sequence into the tree may be quite close to the true placement, meaning
-that only a small refinment is needed to produce the correct result.
-Pplacer is used on each of the clades identified in the previous step.
-Note that, similar to the previous approach, the placement and scoring
-on each clade is completely independent of the other clades. This makes
-this portion of the algorithm embarrasingly parallel. As in the other
-approaches, the final result is the placement of the query sequence in
-the original backbone tree based on its subtree placement. The placement
-that minimizes the maximum likelihood scores, as computed by RAxML in
-fixed tree mode, is then chosen as the placement returned by the
-algorithm. Note also that the original placement, as determine by
-APPLES, is also included in this consideration. Pseudocode for approach
-2 is shown below in algorithm \ref{alg:approach2}.
-The pipeline for approach 2 is also shown below in figure \ref{fig:approach2-pipeline}.
+\section{Experimental Design}
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth]{Figs/pipeline2.png}
-\label{fig:approach2-pipeline}
-\caption{Pipeline for approach 2.
-APPLES is initially used to find a tentative placement for the query sequence.
-Random clades about the query placement are generated
-up to some provided fixed size.
-The query sequence is then placed in each clade
-using pplacer.
-The overall placement on the backbone trees is scored by the log-likelihood
-from running raxml-ng in fixed tree, fixed parameter mode.
-}
-\end{figure}
+% TODO: include the rest of the experimental design
 
-\section{Data}
+% TODO: this must include how we calculate delta error
 
-\subsection{Testing Data}
+\subsection{Error Assessment}
 
-We will use the 1000M1 dataset from \cite{sate}. This includes 20 replicate
-datasets.
+We compared our approaches to both pplacer and APPLES in both their accuracy and runtime. To calculate the error, we used the delta error, which is the same measurement that was used in \cite{balaban_apples_2020}. It compares the set of bipartions for the tree that includes the estimated placement using one of the four methods to the set of bipartions in the tree with the correct placement.
 
-\subsection{Benchmarking Data}
+% TODO: do we say anything about the way we measure time?
 
-For simulated data, we will use the same datasets as APPLES used from
-\cite{guo}, and use the RNASim-VS sets. These sets are of size 500, 1000,
-5000, 10,000, 50,000, 100,000 and 200,000. For each of the sizes, there
-are a total of 5 replicates. The 200,000 sequence data set, however,
-only has a single replicate.
-
-\section{Assessment}
-
-\subsection{Asessment Criteria}
-
-We will be comparing to both pplacer and APPLES for accuracy and
-runtime. For small backbone trees (less than 1000 sequences), our
-approach will equivalent to pplacer, so the accuracy at that point
-should be equal with no meaningful increase in runtime. For larger
-trees, we will look at the error rate relative to APPLES and at how the
-implementation scales. To calculate the error, we will use the same
-delta error calculation as APPLES to compare the sets of bipartions for
-the tree with the placement from our system and the bipartion from the
-tree with the correct placement. In concrete terms, delta error is
-defined as
+The delta error is defined as
 \begin{align*}
 \Delta e(P) = \vert B(T^*) \backslash B(P) \vert - \vert B(T^* \upharpoonright_{\mathcal L}) \backslash B(T)\vert,
 \end{align*}
-where $\mathcal L$ denotes the leafset, \(P\) denotes the tree
-after placement, $T^*$ denotes the true tree on
-$\mathcal L \cup \{q\}$, $T^* \upharpoonright_{\mathcal L}$ denotes
-the true tree restricted to $\mathcal L$, and $B(\cdot)$ denotes the
-bipartition set of a tree \cite{balaban_apples_2020}.
+where $\mathcal L$ denotes the leafset, \(P\) denotes the tree after placement, $T^*$ denotes the true tree on $\mathcal L \cup \{q\}$, $T^* \upharpoonright_{\mathcal L}$ denotes the true tree restricted to $\mathcal L$, and $B(\cdot)$ denotes the bipartition set of a tree \cite{balaban_apples_2020}.
 
-Similar to Balaban and coworkers \cite{balaban_apples_2020}, we plan to consider a
-leave-one-out strategy in testing and evaluating the 1000M1 and
-RNASim-VS datasets. The leave-one-out strategy starts with the true
-tree, \(T\), and identifies a random leaf node \(q\) from the tree. This
-leaf node is removed and then added back into the tree \(T\) using the
-placement software. This process is repeated 200 times to generate a
-distribution of errors produced by the placement software.
+As in \cite{balaban_apples_2020}, we used a leave-one-out strategy for the tests. Out of the set of sequences in the tree, 200 sequences are selected as query sequences. For each of the query sequences, the leave-one-out strategy starts with the true tree, \(T\), and removes the sequence from \(T\), creating \(T'\). Then, the placement software adds that query to \(T'\) to obtain the estimated placement.
 
-\subsection{Analysis Hardware}
+% NOTE: APPLES not only includes the data but the exact list of query sequences used. This may be important to mention?
 
-We will perform the analysis on NCSA's Blue Waters. Each Blue Waters XE
-node has 16 cores. As neither APPLES nor pplacer has GPU capabilities,
-we will use the XE nodes instead of the XK nodes. Development and small
-testing will be conducted on the campuscluster or monza, a 12 core
-workstation.
+\subsection{Data}
 
-\subsection{Software}
+For the data, we tested the methods on the RNASim-VS dataset from \cite{balaban_apples_2020}. This dataset is sampled from the larger RNASim dataset with varying numbers of sequences. It includes five replicates for 500, 1000, 5000, 10,000, 50,000, and 100,000 sequences, and one replicate for 200,000 sequences.
 
-For comparison and steps of the implementation, we will be using both
-APPLES and pplacer. For the implementation, we will also use RAxML
-\cite{raxml}.
+% We also used the 1000M1 data sets from \cite{sate} to examine model conditions where the rate of evolution varies. These datasets are for small, medium, and long gap lengths. Each set has 1000 sequences and 20 replicates. [NOTE: decide if we include this at all, but obviously we need to run it that way before we can include this info]
 
-We will use APPLES version 1.3.0, which requires Python 3. The code can
-be found at:\newline https://github.com/balabanmetin/apples. We will
-only be running APPLES with alignment, as pplacer requires an alignment.
+\subsection{Hardware}
 
-The command for APPLES will be:
+We performed the analysis on NCSA's Blue Waters. Each Blue Waters XE node has 16 cores.
 
-\begin{verbatim}
-python3 ~/apples/run_apples.py -t backbone.nwk -s aln_dna.fa -q query.fa -T 16 -o apples.jplace
-\end{verbatim}
+% TODO: actually make the results be from BW instead of Monza. Probably want to include more info about BW too
 
-We will use pplacer version v1.1.alpha19-0-g807f6f3. The binary files
-can be found at:\newline
-https://github.com/matsen/pplacer/releases/tag/v1.1.alpha19.
+\section{Methods}
 
-The command for pplacer will be:
+We developed two novel approaches and assess them in comparison  to pplacer and APPLES. Both of the methods accept input similar to that of pplacer and APPLES: each requires a backbone tree that includes all sequences except the query sequence and a multiple sequence alignment (MSA) including all sequences and the query sequence. The output is the backbone tree with the query sequence placed. In addition, each requires the selection of the maximum size of the subtrees that are passed to pplacer, and the version using pplacer and APPLES requires the selection of the number of subtrees to assess using pplacer.
 
-\begin{verbatim}
-pplacer -m GTR -s RAxML_info.REF -t backbone.nwk -o query.jplace aln_dna.fa -j 1
-\end{verbatim}
+\subsection{pplacerDC}
 
-We will use the sequential RAxML version 8.2.12. Parallelism with RAxML
-will be done through calling RAxML in a multithreaded section. This will
-be used to compare different pplacer outputs in both approaches. The
-maximum likelihood score returned from RAxML in fixed tree mode is used
-as the score for the two approaches. The command for RAxML-NG will be:
+The first method is a divide-and-conquer version of pplacer (pplacerDC). Its first step is to divide the tree into disjoint subtrees using centroid decomposition. [TODO: citation for centroid decomposition] The maximum size of the subtrees can be selected as a command line option, and should be small enough that pplacer can successfully place the query. pplacer reliably places on trees of 1000 sequences, but frequently failed for 5000 sequence trees [APPLES]. If the maximum size is larger than the backbone tree, then running pplacerDC will be equivalent to running pplacer alone. After dividing the tree into subsets, it runs pplacer independently on each of the subtrees. Then, it uses raxml-ng in fixed-tree mode [cite] to score each of the placements within the context of the overall backbone tree. Running pplacer on each tree and scoring the trees is embarrassingly parallel, so multiple threads may be used during this stage. It then selects the tree with the best score as the final tree.
 
-\begin{verbatim}
-./raxml-ng --evaluate --model GTR+G --tree test.tree
-\end{verbatim}
+% TODO: how do we cite the centroid decomposition?
 
-\subsection{Approach 1 Pseudocode}
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Figs/pplacerDCpipeline.png}
+\label{fig:pplacerDC-pipeline}
+\caption{Pipeline for pplacerDC approach
+}
+\end{figure}
 
 \begin{algorithm}[H]
 \SetKwFor{ParallelFor}{parallel for}{do}{endfor}
@@ -248,7 +108,17 @@ as the score for the two approaches. The command for RAxML-NG will be:
  \label{alg:approach1}
 \end{algorithm}
 
-\subsection{Approach 2 Pseudocode}
+\subsection{pplacerAPPLES}
+
+The second method combines APPLES and pplacer, aiming to achieve the accuracy of pplacer with the scalability of APPLES. First, it runs APPLES with the query sequence and full backbone tree. Then, it selects one or more subtrees with a limited number of leaves. The number of subtrees to use and the maximum size of the subtrees is selected through the command line. As for pplacerDC, the maximum size of the subtree should be selected to be small enough to be handled by pplacer. Then, it will use pplacer for query placement in each of the subtrees. Finally, it compares the placements in the context of the full tree using raxml-ng, as in the first approach. It not only compares each of the pplacer placements, but also the placement from APPLES.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Figs/pplacerAPPLESpipeline.png}
+\label{fig:pplacerAPPLES-pipeline}
+\caption{Pipeline for pplacerAPPLES approach
+}
+\end{figure}
 
 \begin{algorithm}[H]
 \SetKwFor{ParallelFor}{parallel for}{do}{endfor}
@@ -282,38 +152,74 @@ and the number of clades considered, $N_{clades}$.
  \label{alg:approach2}
 \end{algorithm}
 
-\begin{figure}[H]
+\section{Results}
+
+\begin{figure}[h]
 \centering
-\begin{lstlisting}[language=python]
-# code from Vlad Smirnov. Generates a clade of a maximum size given a leaf node.
-def getRegion(leaf, size):
-    taxons = [leaf.taxon.label]
-    node = leaf
-    while len(taxons) < size:
-        shuffledSiblingNodes = node.sibling_nodes().copy()
-        for bro in shuffledSiblingNodes:
-            taxons.extend(collectSubtreeTaxa(bro, size - len(taxons)))
-            if len(taxons) >= size:
-                return taxons
-        node = node.parent_node
-    return taxons
-def collectSubtreeTaxa(node, numTaxa):
-    if node.is_leaf():
-        return [node.taxon.label]
-    taxons = []
-    shuffledChildNodes = node.child_nodes().copy()
-    random.shuffle(shuffledChildNodes)
-    for child in shuffledChildNodes:
-        taxons.extend(collectSubtreeTaxa(child, numTaxa - len(taxons)))
-        if len(taxons) >= numTaxa:
-            return taxons
-    return taxons
-\end{lstlisting}
-\label{alg:clade-grabber}
+\includegraphics[width=\textwidth]{Figs/VS-delta-error-500.png}
+\label{fig:error500}
+\caption{Delta Error for RNASim-VS with 500 sequences}
 \end{figure}
 
-\bibliographystyle{plain}
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Figs/VS-delta-error-1000.png}
+\label{fig:error1000}
+\caption{Delta Error for RNASim-VS with 1000 sequences}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Figs/VS-delta-error-5000.png}
+\label{fig:error5000}
+\caption{Delta Error for RNASim-VS with 5000 sequences}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Figs/VS-delta-error-10000.png}
+\label{fig:error10000}
+\caption{Delta Error for RNASim-VS with 10,000 sequences}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Figs/VS-delta-error-50000.png}
+\label{fig:error50000}
+\caption{Delta Error for RNASim-VS with 50,000 sequences}
+\end{figure}
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=\textwidth]{Figs/VS-delta-error-100000.png}
+%\label{fig:error100000}
+%\caption{Delta Error for RNASim-VS with 100,000 sequences}
+%\end{figure}
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=\textwidth]{Figs/VS-delta-error-200000.png}
+%\label{fig:error200000}
+%\caption{Delta Error for RNASim-VS with 200,000 sequences}
+%\end{figure}
+
+% TODO: update all figures to use Blue Waters results
+
+% TODO: include discussion of all results
+
+Through the experiments, we found that pplacerDC was significantly more accurate than APPLES for the datasets we tested on.
+
+% TODO: expand this section a lot
+
+\section{Discussion}
+
+% TODO: write this section
+
+\section{Conclusions}
+
+% TODO: write this section
+
+\bibliographystyle{ieee}
 \bibliography{cs581-project}
 
 \end{document}
-
