@@ -160,8 +160,8 @@ Pseudocode for pplacerDC is shown in alg \ref{alg:approach2}.
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{Figs/pplacerAPPLESpipeline.png}
-\label{fig:pplacerAPPLES-pipeline}
 \caption{Pipeline for pplacerAPPLES approach
+\label{fig:pplacerAPPLES-pipeline}
 }
 \end{figure}
 
@@ -236,8 +236,9 @@ are shown below in figures
 \ref{fig:error1000},
 \ref{fig:error5000},
 \ref{fig:error10000},
+\ref{fig:error50000},
 and
-\ref{fig:error50000}.
+\ref{fig:error-all}.
 For both methods, a maximum subproblem size of 2,500 is used.
 For pplacerAPPLES, only a single clade is sampled.
 As suspected, figures \ref{fig:error500} and \ref{fig:error1000}
@@ -263,8 +264,10 @@ One concern is the reason figures
 \ref{fig:error1000},
 \ref{fig:error5000},
 \ref{fig:error10000},
+\ref{fig:error50000},
 and
-\ref{fig:error50000} show APPLES performing relatively poorly.
+\ref{fig:error-all}.
+show APPLES performing relatively poorly.
 The RNASim-VS dataset are sampled from the RNASim data set considered by Guo and coworkers\cite{guo}.
 In this simulation, a fast rate of evolution is used.
 Distance-based methods, such as APPLES, are therefore more prone to mistakes
@@ -304,6 +307,12 @@ The authors consider these concerns in the future work section.
 \includegraphics[width=\textwidth]{Figs/VS-delta-error-50000.png}
 \caption{Delta Error for RNASim-VS with 50,000 sequences}
 \label{fig:error50000}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\centering
+\includegraphics[width=\textwidth]{Figs/VS-delta-error-all-sizes.png}
+\caption{Delta Error for RNASim-VS, all data aggregated.}
+\label{fig:error-all}
 \end{subfigure}
 \end{figure}
 
