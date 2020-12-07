@@ -197,7 +197,7 @@ and the number of clades considered, $N_{clades}$.
  \label{alg:approach2}
 \end{algorithm}
 
-\section{Results}
+\section{Results and Discussion}
 
 In order to observe the effect of subproblem size and accuracy for pplacerDC,
 the maximum subproblem size is varied on the RNASim-VS-5000 leaf data set.
@@ -316,10 +316,6 @@ Through the experiments, we found that pplacerDC was significantly more accurate
 
 % TODO: expand this section a lot
 
-\section{Discussion}
-
-
-
 % TODO: write this section
 \section{Conclusions}
 
@@ -337,6 +333,11 @@ Under the model conditions of a low rate of evolution, distance-based phylogenet
 such as APPLES, may be able to outperform maximum-likelihood approaches in both accuracy and runtime.
 In order to improve pplacerAPPLES, the authors plan to consider a wider range of clade sampling
 strategies that sample the entire leafset.
+The authors also plan to consider different decomposition schemes for pplacerDC.
+Currently, the centroid decomposition routine employed by pplacerDC creates disjoint, nonoverlapping
+decompositions of the input backbone tree.
+However, a decomposition scheme which contains some amount of overlap may be more robust to missing
+edges in the decomposed tree set.
 
 \bibliographystyle{ieee}
 \bibliography{cs581-project}
