@@ -12,6 +12,7 @@
 \usepackage{graphicx}
 \usepackage{cite}
 \usepackage{subcaption}
+\usepackage{wrapfig}
 \usepackage[ruled,vlined]{algorithm2e}
 \usepackage[utf8]{inputenc}		% Allow some non-ASCII Unicode in source
 \title{CS 581 Final Project: Improving the Scalability of Phylogenetic Placement Methods}
@@ -42,14 +43,12 @@ We compared our approaches to both pplacer and APPLES in both their accuracy and
 To calculate the error, we used the delta error, which is the same measurement that was used by
 Balaban and coworkers in \cite{balaban_apples_2020}.
 It compares the set of bipartions for the tree that includes the estimated placement using one of the four methods to the set of bipartions in the tree with the correct placement.
-
 The delta error is defined as
 \begin{align*}
 \Delta e(P) = \vert B(T^*) \backslash B(P) \vert - \vert B(T^* \upharpoonright_{\mathcal L}) \backslash B(T)\vert,
 \end{align*}
 where $\mathcal L$ denotes the leafset, \(P\) denotes the tree after placement, $T^*$ denotes the true tree on $\mathcal L \cup \{q\}$, $T^* \upharpoonright_{\mathcal L}$ denotes the true tree restricted to $\mathcal L$, and $B(\cdot)$ denotes the bipartition set of a tree \cite{balaban_apples_2020}.
-
-Similarly to the strategy used by Balaban and coworkers (\cite{balaban_apples_2020}), we used a leave-one-out strategy for the tests.
+Similarly to the strategy used by Balaban and coworkers, we used a leave-one-out strategy for the tests \cite{balaban_apples_2020}.
 Out of the set of sequences in the tree, 200 sequences are selected as query sequences.
 For each of the query sequences, the leave-one-out strategy starts with the true tree, \(T\), and removes the sequence from \(T\), creating \(T'\).
 Then, the placement software adds that query to \(T'\) to obtain the estimated placement.
@@ -82,6 +81,7 @@ pplacerDC finds a centroid edge in the backbone tree that separates the leaf
 sets into two with approximately equal size.
 The decomposition is recursively applied to each subtree containing more
 than the maximum allowable number of leaves.
+This centroid decomposition is the same decomposition used by other softwares TIPP and SEPP\cite{nguyen_tipp_2014}.
 The maximum size of the subtrees can be selected as a command line option, and should be small enough that pplacer can successfully place the query.
 At the same time, however, 
 pplacer reliably places on trees of 1000 sequences, but frequently failed for 5000 sequence trees \cite{balaban_apples_2020}.
@@ -209,22 +209,26 @@ to have an effect on the error observed.
 This is an important consideration with respect to parallel computing,
 since allowing a smaller subproblem size allows
 for increased parallelism in running pplacerDC.
-\begin{figure}[!htb]
+\begin{wrapfigure}{l}{0.5\textwidth}
 \centering
-\includegraphics[width=\textwidth]{Figs/varying-subproblem-size.png}
+\includegraphics[width=0.5\textwidth]{Figs/varying-subproblem-size.png}
 \caption{Effect of changing the maximum pplacer size on the error for DCpplacer.}
 \label{fig:varying-size}
-\end{figure}
+\end{wrapfigure}
 Runtime results on 12 threads on Monza are shown below in figure \ref{fig:timing-results}.
 A maximum of 2,500 taxa are considered for the pplacerDC decomposition and the clade
 sampling for pplacerAPPLES.
 For the latter method, only a single clade is sampled.
-\begin{figure}[!htb]
+In figure \ref{fig:timing-results}, an arbitrary line with linear scaling is plotted.
+Comparing the slope of this line against pplacer, APPLES, pplacerAPPLES, and pplacerDC
+indicates that all of the methods considered have linear time complexity with respect
+to the number of taxa in the input tree.
+\begin{wrapfigure}{r}{0.5\textwidth}
 \centering
-\includegraphics[width=\textwidth]{Figs/VS-timing-results.png}
+\includegraphics[width=0.5\textwidth]{Figs/VS-timing-results.png}
 \caption{Runtime on Monza for 12 threads. Time is average time required to place a single query sequence.}
 \label{fig:timing-results}
-\end{figure}
+\end{wrapfigure}
 
 Delta error results for the RNASim-VS data sets
 are shown below in figures
@@ -254,6 +258,21 @@ A more robust clade sampling strategy, one which samples the entire leafset,
 rather than a compact clade, may produce more accurate placements.
 The authors consider these concerns in the future work section.
 
+One concern is the reason figures
+\ref{fig:error500},
+\ref{fig:error1000},
+\ref{fig:error5000},
+\ref{fig:error10000},
+and
+\ref{fig:error50000} show APPLES performing relatively poorly.
+The RNASim-VS dataset are sampled from the RNASim data set considered by Guo and coworkers\cite{guo}.
+In this simulation, a fast rate of evolution is used.
+Distance-based methods, such as APPLES, are therefore more prone to mistakes
+under the model conditions of high rates of evolution.
+This may explain why pplacer, which is a maximum-likelihood based method for phylogenetic placement \cite{matsen_pplacer_2010},
+is able to generate more accurate placements.
+Therefore, the authors plan to consider datasets with varying rates of evolution in a future study.
+The authors consider these concerns in the future work section.
 
 \begin{figure}[!htb]
 \begin{subfigure}{0.5\textwidth}
@@ -310,7 +329,14 @@ The authors intend to make the code open-source and freely available shortly.
 
 \section{Future Work}
 
-
+Due to time constraints, the authors only consider only a portion of the RNASim-VS data set.
+In a future work, the authors plan to consider the entirety of the RNASim-VS data set.
+In addition, the authors aim to investigate the effect of the rate of evolution on the accuracy
+returned by each method.
+Under the model conditions of a low rate of evolution, distance-based phylogenetic placement schemes,
+such as APPLES, may be able to outperform maximum-likelihood approaches in both accuracy and runtime.
+In order to improve pplacerAPPLES, the authors plan to consider a wider range of clade sampling
+strategies that sample the entire leafset.
 
 \bibliographystyle{ieee}
 \bibliography{cs581-project}
