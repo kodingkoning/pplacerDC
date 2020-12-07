@@ -199,31 +199,26 @@ and the number of clades considered, $N_{clades}$.
 
 \section{Results}
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth]{Figs/Vs-timing-results.png}
-\label{fig:timing-results}
-\caption{Runtime on Monza for 12 threads. Time is average time required to place a single query sequence.}
-\end{figure}
-
+Delta error results for the RNASim-VS data sets
+are shown below in figures \ref{fig:error500,fig:error1000,fig:error5000,fig:error10000}.
 \begin{figure}[h]
 \begin{subfigure}{0.5\textwidth}
 \centering
 \includegraphics[width=\textwidth]{Figs/VS-delta-error-500.png}
-\label{fig:error500}
 \caption{Delta Error for RNASim-VS with 500 sequences}
+\label{fig:error500}
 \end{subfigure}
 \begin{subfigure}{0.5\textwidth}
 \centering
 \includegraphics[width=\textwidth]{Figs/VS-delta-error-1000.png}
-\label{fig:error1000}
 \caption{Delta Error for RNASim-VS with 1000 sequences}
+\label{fig:error1000}
 \end{subfigure}\\
 \begin{subfigure}{0.5\textwidth}
 \centering
 \includegraphics[width=\textwidth]{Figs/VS-delta-error-5000.png}
-\label{fig:error5000}
 \caption{Delta Error for RNASim-VS with 5000 sequences}
+\label{fig:error5000}
 \end{subfigure}
 \begin{subfigure}{0.5\textwidth}
 \centering
@@ -234,21 +229,42 @@ and the number of clades considered, $N_{clades}$.
 \begin{subfigure}{0.5\textwidth}
 \centering
 \includegraphics[width=\textwidth]{Figs/VS-delta-error-50000.png}
-\label{fig:error50000}
 \caption{Delta Error for RNASim-VS with 50,000 sequences}
+\label{fig:error50000}
 \end{subfigure}
 \end{figure}
 
+In order to observe the effect of subproblem size and accuracy for pplacerDC,
+the maximum subproblem size is varied on the RNASim-VS-5000 leaf data set.
+Three of the 5 replicates with 100 query species per replicate are
+considered for 100, 500, and 1000 leaf subproblems.
+The results are shown in fig \ref{fig:varying-size}.
+As shown in the figure, the choice of sub problem size does not seem
+to have an effect on the error observed.
+This is an important consideration with respect to parallel computing,
+since allowing a smaller subproblem size allows
+for increased parallelism in running pplacerDC.
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{Figs/varying-subproblem-size.png}
-\label{fig:varying-size}
 \caption{Effect of changing the maximum pplacer size on the error for DCpplacer.}
+\label{fig:varying-size}
+\end{figure}
+Runtime results on 12 threads on Monza are shown below in figure \ref{fig:timing-results}.
+A maximum of 2,500 taxa are considered for the pplacerDC decomposition and the clade
+sampling for pplacerAPPLES.
+For the latter method, only a single clade is sampled.
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Figs/VS-timing-results.png}
+\caption{Runtime on Monza for 12 threads. Time is average time required to place a single query sequence.}
+\label{fig:timing-results}
 \end{figure}
 
 % TODO: update all figures to use Blue Waters results
 
 % TODO: include discussion of all results
+
 
 Through the experiments, we found that pplacerDC was significantly more accurate than APPLES for the datasets we tested on.
 
