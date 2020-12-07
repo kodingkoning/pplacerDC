@@ -121,7 +121,7 @@ bindings implemented in mpi4py and is tailored for distributed memory machines \
 \KwIn{Tree $T$ on $N$ sequences, the MSA of $N+1$ sequences, and query sequence $q$}
  // $\operatorname{centroidDecomposition}$ decomposes a tree into roughly equal size, disjoint parts until the trees are no larger than the prescribed size.\;
  // $\operatorname{modifyTree}$ adds sequence to a tree based on the sequence's location in the a subtree with the sequence added\;
- $\{T_1,\dots,T_n\} \leftarrow \operatorname{centroidDecomposition}(T,1000)$\;
+ $\{T_1,\dots,T_n\} \leftarrow \operatorname{centroidDecomposition}(T,\texttt{maxSize})$\;
  $\{S_1, \dots, S_n\} \leftarrow 0$ // Score for each tree\;
  \ParallelFor{$i=1,\dots,n$}{
   // Place query sequence $q$ into the subtree\;
@@ -180,8 +180,8 @@ and the number of clades considered, $N_{clades}$.
   $S_{apples} \leftarrow \operatorname{RAxMLScorer}( T'_{apples})$\;
   $\{S_1, \dots, S_{N_{clades}}\} \leftarrow 0$ // Score for each clade\;
   \ParallelFor{$i=1,\dots, N_{clades}$}{
-    // Identify (random) region of T where q was placed with fewer than 1000 sequences\;
-    $T_{i} \leftarrow \operatorname{getRegion}(T'_{APPLES}, q, 1000)$\;
+    // Identify (random) region of T where q was placed with fewer than maxSize sequences\;
+    $T_{i} \leftarrow \operatorname{getRegion}(T'_{APPLES}, q, \texttt{maxSize})$\;
     // Run pplacer on the area of T around the placement of q\;
     $T'_{pplacer} \leftarrow \operatorname{pplacer}(T_{i})$\;
   // Add the location of the query sequence $q$ to a copy of $T$\;
