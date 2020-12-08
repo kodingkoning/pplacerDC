@@ -17,23 +17,21 @@ def read_list(fileName):
     content=[float(x.strip()) for x in content]
     return np.array(content)
 def get_errs(method, size):
-  return np.sort(read_list(f"vs-data/{size}/delta_error_{method}.txt"))
-def get_errs(method, size):
-  return np.sort(read_list(f"vs-data/{size}/delta_error_{method}.txt"))
+  return np.sort(read_list(f"test/RNASim-VS-results/variable-size/data/{size}/delta_error_{method}.txt"))
 
-sizes = [500,1000,5000,10000, 50000]
+sizes = [500,1000,5000,10000]
 pplacer_sizes = [500,1000]
 
 def make_figure(size):
   data=[]
   methods=[]
   if size in pplacer_sizes:
-    methods=["DC-pplacer", "pplacer", "pplacer+APPLES*", "APPLES*"]
+    methods=["pplacerDC", "pplacer", "pplacerAPPLES*", "APPLES*"]
   else:
-    methods=["DC-pplacer", "pplacer+APPLES*", "APPLES*"]
+    methods=["pplacerDC", "pplacerAPPLES*", "APPLES*"]
   data.append(get_errs("approach1", size))
   if size in pplacer_sizes:
-    data.append(get_errs("approach1", size))
+    data.append(get_errs("pplacer", size))
   data.append(get_errs("approach2", size))
   data.append(get_errs("apples", size))
   fig, ax = plt.subplots()
@@ -43,18 +41,18 @@ def make_figure(size):
   plt.ylabel("Delta Error")
   plt.xticks(rotation=45)
   plt.tight_layout()
-  plt.savefig(f"../writeup/Figs/VS-delta-error-{size}.png",dpi=150)
+  plt.savefig(f"../writeup/Figs/VS-delta-error-{size}-BW.png",dpi=150)
 
 for size in sizes:
   make_figure(size)
 
 def make_everything():
   data=[[],[],[],[]]
-  methods=["DC-pplacer", "pplacer", "pplacer+APPLES*", "APPLES*"]
+  methods=["pplacerDC", "pplacer", "pplacerAPPLES*", "APPLES*"]
   for size in sizes:
     data[0].extend(get_errs("approach1", size))
     if size in pplacer_sizes:
-      data[1].extend(get_errs("approach1", size))
+      data[1].extend(get_errs("pplacer", size))
     data[2].extend(get_errs("approach2", size))
     data[3].extend(get_errs("apples", size))
   fig, ax = plt.subplots()
