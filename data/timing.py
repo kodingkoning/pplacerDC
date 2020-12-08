@@ -34,15 +34,15 @@ fig = plt.figure()
 ax = plt.axes()
 ax.set_xscale("log")
 ax.set_yscale("log")
-ax.errorbar(sizes,avg_times,yerr=std_times, label="DC-pplacer", marker="o")
-ax.plot(sizes, sizes / (10 ** 4 / 30.), label="$O(n)$")
+ax.errorbar(sizes,avg_times,yerr=std_times, label="pplacerDC", marker="o")
+#ax.plot(sizes, sizes / (10 ** 4 / 30.), label="$O(n)$")
 ax.set_xlabel("Number of Taxa")
 ax.set_ylabel("Time (s)")
 ax.set_title("Time v. Number of Taxa")
 
 regex = "execution took (.+?) s"
 avg_times, std_times = get_time_by_regex("run_output2.log", regex, sizes)
-ax.errorbar(sizes,avg_times,yerr=std_times, label="pplacer+APPLES*", marker="o")
+ax.errorbar(sizes,avg_times,yerr=std_times, label="pplacerAPPLES*", marker="o")
 
 # Grab some pplacer timing data on 500, 1000 datasets
 pplacer_regex = "Running pplacer... took (.+?) s"
