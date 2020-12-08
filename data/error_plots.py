@@ -65,9 +65,3 @@ def make_everything():
   plt.savefig(f"../writeup/Figs/VS-delta-error-all-sizes.png",dpi=150)
 make_everything()
 
-
-if 0:
-  plt.step(data[0], np.arange(data[0].size), label="DQ-pplacer")  # From 0 to the number of data points-1
-  plt.step(data[1], np.arange(data[1].size), label="pplacer")  # From 0 to the number of data points-1
-  plt.legend()
-  plt.show()
