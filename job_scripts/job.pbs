@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#PBS -l nodes=1:ppn=16:xe
+#PBS -l walltime=04:30:00
+##PBS -N VS10000.0.0-1scale
+#PBS -N VS50000.0-part2
+#PBS -e $PBS_JOBID.err
+#PBS -o $PBS_JOBID.out
+#PBS -m bea
+#PBS -M ekoning2@illinois.edu
+#PBS -W umask=0027
+
+cd /u/sciteam/ekoning2/scratch/cs581-project/job_scripts 
+
+#aprun -n 1 -d 32 ./run_500.sh
+#aprun -n 1 -d 8 ./run_10000.sh
+#aprun -n 2 -d 16 ./run_100K.sh
+#./run_100K.sh
+aprun -n 1 -d 16 ./run_50000.sh
+
