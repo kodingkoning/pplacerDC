@@ -29,12 +29,110 @@ The version of RAxML-NG used is v1.0.1. A pre-build binary is used, which may be
 https://github.com/amkozlov/raxml-ng/releases/tag/1.0.1.\newline
 The version of pplacer used is the pre-built binary for v1.1.alpha19, which may be accessed here:\newline
 https://github.com/matsen/pplacer/releases/tag/v1.1.alpha19.
-Software developed for this project may be accessed here: insert.
+Software developed for this project may be accessed here:\newline
+https://uofi.box.com/s/0ac5k29x8smu9r9dxdwrprsl4uclml3m.
+Results from the RNASim-VS dataset and the dataset itself, including
+the scripts used to run the analyses, may be accessed here:\newline
+https://uofi.box.com/s/5re7u3tsha49p3enr1lqa68t2ke1xxmj.
 
 \section{Commands}
+
+The command to use \texttt{nw\_prune} is:\newline
+\texttt{nw\_prune RAxML\_result.REF \$query \&> input.tre}\newline
+The command to run \texttt{scalepplacer} (pplacerDC) is:\newline
+\texttt{scalepplacer.py -j 12 -m 2500 -s RAxML\_info.REF -t input.tre -q \$query -r aln\_dna.fa -o approach1.tre >> ../run\_output.log}\newline
+The command to compute the delta error returned by pplacerDC is:\newline
+\texttt{python3 treecompare.py true\_topo.tree approach1.tre RAxML\_result.REF >> ../delta\_error\_approach1.txt}\newline
+The command to run \texttt{pplacerAPPLES} is:\newline
+\texttt{pplacerAPPLES.py -j 12 -m 2500 -s RAxML\_info.REF -t input.tre -q \$query -r aln\_dna.fa -o approach2.tre -n 1 >> ../run\_output2.log}\newline
+Note that the resultant apples tree is currently saved as \texttt{approach2.tre.apples}.
+The command to compute the delta error returned by pplacerAPPLES is:\newline
+\texttt{python3 treecompare.py true\_topo.tree approach2.tre RAxML\_result.REF >> ../delta\_error\_approach2.txt}\newline
+The command to compute the delta error returned by APPLES is:\newline
+\texttt{python3 treecompare.py true\_topo.tree approach2.tre.apples RAxML\_result.REF >> ../delta\_error\_apples.txt}\newline
+pplacer, raxml-ng, APPLES, and guppy commands are handled internally in the source code.
+The commands are equivalently as follows:
+raxml:\newline
+\texttt{raxml-ng --msa aln\_dna.fa --model GTR+G --tree input.tre --loglh}\newline
+APPLES:\newline
+\texttt{run\_apples.py -s aln\_dna.fa -t input.tre -q query.fa}\newline
+pplacer:
+\texttt{pplacer -m GTR -s RAxML\_info.REF -t input.tre queries.fa}\newline
+guppy:
+\texttt{guppy tog -o output.tre pplacer.jplace}\newline
+
+\begin{figure}
+\begin{lstlisting}[
+  basicstyle=\small,
+  language=Python
+]
+import dendropy
+import argparse
+def compareTreesFromPath(treePath1, treePath2):
+    tax = dendropy.TaxonNamespace()
+    tr1 = dendropy.Tree.get(path=treePath1,
+                            schema='newick',
+                            rooting='force-unrooted',
+                            taxon_namespace=tax,
+                            preserve_underscores=True)
+    tr2 = dendropy.Tree.get(path=treePath2,
+                            schema='newick',
+                            rooting='force-unrooted',
+                            taxon_namespace=tax,
+                            preserve_underscores=True)
+    tr1.collapse_basal_bifurcation(set_as_unrooted_tree=True)
+    tr2.collapse_basal_bifurcation(set_as_unrooted_tree=True)
+    return compareDendropyTrees(tr1, tr2)
+def compareDendropyTrees(tr1, tr2):
+    from dendropy.calculate.treecompare \
+        import false_positives_and_negatives
+    lb1 = set([l.taxon.label for l in tr1.leaf_nodes()])
+    lb2 = set([l.taxon.label for l in tr2.leaf_nodes()])
+    com = lb1.intersection(lb2)
+    if com != lb1 or com != lb2:
+        com = list(com)
+        tns = dendropy.TaxonNamespace(com)
+        tr1.retain_taxa_with_labels(com)
+        tr1.migrate_taxon_namespace(tns)
+        tr2.retain_taxa_with_labels(com)
+        tr2.migrate_taxon_namespace(tns)
+    com = list(com)
+    tr1.update_bipartitions()
+    tr2.update_bipartitions()
+    nl = len(com)
+    ei1 = len(tr1.internal_edges(exclude_seed_edge=True))
+    ei2 = len(tr2.internal_edges(exclude_seed_edge=True))
+    [fp, fn] = false_positives_and_negatives(tr1, tr2)
+    rf = float(fp + fn) / (ei1 + ei2)
+    return (nl, ei1, ei2, fp, fn, rf)
+def delta_error(t1,t2, trueTree):
+    nl, ei1, ei2, fp, fn1, rf = compareTreesFromPath(trueTree, t1)
+    nl, ei1, ei2, fp, fn2, rf = compareTreesFromPath(trueTree, t2)
+    return fn1 - fn2
+if __name__ == "__main__":
+  parser = argparse.ArgumentParser(description='Evaluate the delta error.')
+  parser.add_argument('trueTreeFile', type=str,
+                     help='True backbone tree')
+  parser.add_argument('outputTreeFile', type=str,
+                     help='Output tree (e.g., from pplacer)')
+  parser.add_argument('estimatedTreeFile', type=str,
+                     help='Input tree (e.g., RAxML) with the correct placement')
+  args = parser.parse_args()
+  trueTreeFile = args.trueTreeFile
+  outputTreeFile = args.outputTreeFile
+  estimatedTreeFile = args.estimatedTreeFile
+  de = delta_error(outputTreeFile, estimatedTreeFile, trueTreeFile)
+  print(abs(de))
+\end{lstlisting}
+\caption{Contents of treecompare.py, which computes the delta error.
+Most of the script is adapted from one provided by Erin Molloy.}
+\end{figure}
+
+
 \section{Data}
 
-RNASim-VS data and results may be accessed here: .
+RNASim-VS data and results may be accessed here:\newline
+https://uofi.box.com/s/5re7u3tsha49p3enr1lqa68t2ke1xxmj.
 
 
 \end{document}
