@@ -217,17 +217,16 @@ for increased parallelism in running pplacerDC.
 \label{fig:varying-size}
 \end{wrapfigure}
 
-Runtime results on 16 threads on Blue Waters are shown below in figure \ref{fig:timing-results}.
+Runtime results on 16 threads on Blue Waters are shown figure \ref{fig:timing-results}.
 A maximum of 2,500 taxa are considered for the pplacerDC decomposition and the clade
 sampling for pplacerAPPLES*.
 For the latter method, only a single clade is sampled.
-Comparing the slope of this line against pplacer, APPLES*, pplacerAPPLES*, and pplacerDC
-indicates that all of the methods considered have linear time complexity with respect
+The graph indicates that all of the methods considered have linear time complexity with respect
 to the number of taxa in the input tree.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
 \centering
-\includegraphics[width=0.5\textwidth]{Figs/VS-timing-results-BW.png}
+\includegraphics[width=0.5\textwidth, height=0.5\textheight, keepaspectratio]{Figs/VS-timing-results-BW.png}
 \caption{Runtime on Blue Waters for 16 threads. Time is average time to place a single query sequence.}
 \label{fig:timing-results}
 \end{wrapfigure}
@@ -237,16 +236,16 @@ are shown below in figures
 \ref{fig:error500},
 \ref{fig:error1000},
 \ref{fig:error5000},
+\ref{fig:error10000},
 and
-\ref{fig:error10000}.
-%\ref{fig:error50000},
+\ref{fig:error50000},
 For both methods, a maximum subproblem size of 2,500 is used.
 For pplacerAPPLES*, only a single clade is sampled.
 The identical error rates for pplacer, pplacerDC, and pplacerAPPLES* in figures \ref{fig:error500} and \ref{fig:error1000}
 show that when the maximum subproblem size exceeds the size of the pplacer input tree, then the resulting placement from both pplacerDC and pplacerAPPLES* is the placement from passing the entire input tree on to pplacer.
 In the 5,000, 10,000, and 50,000 taxa cases,  however, this is no longer the case.
 Pplacer frequently fails, according to \cite{balaban_apples_2020}, and so our two methods were compared only to APPLES*. Further, pplacerDC and pplacerAPPLES* differ from each other as well.
-We see in figures \ref{fig:error5000} and \ref{fig:error10000}.%, and \ref{fig:error50000}
+We see in figures \ref{fig:error5000}, \ref{fig:error10000} and \ref{fig:error50000}
 that pplacerDC remains robust and highly accurate, despite the input tree size.
 At the same time, pplacerAPPLES*, while generally able to improve upon the
 placement provided by APPLES*, is not as accurate as pplacerDC.
@@ -288,12 +287,18 @@ The authors consider these concerns in the future work section.
 \includegraphics[width=\textwidth]{Figs/VS-delta-error-5000-BW.png}
 \caption{Delta Error for RNASim-VS with 5000 sequences}
 \label{fig:error5000}
-\end{subfigure}
+\end{subfigure}\\
 \begin{subfigure}{0.5\textwidth}
 \centering
 \includegraphics[width=\textwidth]{Figs/VS-delta-error-10000-BW.png}
 \caption{Delta Error for RNASim-VS with 10,000 sequences}
 \label{fig:error10000}
+\end{subfigure}\\
+\begin{subfigure}{0.5\textwidth}
+\centering
+\includegraphics[width=\textwidth]{Figs/VS-delta-error-50000.png}
+\caption{Delta Error for RNASim-VS with 50,000 sequences\footnote{Error results are from a different system, but this should have no impact on the accuracy, as all parameters were identical, and the timing results are all from Blue Waters.}}
+\label{fig:error50000}
 \end{subfigure}
 \end{figure}
 
