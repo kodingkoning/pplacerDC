@@ -199,6 +199,12 @@ and the number of clades considered, $N_{clades}$.
 
 \section{Results and Discussion}
 
+\begin{wrapfigure}{l}{0.5\textwidth}
+\centering
+\includegraphics[width=0.5\textwidth]{Figs/varying-subproblem-size.png}
+\caption{Effect of changing the maximum pplacer size on the error for DCpplacer.}
+\label{fig:varying-size}
+\end{wrapfigure}
 In order to observe the effect of subproblem size and accuracy for pplacerDC,
 the maximum subproblem size is varied on the RNASim-VS-5000 leaf data set.
 Three of the 5 replicates with 100 query species per replicate are
@@ -210,11 +216,11 @@ This is an important consideration with respect to parallel computing,
 since allowing a smaller subproblem size allows
 for increased parallelism in running pplacerDC.
 
-\begin{wrapfigure}{l}{0.5\textwidth}
+\begin{wrapfigure}{r}{0.5\textwidth}
 \centering
-\includegraphics[width=0.5\textwidth]{Figs/varying-subproblem-size.png}
-\caption{Effect of changing the maximum pplacer size on the error for DCpplacer.}
-\label{fig:varying-size}
+\includegraphics[width=0.5\textwidth, height=0.5\textheight, keepaspectratio]{Figs/VS-timing-results-BW.png}
+\caption{Runtime on Blue Waters for 16 threads. Time is average time to place a single query sequence.}
+\label{fig:timing-results}
 \end{wrapfigure}
 
 Runtime results on 16 threads on Blue Waters are shown figure \ref{fig:timing-results}.
@@ -224,12 +230,6 @@ For the latter method, only a single clade is sampled.
 The graph indicates that all of the methods considered have linear time complexity with respect
 to the number of taxa in the input tree.
 
-\begin{wrapfigure}{r}{0.5\textwidth}
-\centering
-\includegraphics[width=0.5\textwidth, height=0.5\textheight, keepaspectratio]{Figs/VS-timing-results-BW.png}
-\caption{Runtime on Blue Waters for 16 threads. Time is average time to place a single query sequence.}
-\label{fig:timing-results}
-\end{wrapfigure}
 
 Delta error results for the RNASim-VS data sets
 are shown below in figures
@@ -237,8 +237,9 @@ are shown below in figures
 \ref{fig:error1000},
 \ref{fig:error5000},
 \ref{fig:error10000},
-and
 \ref{fig:error50000},
+and
+\ref{fig:error-all}.
 For both methods, a maximum subproblem size of 2,500 is used.
 For pplacerAPPLES*, only a single clade is sampled.
 The identical error rates for pplacer, pplacerDC, and pplacerAPPLES* in figures \ref{fig:error500} and \ref{fig:error1000}
@@ -282,29 +283,42 @@ The authors consider these concerns in the future work section.
 \caption{Delta Error for RNASim-VS with 1000 sequences}
 \label{fig:error1000}
 \end{subfigure}\\
+\caption{Delta errors for RNASim-VS dataset}
+\end{figure}
+\begin{figure}[!htb]
 \begin{subfigure}{0.5\textwidth}
 \centering
 \includegraphics[width=\textwidth]{Figs/VS-delta-error-5000-BW.png}
 \caption{Delta Error for RNASim-VS with 5000 sequences}
 \label{fig:error5000}
-\end{subfigure}\\
+\end{subfigure}
 \begin{subfigure}{0.5\textwidth}
 \centering
 \includegraphics[width=\textwidth]{Figs/VS-delta-error-10000-BW.png}
 \caption{Delta Error for RNASim-VS with 10,000 sequences}
 \label{fig:error10000}
 \end{subfigure}\\
+\caption{Delta errors for RNASim-VS dataset}
+\end{figure}
+\begin{figure}[!htb]
 \begin{subfigure}{0.5\textwidth}
 \centering
 \includegraphics[width=\textwidth]{Figs/VS-delta-error-50000.png}
 \caption{Delta Error for RNASim-VS with 50,000 sequences\footnote{Error results are from a different system, but this should have no impact on the accuracy, as all parameters were identical, and the timing results are all from Blue Waters.}}
 \label{fig:error50000}
 \end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\centering
+\includegraphics[width=\textwidth]{Figs/VS-delta-error-all-sizes.png}
+\caption{Aggregated delta error results for the RNASim-VS data set.}
+\label{fig:error-all}
+\end{subfigure}
+\caption{Delta errors for RNASim-VS dataset}
 \end{figure}
 
 \section{Conclusions}
 
-PplacerDC offers a scalable version of pplacer. It maintains the accuracy of pplacer, while scaling to large trees. Through the results here, we demonstrate that it can scale to trees of 10,000 sequences, and we expect it to scale to trees of 200,000 sequences and beyond.
+PplacerDC offers a scalable version of pplacer. It maintains the accuracy of pplacer, while scaling to large trees. Through the results here, we demonstrate that it can scale to trees of 50,000 sequences, and we expect it to scale to trees of 200,000 sequences and beyond.
 
 While the code is not currently open-sourced and freely available, a version of the code
 may be accessed with details in the appendix.
@@ -325,6 +339,8 @@ Currently, the centroid decomposition routine employed by pplacerDC creates disj
 decompositions of the input backbone tree.
 However, a decomposition scheme which contains some amount of overlap may be more robust to missing
 edges in the decomposed tree set.
+
+\pagebreak
 
 \bibliographystyle{ieee}
 \bibliography{cs581-project}
