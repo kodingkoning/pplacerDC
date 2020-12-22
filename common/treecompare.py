@@ -56,6 +56,17 @@ def delta_error(t1,t2, trueTree):
     nl, ei1, ei2, fp, fn1, rf = compareTreesFromPath(trueTree, t1)
     nl, ei1, ei2, fp, fn2, rf = compareTreesFromPath(trueTree, t2)
     return fn1 - fn2
+
+def print_all_errors(t1,t2,trueTree):
+    nl_t1, ei1_t1, ei2_t1, fp_t1, fn_t1, rf_t1 = compareTreesFromPath(trueTree, t1)
+    nl, ei1, ei2, fp, fn2, rf = compareTreesFromPath(trueTree, t2)
+    # print delta error, fp rate, fn rate, and rf rate. Focus on t1, the output tree
+    # For binary trees, fn = fp = rf
+    #print(abs(fn_t1-fn2), rf_t1)
+    fp_rate = fp_t1/ei2_t1
+    fn_rate = fn_t1/ei1_t1
+    print(abs(fn_t1-fn2), fp_rate, fn_rate, rf_t1)
+
 if __name__ == "__main__":
   #raxml = "RAxML_result.REF"
   #true = "true_topo.tree"
@@ -79,6 +90,7 @@ if __name__ == "__main__":
   trueTreeFile = args.trueTreeFile
   outputTreeFile = args.outputTreeFile
   estimatedTreeFile = args.estimatedTreeFile
-  de = delta_error(outputTreeFile, estimatedTreeFile, trueTreeFile)
-  print(abs(de))
+  print_all_errors(outputTreeFile, estimatedTreeFile, trueTreeFile)
+  #de = delta_error(outputTreeFile, estimatedTreeFile, trueTreeFile)
+  #print(abs(de))
 
