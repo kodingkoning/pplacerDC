@@ -34,7 +34,8 @@ def make_fasta_files(item):
   tid, tree_object, threadLocalStorage = item
   if DEBUG_THREAD: print(f"Making fasta files on thread {tid}")
   tree_object.get_tree().write(file=open(threadLocalStorage.outputTreeFile, 'w'),
-      schema="newick")
+      schema="newick",
+      suppress_rooting=True)
   se.generate_fasta_file(tree_object, threadLocalStorage.querySequence, threadLocalStorage.msaFile, threadLocalStorage.query_alignment_file)
   return
 def execute_pplacer(item):
@@ -53,7 +54,8 @@ def modify_trees(item):
   resultTree = read_tree(threadLocalStorage.temporaryResultTree).get_tree()
   backBoneTree = read_tree(threadLocalStorage.inputTree).get_tree()
   modify_backbone_tree_with_placement(resultTree, backBoneTree, threadLocalStorage.querySequence)
-  backBoneTree.write(file=open(threadLocalStorage.temporaryBackBoneTree, "w"), schema="newick")
+  backBoneTree.write(file=open(threadLocalStorage.temporaryBackBoneTree, "w"), schema="newick",
+    suppress_rooting=True)
   return
 def score_trees(item):
   tid, tree_object, threadLocalStorage = item
