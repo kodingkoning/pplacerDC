@@ -156,7 +156,11 @@ def run_program(args):
     timer.tic("Generating fasta files for pplacer...")
     if DEBUG: print("Generating fasta files for pplacer...")
     for tid in range(nTrees):
-      if tid % size == rank:
+      if tid % size == rank and rank % 2 == 0: # even ranks
+        make_fasta_files((tid,threadData[tid]))
+    comm.Barrier()
+    for tid in range(nTrees):
+      if tid % size == rank and rank % 2 == 1: # odd ranks
         make_fasta_files((tid,threadData[tid]))
     comm.Barrier()
     timer.toc("Generating fasta files for pplacer...")
@@ -164,7 +168,11 @@ def run_program(args):
     timer.tic("Running pplacer...")
     if DEBUG: print("Running pplacer...")
     for tid in range(nTrees):
-      if tid % size == rank:
+      if tid % size == rank and rank % 2 == 0:
+        execute_pplacer((tid,threadData[tid]))
+    comm.Barrier()
+    for tid in range(nTrees):
+      if tid % size == rank and rank % 2 == 1:
         execute_pplacer((tid,threadData[tid]))
     comm.Barrier()
     timer.toc("Running pplacer...")
@@ -172,7 +180,11 @@ def run_program(args):
     timer.tic("Placing query into subtree...")
     if DEBUG: print("Placing query into subtree...")
     for tid in range(nTrees):
-      if tid % size == rank:
+      if tid % size == rank and rank % 2 == 0:
+        place_query((tid,threadData[tid]))
+    comm.Barrier()
+    for tid in range(nTrees):
+      if tid % size == rank and rank % 2 == 1:
         place_query((tid,threadData[tid]))
     comm.Barrier()
     timer.toc("Placing query into subtree...")
@@ -180,7 +192,11 @@ def run_program(args):
     timer.tic("Modify main tree...")
     if DEBUG: print("Modifying main tree...")
     for tid in range(nTrees):
-      if tid % size == rank:
+      if tid % size == rank and rank % 2 == 0:
+        modify_trees((tid,threadData[tid]))
+    comm.Barrier()
+    for tid in range(nTrees):
+      if tid % size == rank and rank % 2 == 1:
         modify_trees((tid,threadData[tid]))
     comm.Barrier()
     timer.toc("Modify main tree...")
@@ -188,7 +204,11 @@ def run_program(args):
     timer.tic("Scoring trees...")
     if DEBUG: print("Scoring trees...")
     for tid in range(nTrees):
-      if tid % size == rank:
+      if tid % size == rank and rank % 2 == 0:
+        score_trees((tid,threadData[tid]))
+    comm.Barrier()
+    for tid in range(nTrees):
+      if tid % size == rank and rank % 2 == 1:
         score_trees((tid,threadData[tid]))
     comm.Barrier()
     timer.toc("Scoring trees...")
