@@ -1,0 +1,52 @@
+[NID 19619] 2020-12-29 03:16:32 Apid 96476614: OOM killer terminated this process.
+----------------------------------------
+Begin Torque Prologue on nid25430
+at Tue Dec 29 03:15:02 CST 2020
+Job Id:			11830103.bw
+Username:		ekoning2
+Group:			ILL_bbba
+Job name:		100Kepa
+Requested resources:	nodes=1:ppn=16:xe,walltime=12:30:00,neednodes=1:ppn=16:xe
+Queue:			normal
+Account:		bbba
+End Torque Prologue:  0.540 elapsed
+----------------------------------------
+
+
+
+
+Running epa-ng with 100K.0
+no change     /u/sciteam/ekoning2/scratch/miniconda3/condabin/conda
+no change     /u/sciteam/ekoning2/scratch/miniconda3/bin/conda
+no change     /u/sciteam/ekoning2/scratch/miniconda3/bin/conda-env
+no change     /u/sciteam/ekoning2/scratch/miniconda3/bin/activate
+no change     /u/sciteam/ekoning2/scratch/miniconda3/bin/deactivate
+no change     /u/sciteam/ekoning2/scratch/miniconda3/etc/profile.d/conda.sh
+no change     /u/sciteam/ekoning2/scratch/miniconda3/etc/fish/conf.d/conda.fish
+no change     /u/sciteam/ekoning2/scratch/miniconda3/shell/condabin/Conda.psm1
+no change     /u/sciteam/ekoning2/scratch/miniconda3/shell/condabin/conda-hook.ps1
+no change     /u/sciteam/ekoning2/scratch/miniconda3/lib/python3.8/site-packages/xontrib/conda.xsh
+no change     /u/sciteam/ekoning2/scratch/miniconda3/etc/profile.d/conda.csh
+no change     /u/sciteam/ekoning2/.bashrc
+No action taken.
+On datset 100000
+On replicate 0
+L1096833
+Found 1 sequence(s)
+Sequences saved to query-epa-0.fa
+INFO Selected: Output dir: 0/L1096833/
+INFO Selected: Query file: query-epa-0.fa
+INFO Selected: Tree file: input-epa-0.tre
+INFO Selected: Reference MSA: 0/aln_dna.fa
+INFO Selected: Automatic switching of use of per rate scalers
+INFO Selected: Preserving the root of the input tree
+INFO Selected: Specified model file: 0/RAxML_info.REF8
+INFO Selected: Using threads: 16
+INFO     ______ ____   ___           _   __ ______
+        / ____// __ \ /   |         / | / // ____/
+       / __/  / /_/ // /| | ______ /  |/ // / __  
+      / /___ / ____// ___ |/_____// /|  // /_/ /  
+     /_____//_/    /_/  |_|      /_/ |_/ \____/ (v0.3.8)
+WARN The reference MSA and tree have differing number of taxa! 100000 vs. 99999
+Application 96476614 exit signals: Killed
+Application 96476614 resources: utime ~3s, stime ~3s, Rss ~98044, inblocks ~361618, outblocks ~11064

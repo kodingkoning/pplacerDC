@@ -52,14 +52,20 @@ def compareDendropyTrees(tr1, tr2):
     rf = float(fp + fn) / (ei1 + ei2)
     
     return (nl, ei1, ei2, fp, fn, rf)
-def delta_error(t1,t2, trueTree):
-    nl, ei1, ei2, fp, fn1, rf = compareTreesFromPath(trueTree, t1)
-    nl, ei1, ei2, fp, fn2, rf = compareTreesFromPath(trueTree, t2)
-    return fn1 - fn2
+
+#def delta_error(t1,t2, trueTree):
+#    nl, ei1, ei2, fp, fn1, rf = compareTreesFromPath(trueTree, t1)
+#    nl, ei1, ei2, fp, fn2, rf = compareTreesFromPath(trueTree, t2)
+#    return fn1 - fn2
+
+def delta_error(trueTree, outputTree, estTree, trueNQTree):
+  nl_t1, ei1_t1, ei2_t1, fp_t1, fn_t1, rf_t1 = compareTreesFromPath(trueTree, outputTree)
+  nl_t2, ei1_t2, ei2_t2, fp_t2, fn_t2, rf_t2 = compareTreesFromPath(trueNQTree, estTree)
+  return fn_t1-fn_t2
 
 def print_all_errors(t1,t2,trueTree):
     nl_t1, ei1_t1, ei2_t1, fp_t1, fn_t1, rf_t1 = compareTreesFromPath(trueTree, t1)
-    nl, ei1, ei2, fp, fn2, rf = compareTreesFromPath(trueTree, t2)
+    nl, ei1, ei2, fp, fn2, rf = compareTreesFromPath(trueTree, t2) # TODO: change this to use the ones without the query seq
     # print delta error, fp rate, fn rate, and rf rate. Focus on t1, the output tree
     # For binary trees, fn = fp = rf
     #print(abs(fn_t1-fn2), rf_t1)
@@ -68,6 +74,7 @@ def print_all_errors(t1,t2,trueTree):
     print(abs(fn_t1-fn2), fp_rate, fn_rate, rf_t1)
 
 if __name__ == "__main__":
+  # TODO: the difference we want is the FN between the true tree and the tree with placement and then the FN between the true tree minus the query sequence and the tree used for placement (excluding the query sequence)
   #raxml = "RAxML_result.REF"
   #true = "true_topo.tree"
   #approach1Tree = "approach1.tre"
@@ -85,12 +92,16 @@ if __name__ == "__main__":
   parser.add_argument('outputTreeFile', type=str,
                      help='Output tree (e.g., from pplacer)')
   parser.add_argument('estimatedTreeFile', type=str,
-                     help='Input tree (e.g., RAxML) with the correct placement')
+                     help='Input tree (e.g., RAxML) without the query sequence')
+  parser.add_argument('trueTreeNoQueryFile', type=str,
+                     help='True backbone tree without the query sequence')
   args = parser.parse_args()
   trueTreeFile = args.trueTreeFile
   outputTreeFile = args.outputTreeFile
   estimatedTreeFile = args.estimatedTreeFile
-  print_all_errors(outputTreeFile, estimatedTreeFile, trueTreeFile)
+  trueTreeNoQueryFile = args.trueTreeNoQueryFile
+  print(delta_error(trueTreeFile, outputTreeFile, estimatedTreeFile, trueTreeNoQueryFile))
+  #print_all_errors(outputTreeFile, estimatedTreeFile, trueTreeFile)
   #de = delta_error(outputTreeFile, estimatedTreeFile, trueTreeFile)
   #print(abs(de))
 
