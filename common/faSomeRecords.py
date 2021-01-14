@@ -44,6 +44,9 @@ help='if sequences should be printed to screen.')
 parser.add_argument(
 '--keep', '-k', action="store_true", default=False,
 help="keep the order in the list.")
+parser.add_argument(
+'--exclude', '-e', action="store_true", default=False,
+help='exclude listed sequences.')
 args = parser.parse_args()
 if args.list == None and args.records == None:
     parser.print_usage()
@@ -66,7 +69,8 @@ if args.keep:
     with open(args.fasta, "r") as f:
         for line in f:
             if line[0] == ">":
-                if "|" + line[:-1] + "|" in joinheads:
+                #if "|" + line[:-1] + "|" in joinheads:
+                if ("|" + line[:-1] + "|" in joinheads) != args.exclude:
                     h = line[:-1]
                     seq = 1
                     store[h] = ''
@@ -106,7 +110,7 @@ else:
         with open(args.fasta, "r") as f:
             for line in f:
                 if line[0] == ">":
-                    if "|" + line[:-1] + "|" in joinheads:
+                    if ("|" + line[:-1] + "|" in joinheads) != args.exclude:
                         seq = 1
                         sys.stdout.write(line)
                         found += 1
@@ -123,7 +127,8 @@ else:
             with open(args.fasta, "r") as f:
                 for line in f:
                     if line[0] == ">":
-                        if "|" + line[:-1] + "|" in joinheads:
+                        #if "|" + line[:-1] + "|" in joinheads:
+                        if ("|" + line[:-1] + "|" in joinheads) != args.exclude:
                             seq = 1
                             o.write(line)
                             found += 1
