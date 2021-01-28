@@ -19,9 +19,9 @@ pplacerDC is a method for phylogenetic placement of genetic sequences into an ex
 
 ## How to Use
 
-scalepplacer.py can be found in approach1/
+pplacerDC.py can be found in approach1/
 
 Example scripts can be found in scripts/
 
-Usage flags can be found by running `scalepplacer.py -h`
+All options can be found by running `pplacerDC.py -h`
 
