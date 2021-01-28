@@ -89,11 +89,11 @@ def score_raxml(treeFile, referenceAln, tid, trial=0):
     prefix = f"raxml-prefix-{tid}.score"
     tmpFileHandle = open(prefix,"w")
     # generate temporary file handle
-    ret = subprocess.call(["raxml-ng-mpi",
+    ret = subprocess.call(["raxml-ng",
                      "--msa", referenceAln,
                      "--model", "GTR+G",
                      "--tree", treeFile,
-                     "--threads", "1", # run in serial
+                     #"--threads", "1", # run in serial
                      "--opt-branches", "off", # do not optimize branch lengths
                      "--opt-model", "off", # do not optimize model conditions
                      "--evaluate",   # fixed-tree evaluation
