@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import os
 import argparse
 from Bio import AlignIO
@@ -27,3 +27,4 @@ def main():
 	sys.stderr.write("\nfinished\n")
 
 main()
+
