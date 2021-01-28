@@ -1,16 +1,27 @@
-# CS 581 Project: Imrpoving Scalability and Accuracy in Phylogenetic Placement
+# pplacerDC: a New Scalable Maximum Likelihood Phylogenetic Placement Method
 
-## Elizabeth Koning and Malachi Phillips
+## Elizabeth Koning, Malachi Phillips, and Tandy Warnow
 
-Taxonomic identification and phylogenetic profiling software TIPP @nguyen_tipp_2014 
-requires solving a phylogenetic placement problem in order
-to insert a new alignment into a tree.
-Currently, software such as pplacer [@matsen_pplacer_2010] is an accurate,
-maximum likelihood phylogenetic placement method.
-However, pplacer does not scale to problems larger than 1,000 sequences.
-Therefore, alternative phylogenetic placement methods, such as APPLES [@balaban_apples_2020],
-were developed for solving phylogenetic placement.
-While APPLES has been tested to run on 200,000 sequences, the accuracy of the
-method for smaller problems is typically worse than pplacer.
-This course project aims to improve phylogenetic placement software already
-available by using pplacer in a divide-and-conquer approach.
+## Summary
+
+pplacerDC is a method for phylogenetic placement of genetic sequences into an existing reference tree. It is based on pplacer, a highly accurate placement method, but that cannot reliably place sequences into trees beyond 5,000 taxa. pplacerDC improves on pplacer by using a divide and conquer approach to use the accuracy of pplacer in trees that would otherwise be too large for pplacer, and is tested on trees up to 100,000 taxa.
+
+## Requirements
+
+1. Python >= 3.7
+2. pplacer v1.1.alpha19 (https://github.com/matsen/pplacer/releases/tag/v1.1.alpha19)
+3. raxml-ng (https://github.com/amkozlov/raxml-ng.git) 
+
+## Recommended Software for Pre-processing
+
+1. Newick Utilities 1.6 (http://cegg.unige.ch/newick\_utils)
+2. RAxML 7.2.6 (https://cme.h-its.org/exelixis/web/software/raxml)
+
+## How to Use
+
+scalepplacer.py can be found in approach1/
+
+Example scripts can be found in scripts/
+
+Usage flags can be found by running `scalepplacer.py -h`
+
