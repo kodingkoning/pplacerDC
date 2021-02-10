@@ -58,9 +58,9 @@ def modify_trees(item):
     suppress_rooting=True)
   return
 def score_trees(item):
-  tid, tree_object, threadLocalStorage = item
+  tid, tree_object, threadLocalStorage, numThreads = item
   if DEBUG_THREAD: print(f"Scoring trees on thread {tid}")
-  se.score_raxml(threadLocalStorage.temporaryBackBoneTree, threadLocalStorage.msaFile, tid)
+  se.score_raxml(threadLocalStorage.temporaryBackBoneTree, threadLocalStorage.msaFile, tid, threads=numThreads)
   return
 
 def parse_score(tid):
@@ -82,6 +82,7 @@ def run_program(args):
     querySequence = args.query
     msaFile = args.ref_msa
     verbose = args.verbose
+    serial_raxml = args.serial_raxml
     VALIDATE = False
     DEBUG = False
     if verbose:
@@ -154,14 +155,24 @@ def run_program(args):
 
       timer.tic("Modify main tree...")
       if DEBUG: print("Modifying main tree...")
-      with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
+      # TODO: may need to use fewer threads if tree size is 100K or greater (can use at least 3)
+      if (serial_raxml):
+        with concurrent.futures.ProcessPoolExecutor(max_workers=3) as executor:
           executor.map(modify_trees, [(i, decomposed_trees[tree_key], threadData[i]) for i, tree_key in enumerate(decomposed_trees.keys())])
+      else:
+        with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
+            executor.map(modify_trees, [(i, decomposed_trees[tree_key], threadData[i]) for i, tree_key in enumerate(decomposed_trees.keys())])
       timer.toc("Modify main tree...")
 
       timer.tic("Scoring trees...")
       if DEBUG: print("Scoring trees...")
-      with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
-          executor.map(score_trees, [[i, decomposed_trees[tree_key], threadData[i]] for i, tree_key in enumerate(decomposed_trees.keys())])
+      # if the tree size is 100K or greater, use only one thread
+      if (serial_raxml):
+        with concurrent.futures.ProcessPoolExecutor(max_workers=3) as executor:
+            executor.map(score_trees, [[i, decomposed_trees[tree_key], threadData[i],4] for i, tree_key in enumerate(decomposed_trees.keys())])
+      else:
+        with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
+            executor.map(score_trees, [[i, decomposed_trees[tree_key], threadData[i],1] for i, tree_key in enumerate(decomposed_trees.keys())])
       timer.toc("Scoring trees...")
     else:
       timer.tic("Generating fasta files for pplacer...")
@@ -191,7 +202,7 @@ def run_program(args):
       timer.tic("Scoring trees...")
       if DEBUG: print("Scoring trees...")
       for i, tree_key in enumerate(decomposed_trees.keys()):
-        score_trees((i, decomposed_trees[tree_key], threadData[i]))
+        score_trees((i, decomposed_trees[tree_key], threadData[i],1))
       timer.toc("Scoring trees...")
 
     for i, threadStorage in enumerate(threadData):
@@ -222,6 +233,7 @@ if __name__ == "__main__":
     parser.add_argument('-m', '--max', default=500, help='Maximum size of subtree to hand to pplacer')
     parser.add_argument('-o', '--output', default='tree.tre', help='Resultant tree with placement')
     parser.add_argument('-v', '--verbose', default=False, help='Run in verbose mode')
+    parser.add_argument('-x', '--serial-raxml', default=False, help='Run RAxML with only one process.')
     
     requiredNamed = parser.add_argument_group("required named arguments")
     
