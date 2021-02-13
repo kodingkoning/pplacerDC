@@ -75,7 +75,7 @@ def run_pplacer(raxml_info_file, backbone_tree, queries, output):
     if ret != 0:
       exit(-1)
 
-def score_raxml(treeFile, referenceAln, tid, trial=0):
+def score_raxml(treeFile, referenceAln, tid, threads=1, trial=0):
     """
     Run RAxML-ng in fixed tree mode to determine the best LogLikelihood score possible
     treeFile: the file where the tree is located
@@ -93,18 +93,19 @@ def score_raxml(treeFile, referenceAln, tid, trial=0):
                      "--msa", referenceAln,
                      "--model", "GTR+G",
                      "--tree", treeFile,
-                     #"--threads", "1", # run in serial
+                     "--threads", str(threads), 
                      "--opt-branches", "off", # do not optimize branch lengths
                      "--opt-model", "off", # do not optimize model conditions
                      "--evaluate",   # fixed-tree evaluation
                      "--nofiles", # do not generate files
                      "--log", "result", # do not log anything
                      ],
-                     stdout=tmpFileHandle
+                     stdout=tmpFileHandle,
+                     stderr=tmpFileHandle
                      )
     # parse the output for the score
-    tmpFileHandle.close()
     regex = "Final LogLikelihood: (.+)"
+    tmpFileHandle.close()
     try:
       score = field_by_regex(regex, prefix)[0]
     except:
@@ -112,8 +113,10 @@ def score_raxml(treeFile, referenceAln, tid, trial=0):
       trial += 1
       score_raxml(treeFile, referenceAln, tid, trial)
     if ret != 0:
+      tmpFileHandle = open(prefix,"r")
       raxml_error = tmpFileHandle.readlines()
       print(f"Failed to run raxml-ng, it said:\n{raxml_error}")
+      tmpFileHandle.close()
 
     if ret != 0:
       exit(-1)
