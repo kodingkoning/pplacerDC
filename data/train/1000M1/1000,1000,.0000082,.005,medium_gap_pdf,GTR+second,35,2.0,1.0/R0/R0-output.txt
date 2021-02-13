@@ -1,1 +1,0 @@
-bash: ./place_ppa.sh: No such file or directory
