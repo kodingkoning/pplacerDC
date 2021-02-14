@@ -36,8 +36,11 @@ def generate_fasta_file(subtree, querySequence, referenceFastaFile, outputRefere
     if ret != 0:
         exit(-1)
 
+def run_guppy_tog(jplaceFile, outputFile):
+    place_sequence_in_subtree(jplaceFile, outputFile)
 
 def place_sequence_in_subtree(pplacerOutput, outputTreeFileName):
+    # TODO: rename this to run_guppy_tog()
     # Ubuntu 18.0.4 workaround for a bad assertion in loadLocale.c:129
     # THIS IS A BODGE!!!
     # see: https://askubuntu.com/questions/1081901/what-is-the-correct-way-to-fix-an-assertion-in-loadlocale-c

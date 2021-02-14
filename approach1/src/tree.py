@@ -25,6 +25,7 @@ from dendropy import DataSet as Dataset
 from dendropy.datamodel.treemodel import _convert_node_to_root_polytomy as \
     convert_node_to_root_polytomy
 
+# TODO: replace dendropy throughout this with TreeSwift to work better with large trees
 
 try:
     from StringIO import StringIO

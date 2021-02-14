@@ -4,6 +4,7 @@ import math
 import argparse
 from tree_utils import *
 import script_executor as se
+import place_in_backbone as pb
 import uuid
 from util import *
 import shutil
@@ -17,6 +18,7 @@ class ThreadLocalStorage(object):
   def __init__(self, tid, outputTree, raxml_info_file, inputTree, querySequence, msaFile):
     i = tid
     self.outputLocation = f"output-{i}.jplace"
+    self.backboneJplace = f"output-backbone-{i}.jplace"
     self.resultTree = f"mytestoutput-{i}.tre"
     self.query_alignment_file = f"foobar-{i}.fa"
     self.temporaryResultTree = f"mytestoutput-{i}.tre"
@@ -43,19 +45,12 @@ def execute_pplacer(item):
   if DEBUG_THREAD: print(f"Running pplacer on thread {tid}")
   se.run_pplacer(threadLocalStorage.raxml_info_file, threadLocalStorage.outputTreeFile, threadLocalStorage.query_alignment_file, threadLocalStorage.outputLocation)
   return
-def place_query(item):
-  tid, tree_object, threadLocalStorage = item
-  if DEBUG_THREAD: print(f"Placing query sequence on thread {tid}")
-  se.place_sequence_in_subtree(threadLocalStorage.outputLocation, threadLocalStorage.temporaryResultTree)
-  return
-def modify_trees(item):
+def modify_tree(item):
   tid, tree_object, threadLocalStorage = item
   if DEBUG_THREAD: print(f"Modifying trees on thread {tid}")
-  resultTree = read_tree(threadLocalStorage.temporaryResultTree).get_tree()
-  backBoneTree = read_tree(threadLocalStorage.inputTree).get_tree()
-  modify_backbone_tree_with_placement(resultTree, backBoneTree, threadLocalStorage.querySequence)
-  backBoneTree.write(file=open(threadLocalStorage.temporaryBackBoneTree, "w"), schema="newick",
-    suppress_rooting=True)
+  pb.place_in_backbone(threadLocalStorage.inputTree, threadLocalStorage.temporaryBackboneTree, threadLocalStorage.outputLocation, threadLocalStorage.backboneJplace)
+  # TODO: make sure that all the files that need to be deleted are being deleted.
+  # TODO: return the jplace file instead of the tree file in the end
   return
 def score_trees(item):
   tid, tree_object, threadLocalStorage, numThreads = item
@@ -111,9 +106,9 @@ def run_program(args):
       print(f"msaFile: "+ str(path.exists(msaFile)))
       print(f"raxml_info_file: "+ str(path.exists(raxml_info_file)))
     if DEBUG: print("Reading tree...")
-    tree = read_tree(inputTree)
+    tree = read_tree(inputTree) 
     
-    if DEBUG: print("Decomposing tree...")
+    if DEBUG: print("Decomposing tree...") # TODO: this is the stage to adapt to avoid dendropy
     decomposed_trees = tree.decompose_tree(maxSubTreeSize, strategy="centroid", minSize=1)
     nTrees = len(decomposed_trees.keys())
     if DEBUG: print(f"Has {nTrees} sub trees...")
@@ -147,26 +142,18 @@ def run_program(args):
           executor.map(execute_pplacer, [(i, decomposed_trees[tree_key], threadData[i]) for i, tree_key in enumerate(decomposed_trees.keys())])
       timer.toc("Running pplacer...")
 
-      timer.tic("Placing query into subtree...")
-      if DEBUG: print("Placing query into subtree...")
-      with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
-          executor.map(place_query, [(i, decomposed_trees[tree_key], threadData[i]) for i, tree_key in enumerate(decomposed_trees.keys())])
-      timer.toc("Placing query into subtree...")
-
       timer.tic("Modify main tree...")
       if DEBUG: print("Modifying main tree...")
-      # TODO: may need to use fewer threads if tree size is 100K or greater (can use at least 3)
       if (serial_raxml):
         with concurrent.futures.ProcessPoolExecutor(max_workers=3) as executor:
-          executor.map(modify_trees, [(i, decomposed_trees[tree_key], threadData[i]) for i, tree_key in enumerate(decomposed_trees.keys())])
+          executor.map(modify_tree, [(i, decomposed_trees[tree_key], threadData[i]) for i, tree_key in enumerate(decomposed_trees.keys())])
       else:
         with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
-            executor.map(modify_trees, [(i, decomposed_trees[tree_key], threadData[i]) for i, tree_key in enumerate(decomposed_trees.keys())])
+            executor.map(modify_tree, [(i, decomposed_trees[tree_key], threadData[i]) for i, tree_key in enumerate(decomposed_trees.keys())])
       timer.toc("Modify main tree...")
 
       timer.tic("Scoring trees...")
       if DEBUG: print("Scoring trees...")
-      # if the tree size is 100K or greater, use only one thread
       if (serial_raxml):
         with concurrent.futures.ProcessPoolExecutor(max_workers=3) as executor:
             executor.map(score_trees, [[i, decomposed_trees[tree_key], threadData[i],4] for i, tree_key in enumerate(decomposed_trees.keys())])
@@ -187,16 +174,10 @@ def run_program(args):
         execute_pplacer((i, decomposed_trees[tree_key], threadData[i]))
       timer.toc("Running pplacer...")
 
-      timer.tic("Placing query into subtree...")
-      if DEBUG: print("Placing query into subtree...")
-      for i, tree_key in enumerate(decomposed_trees.keys()):
-        place_query((i, decomposed_trees[tree_key], threadData[i]))
-      timer.toc("Placing query into subtree...")
-
       timer.tic("Modify main tree...")
       if DEBUG: print("Modifying main tree...")
       for i, tree_key in enumerate(decomposed_trees.keys()):
-        modify_trees((i, decomposed_trees[tree_key], threadData[i]))
+        modify_tree((i, decomposed_trees[tree_key], threadData[i]))
       timer.toc("Modify main tree...")
 
       timer.tic("Scoring trees...")

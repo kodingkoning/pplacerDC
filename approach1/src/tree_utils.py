@@ -7,6 +7,8 @@ import random
 
 DEBUG = False
 
+# TODO: check if dendropy-related methods are used and either delete unneeded functions or replace with TreeSwift 
+
 def read_tree(tree_file):
     handle = open(tree_file, "r")
     tree = PhylogeneticTree(
