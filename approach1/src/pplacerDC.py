@@ -48,7 +48,8 @@ def execute_pplacer(item):
 def modify_tree(item):
   tid, tree_object, threadLocalStorage = item
   if DEBUG_THREAD: print(f"Modifying trees on thread {tid}")
-  pb.place_in_backbone(threadLocalStorage.inputTree, threadLocalStorage.temporaryBackboneTree, threadLocalStorage.outputLocation, threadLocalStorage.backboneJplace)
+  pb.place_in_backbone(threadLocalStorage.inputTree, threadLocalStorage.temporaryBackBoneTree, threadLocalStorage.outputLocation, threadLocalStorage.backboneJplace)
+  # TODO: debug. The backbone tree isn't containing the placement...
   # TODO: make sure that all the files that need to be deleted are being deleted.
   # TODO: return the jplace file instead of the tree file in the end
   return
@@ -128,7 +129,7 @@ def run_program(args):
       ) for tid, _ in enumerate(decomposed_trees.keys())]
 
     # Thread local variants do *one* process at a time
-    SERIAL = False # This provides better debugging output
+    SERIAL = True # This provides better debugging output
     if not SERIAL:
       timer.tic("Generating fasta files for pplacer...")
       if DEBUG: print("Generating fasta files for pplacer...")
@@ -155,8 +156,8 @@ def run_program(args):
       timer.tic("Scoring trees...")
       if DEBUG: print("Scoring trees...")
       if (serial_raxml):
-        with concurrent.futures.ProcessPoolExecutor(max_workers=3) as executor:
-            executor.map(score_trees, [[i, decomposed_trees[tree_key], threadData[i],4] for i, tree_key in enumerate(decomposed_trees.keys())])
+        with concurrent.futures.ProcessPoolExecutor(max_workers=1) as executor:
+            executor.map(score_trees, [[i, decomposed_trees[tree_key], threadData[i],16] for i, tree_key in enumerate(decomposed_trees.keys())])
       else:
         with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
             executor.map(score_trees, [[i, decomposed_trees[tree_key], threadData[i],1] for i, tree_key in enumerate(decomposed_trees.keys())])
