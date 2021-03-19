@@ -20,6 +20,8 @@
 
 # This file is copied to SEPP and is used as an external library
 
+import treeswift
+# TODO: delete the dendropy imports
 from dendropy import Tree, Taxon, treecalc
 from dendropy import DataSet as Dataset
 from dendropy.datamodel.treemodel import _convert_node_to_root_polytomy as \
@@ -39,58 +41,68 @@ import re
 def decompose_by_diameter(a_tree, strategy, max_size=None, min_size=None,
                           max_diam=None):
     def __ini_record__():
-        for node in a_tree.postorder_node_iter():
+        for node in a_tree.traverse_postorder():
             __updateNode__(node)
 
     def __find_midpoint_edge__(t):
-        u = t.seed_node.bestLCA.anchor
+        u = t.seed_node.bestLCA.anchor #TODO: change?
         uel = u.edge_length if u.edge_length else 0
         d = 0
-        while (d+uel < t.seed_node.diameter/2):
+        while (d+uel < t.seed_node.diameter/2): # TODO: make sure we can do this with the diamter we set
             d += uel
-            u = u.parent_node
+            u = u.get_parent()
             uel = u.edge_length if u.edge_length else 0
         return u.edge
+    
+    def __num_child_leaves__(node): #TODO: we don't need this because we can just set nleaf
+        count = 0
+        children = node.child_nodes()
+        for child in children:
+            if child.is_leaf():
+                count += 1
+        return count
 
     def __find_centroid_edge__(t):
-        u = t.seed_node
+        u = t.seed_node #TODO: need a way to get to the root/seed_node
         product = 0
         acc_nleaf = 0
 
         while not u.is_leaf():
             max_child = None
             max_child_nleaf = 0
-            for ch in u.child_node_iter():
-                if ch.nleaf > max_child_nleaf:
-                    max_child_nleaf = ch.nleaf
+            for ch in u.child_nodes():
+                nleaf = ch.nleaf
+                if nleaf > max_child_nleaf:
+                    max_child_nleaf = nleaf
                     max_child = ch
-            acc_nleaf += (u.nleaf-max_child.nleaf)
-            new_product = max_child.nleaf * acc_nleaf
+            acc_nleaf += (u.nleaf-max_child_nleaf)
+            new_product = max_child_nleaf * acc_nleaf
             if new_product <= product:
                 break
             product = new_product
             u = max_child
 
-        return u.edge
+        return u.edge #TODO: is this supposed to be the edge, or what should this return?
 
     def __bisect__(t, e):
         # e = __find_centroid_edge__(t)
 
-        u = e.tail_node
+        u = e.tail_node # TODO: what does this mean?
         v = e.head_node
 
         u.remove_child(v)
-        t1 = Tree(seed_node=v)
+        #t1 = Tree(seed_node=v)
+        t1 = treeswift.Tree(is_rooted=True) # TODO: do this right with the root node
 
-        if u.num_child_nodes() == 1:
-            p = u.parent_node
-            v = u.child_nodes()[0]
+        if u.num_children() == 1:
+            p = u.get_parent()
+            v = u.child_nodes()[0] #TODO: what assumption is this making about item 0?
             l_v = v.edge_length if v.edge_length else 0
             u.remove_child(v)
             # u is the seed_node; this means the tree runs out of all but one
             # side
             if p is None:
-                t.seed_node = v
+                t.seed_node = v # TODO: get the seed node
                 return t, t1
             l_u = u.edge_length if u.edge_length else 0
             p.remove_child(u)
@@ -100,13 +112,14 @@ def decompose_by_diameter(a_tree, strategy, max_size=None, min_size=None,
 
         while u is not None:
             __updateNode__(u)
-            u = u.parent_node
+            u = u.get_parent()
 
         return t, t1
 
-    def __clean_up__(t):
-        for node in t.postorder_node_iter():
-            delattr(node, "nleaf")
+    def __clean_up__(t): #TODO: is this used, or can it be deleted?
+        print("Called __clean_up__")
+        for node in t.traverse_postorder():
+            delattr(node, "nleaf") # TODO: what does delattr do?
             delattr(node, "anchor")
             # delattr(node,"maxheight")
             delattr(node, "maxdepth")
@@ -114,9 +127,10 @@ def decompose_by_diameter(a_tree, strategy, max_size=None, min_size=None,
             # delattr(node,"topo_diam")
             delattr(node, "bestLCA")
 
-    def __updateNode__(node):
+    def __updateNode__(node): # TODO: is this needed? These won't work in TreeSwift
+        # TODO: it looks like this might work anyway?
         if node.is_leaf():
-            node.anchor = node
+            node.anchor = node # TODO: what is anchor and what can we do with it?
             # node.maxheight = 0
             node.maxdepth = 0
             node.diameter = 0
@@ -264,10 +278,12 @@ def get_pdistance(distances, leaves, stat='mean'):
 
 class PhylogeneticTree(object):
     """Data structure to store phylogenetic tree, wrapping dendropy.Tree."""
-    def __init__(self, dendropy_tree, map_internal_node_names=True):
-        self._tree = dendropy_tree
-        assert isinstance(self._tree, Tree)
+    def __init__(self, input_tree, map_internal_node_names=True):
+        self._tree = input_tree 
+        assert isinstance(self._tree, treeswift.Tree)
         self.n_leaves = self.count_leaves()
+        self._tree.seed_node = self._tree.root
+        self._tree.seed_node.edge = type('', (), {})() # TODO: make an edge object type for this
         self._tree.seed_node.edge.tail_node = None
         self._tree.seed_node.edge.length = None
         self._namemap = None
@@ -282,7 +298,7 @@ class PhylogeneticTree(object):
                       for letter in range(8))
         self._namemap = dict()
         revnamemap = dict()
-        for n in self._tree.internal_nodes():
+        for n in self._tree.traverse_internal(): 
             if n.label:
                 l1 = '%sN%06d%s' % (tag, i, re.sub(
                     r"[%s]" % string.punctuation.replace("_", " "),
@@ -348,10 +364,10 @@ for l2 in sys.stdin.readlines():
     den_tree = property(get_tree)
 
     def count_leaves(self):
-        return len(self._tree.leaf_nodes())
+        return self._tree.num_nodes(leaves=True,internal=False)
 
     def count_nodes(self):
-        return len(self._tree.nodes())
+        return self._tree.num_nodes(leaves=True,internal=True)
 
     def calc_splits(self):
         for i in self._tree.postorder_edge_iter():
@@ -374,11 +390,21 @@ for l2 in sys.stdin.readlines():
         assert clade_edge is not None
         return clade_edge
 
+    def num_leaves_below(t):
+        count = 0
+        for n in t.child_nodes():
+            if n.is_leaf():
+                count += 1
+        return count
+
     def get_centroid_edge(self, minSize):
         """Get centroid edge"""
         root = self._tree.seed_node
         root_children = root.child_nodes()
-        if root_children and (not hasattr(root_children[0].edge,
+        # TODO: what is the actual goal of the if? We just need to know
+        #if not hasattr(root_children[0], "edge"): # TODO
+        n_leaves = 0 # TODO: should this be all the leaves in the tree, or just the children???
+        if root_children and (not hasattr(root_children[0].edge, 
                                           "num_leaves_below")):
             self.calc_splits()
             n_leaves = self.count_leaves()
@@ -626,37 +652,8 @@ for l2 in sys.stdin.readlines():
             tree_map[len(tree_map)] = self
         return tree_map
 
-    def lable_edges(self):
-        en = 0
-        for e in self._tree.postorder_edge_iter():
-            e.label = en
-            en += 1
-
-    '''
-    Returns a given number of taxa that are closest to a given leaf
-    '''
-    def branchOut(self, centerTaxon, subsetSize, **kwargs):
-        dist = {}
-        pdm = treecalc.PatristicDistanceMatrix(self.den_tree)
-        for i, s in enumerate(self.den_tree.taxon_set):  # @UnusedVariable
-            if "filterTaxon" in kwargs:
-                if not kwargs["filterTaxon"](s):
-                    continue
-            dist[s.label] = pdm(centerTaxon, s)
-        incircle = sortByValue(dist)[0:subsetSize]
-        return [node[0] for node in incircle]
-
-
-def node_formatter(n):
-    return str(id(n))
-
-
-def edge_formatter(e):
-    return "%s %f " % (str(id(e)), e.length)
-
-
 def is_valid_tree(t):
-    if (t.is_rooted):
+    if (t.is_rooted): # TODO: might need to add that attribute
         return True
     assert t and t
     rc = t.seed_node.child_nodes()
@@ -671,3 +668,4 @@ def is_valid_tree(t):
         # Bug?  NN
         assert((not rc[0].child_nodes()) and (not rc[0].child_nodes()))
     return True
+
