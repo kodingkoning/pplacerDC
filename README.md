@@ -38,4 +38,10 @@ pplacerDC is a method for phylogenetic placement of genetic sequences into an ex
 1. Newick Utilities 1.6 (http://cegg.unige.ch/newick\_utils)
 2. RAxML 7.2.6 (https://cme.h-its.org/exelixis/web/software/raxml)
 
+## Citing
+
+When using pplacerDC, please cite [this paper](https://doi.org/10.1145/3459930.3469516):
+
+Elizabeth Koning, Malachi Phillips, and Tandy Warnow. 2021. PplacerDC: a new scalable phylogenetic placement method. In _Proceedings of the 12th ACM Conference on Bioinformatics, Computational Biology, and Health Informatics (BCB '21)_. Association for Computing Machinery, New York, NY, USA, Article 3, 1–9. [https://doi.org/10.1145/3459930.3469516](https://doi.org/10.1145/3459930.3469516)
+
 
